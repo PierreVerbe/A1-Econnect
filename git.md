@@ -68,7 +68,7 @@ git diff
 **Pour créer une branche :**
 
 ```sh
-git checkout NOUVELLE_BRANCHE
+git branch NOUVELLE_BRANCHE
 ```
 
 **Pour changer de branche :**
