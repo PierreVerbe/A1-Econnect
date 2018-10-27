@@ -5,8 +5,8 @@
 **Pour initialiser votre email et nom :**
 
 ```sh
-git config --global user.name "Bastien Marais"
-git config --global user.email "marais.bas@gmail.com"
+git config --global user.name "Pierre Verbe"
+git config --global user.email "pierre.verbe@free.fr"
 ```
 
 **Pour stocker ses login/mdp et ne plus avoir a les noter :**
