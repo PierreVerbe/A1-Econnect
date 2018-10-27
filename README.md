@@ -1,2 +1,18 @@
 # APP-G2D
-APP ISEP première année
+
+## APP A1 Télécom & Info
+
+Projet de maison connecté pour notre client Domisep.
+Nous avons appelé notre projet Econnect.
+
+Notre projet s’inscrit dans un enjeu d’actualité: l’écologie. Il est aujourd'hui un devoir commun de préserver notre environnement. D’autre part, la domotique est en grande croissance. De plus en plus de particuliers cherchent à automatiser les outils de leurs maisons dans une recherche de praticité, d'efficacité et de confort. 
+C’est dans ce contexte, que nous allons proposer une innovation à Domisep.
+
+
+**Site http://www.eco-nect.ml/**
+
+```sh
+git config --global user.name "Bastien Marais"
+git config --global user.email "marais.bas@gmail.com"
+```
+
