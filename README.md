@@ -8,6 +8,6 @@ C’est dans ce contexte, que nous allons proposer une innovation à Domisep.
 **Site http://www.eco-nect.ml/**
 
 ```sh
-Ce site permettra de contrôler sa maison connectée à distance.
+Ce site permettra de contrôler notre maison connectée à distance.
 ```
 
