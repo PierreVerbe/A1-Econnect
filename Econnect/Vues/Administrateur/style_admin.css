@@ -1,0 +1,76 @@
+body
+{
+	background-color: #aceace;
+}
+#Chiffres h1
+{
+	text-align: center;
+}
+
+#Chiffres
+{
+	border: 1px solid black;
+	border-radius: 10px;
+}
+
+#Nombres 
+{
+	display: flex;
+	justify-content: space-around;
+}
+
+#Nombres p
+{
+	border: 1px solid black;
+	padding-top: 200px;
+	padding-left: 60px;
+	padding-right: 60px;
+}
+
+#Alertes #liste_alertes
+{
+	display: flex;
+	justify-content: space-around;
+}
+
+/* Pour le footer de la page */
+footer
+{
+    display : flex;
+    justify-content: space-between;
+    /*text-align: center;*/
+    width:100%;
+    line-height: 20px;
+    height:10px;
+    background-color: #a1e5ff  ;
+}
+
+footer img
+{
+    vertical-align: middle;
+}
+
+#a_propos, #le_groupe, #nous_contcater, #aide
+{
+    margin : 20px;
+    /*border-bottom: 1px solid #ddd; pour la barre sous le texte*/
+}
+
+#couleur
+{
+    width:100%;
+    height:90px;
+    background-color: #00b9ff ;
+}
+
+#couleur2
+{
+    width:100%;
+    height:100px;
+    background-color:  #2f4852  ;
+}
+
+.texte_f
+{
+    border-bottom: 1px solid #ddd;
+}
