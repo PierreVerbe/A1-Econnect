@@ -1,7 +1,38 @@
 body
 {
-	background-color: #e1e4e7;
+    background-color: #e1e4e7;
 }
+
+header img
+{
+    background-color: #B2B2B2;
+}
+
+#Menu ul
+{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    border: 0px solid black;
+    border-radius: 10px;
+    background-color: #6FFFBF;  
+}
+
+#Menu li
+{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#Menu li:hover
+{
+    background-color: #00E67F;
+    cursor: pointer;
+    transition: background 1s;
+}
+
 #Chiffres h1
 {
 	text-align: center;

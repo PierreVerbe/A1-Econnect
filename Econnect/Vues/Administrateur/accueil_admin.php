@@ -10,7 +10,7 @@
 
 <body>
 
-	<!-- Le cors du site -->
+	<!-- Le corps du site -->
 
 	<!-- Les chiffres clés -->
 
@@ -50,7 +50,6 @@
 
 </body>
 
-<?php include ("../Client/footer_client.php")?>
 
 </html>
 
