@@ -29,7 +29,7 @@
 	</div>
 
 	<div id = "Alertes">
-		<h1>Alertes / Notificarions</h1>
+		<h1>Alertes / Notifications</h1>
 		<div id = "liste_alertes">
 			<ul>
 				<li> Alerte 1 </li>

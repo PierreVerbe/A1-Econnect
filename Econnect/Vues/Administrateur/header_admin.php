@@ -34,7 +34,7 @@
 
 	#Menu li:hover
 	{
-		background: #00E67F;
+		background-color: #00E67F;
 		cursor: pointer;
 		transition: background 1s;
 	}
