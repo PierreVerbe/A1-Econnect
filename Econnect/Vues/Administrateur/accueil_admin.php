@@ -1,4 +1,3 @@
-<?php include ("header_admin.php")?>
 
 <!DOCTYPE html>
 <html>
@@ -10,7 +9,9 @@
 
 <body>
 
-	<!-- Le cors du site -->
+	<?php include ("header_admin.php")?>
+
+	<!-- Le corps du site -->
 
 	<!-- Les chiffres clés -->
 
@@ -29,7 +30,7 @@
 	</div>
 
 	<div id = "Alertes">
-		<h1>Alertes / Notificarions</h1>
+		<h1>Alertes / Notifications</h1>
 		<div id = "liste_alertes">
 			<ul>
 				<li> Alerte 1 </li>
@@ -47,11 +48,14 @@
 		</div>
 	</div>
 
+	<?php include("footer_admin.php")?>
+
 
 </body>
 
-<?php include ("../Client/footer_client.php")?>
 
 </html>
+
+
 
 

@@ -1,4 +1,4 @@
-/* Header de la page */
+/*################################### DEBUT HEADER ###################################*/
 header
 {
     height:207px;
@@ -43,6 +43,10 @@ body
 {
     background-color:#e1e4e7;
 }
+
+/*################################### FIN HEADER ###################################*/
+
+/*################################### DEBUT BANNER ###################################*/
 
 /* Pour le bouton du menu ma maison */
 .active 
@@ -164,15 +168,6 @@ body
     justify-content: space-between;
 }
 
-/*########################################################*/
-
-/* Pour le slider en haut de la page */
-/*.Slide_Haut_Gauche 
-{
-    height:200px;
-    display:none;
-}*/
-
 .Slider_h
 {
     width:50%;
@@ -195,7 +190,7 @@ body
     margin-bottom: 189px;
 
     /*Transition de la taille des curseurs*/
-    -webkit-transition: width 0.5s, height 0.5s; /* For Safari 3.1 to 6.0 */
+    -webkit-transition: width 0.5s, height 0.5s, margin-top 0.5s, margin-bottom 0.5s; /* Pour Safari */
     transition: width 0.5s, height 0.5s, margin-top 0.5s, margin-bottom 0.5s;
 }
 
@@ -208,22 +203,10 @@ body
     margin-bottom: 183px;
 }
 
-/*################################################################################*/
-/*#info_loupe
-{
-    background: blue;
-    -webkit-transition: background 1s;
-    transition: background 1s;
-}*/
+/*################################### FIN BANNER ###################################*/
 
-#info_loupe:hover
-{
-   background: green;
-    
-}
+/*################################### DEBUT SAV ###################################*/
 
-
-/*################################################################################*/
 /*Pour le SAV du site*/
 .bloc_SAV
 {
@@ -274,13 +257,66 @@ th {
     color: white;
 }
 
+
 @media screen and (max-width: 1024px) 
 {
     th {
     background-color: black;
     }
 }
-/*################################################################################*/
+
+/*################################### FIN SAV ###################################*/
+
+/*################################### DEBUT PROFIL ###################################*/
+
+/*Pour la page profit client*/
+section{
+    background-color: #F8F8FF;  
+    height: 450px;
+    text-align: center;
+    padding: 25px; 
+    border-style: double;
+    border-width: 5px; 
+    border-color: black; 
+    border-radius: 10px; 
+}
+#conteneur{
+    display:flex;
+    justify-content: space-around;
+}
+        
+img{
+    margin-top: 10px; 
+    height: 200px;
+    width: 200px;
+}
+
+.element:nth-child(1){
+    margin-top: 50px; 
+    background-color: #FFF0F5;
+    width: 500px; 
+    border-style: groove;
+    border-width: 2px; 
+    border-color: #008080; 
+    border-radius: 10px; 
+}
+.element:nth-child(2){
+    margin-top: 50px; 
+    background-color: #FFF0F5; 
+    width: 500px;
+    border-style: groove;
+    border-width: 2px; 
+    border-color: #008080; 
+    border-radius: 10px;  
+    text-align: left; 
+    text-indent: 25px; 
+
+}
+
+/*################################### FIN PROFIL ###################################*/
+
+/*################################### DEBUT FOOTER ###################################*/
+
 /* Pour le footer de la page */
 footer
 {
@@ -323,6 +359,7 @@ footer img
     border-bottom: 1px solid #ddd;
 }
 
+/*################################### FIN FOOTER ###################################*/
 
 /**************************************************************/
 /********************** PAGE CONSOMMATION *********************/

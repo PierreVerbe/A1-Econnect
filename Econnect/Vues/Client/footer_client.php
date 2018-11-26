@@ -1,4 +1,4 @@
-<Footer>
+<footer>
   	
   <p Id="a_propos">
     <b>A PROPOS:</b> <br />
@@ -46,19 +46,15 @@
     <img src="../Icons/SAV.png" alt="Icon SAV" width="50" height="50">
     SAV <br />
   </p>
-  
 
- 
-</Footer>
-
+  </footer>
   <div id="couleur">
-    
   </div>
 
 
   <div id="couleur2">
-    
   </div>
-</footer>
+
+
 
 </html>

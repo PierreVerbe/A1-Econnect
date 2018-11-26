@@ -1,7 +1,51 @@
+/*Couleur de fond du site*/
+
 body
 {
-	background-color: #aceace;
+    background-color: #e1e4e7;
 }
+
+a
+{
+    text-decoration: none;
+    color: black;
+}
+
+/*Couleur de fond bannière*/
+
+header img
+{
+    background-color: #B2B2B2;
+}
+
+/*Menu*/
+
+#Menu ul
+{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    border: 0px solid black;
+    border-radius: 10px;
+    background-color: #6FFFBF;  
+}
+
+#Menu li
+{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#Menu li:hover
+{
+    background-color: #00E67F;
+    cursor: pointer;
+    transition: background 1s;
+}
+
+
 #Chiffres h1
 {
 	text-align: center;
@@ -33,44 +77,83 @@ body
 	justify-content: space-around;
 }
 
+/*Liste clients*/
+#clients
+{
+
+    width:98%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left : auto;
+    margin-right : auto;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #67bbde;
+    border : 3px solid #219af4;
+    box-shadow: 5px 5px 13px;
+
+}
+
+table
+{
+    width:98%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left : auto;
+    margin-right : auto;
+    border-radius: 10px;
+    background-color: #dcdcdc;
+    border : 3px solid #b6b6b6;
+    box-shadow: 3px 3px 9px;
+}
+
+
+#tableau_clients {
+    width:98%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left : auto;
+    margin-right : auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Footer */
+
 /* Pour le footer de la page */
 footer
 {
-    display : flex;
+    display: flex;
     justify-content: space-between;
     /*text-align: center;*/
-    width:100%;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: auto;
     line-height: 20px;
-    height:10px;
-    background-color: #a1e5ff  ;
+    background-color: #a1e5ff;
 }
 
 footer img
 {
     vertical-align: middle;
+    width: 20px;
+    height: 20px;
 }
 
-#a_propos, #le_groupe, #nous_contcater, #aide
+#a_propos, #le_groupe, #nous_contacter, #aide
 {
     margin : 20px;
     /*border-bottom: 1px solid #ddd; pour la barre sous le texte*/
-}
-
-#couleur
-{
-    width:100%;
-    height:90px;
-    background-color: #00b9ff ;
-}
-
-#couleur2
-{
-    width:100%;
-    height:100px;
-    background-color:  #2f4852  ;
-}
-
-.texte_f
-{
-    border-bottom: 1px solid #ddd;
 }

@@ -9,7 +9,11 @@
 <header>
 		
 	<!-- Image logo -->
-	<img src="../Image/Econnect_feuille_mini.png" alt="Logo_Econnect"/>
+
+  <div id = "logo_fond">
+    <img src="../Image/Econnect_feuille_mini.png" alt="Logo_Econnect" />
+  </div>
+	
 
 
 	<!-- Menu -->
