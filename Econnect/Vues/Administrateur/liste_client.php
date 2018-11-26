@@ -1,15 +1,14 @@
-<?php include("header_admin.php")?>
 
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">
-		<link rel="stylesheet" href="style_admin.css">
+		<link rel="stylesheet" type="text/css" href="style_admin.css">
 		<title>Liste des clients</title>
 	</head>
 	<body>
 
-		<h1>Liste clients</h1>
+		<?php include("header_admin.php")?>
 
 		<section id="clients">
 
@@ -46,7 +45,12 @@
 			</article>
 
 		</section>
+
+		<?php include("footer_admin.php")?>
+
 	</body>
 
 </html>
+
+
 

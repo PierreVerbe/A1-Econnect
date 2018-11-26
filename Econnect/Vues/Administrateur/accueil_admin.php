@@ -1,4 +1,3 @@
-<?php include ("header_admin.php")?>
 
 <!DOCTYPE html>
 <html>
@@ -9,6 +8,8 @@
 </head>
 
 <body>
+
+	<?php include ("header_admin.php")?>
 
 	<!-- Le corps du site -->
 
@@ -47,10 +48,14 @@
 		</div>
 	</div>
 
+	<?php include("footer_admin.php")?>
+
 
 </body>
 
 
 </html>
+
+
 
 
