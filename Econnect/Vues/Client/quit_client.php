@@ -1,10 +1,12 @@
 <?php include ("header_client.php")?>
 <?php include ("banniere_client.php")?>
 
+<meta http-equiv="refresh" content="0; URL='../../index.php'" />
+
 <body>
 
 	<p>	
-	<a href="../../index.php">Quitter le compte client </a>
+		Votre profil utilisateur est en cours de déconnexion.<a href="../../index.php">Cliquez ici si la redirection prend trop de temps</a>
 	
 	</p>
 
