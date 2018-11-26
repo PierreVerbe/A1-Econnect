@@ -3,13 +3,13 @@
 
 <body>
 
-	<section>
+	<section id="sectionClient">
 
 	<h1>Profil client</h1>
 
 	<div id="conteneur">
 		<div class="element">
-			<img src="http://static.panoramio.com/photos/original/1927414.jpg">
+			<img id="imageClient" src="http://static.panoramio.com/photos/original/1927414.jpg">
 
 			<p>Schéma de la maison, vue d'ensemble... </p>
 		</div>
