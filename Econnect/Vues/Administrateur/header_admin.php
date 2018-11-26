@@ -11,7 +11,8 @@
 			<img src="../Image/Econnect_feuille_mini.png" alt="Logo_Econnect"/>
 			<div id = "Menu">
 				<ul>
-					<li>Liste des clients</li>
+					<li><a href="accueil_admin.php">Accueil</a></li>
+					<li><a href="liste_client.php">Liste des clients</a></li>
 					<li>Accès maison</li>
 					<li>Chat/SAV</li>
 					<li>Déconnexion</li>
@@ -20,4 +21,5 @@
 		</header>
 
 	</body>
+
 </html>
