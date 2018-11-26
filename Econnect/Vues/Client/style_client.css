@@ -382,17 +382,23 @@ footer img
     justify-content: space-around;
 }
 
+#consommation h1{
+	flex-basis: 100%;
+	max-height: 50px;
+}
 /* Pour les cadres généraux HAUT et BAS */
 .consommationHAUT, .consommationBAS
 {
     padding: 10px;
     margin: 15px;
-    height:400px;
     border-radius: 10px;
     background-color: #a6a6a6;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    justify-content: space-around;
+    align-content: flex-start;
+    align-content: baseline;
 } 
 .consommationHAUT h1, .consommationBAS h1
 {
@@ -404,19 +410,48 @@ footer img
 #grapheConso
 {
     border-radius: 10px;
-    background-color: #0066ff;
+    background-color: #CBCBCB;
+    padding: 5px;
+
 }
 
 /* Pour les cadres spécifiques de la page conso. */
 #listeFactures
 {
     border-radius: 10px;
-    background-color: #0066ff;
+    background-color: #CBCBCB;
+    padding: 5px;
+
+
 } 
 
 /* Pour les cadres spécifiques de la page conso. */
 #grapheFactures
 {
     border-radius: 10px;
-    background-color: #0066ff;
+    background-color: #CBCBCB;
+    padding: 5px;
+
 } 
+
+
+/**************************************************************/
+/*********************** PAGE QUIT CLIENT *********************/
+/**************************************************************/
+
+#quit {
+    width:98%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left : auto;
+    margin-right : auto;
+    border-radius: 20px;
+    background-color: #67bbde;
+    border : 3px solid #219af4;
+    box-shadow: 5px 5px 13px;
+    text-align: center;
+}
+
+#quit p {
+
+}
