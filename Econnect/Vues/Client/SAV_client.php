@@ -3,9 +3,7 @@
 
 <body>
 
-	<p>	
-	chat SAV
-	</p>
+	<p> Chat/SAV</p>
 
 	<section class="bloc_SAV">
 		
@@ -48,24 +46,28 @@
 
 		</article>
 
+		<br />
+
+		<p>
+			Ouvrir un nouveau ticket<br />
+
+		</p>
+
 		<form method="post" action="traitement.php">
 			<p>
-		    	<label for="pseudo">Ouvrir un nouveau ticket :<br /></label>
-		    	<input type="text" name="pseudo" id="pseudo" placeholder="Ex : Problème capteur température" size="40" maxlength="300" />
+		    	<label for="objet_message">Objet :<br /></label>
+		    	<input type="text" name="objet_message" id="objet_message" placeholder="Ex : Problème capteur température" size="40" maxlength="300" />
 			</p>
 		</form>
 
 		<form method="post" action="traitement.php">
+		   <p>
+		       <label for="message">Message :</label><br />
+		       <textarea name="message" id="message" rows="7" cols="230"></textarea>
+		   </p>
+		</form>
 
-   <p>
-
-       <label for="ameliorer">Comment pensez-vous que je pourrais améliorer mon site ?</label><br />
-
-       <textarea name="ameliorer" id="ameliorer"></textarea>
-
-   </p>
-
-</form>
+		<input type="submit" value="Envoyer"/>
 
 	</section>
 

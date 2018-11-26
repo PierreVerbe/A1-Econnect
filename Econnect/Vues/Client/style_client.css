@@ -222,6 +222,8 @@ body
     
 }
 
+
+/*################################################################################*/
 /*Pour le SAV du site*/
 .bloc_SAV
 {
@@ -272,7 +274,13 @@ th {
     color: white;
 }
 
-
+@media screen and (max-width: 1024px) 
+{
+    th {
+    background-color: black;
+    }
+}
+/*################################################################################*/
 /* Pour le footer de la page */
 footer
 {
