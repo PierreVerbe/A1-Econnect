@@ -270,7 +270,7 @@ th {
 /*################################### DEBUT PROFIL ###################################*/
 
 /*Pour la page profit client*/
-section{
+#sectionClient{
     background-color: #F8F8FF;  
     height: 450px;
     text-align: center;
@@ -285,7 +285,7 @@ section{
     justify-content: space-around;
 }
         
-img{
+#imageClient{
     margin-top: 10px; 
     height: 200px;
     width: 200px;
