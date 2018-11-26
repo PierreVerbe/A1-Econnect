@@ -13,7 +13,7 @@
 				<ul>
 					<li><a href="accueil_admin.php">Accueil</a></li>
 					<li><a href="liste_client.php">Liste des clients</a></li>
-					<li>Accès maison</li>
+					<li><a href="acces_maison">Accès maison</a></li>
 					<li>Chat/SAV</li>
 					<li>Déconnexion</li>
 				</ul>
