@@ -3,12 +3,11 @@
 		<div class="Slider_h">
 			<button class="Slider_h_gauche" onclick="plusDivs(-1)">&#10094;</button>
 			
+			<div class="Slide_h">Bonjour Mr.Dupont </div>
 		  	<img class="Slide_h" src="../Image/lune.jpg">
 		  	<img class="Slide_h" src="../Image/roche.jpg">
 		  	<img class="Slide_h" src="../Image/minion.jpg">
-		  	<div class="Slide_h">
-	    		Bonjour j'adore les sliders
-	  		</div>
+		  	<div class="Slide_h">Bonjour j'adore les sliders </div>
 
 	  		<!-- Boutons slider du haut -->
 		  	<button class="Slider_h_droite" onclick="plusDivs(1)">&#10095;</button>

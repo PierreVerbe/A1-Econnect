@@ -16,9 +16,13 @@
 			  	<img class="Slide_Haut_Gauche" src="../Image/roche.jpg">
 			  	<img class="Slide_Haut_Gauche" src="../Image/minion.jpg">
 			  	<div class="Slide_Haut_Gauche">Bonjour j'adore les sliders</div>
+			  	
 
 				<button class="info_bloc_droite" onclick="plusDivs_Haut_Gauche(1)">&#10095;</button>
 			</div>
+		
+				
+			
 
 			<!-- Script pour le bloc Haut Gauche -->
 			<script>
@@ -50,7 +54,10 @@
 
 			<!-- troisième block du tableau de bord = bas gauche -->
 			<div class="info_B_G">
-				Box graphe factures
+
+			<!-- appel du graphique -->	
+			<?php echo "<img src='ressources/graph_facture.php'/>";?>
+			
 			</div>
 
 			<!-- quatrième block du tableau de bord = bas droit -->
