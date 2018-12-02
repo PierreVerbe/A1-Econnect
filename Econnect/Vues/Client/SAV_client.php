@@ -3,9 +3,9 @@
 
 <body>
 
-	<p> Chat/SAV</p>
-
 	<section class="bloc_SAV">
+
+		<p> Chat/SAV</p>
 		
 		<!-- deuxième block du tableau de bord = haut droit -->
 		<article class="Liste_tickets">
