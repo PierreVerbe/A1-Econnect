@@ -1,5 +1,5 @@
 <?php include ("header_client.php")?>
 
-<p>Copyright Econnect© :<br /></p>
+<h1>Copyright Econnect© :</h1>
 
 <?php include ("footer_client.php")?>

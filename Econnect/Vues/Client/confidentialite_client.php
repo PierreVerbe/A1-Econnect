@@ -1,5 +1,6 @@
 <?php include ("header_client.php")?>
 
-<p>Politique de confidentialité :<br /></p>
+<h1>Politique de confidentialité :</h1>
+<p></p>
 
 <?php include ("footer_client.php")?>

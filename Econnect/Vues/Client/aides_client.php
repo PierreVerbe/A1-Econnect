@@ -1,5 +1,5 @@
 <?php include ("header_client.php")?>
 
-<p>Besoin d'aide :<br /></p>
+<h1>Besoin d'aide :</h1>
 
 <?php include ("footer_client.php")?>
