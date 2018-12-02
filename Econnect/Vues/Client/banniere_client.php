@@ -3,7 +3,8 @@
 		<div class="Slider_h">
 			<button class="Slider_h_gauche" onclick="plusDivs(-1)">&#10094;</button>
 			
-			<div class="Slide_h">Bonjour Mr.Dupont </div>
+			<div class="Slide_h">	<p class="Text_Slide_h">Bonjour Mr.Dupont<br />
+			 						Vous êtes actuellement en mode "Eco"<br /></p></div>
 		  	<img class="Slide_h" src="../Image/lune.jpg">
 		  	<img class="Slide_h" src="../Image/roche.jpg">
 		  	<img class="Slide_h" src="../Image/minion.jpg">

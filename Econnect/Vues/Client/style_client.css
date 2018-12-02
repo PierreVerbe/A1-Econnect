@@ -65,6 +65,12 @@ body
 
 /*################################### DEBUT BANNER ###################################*/
 
+@font-face /* Définition d'une nouvelle police nommée quicksand */
+{ 
+font-family: 'Montserrat';
+src: url('../Fonts/Montserrat/Montserrat-Regular.otf');
+}
+
 /* Pour le bouton du menu ma maison */
 .active 
 {
@@ -91,6 +97,14 @@ body
     height:150px;
     display:none;
     
+}
+
+.Text_Slide_h
+{
+    font-family: Montserrat, Verdana;
+    font-size: 1.2em;
+    text-align: center;
+    vertical-align: middle;
 }
 
 .Slider_h
