@@ -27,4 +27,3 @@
   		<li><a class="quit" href="quit_client.php">Logo quit</a>
   		</li>
 	</ul>
-

@@ -350,13 +350,19 @@ tr:hover
 /* Pour le footer de la page */
 footer
 {
+    
     display : flex;
     justify-content: space-between;
-    /*text-align: center;*/
-    width:100%;
+    height: 150px;
     line-height: 20px;
-    height:10px;
-    background-color: #a1e5ff  ;
+
+    /* Pour un footer responsif */
+    background-image:url(../Image/Footer/fond_cristaux.png);
+    height:100%;
+    background-position: center;
+    background-position: no-repeat;
+    background-size: cover;
+    position: relative;
 }
 
 footer img
@@ -367,21 +373,6 @@ footer img
 #a_propos, #le_groupe, #nous_contcater, #aide
 {
     margin : 20px;
-    /*border-bottom: 1px solid #ddd; pour la barre sous le texte*/
-}
-
-#couleur
-{
-    width:100%;
-    height:90px;
-    background-color: #00b9ff ;
-}
-
-#couleur2
-{
-    width:100%;
-    height:100px;
-    background-color:  #2f4852  ;
 }
 
 .texte_f
