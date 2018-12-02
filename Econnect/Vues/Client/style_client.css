@@ -7,8 +7,9 @@ src: url('../Fonts/Quicksand/Quicksand-Light.otf');
 
 header
 {
-    height:207px;
-    background-color:#898f93  ;
+    /*height:207px;*/
+    height:300px;
+    background-image:url(../Image/Header/Fond_montagne.jpg)  ;
 }
 
 
@@ -27,7 +28,7 @@ ul
 li 
 {
     float: left;
-    font-size: 1.2em;
+    font-size: 1.5em;
     font-family: Quicksand, Verdana;
 }
 

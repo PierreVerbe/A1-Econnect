@@ -15,7 +15,7 @@
   </div>
 	
 
-
+</header>
 	<!-- Menu -->
 	<ul>
   		<li><a class="active" href="accueil_client.php">Ma maison</a></li>
@@ -26,4 +26,4 @@
   		<li><a class="quit" href="quit_client.php">Logo quit</a>
   		</li>
 	</ul>
-</header>
+
