@@ -4,7 +4,8 @@
 <body>
 
 	<p>	
-	qui sommes nous ?
+	qui sommes nous ?<br />
+	Histoire du groupe <br />
 	</p>
 
 <?php include ("footer_client.php")?>

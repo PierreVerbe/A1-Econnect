@@ -370,9 +370,11 @@ footer img
     vertical-align: middle;
 }
 
-#a_propos, #le_groupe, #nous_contcater, #aide
+#a_propos, #le_groupe, #nous_contacter, #aide
 {
     margin : 20px;
+    font-family: Montserrat, Verdana;
+    font-size: 1.2em;
 }
 
 .texte_f
