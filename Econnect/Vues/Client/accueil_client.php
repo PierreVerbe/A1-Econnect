@@ -12,11 +12,20 @@
 			<div class="info_H_G">
 				<button class="info_bloc_gauche" onclick="plusDivs_Haut_Gauche(-1)">&#10094;</button>
 				
+				<div class="Slide_Haut_Gauche">	<p>Salon<br />Température:<br />
+												Cuisine<br />Température:<br />
+												Salle de bain<br />Température:<br />
+												Chambre<br />Température:<br />
+												
+
+											</p>
+											</div>
 				<img class="Slide_Haut_Gauche" src="../Image/lune.jpg">
 			  	<img class="Slide_Haut_Gauche" src="../Image/roche.jpg">
 			  	<img class="Slide_Haut_Gauche" src="../Image/minion.jpg">
 			  	<div class="Slide_Haut_Gauche">Bonjour j'adore les sliders</div>
-			  	
+			  	<div class="Slide_Haut_Gauche"><?php echo "<img src='ressources/graph_facture.php'/>";?></div>
+
 
 				<button class="info_bloc_droite" onclick="plusDivs_Haut_Gauche(1)">&#10095;</button>
 			</div>
@@ -49,7 +58,33 @@
 
 			<!-- deuxième block du tableau de bord = haut droit -->
 			<div class="info_H_D">
-				Box liste des tickets
+				<table class="SAV_table">
+			  	<tr>
+				    <th>N° ticket</th>
+				    <th>Objet du ticket / dernier message</th>
+				    <th>Statut</th>
+			  	</tr>
+			  	<tr>
+				    <td>1</td>
+				    <td>Problème capteur</td>
+				    <td>✓</td>
+			  	</tr>
+			  	<tr>
+				    <td>2</td>
+				    <td>Problème site</td>
+				    <td>✓</td>
+			  	</tr>
+			  	<tr>
+				    <td>3</td>
+				    <td>Problème données</td>
+				    <td>En cours de traitement</td>
+			  	</tr>
+			  	<tr>
+				    <td>4</td>
+				    <td>Problème compte secondaire</td>
+				    <td>✓</td>
+				</tr>
+			</table>
 			</div>
 
 			<!-- troisième block du tableau de bord = bas gauche -->

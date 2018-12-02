@@ -1,4 +1,10 @@
 /*################################### DEBUT HEADER ###################################*/
+@font-face /* Définition d'une nouvelle police nommée quicksand */
+{ 
+font-family: 'Quicksand';
+src: url('../Fonts/Quicksand/Quicksand-Light.otf');
+}
+
 header
 {
     height:207px;
@@ -6,7 +12,7 @@ header
 }
 
 
-/* liste pour l emenu de la page */
+/* liste pour le menu de la page */
 ul 
 {
     display: flex;
@@ -21,7 +27,8 @@ ul
 li 
 {
     float: left;
-    font-family: arial;
+    font-size: 1.2em;
+    font-family: Quicksand, Verdana;
 }
 
 li a 
@@ -133,7 +140,11 @@ body
     padding-left:0;
 }
 
-/* pour le tableau de bord */
+
+/*################################### FIN BANNER ###################################*/
+
+/*################################### DEBUT ACCEUIL_CLIENT ###################################*/
+
 .tableau_bord
 {
     width:98%;
@@ -168,15 +179,12 @@ body
     justify-content: space-between;
 }
 
-.Slider_h
+.Image_Slide_Haut_Gauche
 {
-    width:50%;
-    height:150px;
-    border: 5px blue outset;
-    border-radius: 5px;
-    display: flex;
-    justify-content: space-between;
+    width: auto;
+    height: auto;
 }
+
 
 .info_bloc_gauche, .info_bloc_droite
 {
@@ -203,7 +211,7 @@ body
     margin-bottom: 183px;
 }
 
-/*################################### FIN BANNER ###################################*/
+/*################################### FIN ACCEUIL_CLIENT ###################################*/
 
 /*################################### DEBUT SAV ###################################*/
 
@@ -257,12 +265,10 @@ th {
     color: white;
 }
 
-
-@media screen and (max-width: 1024px) 
+tr:hover
 {
-    th {
-    background-color: black;
-    }
+    background-color:orange;
+    cursor:pointer;
 }
 
 /*################################### FIN SAV ###################################*/

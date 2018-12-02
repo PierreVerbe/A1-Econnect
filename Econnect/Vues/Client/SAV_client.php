@@ -43,14 +43,18 @@
 				    <td>✓</td>
 				</tr>
 			</table>	
-
 		</article>
-
 		<br />
 
 		<p>
-			Ouvrir un nouveau ticket<br />
+			Contenu du ticket :<br />
+		</p>
 
+		<!-- Pour la barre de délimitation -->
+		<hr width=90% align =center>
+
+		<p>
+			Ouvrir un nouveau ticket :<br />
 		</p>
 
 		<form method="post" action="traitement.php">
