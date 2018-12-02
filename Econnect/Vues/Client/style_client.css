@@ -6,10 +6,19 @@ src: url('../Fonts/Quicksand/Quicksand-Light.otf');
 }
 
 header
-{
-    /*height:207px;*/
+{ 
     height:300px;
-    background-image:url(../Image/Header/Fond_montagne.jpg)  ;
+}
+
+/*Image de fond du header responsif : si on chnage la taille de l'image sera tjs centrée*/
+#image_fond_header
+{
+    background-image:url(../Image/Header/Fond_montagne.jpg);
+    height:100%;
+    background-position: center;
+    background-position: no-repeat;
+    background-size: cover;
+    position: relative;
 }
 
 

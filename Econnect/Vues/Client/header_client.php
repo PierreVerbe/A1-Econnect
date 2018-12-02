@@ -9,9 +9,10 @@
 <header>
 		
 	<!-- Image logo -->
-
+  <div id = "image_fond_header">
   <div id = "logo_fond">
     <img src="../Image/Econnect_feuille_mini.png" alt="Logo_Econnect" />
+  </div>
   </div>
 	
 
