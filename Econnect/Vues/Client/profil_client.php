@@ -9,7 +9,7 @@
 
 	<div id="conteneur">
 		<div class="element">
-			<img id="imageClient" src="http://static.panoramio.com/photos/original/1927414.jpg">
+			<img id="imageClient" src="ressources/userHome.png">
 
 			<p>Schéma de la maison, vue d'ensemble... </p>
 		</div>
