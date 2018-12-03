@@ -15,21 +15,27 @@
 
 	<!-- Les chiffres clés -->
 
-	<div id="Chiffres">
+	<section>
+		
+		<div id="Chiffres">
 
-		<h1>Les chiffres clés</h1>
+			<h1>Les chiffres clés</h1>
 
-		<div id = "Nombres">
+				<div id = "Nombres">
 
-			<p>Nombres d'utilisateurs actifs</p>
+				<p>Nombres d'utilisateurs actifs</p>
 
-			<p>Nombre total de ventes</p>
+				<p>Nombre total de ventes</p>
 			
+			</div>
+
 		</div>
 
-	</div>
+	</section>
 
-	<div id = "Alertes">
+	<section>
+
+		<div id = "Alertes">
 		<h1>Alertes / Notifications</h1>
 		<div id = "liste_alertes">
 			<ul>
@@ -47,6 +53,8 @@
 			</ul>
 		</div>
 	</div>
+
+	</section>
 
 	<?php include("footer_admin.php")?>
 
