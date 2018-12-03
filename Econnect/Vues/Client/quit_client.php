@@ -12,5 +12,6 @@
 		<a href="../../index.php">> Cliquez ici <</a>
 		</p>
 	</div>
+</body>
 
 <?php include ("footer_client.php")?>

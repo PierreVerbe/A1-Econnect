@@ -35,27 +35,43 @@ header img
 #Menu ul
 {
     display: flex;
-    list-style-type: none;
     justify-content: space-around;
-    border: 0px solid black;
-    border-radius: 10px;
-    background-color: #6FFFBF;  
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;  
 }
 
 #Menu li
 {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
+    float: left;
+    font-size: 1.5em;
+    font-family: Quicksand, Verdana;
+}
+
+#Menu li a 
+{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    text-decoration: none;
 }
 
 #Menu li:hover
 {
-    background-color: #00E67F;
-    cursor: pointer;
-    transition: background 1s;
+    display: block;
+    text-align: center;
+    background-color: black;
+    text-decoration: none;
 }
+
+header
+{
+    margin-bottom: 10px;
+}
+
 
 /* ############## ACCUEIL ############# */
 
@@ -66,15 +82,11 @@ header img
 
 #Chiffres
 {
-	width:98%;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    margin-left : auto;
-    margin-right : auto;
+	text-align: center;
+    line-height: 40px;
+    border: 3px solid #b6b6b6;
     border-radius: 10px;
-    background-color: #dcdcdc;
-    border : 3px solid #b6b6b6;
-    box-shadow: 3px 3px 9px;
+    background-color: #dcdcdc
 }
 
 #Nombres 
