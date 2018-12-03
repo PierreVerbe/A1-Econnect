@@ -21,11 +21,15 @@
 
 			<h1>Les chiffres clés</h1>
 
-				<div id = "Nombres">
+			<div id = "Nombres">
 
-				<p>Nombres d'utilisateurs actifs</p>
+				<p>
+					<?php echo "<img src='../../Controleurs/graph_facture_admin.php'/>";?>
+				</p>
 
-				<p>Nombre total de ventes</p>
+				<p>
+					<?php echo "<img src='../../Controleurs/graph_ventes_admin.php'/>";?>
+				</p>
 			
 			</div>
 

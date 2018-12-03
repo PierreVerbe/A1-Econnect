@@ -102,10 +102,10 @@ header
 
 #Nombres p
 {
-	border: 1px solid black;
-	padding-top: 200px;
-	padding-left: 60px;
-	padding-right: 60px;
+	padding-top: 30px;
+	padding-left: 30px;
+	padding-right: 30px;
+    padding-bottom: 30px;
 }
 
 #Alertes #liste_alertes
