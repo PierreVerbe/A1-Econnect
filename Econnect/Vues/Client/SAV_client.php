@@ -5,11 +5,11 @@
 
 	<section class="bloc_SAV">
 
-		<p> Chat/SAV</p>
+		<h1> Chat/SAV</h1>
 		
 		<!-- deuxième block du tableau de bord = haut droit -->
 		<article class="Liste_tickets">
-			Liste de vos tickets :<br />
+			<h2>Liste de vos tickets :</h2>
 			
 			<table class="SAV_table">
 			  	<tr>
@@ -46,32 +46,33 @@
 		</article>
 		<br />
 
-		<p>
-			Contenu du ticket :<br />
-		</p>
+		<!-- message client -->
+		<h2>Contenu du ticket :</h2>
+
+		<p></p>
 
 		<!-- Pour la barre de délimitation -->
 		<hr width=90% align =center>
 
-		<p>
-			Ouvrir un nouveau ticket :<br />
-		</p>
+		<h2>Ouvrir un nouveau ticket :</h2>
 
-		<form method="post" action="traitement.php">
-			<p>
-		    	<label for="objet_message">Objet :<br /></label>
-		    	<input type="text" name="objet_message" id="objet_message" placeholder="Ex : Problème capteur température" size="40" maxlength="300" />
-			</p>
-		</form>
+		<div class="SAV_nouveau_ticket">
+			<form method="post" action="traitement.php">
+				<p>
+			    	<label for="objet_message">Objet :<br /></label>
+			    	<input class="zone_objet_SAV" type="text" name="objet_message" id="objet_message" placeholder="Ex : Problème capteur température" size="40" maxlength="300" />
+				</p>
+			</form>
 
-		<form method="post" action="traitement.php">
-		   <p>
-		       <label for="message">Message :</label><br />
-		       <textarea name="message" id="message" rows="7" cols="230"></textarea>
-		   </p>
-		</form>
+			<form method="post" action="traitement.php">
+			   <p>
+			       <label for="message">Message :</label><br />
+			       <textarea class="zone_message_SAV" name="message" id="message" rows="7" ></textarea>
+			   </p>
+			</form>
 
-		<input type="submit" value="Envoyer"/>
+			<input class="bouton_envoyer" type="submit" value="Envoyer"/>
+		</div>
 
 	</section>
 
