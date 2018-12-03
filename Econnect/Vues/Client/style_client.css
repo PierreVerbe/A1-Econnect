@@ -110,6 +110,19 @@ src: url('../Fonts/Montserrat/Montserrat-Regular.otf');
     justify-content: space-between;
 }
 
+.Slide_image_texte
+{
+    float:right;
+    font-family: Montserrat, Verdana;
+    font-size: 1.2em;
+}
+
+.Slide_image
+{
+    margin-bottom: 5px;
+    margin-top:5px;
+}
+
 .Slider_h_gauche, .Slider_h_droite
 {
     background-color: rgba(150,200,150,0.8);
