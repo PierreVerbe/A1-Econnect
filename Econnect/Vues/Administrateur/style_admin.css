@@ -196,6 +196,8 @@ tr:hover
     margin-bottom: 15px;
     margin-left : auto;
     margin-right : auto;
+    padding-left: 10px;
+    padding-right: 10px;
     border-radius: 20px;
     background-color: #67bbde;
     border : 3px solid #219af4;
