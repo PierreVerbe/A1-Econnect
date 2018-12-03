@@ -18,7 +18,7 @@
 
 </header>
 	<!-- Menu -->
-	<ul>
+	<ul class="navbar">
   		<li><a class="active" href="accueil_client.php">Ma maison</a></li>
   		<li><a href="consommation_client.php">Consommation</a></li>
   		<li><a href="SAV_client.php">Chat/SAV</a></li>

@@ -16,12 +16,14 @@
 
 		<div class="element">
 			<p> C'est du texte essentiellement. Informations essentielles du client: 
-			<li>Adresse mail</li><br />
-			<li>Téléphone</li><br />
-			<li>Nombre d'utilisateur secondaire</li><br />
-			<li>Nombre de maisons gérées</li><br />
-			<li>Nombre de pièces dans chaque maison ... </li><br />
-		</p>
+				<ul>
+					<li>Adresse mail</li>
+					<li>Téléphone</li>
+					<li>Nombre d'utilisateur secondaire</li>
+					<li>Nombre de maisons gérées</li>
+					<li>Nombre de pièces dans chaque maison ... </li>
+				</ul>
+			</p>
 		</div>
 		
 	</div>	
