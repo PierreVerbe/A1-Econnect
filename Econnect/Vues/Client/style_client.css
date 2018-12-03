@@ -243,8 +243,8 @@ src: url('../Fonts/Montserrat/Montserrat-Regular.otf');
     margin-left : auto;
     margin-right : auto;
     border-radius: 20px;
-    background-color: #67bbde;
-    border : 3px solid #219af4;
+    background-color: #A5CAFF;
+    border : 3px solid #8FA8DE;
     box-shadow: 5px 5px 13px;
 }
 
@@ -324,16 +324,21 @@ tr:hover
 /*################################### DEBUT PROFIL ###################################*/
 
 /*Pour la page profit client*/
-#sectionClient{
-    background-color: #F8F8FF;  
+#sectionClient
+{ 
+    width:98%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left : auto;
+    margin-right : auto;
+    background-color: #A5CAFF;
+    border : 3px solid #8FA8DE;
+    box-shadow: 5px 5px 13px;
     height: 450px;
     text-align: center;
-    padding: 25px; 
-    border-style: double;
-    border-width: 5px; 
-    border-color: black; 
-    border-radius: 10px; 
+    border-radius: 20px;  
 }
+
 #conteneur{
     display:flex;
     justify-content: space-around;
@@ -422,9 +427,15 @@ footer img
 /* Pour le fond des cadres */
 .consommation
 {
-    margin: 1% 3% 1% 3%;
+    width:98%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left : auto;
+    margin-right : auto;
     border-radius: 20px;
-    background-color: #404040;
+    background-color: #A5CAFF;
+    border : 3px solid #8FA8DE;
+    box-shadow: 5px 5px 13px;
 }
 
 /* Pour l'organisation des cadres */
@@ -445,15 +456,18 @@ footer img
 {
     padding: 10px;
     margin: 15px;
+    background-color: #dcdcdc;
+    border : 3px solid #b6b6b6;
+    box-shadow: 3px 3px 9px;
     border-radius: 10px;
-    background-color: #a6a6a6;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
     align-content: flex-start;
-    align-content: baseline;
+    align-content: baseline;    
 } 
+
 .consommationHAUT h1, .consommationBAS h1
 {
     padding: 10px;
@@ -500,8 +514,8 @@ footer img
     margin-left : auto;
     margin-right : auto;
     border-radius: 20px;
-    background-color: #67bbde;
-    border : 3px solid #219af4;
+    background-color: #A5CAFF;
+    border : 3px solid #8FA8DE;
     box-shadow: 5px 5px 13px;
     text-align: center;
 }
