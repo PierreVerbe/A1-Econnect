@@ -77,12 +77,6 @@ src: url('../Fonts/Montserrat/Montserrat-Regular.otf');
     background-color:#118ccf;
 }
 
-/* Pour le bouton du menu quitter */
-.quit
-{
-    color: red;
-}
-
 .slider_boutons
 {
     display: flex;
@@ -95,8 +89,7 @@ src: url('../Fonts/Montserrat/Montserrat-Regular.otf');
 .Slide_h 
 {
     height:150px;
-    display:none;
-    
+    display:none; 
 }
 
 .Text_Slide_h
@@ -111,7 +104,7 @@ src: url('../Fonts/Montserrat/Montserrat-Regular.otf');
 {
     width:50%;
     height:150px;
-    border: 5px blue outset;
+    border: 5px #2149A0 outset;
     border-radius: 5px;
     display: flex;
     justify-content: space-between;
@@ -137,17 +130,20 @@ src: url('../Fonts/Montserrat/Montserrat-Regular.otf');
 
 .bouton_eco, .bouton_sortie, .bouton_confort, .bouton_hibernation 
 {
-    max-width:85px;
-    max-height:85px;
-    min-width:85px;
-    min-height:85px;
+    max-width:120px;
+    max-height:120px;
+    min-width:120px;
+    min-height:120px;
     background: #118ccf;
     box-shadow:2px 2px 8px #aaa;
-    font:bold 13px Arial;
+    font:bold 15px Montserrat, Verdana;
     border-radius:50%;
     color:#555;
     padding: 5px;
-    margin: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .bouton_eco:hover, .bouton_sortie:hover, .bouton_confort:hover, .bouton_hibernation:hover
@@ -160,7 +156,6 @@ src: url('../Fonts/Montserrat/Montserrat-Regular.otf');
     display: flex;
     justify-content: flex-end;
     /*padding: 0px;*/
-    margin: 10px;
     padding-left:0;
 }
 
@@ -177,8 +172,8 @@ src: url('../Fonts/Montserrat/Montserrat-Regular.otf');
     margin-left : auto;
     margin-right : auto;
     border-radius: 20px;
-    background-color: #67bbde;
-    border : 3px solid #219af4;
+    background-color: #A5CAFF;
+    border : 3px solid #8FA8DE;
     box-shadow: 5px 5px 13px;
 }
 
@@ -212,7 +207,7 @@ src: url('../Fonts/Montserrat/Montserrat-Regular.otf');
 
 .info_bloc_gauche, .info_bloc_droite
 {
-    background-color: rgba(106,106,106,0.4);
+    background-color: rgba(150,200,150,0.8);
     border: none;
     height:22px;
     width:22px;
@@ -228,7 +223,7 @@ src: url('../Fonts/Montserrat/Montserrat-Regular.otf');
 
 .info_bloc_gauche:hover, .info_bloc_droite:hover
 {
-    background-color: rgba(106,106,106,0.8);
+    background-color: rgba(150,200,150,0.6);
     height:34px;
     width:34px;
     margin-top: 183px;

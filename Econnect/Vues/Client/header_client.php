@@ -24,6 +24,6 @@
   		<li><a href="SAV_client.php">Chat/SAV</a></li>
   		<li><a href="parametre_client.php">Paramètres</a></li>
   		<li><a href="profil_client.php">Mon profil</a></li>
-  		<li><a class="quit" href="quit_client.php">Logo quit</a>
+  		<li><a href="quit_client.php">Déconnexion</a>
   		</li>
 	</ul>
