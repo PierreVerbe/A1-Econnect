@@ -87,11 +87,15 @@ header
 
 #Chiffres
 {
-	text-align: center;
-    line-height: 40px;
-    border: 3px solid #b6b6b6;
-    border-radius: 10px;
-    background-color: #dcdcdc
+	width:98%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left : auto;
+    margin-right : auto;
+    border-radius: 20px;
+    background-color: #A5CAFF;
+    border : 3px solid #8FA8DE;
+    box-shadow: 5px 5px 13px;
 }
 
 #Nombres 
@@ -133,17 +137,18 @@ header
 
 /* ############## LISTE CLIENTS ############### */
 
-table
+#clients
 {
     width:98%;
     margin-top: 15px;
     margin-bottom: 15px;
     margin-left : auto;
     margin-right : auto;
-    border-radius: 10px;
-    background-color: #dcdcdc;
-    border : 3px solid #b6b6b6;
-    box-shadow: 3px 3px 9px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #A5CAFF;
+    border : 3px solid #8FA8DE;
+    box-shadow: 5px 5px 13px; 
 }
 
 
@@ -155,6 +160,8 @@ table
     margin-right : auto;
     border-collapse: collapse;
     overflow: auto;
+    background-color: #dcdcdc;
+    font-family: Montserrat, Verdana;
 }
 
 th, td {
@@ -181,10 +188,17 @@ tr:hover
 #confirmation
 {
     text-align: center;
-    line-height: 40px;
-    border: 3px solid #b6b6b6;
-    border-radius: 10px;
-    background-color: #dcdcdc; 
+    width:98%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left : auto;
+    margin-right : auto;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #A5CAFF;
+    border : 3px solid #8FA8DE;
+    box-shadow: 5px 5px 13px;
+    font-family: Montserrat, Verdana; 
 }
 
 
@@ -196,13 +210,17 @@ tr:hover
     margin-bottom: 15px;
     margin-left : auto;
     margin-right : auto;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 10px;
     border-radius: 20px;
-    background-color: #67bbde;
-    border : 3px solid #219af4;
+    background-color: #A5CAFF;
+    border : 3px solid #8FA8DE;
     box-shadow: 5px 5px 13px;
     font-family: Montserrat, Verdana;
+}
+
+.SAV_table
+{
+    background-color: #dcdcdc;
 }
 
 .SAV_nouveau_ticket
@@ -218,11 +236,30 @@ tr:hover
 
 .bouton_envoyer
 {
-    font-family: Montserrat, Verdana;
     margin-left : 50%;
     margin-right : 50%;
     margin-bottom: 10px;
 }
+
+
+
+/*##################### PAGE QUIT CLIENT ###################*/
+
+
+#quit {
+    width:98%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left : auto;
+    margin-right : auto;
+    border-radius: 20px;
+    background-color: #A5CAFF;
+    border : 3px solid #8FA8DE;
+    box-shadow: 5px 5px 13px;
+    text-align: center;
+}
+
+
 /* ################ FOOTER ###############*/
 
 footer
