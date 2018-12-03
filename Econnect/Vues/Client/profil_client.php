@@ -13,6 +13,7 @@
 
 			<p>Schéma de la maison, vue d'ensemble... </p>
 		</div>
+
 		<div class="element">
 			<p> C'est du texte essentiellement. Informations essentielles du client: 
 			<li>Adresse mail</li><br />
@@ -22,6 +23,7 @@
 			<li>Nombre de pièces dans chaque maison ... </li><br />
 		</p>
 		</div>
+		
 	</div>	
 </section>
 
