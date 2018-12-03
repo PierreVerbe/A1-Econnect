@@ -11,11 +11,11 @@
 			<img src="../Image/Econnect_feuille_mini.png" alt="Logo_Econnect"/>
 			<div id = "Menu">
 				<ul>
-					<li><a href="accueil_admin.php">Accueil</a></li>
+					<li><a href="accueil_admin.php">Accueil.</a></li>
 					<li><a href="liste_client.php">Liste des clients</a></li>
-					<li><a href="acces_maison">Accès maison</a></li>
-					<li>Chat/SAV</li>
-					<li>Déconnexion</li>
+					<li><a href="acces_maison.php">Accès maison</a></li>
+					<li><a href="chat_sav.php">Chat/SAV</a></li>
+					<li><a href="quit_admin.php">Déconnexion</a></li>
 				</ul>
 			</div>
 		</header>
