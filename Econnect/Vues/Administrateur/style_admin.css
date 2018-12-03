@@ -25,9 +25,14 @@ a
 
 /*############### BANNIERE ###################*/
 
-header img
+header
 {
-    background-color: #B2B2B2;
+    background-image:url(../Image/Header/Fond_montagne.jpg);
+    height:100%;
+    background-position: center;
+    background-position: no-repeat;
+    background-size: cover;
+    position: relative;
 }
 
 /*Menu*/
