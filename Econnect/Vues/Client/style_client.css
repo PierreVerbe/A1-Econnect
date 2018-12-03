@@ -55,6 +55,12 @@ ul.navbar li a:hover:not(.active)
     background-color: #111;
 }
 
+/* Pour le bouton du menu ma maison */
+.active 
+{
+    background-color:#118ccf;
+}
+
 
 body
 {
@@ -69,12 +75,6 @@ body
 { 
 font-family: 'Montserrat';
 src: url('../Fonts/Montserrat/Montserrat-Regular.otf');
-}
-
-/* Pour le bouton du menu ma maison */
-.active 
-{
-    background-color:#118ccf;
 }
 
 .slider_boutons

@@ -1,0 +1,115 @@
+/*################################### DEBUT HEADER ###################################*/
+@font-face /* Définition d'une nouvelle police nommée quicksand */
+{ 
+font-family: 'Quicksand';
+src: url('../Fonts/Quicksand/Quicksand-Light.otf');
+}
+
+header
+{ 
+    height:300px;
+}
+
+/*Image de fond du header responsif : si on chnage la taille de l'image sera tjs centrée*/
+#image_fond_header
+{
+    background-image:url(../Image/Header/dollars.jpg);
+    height:100%;
+    background-position: center;
+    background-position: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+
+/* liste pour le menu de la page */
+ul.navbar
+{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+ul.navbar li
+{
+    float: left;
+    font-size: 1.5em;
+    font-family: Quicksand, Verdana;
+}
+
+ul.navbar li a 
+{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 16px;
+    text-decoration: none;
+}
+
+ul.navbar li a:hover:not(.active) 
+{
+    background-color: #111;
+}
+
+/* Pour le bouton du menu ma maison */
+.active 
+{
+    background-color:  #c99f4a;
+}
+
+
+body
+{
+    background-color:#e1e4e7;
+}
+
+/*################################### FIN HEADER ###################################*/
+/*################################### DEBUT FOOTER ###################################*/
+
+/* Pour le footer de la page */
+footer
+{
+    
+    display : flex;
+    justify-content: space-between;
+    height: 150px;
+    line-height: 20px;
+
+    /* Pour un footer responsif */
+    background-image:url(../Image/Footer/fond_cristaux_marrange.png);
+    height:100%;
+    background-position: center;
+    background-position: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+footer img
+{
+    vertical-align: middle;
+}
+
+#a_propos, #le_groupe, #nous_contacter, #aide
+{
+    margin : 20px;
+    font-family: Quicksand, Verdana;
+    font-size: 1em;
+}
+
+.texte_f
+{
+    border-bottom: 1px solid #ddd;
+}
+
+/*################################### PAGES FOOTER ###################################*/
+.pages_footer
+{
+    font-family: Montserrat, Verdana;
+    /*ont-size: 1.2em;*/
+}
+
+/*################################### FIN FOOTER ###################################*/
