@@ -266,8 +266,6 @@ src: url('../Fonts/Montserrat/Montserrat-Regular.otf');
     box-shadow: 3px 3px 9px;
 }
 
-
-
 .SAV_table {
     width:98%;
     margin-top: 15px;
@@ -287,12 +285,43 @@ tr:nth-child(even){background-color: #f2f2f2}
 th {
     background-color: #4CAF50;
     color: white;
+    font-family: Montserrat, Verdana;
+}
+
+tr
+{
+    font-family: Montserrat, Verdana;
 }
 
 tr:hover
 {
     background-color:orange;
     cursor:pointer;
+}
+
+.SAV_nouveau_ticket
+{
+    font-family: Montserrat, Verdana;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.zone_objet_SAV
+{
+    font-family: Montserrat, Verdana;
+}
+
+.zone_message_SAV
+{
+    width : 100%;
+}
+
+.bouton_envoyer
+{
+    font-family: Montserrat, Verdana;
+    margin-left : 50%;
+    margin-right : 50%;
+    margin-bottom: 10px;
 }
 
 /*################################### FIN SAV ###################################*/
@@ -380,6 +409,13 @@ footer img
 .texte_f
 {
     border-bottom: 1px solid #ddd;
+}
+
+/*################################### PAGES FOOTER ###################################*/
+.pages_footer
+{
+    font-family: Montserrat, Verdana;
+    /*ont-size: 1.2em;*/
 }
 
 /*################################### FIN FOOTER ###################################*/
@@ -478,3 +514,18 @@ footer img
 #quit p {
 
 }
+
+/*################################### DEBUT COMMUN ###################################*/
+h1
+{
+    font-family: Montserrat, Verdana;
+    margin-left: 30px;
+}
+
+h2
+{
+    font-family: Montserrat, Verdana;
+    font-size: 1.3em;
+    margin-left: 30px;
+}
+/*################################### FIN COMMUN ###################################*/
