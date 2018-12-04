@@ -55,6 +55,12 @@ ul.navbar li a:hover:not(.active)
     background-color: #111;
 }
 
+/* Pour le bouton du menu ma maison */
+.active 
+{
+    background-color:#118ccf;
+}
+
 
 body
 {
@@ -69,12 +75,6 @@ body
 { 
 font-family: 'Montserrat';
 src: url('../Fonts/Montserrat/Montserrat-Regular.otf');
-}
-
-/* Pour le bouton du menu ma maison */
-.active 
-{
-    background-color:#118ccf;
 }
 
 .slider_boutons
@@ -108,6 +108,19 @@ src: url('../Fonts/Montserrat/Montserrat-Regular.otf');
     border-radius: 5px;
     display: flex;
     justify-content: space-between;
+}
+
+.Slide_image_texte
+{
+    float:right;
+    font-family: Montserrat, Verdana;
+    font-size: 1.2em;
+}
+
+.Slide_image
+{
+    margin-bottom: 5px;
+    margin-top:5px;
 }
 
 .Slider_h_gauche, .Slider_h_droite

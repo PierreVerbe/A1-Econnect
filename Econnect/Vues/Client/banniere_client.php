@@ -3,14 +3,14 @@
 		<div class="Slider_h">
 			<button class="Slider_h_gauche" onclick="plusDivs(-1)">&#10094;</button>
 			
-			<div class="Slide_h">	<p class="Text_Slide_h">Bonjour Mr.Dupont<br />Vous êtes actuellement en mode "Eco"<br /></p></div>
+			
+			<img class="Slide_h" src="../Image/Banniere/Econnect_slider.png">
+			<div class="Slide_h"><p class="Text_Slide_h">Bonjour Mr.Dupont<br />Vous êtes actuellement en mode "Eco"<br /></p></div>
+			<div class="Slide_h"><p class="Slide_image_texte"><img class="Slide_image" src="../Image/Banniere/moyenne_temperature.png" width="100" height="100">Température moyenne est de : 20°C</p></div>
+			<div class="Slide_h"><p class="Slide_image_texte"><img class="Slide_image" src="../Image/Banniere/moyenne_lumiere.png" width="100" height="100">Luminosité moyenne est : Moyenne+</p></div>
 			<div class="Slide_h">	<p class="Text_Slide_h">Le saviez-vous ?<br />
 															En 2014, le niveau des océans a augmenté d'environ 3,3 mm<br />
-															Les prévisions etaient plus optimistes<br /></p></div>
-		  	<img class="Slide_h" src="../Image/lune.jpg">
-		  	<img class="Slide_h" src="../Image/roche.jpg">
-		  	<img class="Slide_h" src="../Image/minion.jpg">
-		  	
+															Les prévisions etaient plus optimistes<br /></p></div>	  	
 
 	  		<!-- Boutons slider du haut -->
 		  	<button class="Slider_h_droite" onclick="plusDivs(1)">&#10095;</button>
