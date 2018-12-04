@@ -177,6 +177,53 @@ tr:hover
     cursor:pointer;
 }
 
+#details_client
+{
+    width:98%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left : auto;
+    margin-right : auto;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #A5CAFF;
+    border : 3px solid #8FA8DE;
+    box-shadow: 5px 5px 13px;
+    font-family: Montserrat, Verdana;
+}
+
+#proprietes
+{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+#Pieces h2, #Capteurs h2, #Actionneurs h2
+{
+    text-align: center;
+}
+
+#liste_piece_user, #liste_capteurs_user, #liste_actionneurs_user
+{
+    display: flex;
+    justify-content: space-around;
+}
+
+#tableaux_client_admin table
+{
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+
+#tableau_factures, #tableau_tickets_user
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 /* ################ ACCES MAISON #############*/
 
 
