@@ -86,58 +86,60 @@
 			<div id="tableaux_client_admin">
 				<div id="Listes_factures">
 					<table id="tableau_factures">
+						<caption>Liste des factures du client</caption>
 						<tr>
-							<th>N° Client</th>
-							<th>Nom du client</th>
-							<th>Adresse du client</th>
-							<th>Statut</th>
+							<th>N° Facture</th>
+							<th>Date</th>
+							<th>Consommation</th>
+							<th>Prix</th>
 						</tr>
 						<tr>
 							<td>300014</td>
-							<td>Jean François</td>
-							<td>1 rue des Lilas, 75006 Paris</td>
-							<td>En attente d'installation</td>
+							<td>08-09-2018</td>
+							<td>40kWh</td>
+							<td>35€</td>
 						</tr>
 						<tr>
 							<td>300015</td>
-							<td>Bertrand Martin</td>
-							<td>5 rue du Vieux-Port, 13001 Marseille</td>
-							<td>Défaut de paiement</td>
+							<td>08-10-2018</td>
+							<td>50kWh</td>
+							<td>30€</td>
 						</tr>
 						<tr>
 							<td>300016</td>
-							<td>Patrick Nerat</td>
-							<td>7 rue du Parc, 64200</td>
-							<td>Déménagement en cours</td>
+							<td>08-11-2018</td>
+							<td>45kWh</td>
+							<td>45€</td>
 						</tr>
 					</table>
 				</div>
 
 				<div id="Listes_tickets_user_admin">
 					<table id="tableau_tickets_user">
+						<caption>Liste des tickets du client</caption>
 						<tr>
-							<th>N° Client</th>
-							<th>Nom du client</th>
-							<th>Adresse du client</th>
+							<th>N° Ticket</th>
+							<th>Objet</th>
+							<th>Date</th>
 							<th>Statut</th>
 						</tr>
 						<tr>
 							<td>300014</td>
-							<td>Jean François</td>
-							<td>1 rue des Lilas, 75006 Paris</td>
-							<td>En attente d'installation</td>
+							<td>Problème capteur</td>
+							<td>07-04-2018</td>
+							<td>Ouvert</td>
 						</tr>
 						<tr>
 							<td>300015</td>
-							<td>Bertrand Martin</td>
-							<td>5 rue du Vieux-Port, 13001 Marseille</td>
-							<td>Défaut de paiement</td>
+							<td>Problème facture</td>
+							<td>04-05-2018</td>
+							<td>Fermé</td>
 						</tr>
 						<tr>
 							<td>300016</td>
-							<td>Patrick Nerat</td>
-							<td>7 rue du Parc, 64200</td>
-							<td>Déménagement en cours</td>
+							<td>Problème connexion</td>
+							<td>03-06-2018</td>
+							<td>Fermé</td>
 						</tr>
 					</table>
 				</div>

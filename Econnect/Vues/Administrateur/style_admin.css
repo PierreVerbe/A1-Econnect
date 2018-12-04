@@ -212,17 +212,21 @@ tr:hover
 
 #tableaux_client_admin table
 {
-    display: flex;
-    justify-content: space-between;
     margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    background-color: #dcdcdc;
+    overflow: auto;
+    width: 80%;
 }
 
-
-#tableau_factures, #tableau_tickets_user
+#tableaux_client_admin caption
 {
-    margin-top: 10px;
+    font-size: 30px;
     margin-bottom: 10px;
 }
+
+
 
 /* ################ ACCES MAISON #############*/
 
