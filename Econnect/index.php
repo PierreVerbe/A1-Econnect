@@ -4,13 +4,13 @@
 
 	<head>
 		<meta charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="stylev2.css">
+		<link rel="stylesheet" type="text/css" href="Vues/style_index.css">
 		<title>E-Connect</title>
 	</head>
 
 	<header>
 			<div class="logo">
-				<img src="Logo_Econnect.png" alt="logo" width="300" />
+				<img src="Vues/Image/Logo_Econnect_texte.png" alt="logo" width="300" />
 			</div>
 	</header>
 	
