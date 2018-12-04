@@ -3,10 +3,9 @@
 <html>
 
 	<head>
-		<title>E-Connect</title>
 		<meta charset="utf-8">
-		<link rel="stylesheet" href="stylev2.css" type="text/css">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="stylev2.css">
+		<title>E-Connect</title>
 	</head>
 
 	<header>
