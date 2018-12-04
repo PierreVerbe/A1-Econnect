@@ -12,7 +12,7 @@
 
 			<section class="bloc_SAV">
 
-				<h1> Chat/SAV</h1>
+				<h1>Chat/SAV</h1>
 		
 				<!-- deuxième block du tableau de bord = haut droit -->
 				<article class="Liste_tickets">

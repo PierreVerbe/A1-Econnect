@@ -24,7 +24,7 @@
 			<div id = "Nombres">
 
 				<p>
-					<?php echo "<img src='../../Controleurs/graph_facture_admin.php'/>";?>
+					<?php echo "<img src='../../Controleurs/graph_users_admin.php'/>";?>
 				</p>
 
 				<p>
@@ -37,9 +37,8 @@
 
 	</section>
 
-	<section>
+	<section id="Alertes">
 
-		<div id = "Alertes">
 		<h1>Alertes / Notifications</h1>
 		<div id = "liste_alertes">
 			<ul>
@@ -56,7 +55,6 @@
 				<li> Alerte 4 </li>
 			</ul>
 		</div>
-	</div>
 
 	</section>
 

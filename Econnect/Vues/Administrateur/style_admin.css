@@ -83,6 +83,7 @@ header
 #Chiffres h1
 {
 	text-align: center;
+    font-family: Montserrat, Verdana;
 }
 
 #Chiffres
@@ -112,28 +113,17 @@ header
     padding-bottom: 30px;
 }
 
-#Alertes #liste_alertes
+#Alertes h1
+{
+   font-family: Montserrat, Verdana; 
+}
+#liste_alertes
 {
 	display: flex;
 	justify-content: space-around;
+    font-family: Montserrat, Verdana;
 }
 
-/*Liste clients*/
-#clients
-{
-
-    width:98%;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    margin-left : auto;
-    margin-right : auto;
-    padding: 10px;
-    border-radius: 20px;
-    background-color: #67bbde;
-    border : 3px solid #219af4;
-    box-shadow: 5px 5px 13px;
-
-}
 
 /* ############## LISTE CLIENTS ############### */
 
@@ -148,7 +138,13 @@ header
     border-radius: 20px;
     background-color: #A5CAFF;
     border : 3px solid #8FA8DE;
-    box-shadow: 5px 5px 13px; 
+    box-shadow: 5px 5px 13px;
+    font-family: Montserrat, Verdana;
+}
+
+.SAV_table
+{
+    margin: auto;
 }
 
 
@@ -165,7 +161,6 @@ header
 }
 
 th, td {
-    text-align: left;
     padding: 8px;
 }
 

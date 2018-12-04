@@ -14,7 +14,7 @@ $theme_class=new UniversalTheme;
 
 $graph->SetTheme($theme_class);
 $graph->img->SetAntiAliasing(false);
-$graph->title->Set('Graphique factures');
+$graph->title->Set("Nombre d'utilisateurs actifs");
 $graph->SetBox(false);
 
 //$graph->SetMargin(40,20,36,83);

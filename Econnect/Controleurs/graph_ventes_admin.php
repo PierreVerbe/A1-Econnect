@@ -5,14 +5,14 @@ require_once ('../jpgraph-4.2.5/src/jpgraph_line.php');
 $datay = array(20,10,35,5,17,35,22);
 
 // Setup the graph
-$graph = new Graph(400,250);
+$graph = new Graph(600,300);
 $graph->SetScale("intlin",0,$aYMax=50);
 $theme_class=new UniversalTheme;
 $graph->SetTheme($theme_class);
 
 $graph->SetBox(false);
 
-$graph->title->Set('Step Line');
+$graph->title->Set("Nombre total de ventes");
 $graph->ygrid->Show(true);
 $graph->xgrid->Show(false);
 $graph->yaxis->HideZeroLabel();
