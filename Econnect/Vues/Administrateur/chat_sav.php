@@ -61,7 +61,7 @@
 				<!-- Pour la barre de délimitation -->
 				<hr width=90% align =center>
 
-				<h2>Ouvrir un nouveau ticket :</h2>
+				<h2>Répondre à un ticket :</h2>
 
 				<div class="SAV_nouveau_ticket">
 					<form method="post" action="traitement.php">
