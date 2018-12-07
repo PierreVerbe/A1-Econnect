@@ -420,7 +420,7 @@ tr:hover
 
 .element:nth-child(1){
     margin-top: 50px; 
-    background-color: #FFF0F5;
+    background-color: #dcdcdc;
     width: 500px; 
     border-style: groove;
     border-width: 2px; 
@@ -429,7 +429,7 @@ tr:hover
 }
 .element:nth-child(2){
     margin-top: 50px; 
-    background-color: #FFF0F5; 
+    background-color: #dcdcdc; 
     width: 500px;
     border-style: groove;
     border-width: 2px; 
