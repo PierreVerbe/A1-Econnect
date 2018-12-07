@@ -211,6 +211,61 @@ src: url('../Fonts/Montserrat/Montserrat-Regular.otf');
     justify-content: space-between;
 }
 
+.titre_contenu_info_H_G
+{
+    font-family: Montserrat, Verdana;
+    font-size: 1.5em;
+    text-align: center;
+    border-left: 300px solid #737373;
+    border-right: 300px solid #737373;
+    background-color: #737373;
+}
+
+.contenu_info_H_G
+{
+    font-family: Montserrat, Verdana;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.bouton_info_H_G
+{
+    text-align: center;
+    
+    /*display: flex;
+    justify-content: space-between;*/
+}
+
+.moins_température
+{
+    height: 100px;
+    width: 100px;
+    margin-right: 40px;
+    font-family: Montserrat, Verdana;
+    font-size: 2em;
+    display: inline-block;
+    cursor: pointer;
+    background: #4000FF;
+    border: 2px solid #1800a2;
+    border-radius: 5px;
+    box-shadow:0px 0px 4px 2px rgba(0, 0, 0, 0.25), inset 1px 1px 0px 0px rgba(255, 255, 255, 0.25);
+}
+
+.plus_température
+{
+    height: 100px;
+    width: 100px;
+    margin-left: 40px;
+    font-family: Montserrat, Verdana;
+    font-size: 2em;
+    display: inline-block;
+    cursor: pointer;
+    background: #FF0000;
+    border: 2px solid #BD0000;
+    border-radius: 5px;
+    box-shadow:0px 0px 4px 2px rgba(0, 0, 0, 0.25), inset 1px 1px 0px 0px rgba(255, 255, 255, 0.25);
+}
+
 .Image_Slide_Haut_Gauche
 {
     width: auto;

@@ -13,7 +13,7 @@ header
 /*Image de fond du header responsif : si on chnage la taille de l'image sera tjs centrée*/
 #image_fond_header
 {
-    background-image:url(../Image/Header/dollars.jpg);
+    background-image:url(../Image/Header/estonia.jpg);
     height:100%;
     background-position: center;
     background-position: no-repeat;
