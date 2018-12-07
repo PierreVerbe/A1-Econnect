@@ -13,8 +13,11 @@
 				<img src="Vues/Image/Logo_Econnect_texte.png" alt="logo" width="300" />
 			</div>
 	</header>
+
+	
 	
 	<body>
+
 		
 		<div class="menu">
 		
@@ -26,6 +29,8 @@
 			</ul>	
 				
 		</div>
+
+		
 
 		<div class="meteo">
 			<p> Info météo </p>
@@ -67,6 +72,33 @@
 				</p>
 				<input type="submit" value="Envoyer">
 			</form>-->	
+			<div class="vitrine_image1">
+				<img id="logo_vitrine_image1" src="Vues/Image/Econnect_feuille_contour_white.png">
+				<p id="texte_vitrine_image1">La solution de domotique</p>
+			</div>
+
+			<div class="vitrine_text1">
+				<p id="texte_vitrine_text1">Parler du groupe</p>
+			</div>
+
+			<div class="vitrine_image2">
+				<p id="texte_vitrine_image2">Une solution, 3 réponses</p>
+				<button class="button_vitrine_image2">Ecologique</button>
+				<button class="button_vitrine_image2">Economique</button>
+				<button class="button_vitrine_image2">Connectée</button>
+				<!-- survol des boxs découvre les mots ecologique, economique, connecté-->
+			</div>
+
+
+
+
+			<!-- la maison connecté respectueuse de l'envirronement
+				connecté electronique
+				economique
+				ergonomie du site
+				très visuel avec des graphique
+				s'incrire maitenant-->
+
 			<p>
 			<a href="Vues/Client/accueil_client.php"> Vous êtes client ? </a> ? <br/>
 			<a href="Vues/Administrateur/accueil_admin.php"> Vous êtes administrateur ou technicien ? </a> <br/>

@@ -21,6 +21,70 @@
 		font-weight: bold;
 	}
 
+	.vitrine_image1
+	{
+		background-image:url(Image/paysage_vitrine.png);
+	    height:500px;
+	    background-position: center;
+	    background-position: no-repeat;
+	    background-size: cover;
+	    position: relative;
+	}
+
+	#logo_vitrine_image1
+	{
+		width: 363px;
+		height: 270px;
+		padding-top: 100px;
+		display: block;
+		margin-left: auto;
+   		margin-right: auto;
+	}
+
+	#texte_vitrine_text1
+	{
+		text-align: center;
+		font-size: 1.5em;
+    	font-family: Verdana;
+	}
+
+	.vitrine_image2
+	{
+		background-image:url(Image/tech_vitrine.png);
+	    height:300px;
+	    background-position: center;
+	    background-position: no-repeat;
+	    background-size: cover;
+	    position: relative;
+	}
+
+	#texte_vitrine_image2
+	{
+		text-align: center;
+		font-size: 1.5em;
+		padding-top: 30px;
+    	font-family: Verdana;
+	}
+
+	.button_vitrine_image2
+	{
+		background:    #073763;
+		background:    -webkit-linear-gradient(#073763, #073763);
+		background:    linear-gradient(#073763, #073763);
+		border-radius: 5px;
+		padding:       8px 22px;
+		color:         #073763;
+		display:       inline-block;
+		font:          normal 700 24px/1 "Calibri", sans-serif;
+		text-align:    center;
+		text-shadow:   none;
+	}
+
+	.button_vitrine_image2:hover
+	{
+		color:         #ffffff;
+	}
+
 	.meteo
  	{
 		background-color: white;
