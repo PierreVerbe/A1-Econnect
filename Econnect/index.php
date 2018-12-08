@@ -100,7 +100,7 @@
 				s'incrire maitenant-->
 
 			<p>
-			<a href="Vues/Client/accueil_client.php"> Vous êtes client ? </a> ? <br/>
+			<a href="Vues/Client/accueil_client.php"> Vous êtes client ? </a><br/>
 			<a href="Vues/Administrateur/accueil_admin.php"> Vous êtes administrateur ou technicien ? </a> <br/>
 			<a href="Vues/Domisep/accueil_domisep.php"> Vous êtes Domisep ? </a> <br/>
 			</p>

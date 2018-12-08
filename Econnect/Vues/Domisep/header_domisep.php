@@ -19,9 +19,9 @@
 </header>
 	<!-- Menu -->
 	<ul class="navbar">
-  		<li><a class="active" href="accueil_client.php">Accueil</a></li>
-  		<li><a href="parametre_client.php">Liste Clients</a></li>
+  		<li><a class="active" href="accueil_domisep.php">Accueil</a></li>
+  		<li><a href="liste_clients_domisep.php">Liste Clients</a></li>
   		<li><a href="profil_client.php">Mon profil</a></li>
-  		<li><a href="quit_client.php">Déconnexion</a>
+  		<li><a href="quit_domisep.php">Déconnexion</a>
   		</li>
 	</ul>
