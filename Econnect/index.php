@@ -103,11 +103,8 @@
 		</section>
 
 
-<<<<<<< HEAD
-			<p>
-=======
+
 		<p>
->>>>>>> 0dbbf3b3720cf66eb3c60b8096e44e34146fc048
 			<a href="Vues/Client/accueil_client.php"> Vous êtes client ? </a><br/>
 			<a href="Vues/Administrateur/accueil_admin.php"> Vous êtes administrateur ou technicien ? </a> <br/>
 			<a href="Vues/Domisep/accueil_domisep.php"> Vous êtes Domisep ? </a> <br/>
