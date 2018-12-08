@@ -19,8 +19,7 @@
 </header>
 	<!-- Menu -->
 	<ul class="navbar">
-  		<li><a class="active" href="accueil_client.php">Info général</a></li>
-  		<li><a href="SAV_client.php">Statistiques</a></li>
+  		<li><a class="active" href="accueil_client.php">Accueil</a></li>
   		<li><a href="parametre_client.php">Liste Clients</a></li>
   		<li><a href="profil_client.php">Mon profil</a></li>
   		<li><a href="quit_client.php">Déconnexion</a>

@@ -13,7 +13,20 @@
 		<section id="clients">
 
 			<article id="liste_clients">
-				Liste des clients :<br />
+				Liste des clients :<br /><br />
+
+				<div id="recherche_client">
+					<label>Nom Client : </label><input type="text" name="recherche_nom" />
+
+					<label>N° Client : </label><input type="text" name="recherche_numero" />
+
+					<label>Adresse : </label><input type="text" name="recherche_adresse" />
+
+					<label>Statut : </label><input type="text" name="recherche_statut" />
+
+				</div>
+
+				<input type="button" name="validate" value="Rechercher">
 
 				<table id="tableau_clients">
 					<tr>
