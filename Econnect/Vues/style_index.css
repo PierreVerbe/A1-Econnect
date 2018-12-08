@@ -21,6 +21,11 @@
 		font-weight: bold;
 	}
 
+	.login{
+		text-align: right;
+		font-size: 110%;
+	}
+
 	.vitrine_image1
 	{
 		background-image:url(Image/paysage_vitrine.png);
@@ -119,6 +124,10 @@
 	{
 		display: flex;
 		flex-direction: column;
+	}
+
+	form{
+		padding: 50;
 	}
 
 }
