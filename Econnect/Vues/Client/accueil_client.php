@@ -114,10 +114,38 @@
 			<div class="info_B_D">
 				<button class="info_bloc_gauche" onclick="plusDivs_Bas_Droit(-1)">&#10094;</button>
 				
-				<img class="Slide_Bas_Droit" src="../Image/lune.jpg">
-			  	<img class="Slide_Bas_Droit" src="../Image/roche.jpg">
-			  	<img class="Slide_Bas_Droit" src="../Image/minion.jpg">
-			  	<div class="Slide_Bas_Droit">Bonjour j'adore les sliders</div>
+				<img class="Slide_Bas_Droit" src="../Image/Accueil/lumiere.png">
+				<div class="Slide_Bas_Droit"><p class="titre_contenu_info_H_G">Salon</p>
+												<p class="contenu_info_B_D"><br /><br />Lumière actuelle : Basse<br /><br />
+																			Ajuster la lumière : <br /><br /> </p>
+																			<div class="bouton_info_B_D">
+																			<button class="moins_lumière">-</button>
+																			<button class="plus_lumière">+</button></div></div>
+
+				<div class="Slide_Bas_Droit"><p class="titre_contenu_info_H_G">Cuisine</p>
+												<p class="contenu_info_B_D"><br /><br />Lumière actuelle : OFF<br /><br />
+																			Ajuster la lumière : <br /><br /> </p>
+																			<div class="bouton_info_B_D">
+																			<button class="moins_lumière">-</button>
+																			<button class="plus_lumière">+</button></div></div>
+												
+
+				<div class="Slide_Bas_Droit"><p class="titre_contenu_info_H_G">Chambre</p>
+												<p class="contenu_info_B_D"><br /><br />Lumière actuelle : Forte<br /><br />
+																			Ajuster la lumière : <br /><br /> </p>
+																			<div class="bouton_info_B_D">
+																			<button class="moins_lumière">-</button>
+																			<button class="plus_lumière">+</button></div></div>
+												
+
+				<div class="Slide_Bas_Droit"><p class="titre_contenu_info_H_G">Salle de bain</p>
+												<p class="contenu_info_B_D"><br /><br />Lumière actuelle : OFF<br /><br />
+																			Ajuster la lumière : <br /><br /> </p>
+																			<div class="bouton_info_B_D">
+																			<button class="moins_lumière">-</button>
+																			<button class="plus_lumière">+</button></div></div>
+												
+			  	
 
 				<button class="info_bloc_droite" onclick="plusDivs_Bas_Droit(1)">&#10095;</button>
 			</div>
