@@ -12,7 +12,7 @@ $graph->SetTheme($theme_class);
 
 $graph->SetBox(false);
 
-$graph->title->Set("Nombre total de ventes");
+$graph->title->Set("Nombre total de visites");
 $graph->ygrid->Show(true);
 $graph->xgrid->Show(false);
 $graph->yaxis->HideZeroLabel();

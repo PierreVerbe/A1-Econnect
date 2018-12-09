@@ -8,14 +8,14 @@
 
 		<div id="articles">
 			<article id="details">
-				<h2>Informations détaillées</h2></br>
+				<h2>Informations détaillées :</h2></br>
 
-				<p>Nom</p>
-				<p>Prénom</p>
-				<p>Pays</p>
-				<p>Ville</p>
-				<p>Adresse email</p>
-				<p>Téléphone</p>
+				<p>Nom :</p>
+				<p>Prénom :</p>
+				<p>Pays :</p>
+				<p>Ville :</p>
+				<p>Adresse email :</p>
+				<p>Téléphone :</p>
 			</article>
 
 			<article id="poste">

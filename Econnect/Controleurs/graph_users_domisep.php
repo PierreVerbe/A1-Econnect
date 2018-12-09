@@ -25,7 +25,7 @@ $graph->img->SetAntiAliasing();
 $graph->yaxis->HideZeroLabel();
 $graph->yaxis->HideLine(false);
 $graph->yaxis->HideTicks(false,false);
-$graph->yaxis->title->Set("Consommation en kWh");
+$graph->yaxis->title->Set("Nombre d'utilisateurs");
 
 $graph->xgrid->Show();
 $graph->xgrid->SetLineStyle("solid");
