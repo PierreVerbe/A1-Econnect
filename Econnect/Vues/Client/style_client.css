@@ -500,20 +500,25 @@ tr:hover
 }
 
 /*Pour la page paramètres client*/
-#body_Client{
+#body_Client
+{
     background-color: #dcdcdc; 
 }
-#GestionClient{
-    background-color: #a5caff;  
-    height: 450px;
-    text-align: center;
-    padding: 25px; 
-    border-style: double;
-    border-width: 5px; 
-    border-color: black; 
-    border-radius: 10px;
 
+#GestionClient
+{
+  width:98%;
+  height: 450px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left : auto;
+  margin-right : auto;
+  border-radius: 20px;
+  background-color: #A5CAFF;
+  border : 3px solid #8FA8DE;
+  box-shadow: 5px 5px 13px;
 }
+
 #conteneur_1{
     display:flex;
     justify-content: space-around;
@@ -787,18 +792,22 @@ tr:hover
   opacity: 1;
   right: 0;
 }
-#GestioN{
-    background-color: #a5caff;  
-    height: 450px;
-    text-align: center;
-    padding: 25px; 
-    border-style: double;
-    border-width: 5px; 
-    border-color: black; 
-    border-radius: 10px;
-    margin-top: 10px; 
-    margin-right: 0px; 
+
+#GestioN
+{
+  width:98%;
+  height: 450px;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left : auto;
+  margin-right : auto;
+  border-radius: 20px;
+  background-color: #A5CAFF;
+  border : 3px solid #8FA8DE;
+  box-shadow: 5px 5px 13px;
 }
+
 #conteneur_2{
     display:inline-block;
     justify-content: space-around;
