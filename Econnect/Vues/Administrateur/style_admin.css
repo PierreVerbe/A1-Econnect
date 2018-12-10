@@ -17,11 +17,11 @@ body
     background-color: #e1e4e7;
 }
 
-a
+/*a
 {
     text-decoration: none;
     color: black;
-}
+}*/
 
 /*############### BANNIERE ###################*/
 
@@ -113,7 +113,7 @@ header
     padding-bottom: 30px;
 }
 
-#Alertes h1
+/*#Alertes h1
 {
    font-family: Montserrat, Verdana; 
 }
@@ -122,6 +122,45 @@ header
 	display: flex;
 	justify-content: space-around;
     font-family: Montserrat, Verdana;
+}*/
+
+#gestion_admin
+{
+    width:98%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left : auto;
+    margin-right : auto;
+    border-radius: 20px;
+    background-color: #A5CAFF;
+    border : 3px solid #8FA8DE;
+    box-shadow: 5px 5px 13px;
+    font-family: Montserrat, Verdana;
+}
+
+#Alertes, #gestion_pannes
+{
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 45%;
+    margin: 10px;
+    padding: 10px;
+}
+
+#Alertes li, #gestion_pannes li
+{
+    height: 30px;
+}
+
+#gestion_admin
+{
+    display: flex;
+    justify-content: space-around;
+}
+
+#gestion_admin ul
+{
+    list-style-type: none;
 }
 
 

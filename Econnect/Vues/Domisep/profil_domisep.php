@@ -4,7 +4,7 @@
 	<section id="profil">
 		<h1>Votre profil</h1>
 
-		<img src="ressources/profil_domisep_mini.png">
+		<img src="ressources/profil_domisep_mini.png" alt="Image de profil">
 
 		<div id="articles">
 			<article id="details">

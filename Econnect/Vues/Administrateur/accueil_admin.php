@@ -37,24 +37,33 @@
 
 	</section>
 
-	<section id="Alertes">
+	<section id="gestion_admin">
+		
+		<article id="Alertes">
 
-		<h1>Alertes / Notifications</h1>
-		<div id = "liste_alertes">
-			<ul>
-				<li> Alerte 1 </li>
-				<li> Alerte 2 </li>
-				<li> Alerte 3 </li>
-				<li> Alerte 4 </li>
-			</ul>
+			<h2>Alertes</h2>
 
 			<ul>
-				<li> Alerte 1 </li>
-				<li> Alerte 2 </li>
-				<li> Alerte 3 </li>
-				<li> Alerte 4 </li>
+				<li><img src="ressources/point_rouge_mini.png" alt="Alerte""> Maison n°14587 : Alerte intrusion <button type="button">Vérifier les caméras</button></li>
+				<li><img src="ressources/point_orange_mini.png" alt="Problème"> Maison n°14586 : Intervention nécéssaire</li>
+				<li><img src="ressources/point_vert_mini.png" alt="OK"> Tout est ok</li>
 			</ul>
-		</div>
+			
+		</article>
+
+		<article id="gestion_pannes">
+
+			<h2>Gestion des pannes</h2>
+
+			<ul>
+				<li>Maison n°14587 : Problème capteur <button class="button">Détails</button><button class="button">Désactiver</button><button class="button">Appel Technicien</button></li>
+				<li>Maison n°14588 : Problème actionneur <button class="button">Détails</button><button class="button">Désactiver</button><button class="button">Appel Technicien</button></li>
+				<li>Maison n°14582 : HAG défaillant <button class="button">Détails</button><button class="button">Désactiver</button><button class="button">Appel Technicien</button></li>
+			</ul>
+			
+		</article>
+			
+		</table>
 
 	</section>
 
