@@ -27,8 +27,18 @@
 				</div>
 
 				<input type="button" name="validate" value="Rechercher">
-
+				
 				<table id="tableau_clients">
+					<tr>
+						<th>N° Client</th>
+						<th>Nom du client</th>
+						<th>Adresse email</th>
+						<th>Téléphone</th>
+					</tr>
+				<?php include("../../Controleurs/bdd_liste-clients_admin.php");?>
+				</table>
+
+				<!--<table id="tableau_clients">
 					<tr>
 						<th>N° Client</th>
 						<th>Nom du client</th>
@@ -53,7 +63,7 @@
 						<td>7 rue du Parc, 64200</td>
 						<td>Déménagement en cours</td>
 					</tr>
-				</table>
+				</table>-->
 			
 			</article>
 
