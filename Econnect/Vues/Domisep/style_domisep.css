@@ -91,8 +91,8 @@ body
     margin-right : auto;
     padding-left: 10px;
     border-radius: 20px;
-    background-color: #A5CAFF;
-    border : 3px solid #8FA8DE;
+    background-color: #f9c761;
+    border : 3px solid #c29c4e;
     box-shadow: 5px 5px 13px;
 }
 
@@ -114,8 +114,8 @@ body
     margin-right : auto;
     padding: 10px;
     border-radius: 20px;
-    background-color: #A5CAFF;
-    border : 3px solid #8FA8DE;
+    background-color: #f9c761;
+    border : 3px solid #c29c4e;
     box-shadow: 5px 5px 13px;
     font-family: Montserrat, Verdana;
 }
@@ -176,8 +176,8 @@ tr:hover
     margin-right : auto;
     padding: 10px;
     border-radius: 20px;
-    background-color: #A5CAFF;
-    border : 3px solid #8FA8DE;
+    background-color: #f9c761;
+    border : 3px solid #c29c4e;
     box-shadow: 5px 5px 13px;
     font-family: Montserrat, Verdana;
 }
@@ -231,8 +231,8 @@ tr:hover
     margin-left : auto;
     margin-right : auto;
     border-radius: 20px;
-    background-color: #A5CAFF;
-    border : 3px solid #8FA8DE;
+    background-color: #f9c761;
+    border : 3px solid #c29c4e;
     box-shadow: 5px 5px 13px;
 }
 
@@ -268,8 +268,8 @@ tr:hover
     margin-left : auto;
     margin-right : auto;
     border-radius: 20px;
-    background-color: #A5CAFF;
-    border : 3px solid #8FA8DE;
+    background-color: #f9c761;
+    border : 3px solid #c29c4e;
     box-shadow: 5px 5px 13px;
     text-align: center;
 }

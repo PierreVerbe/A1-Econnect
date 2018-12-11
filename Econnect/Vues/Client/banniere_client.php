@@ -48,6 +48,6 @@
 			<button class="bouton_eco">Eco</button>
 			<button class="bouton_sortie">Sortie</button>
 			<button class="bouton_confort">Confort</button>
-			<button class="bouton_hibernation">Hibernation</button>
+			<button class="bouton_hibernation">Hiber-<br />nation</button>
 		</div>
 	</div>

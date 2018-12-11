@@ -106,7 +106,7 @@
 			<div class="info_B_G">
 
 			<!-- appel du graphique -->	
-			<?php echo "<img src='ressources/graph_facture.php'/>";?>
+			<?php echo "<img src='../../Controleurs/graph_conso_elec_client.php'/>";?>
 			
 			</div>
 
