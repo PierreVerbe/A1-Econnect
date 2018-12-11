@@ -4,7 +4,7 @@
     <b>A PROPOS:</b> <br />
     
     <img src="../Icons/Confidentialite.png" alt="Icon confidentialité" width="35" height="35"><a classe="qsdjsd" href="confidentialite_client.php">
-    Politique de confidentialité</a> <br />
+    Mentions légales</a> <br />
 
     <img src="../Icons/Copyright.png" alt="Icon Copyright" width="35" height="35"><a classe="qsdjsd" href="copyright_client.php">
     Copyright Econnect©</a>	<br />

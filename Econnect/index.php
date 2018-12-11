@@ -12,6 +12,7 @@
 			<div class="logo">
 				<img src="Vues/Image/Logo_Econnect_texte.png" alt="logo" width="300" />
 			</div>
+			<p id="soustitre_logo"> Un produit Domisep©</p>
 			<div class="login">
 				<form method="post" action="do_login.php" >
 					<label>Email:</label>
