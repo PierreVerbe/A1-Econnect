@@ -216,8 +216,8 @@ src: url('../Fonts/Montserrat/Montserrat-Regular.otf');
     font-family: Montserrat, Verdana;
     font-size: 1.5em;
     text-align: center;
-    border-left: 300px solid #737373;
-    border-right: 300px solid #737373;
+    border-left: 250px solid #737373;
+    border-right: 250px solid #737373;
     background-color: #737373;
 }
 
@@ -231,9 +231,6 @@ src: url('../Fonts/Montserrat/Montserrat-Regular.otf');
 .bouton_info_H_G
 {
     text-align: center;
-    
-    /*display: flex;
-    justify-content: space-between;*/
 }
 
 .moins_température
@@ -245,10 +242,15 @@ src: url('../Fonts/Montserrat/Montserrat-Regular.otf');
     font-size: 2em;
     display: inline-block;
     cursor: pointer;
-    background: #4000FF;
+    background: rgba(64, 0, 255, 1);
     border: 2px solid #1800a2;
     border-radius: 5px;
     box-shadow:0px 0px 4px 2px rgba(0, 0, 0, 0.25), inset 1px 1px 0px 0px rgba(255, 255, 255, 0.25);
+}
+
+.moins_température:hover
+{
+    background: rgba(64, 0, 255, 0.65);
 }
 
 .plus_température
@@ -260,10 +262,67 @@ src: url('../Fonts/Montserrat/Montserrat-Regular.otf');
     font-size: 2em;
     display: inline-block;
     cursor: pointer;
-    background: #FF0000;
+    background: rgba(255, 0, 0, 1);
     border: 2px solid #BD0000;
     border-radius: 5px;
     box-shadow:0px 0px 4px 2px rgba(0, 0, 0, 0.25), inset 1px 1px 0px 0px rgba(255, 255, 255, 0.25);
+}
+
+.plus_température:hover
+{
+    background: rgba(255, 0, 0, 0.65);
+}
+
+.contenu_info_B_D
+{
+    font-family: Montserrat, Verdana;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.bouton_info_B_D
+{
+    text-align: center;
+}
+
+.moins_lumière
+{
+    height: 100px;
+    width: 100px;
+    margin-right: 40px;
+    font-family: Montserrat, Verdana;
+    font-size: 2em;
+    display: inline-block;
+    cursor: pointer;
+    background: rgba(173, 173, 0, 1);
+    border: 2px solid #adad00;
+    border-radius: 5px;
+    box-shadow:0px 0px 4px 2px rgba(0, 0, 0, 0.25), inset 1px 1px 0px 0px rgba(255, 255, 255, 0.25);
+}
+
+.moins_lumière:hover
+{
+    background: rgba(173, 173, 0, 0.65);
+}
+
+.plus_lumière
+{
+    height: 100px;
+    width: 100px;
+    margin-left: 40px;
+    font-family: Montserrat, Verdana;
+    font-size: 2em;
+    display: inline-block;
+    cursor: pointer;
+    background: rgba(245, 245, 0, 1);
+    border: 2px solid #f9f500;
+    border-radius: 5px;
+    box-shadow:0px 0px 4px 2px rgba(0, 0, 0, 0.25), inset 1px 1px 0px 0px rgba(255, 255, 255, 0.25);
+}
+
+.plus_lumière:hover
+{
+    background: rgba(245, 245, 0, 0.65);
 }
 
 .Image_Slide_Haut_Gauche
@@ -899,6 +958,7 @@ footer img
     border-radius: 10px;
     background-color: #CBCBCB;
     padding: 5px;
+    height: 25px;
 
 
 } 

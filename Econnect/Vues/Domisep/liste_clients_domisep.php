@@ -1,16 +1,7 @@
+<?php include ("header_domisep.php")?>
 
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="style_admin.css">
-		<title>Liste des clients</title>
-	</head>
-	<body>
-
-		<?php include("header_admin.php")?>
-
-		<section id="clients">
+<body>
+	<section id="clients">
 
 			<article id="liste_clients">
 				Liste des clients :<br /><br />
@@ -159,12 +150,6 @@
 			</div>
 			
 		</section>
+</body>
 
-		<?php include("footer_admin.php")?>
-
-	</body>
-
-</html>
-
-
-
+<?php include ("footer_domisep.php")?>

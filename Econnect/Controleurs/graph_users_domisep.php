@@ -7,7 +7,7 @@ $datay2 = array(2200,2100,1850,1600,1400,1550,1100,850,1150,1950,2150,2300);
 $datay3 = array(2100,2150,1900,1700,1600,1550,1000,900,1100,1950,2000,2150);
 
 // Setup the graph
-$graph = new Graph(700,400);
+$graph = new Graph(600,300);
 $graph->SetScale("textlin");
 
 $theme_class=new UniversalTheme;
@@ -25,7 +25,7 @@ $graph->img->SetAntiAliasing();
 $graph->yaxis->HideZeroLabel();
 $graph->yaxis->HideLine(false);
 $graph->yaxis->HideTicks(false,false);
-$graph->yaxis->title->Set("Nombres d'utilisateurs");
+$graph->yaxis->title->Set("Nombre d'utilisateurs");
 
 $graph->xgrid->Show();
 $graph->xgrid->SetLineStyle("solid");

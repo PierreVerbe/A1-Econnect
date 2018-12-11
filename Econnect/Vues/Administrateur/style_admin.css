@@ -142,6 +142,18 @@ header
     font-family: Montserrat, Verdana;
 }
 
+#recherche_client
+{
+    display: flex;
+    justify-content: flex-start;
+}
+
+#recherche_client input
+{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
 .SAV_table
 {
     margin: auto;
@@ -210,6 +222,13 @@ tr:hover
     justify-content: space-around;
 }
 
+#Pieces p, #Capteurs p, #Actionneurs p
+{
+    border : 1px solid black;
+    padding: 10px;
+    border-radius: 3px;
+}
+
 #tableaux_client_admin table
 {
     margin: auto;
@@ -225,8 +244,6 @@ tr:hover
     font-size: 30px;
     margin-bottom: 10px;
 }
-
-
 
 /* ################ ACCES MAISON #############*/
 

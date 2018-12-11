@@ -20,30 +20,40 @@
 			
 					<table class="SAV_table">
 			  			<tr>
+			  				<th>N° Client</th>
+			  				<th>Nom du Client</th>
 				    		<th>N° ticket</th>
 				   	 		<th>Objet du ticket / dernier message</th>
 				    		<th>Date du dernier message</th>
 				    		<th>Statut</th>
 			  			</tr>
 			  			<tr>
+			  				<td>30001</td>
+			  				<td>Jean François</td>
 				    		<td>1</td>
 				    		<td>Problème capteur</td>
 				    		<td>01/11/2018</td>
 				    		<td>✓</td>
 			  			</tr>
 			  			<tr>
+			  				<td>30002</td>
+			  				<td>Pierre Nerat</td>
 				    		<td>2</td>
 				    		<td>Problème site</td>
 				    		<td>02/11/2018</td>
 				    		<td>✓</td>
 			  			</tr>
 			  			<tr>
+			  				<td>30003</td>
+			  				<td>Marie Rumin</td>
 				    		<td>3</td>
 				    		<td>Problème données</td>
 				    		<td>03/11/2018</td>
 				    		<td>En cours de traitement</td>
 			  			</tr>
 			  			<tr>
+			  				<td>30004</td>
+			  				<td>Jacques Henry</td>
 				    		<td>4</td>
 				    		<td>Problème compte secondaire</td>
 				    		<td>04/11/2018</td>

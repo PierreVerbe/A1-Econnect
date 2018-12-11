@@ -46,20 +46,7 @@
 			<p> Info météo </p>
 		</div>
 
-		<section class="infos">
-				<div class="Graphs">
-					<p> Chiffres info générales sur l'entreprise Graph...</p>
-				</div>
-
-				<div class="Partenaires">
-					<p> Nos partenaires </p>
-				</div>
-		</section> 
 		
-		<section class="inscription">
-		
-			<form method="post" action="http://traitement.php" >
-				<input class="boutoninscription" type="button" value="S'inscire">
 				<!--<p>
 					<label>Votre nom:</label> 
 					<input type="text" name="nom" placeholder="Emmanuel" required>
@@ -93,29 +80,45 @@
 
 			<div class="vitrine_image2">
 				<p id="texte_vitrine_image2">Une solution, 3 réponses</p>
-				<button class="button_vitrine_image2">Ecologique</button>
-				<button class="button_vitrine_image2">Economique</button>
-				<button class="button_vitrine_image2">Connectée</button>
+				<div id="button_multiple_vitrine_image2">
+					<button class="button_vitrine_image2">Ecologique</button>
+					<button class="button_vitrine_image2">Economique</button>
+					<button class="button_vitrine_image2">Connectée</button>
 				<!-- survol des boxs découvre les mots ecologique, economique, connecté-->
+				</div>
+				<p id="texte2_vitrine_image2">Survol les blocs pour le découvrir</p>
+
 			</div>
 
+			<!-- la maison connecté respectueuse de l'envirronementconnecté electroniqueeconomiqueergonomie du sitetrès visuel avec des graphiques'incrire maitenant-->
+
+			
+
+
+		<section class="infos">
+				<div class="Graphs">
+					<p> Chiffres info générales sur l'entreprise Graph...</p>
+				</div>
+
+				<div class="Partenaires">
+					<p> Nos partenaires </p>
+				</div>
+		</section> 
+		
+		<section class="inscription">
+		
+			<form method="post" action="http://traitement.php" >
+				<input class="boutoninscription" type="button" value="S'inscire">
+		
+		</section>
 
 
 
-			<!-- la maison connecté respectueuse de l'envirronement
-				connecté electronique
-				economique
-				ergonomie du site
-				très visuel avec des graphique
-				s'incrire maitenant-->
-
-			<p>
-			<a href="Vues/Client/accueil_client.php"> Vous êtes client ? </a> ? <br/>
+		<p>
+			<a href="Vues/Client/accueil_client.php"> Vous êtes client ? </a><br/>
 			<a href="Vues/Administrateur/accueil_admin.php"> Vous êtes administrateur ou technicien ? </a> <br/>
 			<a href="Vues/Domisep/accueil_domisep.php"> Vous êtes Domisep ? </a> <br/>
 			</p>
-		
-		</section>
 
 	</body>
 </html>
