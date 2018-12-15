@@ -10,7 +10,7 @@
 		<header>
 			<img src="../Image/Econnect_feuille_mini.png" alt="Logo_Econnect"/>
 			<div id = "Menu">
-				<ul>
+				<ul class="navbar">
 					<li><a href="accueil_admin.php">Accueil</a></li>
 					<li><a href="liste_client.php">Liste des clients</a></li>
 					<li><a href="acces_maison.php">Accès maison</a></li>
@@ -18,6 +18,19 @@
 					<li><a href="quit_admin.php">Déconnexion</a></li>
 				</ul>
 			</div>
+			<script>
+				var url = location.href.split("/"); //replace string with location.href
+				var navLinks = document.getElementsByClassName("navbar")[0].getElementsByTagName("a");
+				//naturally you could use something other than the <nav> element
+				var i=0;
+				var currentPage = url[url.length - 1];
+				for(i;i<navLinks.length;i++){
+				 	var lb = navLinks[i].href.split("/");
+				 	if(lb[lb.length-1] == currentPage) {
+				 	navLinks[i].className = "current";
+					}
+				}
+			</script>
 		</header>
 
 	</body>

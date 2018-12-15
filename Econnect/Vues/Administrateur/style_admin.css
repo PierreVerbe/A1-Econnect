@@ -64,13 +64,20 @@ header
     text-decoration: none;
 }
 
-#Menu li:hover
+#Menu li:hover:not(.current)
 {
     display: block;
     text-align: center;
     background-color: black;
     text-decoration: none;
 }
+
+/* Pour le bouton du menu ma maison */
+.current 
+{
+    background-color:#118ccf;
+}
+
 
 header
 {

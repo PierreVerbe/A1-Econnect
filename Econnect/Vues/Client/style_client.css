@@ -50,13 +50,13 @@ ul.navbar li a
     text-decoration: none;
 }
 
-ul.navbar li a:hover:not(.active) 
+ul.navbar li a:hover:not(.current) 
 {
     background-color: #111;
 }
 
 /* Pour le bouton du menu ma maison */
-.active 
+.current 
 {
     background-color:#118ccf;
 }
