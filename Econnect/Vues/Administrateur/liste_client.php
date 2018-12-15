@@ -79,6 +79,15 @@
 
 			<p id="mode">Mode actuel : Hibernation</p>
 
+			<table id="tableau_maisons">
+					<tr>
+						<th>N° Maison</th>
+						<th>Mode de la maison</th>
+						<th>Adresse</th>
+					</tr>
+					<?php include("../../Controleurs/bdd_liste-maisons-clients_admin.php");?>
+				</table>
+
 			<div id="Pieces">
 				<h2>Pièces</h2>
 				<div id="liste_piece_user">
@@ -116,24 +125,7 @@
 							<th>Consommation</th>
 							<th>Prix</th>
 						</tr>
-						<tr>
-							<td>300014</td>
-							<td>08-09-2018</td>
-							<td>40kWh</td>
-							<td>35€</td>
-						</tr>
-						<tr>
-							<td>300015</td>
-							<td>08-10-2018</td>
-							<td>50kWh</td>
-							<td>30€</td>
-						</tr>
-						<tr>
-							<td>300016</td>
-							<td>08-11-2018</td>
-							<td>45kWh</td>
-							<td>45€</td>
-						</tr>
+						<?php include("../../Controleurs/bdd_liste-facture-clients_admin.php");?>
 					</table>
 				</div>
 

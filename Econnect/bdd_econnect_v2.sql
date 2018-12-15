@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.0
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Dec 07, 2018 at 09:51 AM
--- Server version: 5.6.34-log
--- PHP Version: 7.2.1
+-- Hôte : 127.0.0.1:3306
+-- Généré le :  sam. 15 déc. 2018 à 16:01
+-- Version du serveur :  5.7.23
+-- Version de PHP :  7.2.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,135 +19,174 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `bdd_econnect`
+-- Base de données :  `econnect_v2`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `actionneur`
+-- Structure de la table `actionneur`
 --
 
-CREATE TABLE `actionneur` (
-  `ID_Actionneur` int(11) NOT NULL,
+DROP TABLE IF EXISTS `actionneur`;
+CREATE TABLE IF NOT EXISTS `actionneur` (
+  `ID_Actionneur` int(11) NOT NULL AUTO_INCREMENT,
   `Numero_serie` varchar(128) COLLATE utf8_bin NOT NULL,
   `ID_Piece` int(11) NOT NULL,
-  `Date_actuelle` datetime NOT NULL
+  `Date_actuelle` datetime NOT NULL,
+  PRIMARY KEY (`ID_Actionneur`),
+  KEY `ID_Piece` (`ID_Piece`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `capteur`
+-- Structure de la table `capteur`
 --
 
-CREATE TABLE `capteur` (
-  `ID_Capteur` int(11) NOT NULL,
+DROP TABLE IF EXISTS `capteur`;
+CREATE TABLE IF NOT EXISTS `capteur` (
+  `ID_Capteur` int(11) NOT NULL AUTO_INCREMENT,
   `Numero_serie` varchar(128) COLLATE utf8_bin NOT NULL,
-  `ID_Piece` int(11) NOT NULL
+  `ID_Piece` int(11) NOT NULL,
+  PRIMARY KEY (`ID_Capteur`),
+  KEY `ID_Piece` (`ID_Piece`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `connexion`
+-- Structure de la table `connexion`
 --
 
-CREATE TABLE `connexion` (
-  `ID_Connexion` int(11) NOT NULL,
+DROP TABLE IF EXISTS `connexion`;
+CREATE TABLE IF NOT EXISTS `connexion` (
+  `ID_Connexion` int(11) NOT NULL AUTO_INCREMENT,
   `ID_User` int(11) NOT NULL,
-  `Date_connexion` datetime NOT NULL
+  `Date_connexion` datetime NOT NULL,
+  PRIMARY KEY (`ID_Connexion`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `donnees`
+-- Structure de la table `donnees`
 --
 
-CREATE TABLE `donnees` (
-  `ID_DATA` bigint(20) NOT NULL,
+DROP TABLE IF EXISTS `donnees`;
+CREATE TABLE IF NOT EXISTS `donnees` (
+  `ID_DATA` bigint(20) NOT NULL AUTO_INCREMENT,
   `Valeur` decimal(6,2) DEFAULT NULL,
   `Unite_mesure` varchar(128) COLLATE utf8_bin NOT NULL,
-  `Date_actuelle` datetime NOT NULL
+  `Date_actuelle` datetime NOT NULL,
+  PRIMARY KEY (`ID_DATA`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `facture`
+-- Structure de la table `facture`
 --
 
-CREATE TABLE `facture` (
-  `ID_Facture` int(11) NOT NULL,
+DROP TABLE IF EXISTS `facture`;
+CREATE TABLE IF NOT EXISTS `facture` (
+  `ID_Facture` int(11) NOT NULL AUTO_INCREMENT,
   `Date_facture` date NOT NULL,
   `Consommation` decimal(6,2) NOT NULL,
   `Prix` decimal(6,2) NOT NULL,
-  `ID_Maison` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+  `ID_Maison` int(11) NOT NULL,
+  PRIMARY KEY (`ID_Facture`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Déchargement des données de la table `facture`
+--
+
+INSERT INTO `facture` (`ID_Facture`, `Date_facture`, `Consommation`, `Prix`, `ID_Maison`) VALUES
+(1, '2018-12-18', '95.00', '120.00', 1),
+(2, '2019-01-18', '88.00', '90.00', 1);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `maison`
+-- Structure de la table `maison`
 --
 
-CREATE TABLE `maison` (
-  `ID_Maison` int(11) NOT NULL,
+DROP TABLE IF EXISTS `maison`;
+CREATE TABLE IF NOT EXISTS `maison` (
+  `ID_Maison` int(11) NOT NULL AUTO_INCREMENT,
   `Mode_maison` varchar(128) COLLATE utf8_bin NOT NULL,
   `Numero` int(11) NOT NULL,
   `Rue` varchar(128) COLLATE utf8_bin NOT NULL,
   `Ville` varchar(128) COLLATE utf8_bin NOT NULL,
   `Code_postal` varchar(128) COLLATE utf8_bin NOT NULL,
-  `Pays` varchar(128) COLLATE utf8_bin NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+  `Pays` varchar(128) COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`ID_Maison`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Déchargement des données de la table `maison`
+--
+
+INSERT INTO `maison` (`ID_Maison`, `Mode_maison`, `Numero`, `Rue`, `Ville`, `Code_postal`, `Pays`) VALUES
+(1, 'Eco', 11, 'rue de la ville', 'Paris', '75015', 'France'),
+(2, 'Confort', 13, 'rue de l\'école', 'Marseille', '13002', 'France');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `message`
+-- Structure de la table `message`
 --
 
-CREATE TABLE `message` (
-  `ID_Message` int(11) NOT NULL,
+DROP TABLE IF EXISTS `message`;
+CREATE TABLE IF NOT EXISTS `message` (
+  `ID_Message` int(11) NOT NULL AUTO_INCREMENT,
   `ID_Ticket` int(11) NOT NULL,
   `Date_message` datetime NOT NULL,
   `Piece_jointe` varchar(300) COLLATE utf8_bin DEFAULT NULL,
-  `Contenu` varchar(3000) COLLATE utf8_bin NOT NULL
+  `Contenu` varchar(3000) COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`ID_Message`),
+  KEY `ID_Ticket` (`ID_Ticket`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `piece`
+-- Structure de la table `piece`
 --
 
-CREATE TABLE `piece` (
-  `ID_Piece` int(11) NOT NULL,
-  `ID_Maison` int(11) NOT NULL
+DROP TABLE IF EXISTS `piece`;
+CREATE TABLE IF NOT EXISTS `piece` (
+  `ID_Piece` int(11) NOT NULL AUTO_INCREMENT,
+  `ID_Maison` int(11) NOT NULL,
+  PRIMARY KEY (`ID_Piece`),
+  KEY `ID_Maison` (`ID_Maison`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ticket`
+-- Structure de la table `ticket`
 --
 
-CREATE TABLE `ticket` (
-  `ID_Ticket` int(11) NOT NULL,
+DROP TABLE IF EXISTS `ticket`;
+CREATE TABLE IF NOT EXISTS `ticket` (
+  `ID_Ticket` int(11) NOT NULL AUTO_INCREMENT,
   `Objet` varchar(300) COLLATE utf8_bin NOT NULL,
   `Status` varchar(128) COLLATE utf8_bin NOT NULL,
   `ID_User` int(11) NOT NULL,
-  `Date_ticket` datetime NOT NULL
+  `Date_ticket` datetime NOT NULL,
+  PRIMARY KEY (`ID_Ticket`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `type_maison`
+-- Structure de la table `type_maison`
 --
 
-CREATE TABLE `type_maison` (
+DROP TABLE IF EXISTS `type_maison`;
+CREATE TABLE IF NOT EXISTS `type_maison` (
   `ID_Maison` int(11) NOT NULL,
   `Type_maison` varchar(128) COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
@@ -155,10 +194,11 @@ CREATE TABLE `type_maison` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `type_piece`
+-- Structure de la table `type_piece`
 --
 
-CREATE TABLE `type_piece` (
+DROP TABLE IF EXISTS `type_piece`;
+CREATE TABLE IF NOT EXISTS `type_piece` (
   `ID_Piece` int(11) NOT NULL,
   `Type_piece` varchar(128) COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
@@ -166,35 +206,51 @@ CREATE TABLE `type_piece` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user_maison`
+-- Structure de la table `user_maison`
 --
 
-CREATE TABLE `user_maison` (
-  `ID_Possession` int(11) NOT NULL,
+DROP TABLE IF EXISTS `user_maison`;
+CREATE TABLE IF NOT EXISTS `user_maison` (
+  `ID_Possession` int(11) NOT NULL AUTO_INCREMENT,
   `ID_User` int(11) NOT NULL,
-  `ID_Maison` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+  `ID_Maison` int(11) NOT NULL,
+  PRIMARY KEY (`ID_Possession`),
+  KEY `ID_Maison` (`ID_Maison`),
+  KEY `ID_User` (`ID_User`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Déchargement des données de la table `user_maison`
+--
+
+INSERT INTO `user_maison` (`ID_Possession`, `ID_User`, `ID_Maison`) VALUES
+(1, 1, 1),
+(2, 1, 2);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user_piece`
+-- Structure de la table `user_piece`
 --
 
-CREATE TABLE `user_piece` (
-  `ID_User_piece` int(11) NOT NULL,
+DROP TABLE IF EXISTS `user_piece`;
+CREATE TABLE IF NOT EXISTS `user_piece` (
+  `ID_User_piece` int(11) NOT NULL AUTO_INCREMENT,
   `ID_Piece` int(11) NOT NULL,
-  `ID_User` int(11) NOT NULL
+  `ID_User` int(11) NOT NULL,
+  PRIMARY KEY (`ID_User_piece`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `utilisateur`
+-- Structure de la table `utilisateur`
 --
 
-CREATE TABLE `utilisateur` (
-  `ID_User` int(11) NOT NULL,
+DROP TABLE IF EXISTS `utilisateur`;
+CREATE TABLE IF NOT EXISTS `utilisateur` (
+  `ID_User` int(11) NOT NULL AUTO_INCREMENT,
+  `User_type` varchar(128) COLLATE utf8_bin NOT NULL,
   `Nom` varchar(128) COLLATE utf8_bin NOT NULL,
   `Prenom` varchar(128) COLLATE utf8_bin NOT NULL,
   `Adresse_email` varchar(128) COLLATE utf8_bin NOT NULL,
@@ -203,173 +259,47 @@ CREATE TABLE `utilisateur` (
   `Date_naissance` date NOT NULL,
   `Debut_abo` date NOT NULL,
   `Fin_abo` date NOT NULL,
-  `User_type` enum('user','admin') COLLATE utf8_bin NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+  PRIMARY KEY (`ID_User`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Indexes for dumped tables
+-- Déchargement des données de la table `utilisateur`
+--
+
+INSERT INTO `utilisateur` (`ID_User`, `User_type`, `Nom`, `Prenom`, `Adresse_email`, `Mot_de_passe`, `Telephone`, `Date_naissance`, `Debut_abo`, `Fin_abo`) VALUES
+(1, 'Client', 'Grana', 'Pablo', 'pablo.grana@isep.fr', 'mdp12345', '0676877850', '1998-05-24', '2018-12-04', '2019-01-04'),
+(2, 'Client', 'Verbe', 'Pierre', 'pierre.verbe@isep.fr', 'mdp4597', '0678458785', '1998-02-16', '2018-12-26', '2019-01-23');
+
+--
+-- Contraintes pour les tables déchargées
 --
 
 --
--- Indexes for table `actionneur`
+-- Contraintes pour la table `actionneur`
 --
 ALTER TABLE `actionneur`
-  ADD PRIMARY KEY (`ID_Actionneur`),
-  ADD KEY `ID_Piece` (`ID_Piece`);
+  ADD CONSTRAINT `actionneur_ibfk_1` FOREIGN KEY (`ID_Piece`) REFERENCES `piece` (`ID_Piece`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Indexes for table `capteur`
+-- Contraintes pour la table `capteur`
 --
 ALTER TABLE `capteur`
-  ADD PRIMARY KEY (`ID_Capteur`),
-  ADD KEY `ID_Piece` (`ID_Piece`);
+  ADD CONSTRAINT `capteur_ibfk_1` FOREIGN KEY (`ID_Piece`) REFERENCES `piece` (`ID_Piece`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Indexes for table `connexion`
---
-ALTER TABLE `connexion`
-  ADD PRIMARY KEY (`ID_Connexion`);
-
---
--- Indexes for table `donnees`
---
-ALTER TABLE `donnees`
-  ADD PRIMARY KEY (`ID_DATA`);
-
---
--- Indexes for table `facture`
---
-ALTER TABLE `facture`
-  ADD PRIMARY KEY (`ID_Facture`);
-
---
--- Indexes for table `maison`
---
-ALTER TABLE `maison`
-  ADD PRIMARY KEY (`ID_Maison`);
-
---
--- Indexes for table `message`
---
-ALTER TABLE `message`
-  ADD PRIMARY KEY (`ID_Message`),
-  ADD KEY `ID_Ticket` (`ID_Ticket`);
-
---
--- Indexes for table `piece`
---
-ALTER TABLE `piece`
-  ADD PRIMARY KEY (`ID_Piece`),
-  ADD KEY `ID_Maison` (`ID_Maison`);
-
---
--- Indexes for table `ticket`
---
-ALTER TABLE `ticket`
-  ADD PRIMARY KEY (`ID_Ticket`);
-
---
--- Indexes for table `user_maison`
---
-ALTER TABLE `user_maison`
-  ADD PRIMARY KEY (`ID_Possession`),
-  ADD KEY `ID_Maison` (`ID_Maison`),
-  ADD KEY `ID_User` (`ID_User`);
-
---
--- Indexes for table `user_piece`
---
-ALTER TABLE `user_piece`
-  ADD PRIMARY KEY (`ID_User_piece`);
-
---
--- Indexes for table `utilisateur`
---
-ALTER TABLE `utilisateur`
-  ADD PRIMARY KEY (`ID_User`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `actionneur`
---
-ALTER TABLE `actionneur`
-  MODIFY `ID_Actionneur` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `capteur`
---
-ALTER TABLE `capteur`
-  MODIFY `ID_Capteur` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `connexion`
---
-ALTER TABLE `connexion`
-  MODIFY `ID_Connexion` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `donnees`
---
-ALTER TABLE `donnees`
-  MODIFY `ID_DATA` bigint(20) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `facture`
---
-ALTER TABLE `facture`
-  MODIFY `ID_Facture` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `maison`
---
-ALTER TABLE `maison`
-  MODIFY `ID_Maison` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `message`
---
-ALTER TABLE `message`
-  MODIFY `ID_Message` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `piece`
---
-ALTER TABLE `piece`
-  MODIFY `ID_Piece` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `ticket`
---
-ALTER TABLE `ticket`
-  MODIFY `ID_Ticket` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `user_maison`
---
-ALTER TABLE `user_maison`
-  MODIFY `ID_Possession` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `user_piece`
---
-ALTER TABLE `user_piece`
-  MODIFY `ID_User_piece` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `utilisateur`
---
-ALTER TABLE `utilisateur`
-  MODIFY `ID_User` int(11) NOT NULL AUTO_INCREMENT;
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `message`
+-- Contraintes pour la table `message`
 --
 ALTER TABLE `message`
   ADD CONSTRAINT `message_ibfk_1` FOREIGN KEY (`ID_Ticket`) REFERENCES `ticket` (`ID_Ticket`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `piece`
+-- Contraintes pour la table `piece`
 --
 ALTER TABLE `piece`
   ADD CONSTRAINT `piece_ibfk_1` FOREIGN KEY (`ID_Maison`) REFERENCES `maison` (`ID_Maison`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `user_maison`
+-- Contraintes pour la table `user_maison`
 --
 ALTER TABLE `user_maison`
   ADD CONSTRAINT `user_maison_ibfk_1` FOREIGN KEY (`ID_Maison`) REFERENCES `maison` (`ID_Maison`) ON DELETE CASCADE ON UPDATE CASCADE,
