@@ -8,6 +8,9 @@
 
     <img src="../Icons/Copyright.png" alt="Icon Copyright" width="35" height="35"><a classe="qsdjsd" href="copyright_client.php">
     Copyright Econnect©</a>	<br />
+
+    <img src="../Icons/Cgv.png" alt="Icon CGV" width="35" height="35"><a classe="qsdjsd" href="cgv_client.php">
+    Conditions Générales de Vente</a> <br />
   </p>
 
 	<p id="le_groupe" >
