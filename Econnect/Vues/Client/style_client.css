@@ -1017,3 +1017,21 @@ h2
     margin-left: 30px;
 }
 /*################################### FIN COMMUN ###################################*/
+/*################################### DEBUT CGV ###################################*/
+.cgv
+{
+    width:96%;
+    padding: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left : 1%;
+    margin-right : 1%;
+    border-radius: 20px;
+    background-color: #A5CAFF;
+    border : 3px solid #8FA8DE;
+    box-shadow: 5px 5px 13px;
+}
+.cgv p {
+  padding-left:20px;
+}
+/*################################### FIN COMMUN ###################################*/
