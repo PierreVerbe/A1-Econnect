@@ -1032,6 +1032,13 @@ h2
     box-shadow: 5px 5px 13px;
 }
 .cgv p {
-  padding-left:20px;
+  padding-left:45px;
+}
+.cgv h3 {
+  padding-left:27px;
+}
+.cgv h1 {
+  margin-left:15px;
+  font-size: 45px;
 }
 /*################################### FIN COMMUN ###################################*/
