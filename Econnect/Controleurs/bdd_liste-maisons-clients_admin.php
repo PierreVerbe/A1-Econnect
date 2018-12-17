@@ -9,7 +9,22 @@
 		die('Erreur : ' . $e->getMessage());
 	}
 
-	$req = $bdd->query('SELECT maison.ID_Maison, maison.Mode_maison, maison.Numero, maison.Rue, maison.Ville, maison.Code_postal, maison.Pays FROM maison, utilisateur, user_maison WHERE utilisateur.ID_User = user_maison.ID_User AND user_maison.ID_Maison = maison.ID_Maison AND utilisateur.ID_User = 1'); /*ici mettre le numero du client récupéré*/
+	if (isset($_POST['postid']))
+	{
+		$id_client = $_POST['postid'];
+
+		$req = $bdd->query('SELECT maison.ID_Maison, maison.Mode_maison, maison.Numero, maison.Rue, maison.Ville, maison.Code_postal, maison.Pays FROM maison, utilisateur, user_maison WHERE utilisateur.ID_User = user_maison.ID_User AND user_maison.ID_Maison = maison.ID_Maison AND utilisateur.ID_User = "'.$id_client.'"'); /*ici mettre le numero du client récupéré*/
+	}
+
+	?>
+
+	<table id="tableau_maisons">
+			<tr>
+				<th>N° Maison</th>
+				<th>Mode de la maison</th>
+				<th>Adresse</th>
+			</tr>
+	<?php
 
 	while ($donnees = $req->fetch())
 	{
@@ -21,7 +36,11 @@
 		</tr>
 		<?php
 	}
+
 	?>
+	</table>
 	<?php
-		$req->closeCursor();
+
+	$req->closeCursor();
+
 	?>
