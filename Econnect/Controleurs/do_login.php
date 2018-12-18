@@ -1,7 +1,7 @@
 <?php 
 include('connect.php');
 
-if(isset($_POST["submit"])){
+if(isset($_POST["login_submit"])){
 	$email=$_POST["txtemail"];
 	$pass=$_POST["txtpass"];
 	

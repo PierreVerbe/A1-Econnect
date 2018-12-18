@@ -4,6 +4,7 @@
 		color: white;
 		font-family: Arial;
 	}
+
 	.menu ul
 	{	
 		display: flex;
@@ -24,6 +25,7 @@
 		font-size: 110%;
 	}
 
+
 	.vitrine_image1
 	{
 		background-image:url(Image/paysage_vitrine.png);
@@ -34,38 +36,16 @@
 	    position: relative;
 	}
 
-	#logo_vitrine_image1
-	{
-		width: 363px;
-		height: 270px;
-		padding-top: 100px;
-		display: block;
-		margin-left: auto;
-   		margin-right: auto;
-	}
-
-	#texte_vitrine_image1
-	{
-		text-align: center;
-		font-size: 1.5em;
-    	font-family: Verdana;
-	}
-
-	.vitrine_text1
-	{
-		text-align: center;
-		font-size: 1.5em;
-    	font-family: Verdana;
-	}
 
 	.vitrine_image2
 	{
 		background-image:url(Image/tech_vitrine.png);
-	    height:300px;
+	    height:400px;
 	    background-position: center;
 	    background-position: no-repeat;
 	    background-size: cover;
 	    position: relative;
+	    text-align: center;
 	}
 
 	#texte_vitrine_image2
@@ -149,3 +129,12 @@
 	form{
 		padding: 50;
 	}
+
+	.form_col {
+    display: inline-block;
+    margin-right: 15px;
+    padding: 3px 0px;
+    width: 200px;
+    min-height: 1px;
+    text-align: right;
+}

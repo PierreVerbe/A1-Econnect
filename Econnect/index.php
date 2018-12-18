@@ -14,12 +14,12 @@
 			</div>
 			<p id="soustitre_logo"> Un produit Domisep©</p>
 			<div class="login">
-				<form method="post" action="do_login.php" >
+				<form method="post" action="Controleurs/do_login.php" >
 					<label>Email:</label>
 					<input type="email" name="txtemail" required />
 					<label>Mot de passe:</label>
 					<input type="password" name="txtpass" required />
-					<input type="submit" name="submit" value="Connexion" />	
+					<input type="submit" name="submit_login" value="Connexion" />	
 				</form>
 			</div>
 
@@ -87,7 +87,7 @@
 					<button class="button_vitrine_image2">Connectée</button>
 				<!-- survol des boxs découvre les mots ecologique, economique, connecté-->
 				</div>
-				<p id="texte2_vitrine_image2">Survol les blocs pour le découvrir</p>
+				<p id="texte2_vitrine_image2">Survoler les blocs pour le découvrir</p>
 
 			</div>
 
@@ -107,10 +107,9 @@
 		</section> 
 		
 		<section class="inscription">
-		
-			<form method="post" action="http://traitement.php" >
-				<input class="boutoninscription" type="button" value="S'inscire">
-		
+		<p> Vous n'êtes pas encore inscrit ?
+			<a href="Vues/signup.php">S'inscrire </a>
+		</p>
 		</section>
 
 
