@@ -18,31 +18,8 @@
 
 
 		<!-- Boutons slider du haut -->
-		<script>
-			var slideIndex = 1;
-			showDivs(slideIndex);
-
-			function plusDivs(n) 
-			{
-		  	showDivs(slideIndex += n);
-			}
-
-			function showDivs(n) 
-			{
-			  var i;
-			  var x = document.getElementsByClassName("Slide_h");
-			  if (n > x.length) {slideIndex = 1}    
-			  if (n < 1) {slideIndex = x.length}
-			  for (i = 0; i < x.length; i++) {
-			     x[i].style.display = "none";  
-			  }
-		  		x[slideIndex-1].style.display = "block";  
-			}
-		</script>
-
-
-
-
+		<script src="javascript/banniere_client.js"> </script>
+			
 		<!-- Boutons pour activations des différents modes -->
 		<div id="bouton_mode">
 			<button class="bouton_eco">Eco</button>
