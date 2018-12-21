@@ -18,36 +18,38 @@
 				    <th>Date du dernier message</th>
 				    <th>Statut</th>
 			  	</tr>
-			  	<tr>
-				    <td>1</td>
-				    <td>Problème capteur</td>
-				    <td>01/11/2018</td>
-				    <td>✓</td>
-			  	</tr>
-			  	<tr>
-				    <td>2</td>
-				    <td>Problème site</td>
-				    <td>02/11/2018</td>
-				    <td>✓</td>
-			  	</tr>
-			  	<tr>
-				    <td>3</td>
-				    <td>Problème données</td>
-				    <td>03/11/2018</td>
-				    <td>En cours de traitement</td>
-			  	</tr>
-			  	<tr>
-				    <td>4</td>
-				    <td>Problème compte secondaire</td>
-				    <td>04/11/2018</td>
-				    <td>✓</td>
-				</tr>
+			  	<?php include("../../Modeles/Client/Requete_SAV_Liste_Ticket.php");?>
 			</table>	
 		</article>
 		<br />
 
 		<!-- message client -->
 		<h2>Contenu du ticket :</h2>
+
+		<!--  jQueries 
+		<script src="http://code.jquery.com/jquery.min.js"></script>
+
+			<script>
+
+				var table = document.getElementById('tableau_clients');
+
+				for(var i = 1; i < table.rows.length; i++)
+				{
+					table.rows[i].onclick = function()
+					{
+						var id_client = this.cells[0].innerHTML;
+
+						$.post("../../Controleurs/bdd_liste-maisons-clients_admin.php", {postid: id_client},
+							function(data){
+								$('#tableau_maisons_ajax').html(data);
+							});
+					}
+				}
+
+			</script>
+
+			<div id="tableau_maisons_ajax"></div>
+			<!-- fin jQueries -->
 
 		<p></p>
 
