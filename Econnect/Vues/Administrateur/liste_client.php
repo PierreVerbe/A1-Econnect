@@ -37,8 +37,6 @@
 					</tr>
 				<?php include("../../Controleurs/bdd_liste-clients_admin.php");?>
 				</table>
-
-				
 			
 			</article>
 
@@ -46,13 +44,11 @@
 
 		<section id="details_client">
 
-			<ul id="proprietes">
+			<!--<ul id="proprietes">
 				<li>N° Client :</li>
 				<li>Nom du client :</li>
 				<li>Fin du contrat :</li>
-			</ul>
-
-			<p id="mode">Mode actuel : Hibernation</p>
+			</ul>-->
 
 			<script src="http://code.jquery.com/jquery.min.js"></script>
 
@@ -75,34 +71,32 @@
 
 			</script>
 
+
 			<div id="tableau_maisons_ajax"></div>
+
+			<script>
+
+				function showDetails(){
+					var table = document.getElementById('tableau_maisons');
+
+					for(var i = 1; i < table.rows.length; i++)
+					{
+						table.rows[i].onclick = function()
+						{
+							var id_maison = this.cells[0].innerHTML;
+
+							$.post("../../Controleurs/bdd_details_maison_admin.php", {id_home: id_maison},
+								function(data){
+									$('#details_maison').html(data);
+								});
+						}
+					}
+				}
+			</script>
+
 			
-			<div id="Pieces">
-				<h2>Pièces</h2>
-				<div id="liste_piece_user">
-					<p>Salon</p>
-					<p>Chambre</p>
-					<p>Cuisine</p>
-				</div>
-			</div>
+			<div id="details_maison"></div>
 
-			<div id="Capteurs">
-				<h2>Capteurs</h2>
-				<div id="liste_capteurs_user">
-					<p>Capteur 1</p>
-					<p>Capteur 2</p>
-					<p>Capteur 3</p>
-				</div>
-			</div>
-
-			<div id="Actionneurs">
-				<h2>Actionneurs</h2>
-				<div id="liste_actionneurs_user">
-					<p>Action 1</p>
-					<p>Action 2</p>
-					<p>Action 3</p>
-				</div>
-			</div>
 
 			<div id="tableaux_client_admin">
 				<div id="Listes_factures">

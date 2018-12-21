@@ -29,7 +29,7 @@
 	while ($donnees = $req->fetch())
 	{
 		?>
-		<tr>
+		<tr onclick="showDetails()">
 			<td><?php echo $donnees['ID_Maison']; ?></td>
 			<td><?php echo $donnees['Mode_maison']; ?></td>
 			<td><?php echo $donnees['Numero'] . ", " . $donnees['Rue'] . ", " . $donnees['Code_postal'] . " " . $donnees['Ville'] . ", " . $donnees['Pays']; ?></td>
