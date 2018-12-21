@@ -480,24 +480,30 @@ tr:hover
 .element:nth-child(1){
     margin-top: 50px; 
     background-color: #dcdcdc;
-    width: 500px; 
-    border-style: groove;
-    border-width: 2px; 
-    border-color: #008080; 
-    border-radius: 10px; 
+    width: 600px; 
+    border-radius: 10px;
+    background-color: #dcdcdc;
+    border : 3px solid #b6b6b6;
+    box-shadow: 3px 3px 9px;
+    font-family: Montserrat, Verdana;
+    font-size: 1.2em;
 }
+
 .element:nth-child(2){
     margin-top: 50px; 
     background-color: #dcdcdc; 
-    width: 500px;
-    border-style: groove;
-    border-width: 2px; 
-    border-color: #008080; 
-    border-radius: 10px;  
+    width: 600px;
+    border-radius: 10px;
+    background-color: #dcdcdc;
+    border : 3px solid #b6b6b6;
+    box-shadow: 3px 3px 9px; 
     text-align: left; 
     text-indent: 25px; 
-
+    font-family: Montserrat, Verdana;
+    font-size: 1.2em;
 }
+
+    
 
 /*Pour la page paramètres client*/
 #body_Client

@@ -15,7 +15,7 @@
 		</div>
 
 		<div class="element">
-			<p> C'est du texte essentiellement. Informations essentielles du client: 
+			<p> C'est du texte essentiellement. Informations essentielles du client : 
 				<ul>
 					<li>Adresse mail</li>
 					<li>Téléphone</li>

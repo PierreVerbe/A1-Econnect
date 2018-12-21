@@ -13,12 +13,13 @@
 				<button class="info_bloc_gauche" onclick="plusDivs_Haut_Gauche(-1)">&#10094;</button>
 				
 				<img class="Slide_Haut_Gauche" src="../Image/Accueil/temperature.png">
+
 				<div class="Slide_Haut_Gauche">	<p class="titre_contenu_info_H_G">Salon</p>
 												<p class="contenu_info_H_G"><br /><br />Température actuelle : 18°C<br /><br />
 																			Ajuster la température : <br /><br /> </p>
 																			<div class="bouton_info_H_G">
-																			<button class="moins_température">- °C</button>
-																			<button class="plus_température">+ °C</button></div></div>
+																			<button class="moins_température" onclick="changement_temperature(0.5)">- °C</button>
+																			<button class="plus_température" onclick="changement_temperature(-0.5)">+ °C</button></div></div>
 
 
 				<div class="Slide_Haut_Gauche">	<p class="titre_contenu_info_H_G">Cuisine</p>
