@@ -97,22 +97,7 @@
 			
 			<div id="details_maison"></div>
 
-
-			<div id="tableaux_client_admin">
-				<div id="Listes_factures">
-					<table id="tableau_factures">
-						<caption>Liste des factures du client</caption>
-						<tr>
-							<th>N° Facture</th>
-							<th>Date</th>
-							<th>Consommation</th>
-							<th>Prix</th>
-						</tr>
-						<?php include("../../Controleurs/bdd_liste-facture-clients_admin.php");?>
-					</table>
-				</div>
-
-				<div id="Listes_tickets_user_admin">
+				<!--<div id="Listes_tickets_user_admin">
 					<table id="tableau_tickets_user">
 						<caption>Liste des tickets du client</caption>
 						<tr>
@@ -141,7 +126,7 @@
 						</tr>
 					</table>
 				</div>
-			</div>
+			</div>-->
 			
 		</section>
 

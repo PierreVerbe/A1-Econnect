@@ -37,68 +37,6 @@
 					</tr>
 				<?php include("../../Controleurs/bdd_liste-clients_admin.php");?>
 				</table>
-
-				<script type="text/javascript">
-
-					function getXMLHttpRequest() {
-						var xhr = null;
-			
-						if (window.XMLHttpRequest || window.ActiveXObject) {
-							if (window.ActiveXObject) {
-								try {
-									xhr = new ActiveXObject("Msxml2.XMLHTTP");
-								} catch(e) {
-									xhr = new ActiveXObject("Microsoft.XMLHTTP");
-								}
-							} else {
-								xhr = new XMLHttpRequest(); 
-							}
-						} else {
-							alert("Votre navigateur ne supporte pas l'objet XMLHTTPRequest...");
-							return null;
-						}
-								
-						return xhr;
-					}
-
-					function request(callback) {
-						var xhr = getXMLHttpRequest();
-			
-						xhr.onreadystatechange = function() {
-							if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
-									callback(xhr.responseXML);
-							}
-						};
-
-						xhr.open("POST", "../../Controleurs/bdd_liste-maisons-clients_admin.php", true);
-						xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-						xhr.send("postid=id_client");
-					}
-
-					function readData(sData) {
-						// On peut maintenant traiter les données sans encombrer l'objet XHR.
-						if (sData == "OK") {
-							alert("C'est bon");
-						} else {
-							alert("Y'a eu un problème");
-						}
-					}
-
-					var table = document.getElementById('tableau_clients');
-
-					for(var i = 1; i < table.rows.length; i++)
-					{
-						table.rows[i].onclick = function()
-						{
-							var id_client = this.cells[0].innerHTML;
-
-							id_client = encodeURIComponent(id_client);
-
-							request(readData);
-						}
-					}
-
-				</script>
 			
 			</article>
 
@@ -106,42 +44,59 @@
 
 		<section id="details_client">
 
-			<ul id="proprietes">
+			<!--<ul id="proprietes">
 				<li>N° Client :</li>
 				<li>Nom du client :</li>
 				<li>Fin du contrat :</li>
-			</ul>
+			</ul>-->
 
-			<p id="mode">Mode actuel : Hibernation</p>
+			<script src="http://code.jquery.com/jquery.min.js"></script>
+
+			<script>
+
+				var table = document.getElementById('tableau_clients');
+
+				for(var i = 1; i < table.rows.length; i++)
+				{
+					table.rows[i].onclick = function()
+					{
+						var id_client = this.cells[0].innerHTML;
+
+						$.post("../../Controleurs/bdd_liste-maisons-clients_admin.php", {postid: id_client},
+							function(data){
+								$('#tableau_maisons_ajax').html(data);
+							});
+					}
+				}
+
+			</script>
 
 
+			<div id="tableau_maisons_ajax"></div>
 
-			<div id="Pieces">
-				<h2>Pièces</h2>
-				<div id="liste_piece_user">
-					<p>Salon</p>
-					<p>Chambre</p>
-					<p>Cuisine</p>
-				</div>
-			</div>
+			<script>
 
-			<div id="Capteurs">
-				<h2>Capteurs</h2>
-				<div id="liste_capteurs_user">
-					<p>Capteur 1</p>
-					<p>Capteur 2</p>
-					<p>Capteur 3</p>
-				</div>
-			</div>
+				function showDetails(){
+					var table = document.getElementById('tableau_maisons');
 
-			<div id="Actionneurs">
-				<h2>Actionneurs</h2>
-				<div id="liste_actionneurs_user">
-					<p>Action 1</p>
-					<p>Action 2</p>
-					<p>Action 3</p>
-				</div>
-			</div>
+					for(var i = 1; i < table.rows.length; i++)
+					{
+						table.rows[i].onclick = function()
+						{
+							var id_maison = this.cells[0].innerHTML;
+
+							$.post("../../Controleurs/bdd_details_maison_admin.php", {id_home: id_maison},
+								function(data){
+									$('#details_maison').html(data);
+								});
+						}
+					}
+				}
+			</script>
+
+			
+			<div id="details_maison"></div>
+
 
 			<div id="tableaux_client_admin">
 				<div id="Listes_factures">

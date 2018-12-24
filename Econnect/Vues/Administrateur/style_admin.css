@@ -206,7 +206,7 @@ header
 }
 
 
-#tableau_clients, #tableau_maisons {
+#tableau_clients, #tableau_maisons, #tableau_factures, #tableau_tickets {
     width:98%;
     margin-top: 15px;
     margin-bottom: 15px;

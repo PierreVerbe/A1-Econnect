@@ -46,8 +46,79 @@
 		{
 			echo '<p>Actionneur n° : ' . $donnees['ID_Actionneur'] . ' dans ' . $donnees['Type_piece'] .'</p>';
 		}
-	}
 
+		##### Factures #####
+
+		$req4 = $bdd->query('SELECT facture.ID_Facture, facture.Date_facture, facture.Consommation, facture.Prix FROM facture, maison WHERE facture.ID_Maison = maison.ID_Maison AND maison.ID_Maison = "'.$id_maison.'"'); /*ici mettre le numero du client récupéré*/
+
+		?>
+
+		<table id="tableau_factures">
+			<caption><h2>Liste des factures</h2></caption>
+				<tr>
+					<th>N° Facture</th>
+					<th>Date</th>
+					<th>Consommation</th>
+					<th>Prix</th>
+				</tr>
+
+		<?php
+
+		while ($donnees = $req4->fetch())
+		{
+			?>
+			<tr>
+				<td><?php echo $donnees['ID_Facture']; ?></td>
+				<td><?php echo $donnees['Date_facture']; ?></td>
+				<td><?php echo $donnees['Consommation']; ?></td>
+				<td><?php echo $donnees['Prix']; ?></td>
+			</tr>
+			<?php
+		}
+
+		?>
+
+		</table>
+
+		<?php
+
+		##### Tickets #####
+
+		$req5 = $bdd->query('SELECT ticket.ID_Ticket, ticket.Objet, ticket.Status, ticket.Date_ticket FROM ticket, maison WHERE ticket.ID_Maison = maison.ID_Maison AND maison.ID_Maison = "'.$id_maison.'"'); /*ici mettre le numero du client récupéré*/
+
+		?>
+
+		<table id="tableau_tickets">
+			<caption><h2>Liste des tickets SAV</h2></caption>
+				<tr>
+					<th>N° Ticket</th>
+					<th>Objet</th>
+					<th>Statut</th>
+					<th>Date</th>
+					
+				</tr>
+
+		<?php
+
+		while ($donnees = $req5->fetch())
+		{
+			?>
+			<tr>
+				<td><?php echo $donnees['ID_Ticket']; ?></td>
+				<td><?php echo $donnees['Objet']; ?></td>
+				<td><?php echo $donnees['Status']; ?></td>
+				<td><?php echo $donnees['Date_ticket']; ?></td>
+			</tr>
+			<?php
+		}
+
+		?>
+
+		</table>
+
+		<?php
+
+	}
 
 	$req->closeCursor();
 ?>
