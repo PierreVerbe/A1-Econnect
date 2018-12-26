@@ -44,7 +44,7 @@
 			<h2>Alertes</h2>
 
 			<ul>
-				<li><img src="ressources/point_rouge_mini.png" alt="Alerte""> Maison n°14587 : Alerte intrusion <button type="button">Vérifier les caméras</button></li>
+				<li><img src="ressources/point_rouge_mini.png" alt="Alerte""> Maison n°14587 : Alerte intrusion <a href="https://livestream.com/accounts/888332/events/931293/player?width=640&height=360&autoPlay=true&mute=false"><button>Vérifier les caméras</button></a></li>
 				<li><img src="ressources/point_orange_mini.png" alt="Problème"> Maison n°14586 : Intervention nécéssaire</li>
 				<li><img src="ressources/point_vert_mini.png" alt="OK"> Tout est ok</li>
 			</ul>
@@ -56,10 +56,17 @@
 			<h2>Gestion des pannes</h2>
 
 			<ul>
-				<li>Maison n°14587 : Problème capteur <button class="button">Détails</button><button class="button">Désactiver</button><button class="button">Appel Technicien</button></li>
+				<li>Maison n°14587 : Problème capteur <button class="button">Détails</button><button onclick="desactivated()">Désactiver</button><button class="button">Appel Technicien</button></li>
 				<li>Maison n°14588 : Problème actionneur <button class="button">Détails</button><button class="button">Désactiver</button><button class="button">Appel Technicien</button></li>
 				<li>Maison n°14582 : HAG défaillant <button class="button">Détails</button><button class="button">Désactiver</button><button class="button">Appel Technicien</button></li>
 			</ul>
+
+			<script>
+				desactivated()
+				{
+					alert("Désactivé !");
+				}
+			</script>
 			
 		</article>
 			

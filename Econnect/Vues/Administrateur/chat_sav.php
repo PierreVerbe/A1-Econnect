@@ -22,32 +22,50 @@
 				</article>
 				<br />
 
+				<script src="http://code.jquery.com/jquery.min.js"></script>
+
+				<script>
+
+					var table = document.getElementById('SAV_table');
+
+					for(var i = 1; i < table.rows.length; i++)
+					{
+						table.rows[i].onclick = function()
+						{
+							var id_ticket = this.cells[2].innerHTML;
+
+							document.getElementById('num_ticket').value = id_ticket;
+
+							$.post("../../Controleurs/bdd_message-tickets-sav_admin.php", {postid: id_ticket},
+								function(data){
+									$('#contenu_ticket').html(data);
+								});
+						}
+					}
+
+				</script>
+
 				<!-- message client -->
 				<h2>Contenu du ticket :</h2>
 
-				<p></p>
-
 				<!-- Pour la barre de délimitation -->
-				<hr width=90% align =center>
+				<div id="contenu_ticket"></div>
 
 				<h2>Répondre à un ticket :</h2>
 
 				<div class="SAV_nouveau_ticket">
-					<form method="post" action="traitement.php">
-						<p>
-			    			<label for="objet_message">Objet :<br /></label>
-			    			<input class="zone_objet_SAV" type="text" name="objet_message" id="objet_message" placeholder="Ex : Problème capteur température" size="40" maxlength="300" />
-						</p>
-					</form>
+					<form method="post" action="traitement_ticket_admin.php">
+			    			<p>
+				       			<label for="message">Message :</label><br />
+				       			<textarea class="zone_message_SAV" name="message" id="message" rows="7" ></textarea>
+				   			</p>
 
-					<form method="post" action="traitement.php">
-			   			<p>
-			       		<label for="message">Message :</label><br />
-			       		<textarea class="zone_message_SAV" name="message" id="message" rows="7" ></textarea>
-			   			</p>
-					</form>
+				   			<input type="hidden" id="num_ticket" name="id_ticket" value="" />
 
-					<input class="bouton_envoyer" type="submit" value="Envoyer"/>
+				   			<p>
+				   				<input class="bouton_envoyer" type="submit" value="Envoyer"/>
+							</p>
+					</form>
 				</div>
 
 			</section>

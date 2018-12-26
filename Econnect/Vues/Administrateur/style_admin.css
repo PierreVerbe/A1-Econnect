@@ -200,7 +200,7 @@ header
     margin-right: 10px;
 }
 
-.SAV_table
+#SAV_table
 {
     margin: auto;
 }
@@ -267,17 +267,19 @@ tr:hover
     text-align: center;
 }
 
-#details_maison p
+#liste_details_maison
 {
-    display: flex;
-    justify-content: space-around;
+    text-align: center;
 }
 
 #details_maison p
 {
+    margin: 10px;
+    display: inline-block;
     border : 1px solid black;
     padding: 10px;
     border-radius: 3px;
+    width: 15%;
 }
 
 #tableaux_client_admin table
@@ -332,7 +334,7 @@ tr:hover
     font-family: Montserrat, Verdana;
 }
 
-.SAV_table
+#SAV_table
 {
     background-color: #dcdcdc;
 }
@@ -353,6 +355,13 @@ tr:hover
     margin-left : 50%;
     margin-right : 50%;
     margin-bottom: 10px;
+}
+
+#contenu_message
+{
+    border: 1px solid black;
+    background-color: white;
+    padding: 5px;
 }
 
 

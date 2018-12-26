@@ -12,7 +12,7 @@
 	$req = $bdd->query('SELECT ticket.ID_User, utilisateur.Nom, utilisateur.Prenom, ticket.ID_Ticket, ticket.Objet, ticket.Date_ticket, ticket.Status FROM ticket, utilisateur WHERE ticket.ID_User = utilisateur.ID_User ORDER BY ticket.Date_ticket DESC');
 	?>
 
-	<table class="SAV_table">
+	<table id="SAV_table">
 		<tr>
 			<th>N° Client</th>
 			<th>Nom du Client</th>

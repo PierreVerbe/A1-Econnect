@@ -15,6 +15,12 @@
 
 		##### Pièces ######
 
+		?>
+
+		<div id="liste_details_maison">
+
+		<?php
+
 		$req = $bdd->query('SELECT type_piece.Type_piece FROM type_piece, piece WHERE type_piece.ID_Piece = piece.ID_Piece AND piece.ID_Maison = "'.$id_maison.'"');
 
 		echo "<h2>Pieces</h2>";
@@ -47,7 +53,15 @@
 			echo '<p>Actionneur n° : ' . $donnees['ID_Actionneur'] . ' dans ' . $donnees['Type_piece'] .'</p>';
 		}
 
+		?>
+
+		</div>
+
+		<?php
+
 		##### Factures #####
+
+
 
 		$req4 = $bdd->query('SELECT facture.ID_Facture, facture.Date_facture, facture.Consommation, facture.Prix FROM facture, maison WHERE facture.ID_Maison = maison.ID_Maison AND maison.ID_Maison = "'.$id_maison.'"'); /*ici mettre le numero du client récupéré*/
 
