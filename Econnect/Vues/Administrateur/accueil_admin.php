@@ -62,7 +62,7 @@
 			</ul>
 
 			<script>
-				desactivated()
+				function desactivated()
 				{
 					alert("Désactivé !");
 				}

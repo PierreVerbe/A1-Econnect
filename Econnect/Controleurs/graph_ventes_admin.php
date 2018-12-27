@@ -19,7 +19,7 @@ $req = $bdd->query('SELECT COUNT(*) AS countAbos FROM utilisateur GROUP BY MONTH
 
 while ($donnees = $req->fetch())
 {
-	$datay[] = $donnees['countAbos'] * 30;
+	$datay[] = $donnees['countAbos'] * 30 //prix de l'abonnement;
 }
 
 $req->closeCursor();
