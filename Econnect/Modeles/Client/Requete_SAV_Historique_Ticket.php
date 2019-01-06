@@ -1,16 +1,13 @@
 <?php
 
-	try
-	{
+	try{
 		$bdd = new PDO('mysql:host=localhost;dbname=econnect_v2;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 	}
-	catch (Exception $e)
-	{
+	catch (Exception $e){
 		die('Erreur : ' . $e->getMessage());
 	}
 
-	if (isset($_POST['postid']))
-	{
+	if (isset($_POST['postid'])){
 		$id_client = $_POST['postid'];
 
 		$req = $bdd->query('SELECT maison.ID_Maison, maison.Mode_maison, maison.Numero, maison.Rue, maison.Ville, maison.Code_postal, maison.Pays FROM maison, utilisateur, user_maison WHERE utilisateur.ID_User = user_maison.ID_User AND user_maison.ID_Maison = maison.ID_Maison AND utilisateur.ID_User = "'.$id_client.'"'); /*ici mettre le numero du client récupéré*/
@@ -26,8 +23,7 @@
 			</tr>
 	<?php
 
-	while ($donnees = $req->fetch())
-	{
+	while ($donnees = $req->fetch()){
 		?>
 		<tr>
 			<td><?php echo $donnees['ID_Maison']; ?></td>
