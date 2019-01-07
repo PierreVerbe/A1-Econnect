@@ -13,21 +13,7 @@
 		<br />
 
 		<script src="http://code.jquery.com/jquery.min.js"></script>
-			<script>
-				var table = document.getElementById('SAV_table_client');
-				//alert(table);
-				for(var i = 1; i < table.rows.length; i++){
-					table.rows[i].onclick = function(){
-						var id_ticket = this.cells[0].innerHTML;
-						//document.getElementById('num_ticket').value = id_ticket;
-						
-						$.post("../../Modeles/Client/Requete_SAV_Contenu_Ticket.php", {postid: id_ticket},
-							function(data){
-								$('#contenu_ticket').html(data);
-							});
-					}
-				}
-			</script>
+		<script src="javascript/SAV_client.js"></script>
 
 		<!-- message client -->
 		<h2>Contenu du ticket :</h2>
