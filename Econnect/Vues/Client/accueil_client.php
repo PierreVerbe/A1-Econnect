@@ -6,6 +6,8 @@
 
 	<!-- Texte de remplissage -->
 	<section class="tableau_bord">
+
+	<script src="http://code.jquery.com/jquery.min.js"></script>
 	
 		<div id="bloc_info">
 			<!-- premier block du tableau de bord = Haut gauche -->
@@ -14,29 +16,29 @@
 				
 				<img class="Slide_Haut_Gauche" src="../Image/Accueil/temperature.png">
 
-				<div class="Slide_Haut_Gauche">	<p class="titre_contenu_info_H_G">Salon</p>
+				<div class="Slide_Haut_Gauche">	<p class="titre_contenu_info_H_G" id="piece1">Salon</p>
 												<p class="contenu_info_H_G"><br /><br />Température actuelle : 18°C<br /><br />
-																			Ajuster la température : <br /><br /> </p>
+																			Ajuster la température : <a id="getTemp"></a><br /><br /> </p>
 																			<div class="bouton_info_H_G">
-																			<button class="moins_température" onclick="changement_temperature(0.5)">- °C</button>
-																			<button class="plus_température" onclick="changement_temperature(-0.5)">+ °C</button></div></div>
+																			<button class="moins_température" onclick="changement_temperature(1)">- °C</button>
+																			<button class="plus_température" onclick="changement_temperature(1)">+ °C</button></div></div>
 
 
-				<div class="Slide_Haut_Gauche">	<p class="titre_contenu_info_H_G">Cuisine</p>
+				<div class="Slide_Haut_Gauche">	<p class="titre_contenu_info_H_G" id="piece1">Cuisine</p>
 												<p class="contenu_info_H_G"><br /><br />Température actuelle : 20°C<br /><br />
 																			Ajuster la température : <br /><br /> </p>
 																			<div class="bouton_info_H_G">
 																			<button class="moins_température">- °C</button>
 																			<button class="plus_température">+ °C</button></div></div>
 
-				<div class="Slide_Haut_Gauche">	<p class="titre_contenu_info_H_G">Chambre</p>
+				<div class="Slide_Haut_Gauche">	<p class="titre_contenu_info_H_G" id="piece1">Chambre</p>
 												<p class="contenu_info_H_G"><br /><br />Température actuelle : 18°C<br /><br />
 																			Ajuster la température : <br /><br /> </p>
 																			<div class="bouton_info_H_G">
 																			<button class="moins_température">- °C</button>
 																			<button class="plus_température">+ °C</button></div></div>
 
-				<div class="Slide_Haut_Gauche">	<p class="titre_contenu_info_H_G">Salle de bain</p>
+				<div class="Slide_Haut_Gauche">	<p class="titre_contenu_info_H_G" id="piece1">Salle de bain</p>
 												<p class="contenu_info_H_G"><br /><br />Température actuelle : 20°C<br /><br />
 																			Ajuster la température : <br /><br /> </p>
 																			<div class="bouton_info_H_G">

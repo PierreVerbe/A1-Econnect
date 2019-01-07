@@ -282,6 +282,11 @@ tr:hover
     width: 15%;
 }
 
+#details_maison p:hover
+{
+    cursor: pointer;
+}
+
 #tableaux_client_admin table
 {
     margin: auto;
@@ -337,6 +342,7 @@ tr:hover
 #SAV_table
 {
     background-color: #dcdcdc;
+    width: 100%;
 }
 
 .SAV_nouveau_ticket

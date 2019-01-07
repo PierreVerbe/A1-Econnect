@@ -7,6 +7,7 @@ showDivs_Haut_Gauche(var_Haut_Gauche);
 function plusDivs_Haut_Gauche(n) 
 {
 	showDivs_Haut_Gauche(var_Haut_Gauche += n);
+    getTempWanted();
 }
 
 function showDivs_Haut_Gauche(n) 
@@ -41,8 +42,19 @@ function showDivs_Bas_Droit(n)
 		x[var_Bas_Droit-1].style.display = "block";  
 }
 
-//pour les boutons de température
-function changement_temperature(n) 
-{
-	
+function getTempWanted(){
+    var piece = document.getElementById('piece1').innerHTML;
+    $.post("../../Controleurs/bdd_change_temp_client", {postpiece: piece},
+        function(data){
+        $('#getTemp').html(data);
+        });
 }
+
+//pour les boutons de température
+/*function changement_temperature(n) 
+{
+  $.post("../../Controleurs/bdd_liste-maisons-clients_admin.php", {postid: id_client},
+        function(data){
+        $('#tableau_maisons_ajax').html(data);
+        });
+}*/
