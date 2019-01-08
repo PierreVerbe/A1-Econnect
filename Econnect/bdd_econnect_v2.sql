@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  jeu. 27 déc. 2018 à 14:38
+-- Généré le :  mar. 08 jan. 2019 à 09:44
 -- Version du serveur :  5.7.23
 -- Version de PHP :  7.2.10
 
@@ -187,7 +187,7 @@ CREATE TABLE IF NOT EXISTS `message` (
   `Contenu` text COLLATE utf8_bin NOT NULL,
   PRIMARY KEY (`ID_Message`),
   KEY `ID_Ticket` (`ID_Ticket`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Déchargement des données de la table `message`
@@ -196,7 +196,8 @@ CREATE TABLE IF NOT EXISTS `message` (
 INSERT INTO `message` (`ID_Message`, `ID_Ticket`, `Date_message`, `Piece_jointe`, `Contenu`) VALUES
 (1, 1, '2018-12-25 00:00:00', 'Photo.jpg', 'Bonjour,\r\n\r\nTest ticket SAV .\r\nJoyeux Noël et joyeux anniversaire\r\n\r\nEh mercé d\'avance.'),
 (2, 2, '2018-12-26 00:00:00', 'photo.jpg', 'Bonjour,\r\n\r\nProblème actionneur volet fenêtre salon.\r\n\r\nBonne journée.'),
-(6, 1, '2018-12-26 15:01:03', NULL, 'Wesh');
+(6, 1, '2018-12-26 15:01:03', NULL, 'Wesh'),
+(7, 1, '2018-12-28 14:29:29', NULL, 'Wesh Alors');
 
 -- --------------------------------------------------------
 
@@ -208,6 +209,8 @@ DROP TABLE IF EXISTS `piece`;
 CREATE TABLE IF NOT EXISTS `piece` (
   `ID_Piece` int(11) NOT NULL AUTO_INCREMENT,
   `ID_Maison` int(11) NOT NULL,
+  `Temperature` int(11) NOT NULL DEFAULT '20',
+  `Luminosite` int(11) NOT NULL DEFAULT '50',
   PRIMARY KEY (`ID_Piece`),
   KEY `ID_Maison` (`ID_Maison`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
@@ -216,9 +219,9 @@ CREATE TABLE IF NOT EXISTS `piece` (
 -- Déchargement des données de la table `piece`
 --
 
-INSERT INTO `piece` (`ID_Piece`, `ID_Maison`) VALUES
-(1, 1),
-(2, 1);
+INSERT INTO `piece` (`ID_Piece`, `ID_Maison`, `Temperature`, `Luminosite`) VALUES
+(1, 1, 20, 70),
+(2, 1, 20, 70);
 
 -- --------------------------------------------------------
 

@@ -16,12 +16,12 @@
 				
 				<img class="Slide_Haut_Gauche" src="../Image/Accueil/temperature.png">
 
-				<div class="Slide_Haut_Gauche">	<p class="titre_contenu_info_H_G" id="piece1">Salon</p>
+				<div class="Slide_Haut_Gauche">	<p class="titre_contenu_info_H_G" id="pieceTemp1">Salon</p>
 												<p class="contenu_info_H_G"><br /><br />Température actuelle : 18°C<br /><br />
-																			Ajuster la température : <a id="getTemp"></a><br /><br /> </p>
+																			Ajuster la température : <a id="getTemp"></a>°C<br /><br /> </p>
 																			<div class="bouton_info_H_G">
-																			<button class="moins_température" onclick="changement_temperature(1)">- °C</button>
-																			<button class="plus_température" onclick="changement_temperature(1)">+ °C</button></div></div>
+																			<button class="moins_température" onclick="changeNegTemp()">- °C</button>
+																			<button class="plus_température" onclick="changePosTemp()">+ °C</button></div></div>
 
 
 				<div class="Slide_Haut_Gauche">	<p class="titre_contenu_info_H_G" id="piece1">Cuisine</p>
@@ -98,12 +98,12 @@
 				<button class="info_bloc_gauche" onclick="plusDivs_Bas_Droit(-1)">&#10094;</button>
 				
 				<img class="Slide_Bas_Droit" src="../Image/Accueil/lumiere.png">
-				<div class="Slide_Bas_Droit"><p class="titre_contenu_info_H_G">Salon</p>
+				<div class="Slide_Bas_Droit"><p class="titre_contenu_info_H_G" id="pieceLum1">Salon</p>
 												<p class="contenu_info_B_D"><br /><br />Lumière actuelle : Basse<br /><br />
-																			Ajuster la lumière : <br /><br /> </p>
+																			Ajuster la lumière : <a id="getLum"></a>%<br /><br /></p>
 																			<div class="bouton_info_B_D">
-																			<button class="moins_lumière">-</button>
-																			<button class="plus_lumière">+</button></div></div>
+																			<button class="moins_lumière" onclick="changeNegLum()">-</button>
+																			<button class="plus_lumière" onclick="changePosLum()">+</button></div></div>
 
 				<div class="Slide_Bas_Droit"><p class="titre_contenu_info_H_G">Cuisine</p>
 												<p class="contenu_info_B_D"><br /><br />Lumière actuelle : OFF<br /><br />

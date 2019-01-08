@@ -20,21 +20,21 @@
 	{
 		$piece = $_POST['postpiece'];
 
-		$req = $bdd->query('SELECT piece.Temperature FROM piece, type_piece WHERE piece.ID_Piece = type_piece.ID_Piece AND type_piece.Type_piece = "'.$piece.'"');
+		$req = $bdd->query('SELECT piece.Luminosite FROM piece, type_piece WHERE piece.ID_Piece = type_piece.ID_Piece AND type_piece.Type_piece = "'.$piece.'"');
 
 		while ($donnees = $req->fetch())
 		{
-			echo $donnees['Temperature'];
+			echo $donnees['Luminosite'];
 		}
 
 		$req->closeCursor();
 	}
 
-	if(isset($_POST['postemp']))
+	if(isset($_POST['postlum']))
 	{
-		$temp = $_POST['postemp'];
+		$lum = $_POST['postlum'];
 
-		if($req2 = $bdd->query('UPDATE piece SET piece.Temperature = "'.$temp.'"') === TRUE)
+		if($req2 = $bdd->query('UPDATE piece SET piece.Luminosite = "'.$lum.'"') === TRUE)
 		{
 			echo "complete";
 		}
@@ -44,13 +44,5 @@
 		}
 		$req2->closeCursor();
 	}
-
-	
-
-			
-
-	
-
-	
 
 ?>
