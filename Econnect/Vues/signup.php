@@ -177,7 +177,7 @@ function passwordVerify() {
 
 function cemacVerify() {
   if (cemac.value != "") {
-   cemac.style.border = "1px solid #5e6e66";
+   cemac.style.border = "1px solid #5e6e6";
    document.getElementById('cemac_div').style.color = "#5e6e66";
    cemac_error.innerHTML = "";
    return true;
