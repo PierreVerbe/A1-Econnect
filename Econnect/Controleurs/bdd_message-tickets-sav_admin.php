@@ -20,9 +20,9 @@
 
 		while ($donnees = $req->fetch())
 		{
-			echo '<p>Message n°'. $donnees['ID_Message'] . '</p>';
-			echo '<p>Date :'. $donnees['Date_message'] . '</p>';
-			echo '<p>Pièce jointe :'. $donnees['Piece_jointe'] . '</p>';
+			echo '<p>Message n° '. $donnees['ID_Message'] . '</p>';
+			echo '<p>Date : '. $donnees['Date_message'] . '</p>';
+			echo '<p>Pièce jointe : '. $donnees['Piece_jointe'] . '</p>';
 			echo '<label>Contenu :</label><p id="contenu_message">'. $donnees['Contenu'] . '</p>';
 			echo "<p><hr width=90%></p>";
 		}

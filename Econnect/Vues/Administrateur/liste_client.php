@@ -91,6 +91,17 @@
 						}
 					}
 				}
+
+				function getSensorsDetails(){
+					var numCapteur = document.getElementById('idCapteur').innerHTML;
+					numCapteur = Number(numCapteur.replace(/[^\d]/g, ""));
+
+					$.post("../../Controleurs/bdd_details_sensors_admin.php", {id_capteur: numCapteur},
+								function(data){
+									alert(data);
+								});
+
+				}
 			</script>
 
 			

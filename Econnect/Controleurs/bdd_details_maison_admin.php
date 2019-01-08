@@ -38,7 +38,7 @@
 
 		while ($donnees = $req2->fetch())
 		{
-			echo '<p>Capteur n° : ' . $donnees['ID_Capteur'] . ' dans ' . $donnees['Type_piece'] . '</p>';
+			echo '<p id = "idCapteur" onclick = "getSensorsDetails()">Capteur n° : ' . $donnees['ID_Capteur'] . ' dans ' . $donnees['Type_piece'] . '</p>';
 		}
 
 
@@ -63,7 +63,7 @@
 
 
 
-		$req4 = $bdd->query('SELECT facture.ID_Facture, facture.Date_facture, facture.Consommation, facture.Prix FROM facture, maison WHERE facture.ID_Maison = maison.ID_Maison AND maison.ID_Maison = "'.$id_maison.'"'); /*ici mettre le numero du client récupéré*/
+		$req4 = $bdd->query('SELECT facture.ID_Facture, facture.Date_facture, facture.Consommation, facture.Prix FROM facture, maison WHERE facture.ID_Maison = maison.ID_Maison AND maison.ID_Maison = "'.$id_maison.'"');
 
 		?>
 
@@ -98,7 +98,7 @@
 
 		##### Tickets #####
 
-		$req5 = $bdd->query('SELECT ticket.ID_Ticket, ticket.Objet, ticket.Status, ticket.Date_ticket FROM ticket, maison WHERE ticket.ID_Maison = maison.ID_Maison AND maison.ID_Maison = "'.$id_maison.'"'); /*ici mettre le numero du client récupéré*/
+		$req5 = $bdd->query('SELECT ticket.ID_Ticket, ticket.Objet, ticket.Status, ticket.Date_ticket FROM ticket, maison WHERE ticket.ID_Maison = maison.ID_Maison AND maison.ID_Maison = "'.$id_maison.'"');
 
 		?>
 

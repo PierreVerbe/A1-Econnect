@@ -26,4 +26,14 @@ $res=mysqli_query($conn,$query);
 	echo "Vous n'avez pas accepter les CGU (retourner à la page précédente)"
 }
 }
+
+/*
+function existingEmail($email): bool
+{
+    $bdd = connectBDD();
+    $req = $bdd->prepare('SELECT EXISTS(SELECT * FROM utilisateurs WHERE email = ?)');
+    $req->execute(array($email));
+    return $req->fetch()["EXISTS(SELECT * FROM utilisateurs WHERE email = '$email')"];
+}
+*/
 ?>
