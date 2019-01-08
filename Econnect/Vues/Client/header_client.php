@@ -14,7 +14,6 @@
     <img src="../Image/Econnect_feuille_mini.png" alt="Logo_Econnect" />
   </div>
   </div>
-	
 
 </header>
 	<!-- Menu -->
