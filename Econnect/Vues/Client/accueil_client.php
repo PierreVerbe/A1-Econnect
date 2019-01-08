@@ -8,9 +8,14 @@
 	<section class="tableau_bord">
 
 	<script src="http://code.jquery.com/jquery.min.js"></script>
-	
+
+	<div class="info_H_G">
+				<button class="info_bloc_gauche" onclick="plusDivs_Haut_Gauche(-1)">&#10094;</button>
+				
+				<img class="Slide_Haut_Gauche" src="../Image/Accueil/temperature.png">
+	<!--
 		<div id="bloc_info">
-			<!-- premier block du tableau de bord = Haut gauche -->
+			 premier block du tableau de bord = Haut gauche
 			<div class="info_H_G">
 				<button class="info_bloc_gauche" onclick="plusDivs_Haut_Gauche(-1)">&#10094;</button>
 				
@@ -46,6 +51,12 @@
 																			<button class="plus_température">+ °C</button></div></div>
 
 				<button class="info_bloc_droite" onclick="plusDivs_Haut_Gauche(1)">&#10095;</button>
+			</div>-->
+
+			<?php include("../../Controleurs/bdd_get-rooms_client.php");
+			?>
+
+			<button class="info_bloc_droite" onclick="plusDivs_Haut_Gauche(1)">&#10095;</button>
 			</div>
 		
 				

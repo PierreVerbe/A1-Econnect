@@ -34,7 +34,7 @@
 	{
 		$temp = $_POST['postemp'];
 
-		if($req2 = $bdd->query('UPDATE piece SET piece.Temperature = "'.$temp.'"') === TRUE)
+		if($req2 = $bdd->query('UPDATE piece SET Temperature = "'.$temp.'" WHERE ID_Piece = 1') === TRUE)
 		{
 			echo "complete";
 		}

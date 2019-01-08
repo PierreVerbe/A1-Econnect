@@ -190,7 +190,7 @@ src: url('../Fonts/Montserrat/Montserrat-Regular.otf');
     box-shadow: 5px 5px 13px;
 }
 
-#bloc_info
+.tableau_bord
 {
     display: flex;
     flex-wrap: wrap;

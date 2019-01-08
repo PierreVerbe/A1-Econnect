@@ -44,7 +44,7 @@ function showDivs_Bas_Droit(n)
 }
 
 function getTempWanted(){
-    var piece = document.getElementById('piece1').innerHTML;
+    var piece = document.getElementById('pieceTemp').innerHTML;
     $.post("../../Controleurs/bdd_change_temp_client", {postpiece: piece},
         function(data){
         $('#getTemp').html(data);
@@ -53,7 +53,7 @@ function getTempWanted(){
 
 function changePosTemp(){
     var temp = document.getElementById('getTemp').innerHTML;
-    var piece = document.getElementById('pieceTemp1').innerHTML;
+    var piece = document.getElementById('pieceTemp').innerHTML;
     if (temp >= 30)
     {
         alert("Vous ne pouvez pas augmenter plus la température");
@@ -75,7 +75,7 @@ function changePosTemp(){
 
 function changeNegTemp(){
     var temp = document.getElementById('getTemp').innerHTML;
-    var piece = document.getElementById('pieceTemp1').innerHTML;
+    var piece = document.getElementById('pieceTemp').innerHTML;
     if (temp <= 10)
     {
         alert("Vous ne pouvez pas diminuer la température");
