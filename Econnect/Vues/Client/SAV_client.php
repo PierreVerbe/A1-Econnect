@@ -28,6 +28,7 @@
 			    	<label for="objet_message">Objet :<br /></label>
 			    	<input class="zone_objet_SAV" type="text" name="objet_message" id="objet_message" placeholder="Ex : Problème capteur température" size="40" maxlength="300" />
 				</p>
+				
 			   	<p>
 			       <label for="message">Message :</label><br />
 			       <textarea class="zone_message_SAV" name="message" id="message" rows="7" ></textarea>

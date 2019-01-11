@@ -54,33 +54,7 @@
 
 			<!-- deuxième block du tableau de bord = haut droit -->
 			<div class="info_H_D">
-				<table class="SAV_table">
-			  	<tr>
-				    <th>N° ticket</th>
-				    <th>Objet du ticket / dernier message</th>
-				    <th>Statut</th>
-			  	</tr>
-			  	<tr>
-				    <td>1</td>
-				    <td>Problème capteur</td>
-				    <td>✓</td>
-			  	</tr>
-			  	<tr>
-				    <td>2</td>
-				    <td>Problème site</td>
-				    <td>✓</td>
-			  	</tr>
-			  	<tr>
-				    <td>3</td>
-				    <td>Problème données</td>
-				    <td>En cours de traitement</td>
-			  	</tr>
-			  	<tr>
-				    <td>4</td>
-				    <td>Problème compte secondaire</td>
-				    <td>✓</td>
-				</tr>
-			</table>
+				<?php include("../../Modeles/Client/Requete_accueil_tableau.php");?>
 			</div>
 
 			<!-- troisième block du tableau de bord = bas gauche -->
