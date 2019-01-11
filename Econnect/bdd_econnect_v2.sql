@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  ven. 11 jan. 2019 à 10:31
+-- Généré le :  ven. 11 jan. 2019 à 10:45
 -- Version du serveur :  5.7.23
 -- Version de PHP :  7.2.10
 
@@ -131,15 +131,25 @@ CREATE TABLE IF NOT EXISTS `facture` (
   `Prix` decimal(6,2) NOT NULL,
   `ID_Maison` int(11) NOT NULL,
   PRIMARY KEY (`ID_Facture`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Déchargement des données de la table `facture`
 --
 
 INSERT INTO `facture` (`ID_Facture`, `Date_facture`, `Consommation`, `Prix`, `ID_Maison`) VALUES
-(1, '2018-12-18', '95.00', '120.00', 1),
-(2, '2019-01-18', '88.00', '90.00', 1);
+(3, '2019-01-01', '100.00', '50.00', 1),
+(4, '2019-02-01', '90.00', '40.00', 1),
+(5, '2019-03-01', '80.00', '30.00', 1),
+(6, '2019-04-01', '75.00', '25.00', 1),
+(7, '2019-05-01', '70.00', '20.00', 1),
+(8, '2019-06-01', '50.00', '10.00', 1),
+(9, '2019-07-01', '55.00', '15.00', 1),
+(10, '2019-08-01', '60.00', '20.00', 1),
+(11, '2019-09-01', '65.00', '22.00', 1),
+(12, '2019-10-01', '80.00', '40.00', 1),
+(13, '2019-11-01', '90.00', '45.00', 1),
+(14, '2019-12-01', '100.00', '50.00', 1);
 
 -- --------------------------------------------------------
 
@@ -215,7 +225,7 @@ CREATE TABLE IF NOT EXISTS `piece` (
   `Luminosite` int(11) NOT NULL DEFAULT '50',
   PRIMARY KEY (`ID_Piece`),
   KEY `ID_Maison` (`ID_Maison`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Déchargement des données de la table `piece`
@@ -223,7 +233,10 @@ CREATE TABLE IF NOT EXISTS `piece` (
 
 INSERT INTO `piece` (`ID_Piece`, `ID_Maison`, `Temperature`, `Luminosite`) VALUES
 (1, 1, 20, 70),
-(2, 1, 20, 70);
+(2, 1, 20, 70),
+(3, 1, 20, 50),
+(4, 1, 20, 50),
+(5, 1, 20, 50);
 
 -- --------------------------------------------------------
 
@@ -283,7 +296,10 @@ CREATE TABLE IF NOT EXISTS `type_piece` (
 
 INSERT INTO `type_piece` (`ID_Piece`, `Type_piece`) VALUES
 (1, 'Cuisine'),
-(2, 'Salon');
+(2, 'Salon'),
+(3, 'Chambre'),
+(4, 'Salle de bain'),
+(5, 'Salle d\'eau');
 
 -- --------------------------------------------------------
 
@@ -327,7 +343,18 @@ CREATE TABLE IF NOT EXISTS `user_piece` (
   `ID_Piece` int(11) NOT NULL,
   `ID_User` int(11) NOT NULL,
   PRIMARY KEY (`ID_User_piece`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Déchargement des données de la table `user_piece`
+--
+
+INSERT INTO `user_piece` (`ID_User_piece`, `ID_Piece`, `ID_User`) VALUES
+(1, 1, 1),
+(2, 2, 1),
+(3, 3, 1),
+(4, 4, 1),
+(5, 5, 1);
 
 -- --------------------------------------------------------
 

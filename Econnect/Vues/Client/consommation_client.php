@@ -18,7 +18,7 @@
 				<article class="consommationBAS">
 					<h1>Vos factures :</h1>
 					<div id="listeFactures">
-						Mes factures :
+						<?php include("../../Controleurs/bdd_liste-factures_client.php"); ?>
 					</div>
 					<div id="grapheFactures">
 						<?php echo "<img src='../../Controleurs/graph_factures_client.php'/>";?>

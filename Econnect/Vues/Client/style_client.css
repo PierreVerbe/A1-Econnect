@@ -966,7 +966,19 @@ footer img
     justify-content: space-around;
     align-content: flex-start;
     align-content: baseline;    
-} 
+}
+
+#tableau_factures
+{
+    width:98%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left : auto;
+    margin-right : auto;
+    overflow: auto;
+    background-color: #dcdcdc;
+    font-family: Montserrat, Verdana;
+}
 
 .consommationHAUT h1, .consommationBAS h1
 {
@@ -984,13 +996,6 @@ footer img
 }
 
 /* Pour les cadres spécifiques de la page conso. */
-#listeFactures
-{
-    border-radius: 10px;
-    background-color: #CBCBCB;
-    padding: 5px;
-    height: 25px;
-
 
 } 
 
