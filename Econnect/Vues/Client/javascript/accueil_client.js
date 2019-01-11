@@ -108,7 +108,7 @@ function changePosLum(){
     var piece = document.getElementById('pieceLum1').innerHTML;
     if (lum >= 100)
     {
-        alert("Vous ne pouvez pas diminuer la température");
+        alert("Vous ne pouvez pas augmenter la luminosité");
     }
 
     else
@@ -131,7 +131,7 @@ function changeNegLum(){
     var piece = document.getElementById('pieceLum1').innerHTML;
     if (lum <= 0)
     {
-        alert("Vous ne pouvez pas diminuer la température");
+        alert("Vous ne pouvez pas diminuer la luminosité");
     }
 
     else

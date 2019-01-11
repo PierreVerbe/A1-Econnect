@@ -53,8 +53,7 @@
 				<button class="info_bloc_droite" onclick="plusDivs_Haut_Gauche(1)">&#10095;</button>
 			</div>-->
 
-			<?php include("../../Controleurs/bdd_get-rooms_client.php");
-			?>
+			<?php include("../../Controleurs/bdd_get-rooms-temp_client.php");?>
 
 			<button class="info_bloc_droite" onclick="plusDivs_Haut_Gauche(1)">&#10095;</button>
 			</div>
@@ -109,7 +108,7 @@
 				<button class="info_bloc_gauche" onclick="plusDivs_Bas_Droit(-1)">&#10094;</button>
 				
 				<img class="Slide_Bas_Droit" src="../Image/Accueil/lumiere.png">
-				<div class="Slide_Bas_Droit"><p class="titre_contenu_info_H_G" id="pieceLum1">Salon</p>
+				<!--<div class="Slide_Bas_Droit"><p class="titre_contenu_info_H_G" id="pieceLum1">Salon</p>
 												<p class="contenu_info_B_D"><br /><br />Lumière actuelle : Basse<br /><br />
 																			Ajuster la lumière : <a id="getLum"></a>%<br /><br /></p>
 																			<div class="bouton_info_B_D">
@@ -137,7 +136,8 @@
 																			Ajuster la lumière : <br /><br /> </p>
 																			<div class="bouton_info_B_D">
 																			<button class="moins_lumière">-</button>
-																			<button class="plus_lumière">+</button></div></div>
+																			<button class="plus_lumière">+</button></div></div>-->
+				<?php include("../../Controleurs/bdd_get-rooms-lum_client.php"); ?>
 												
 			  	
 
