@@ -1,5 +1,6 @@
 <?php include ("header_admin.php")?>
 <div class="pages_footer">
+	<section class="modelFooter">
 	<h1>Informations :</h1>
 	<h2>Localisation</h2>
 	<p> &nbsp Nous nous situons sur 2 sites: <br />
@@ -16,5 +17,6 @@
 	<h2>Téléphone</h2>
 	<p> &nbsp Nous sommes contactable par téléphone à ce numéro 01 01 01 01 01.<br />
 	</p>
+	</section>
 </div>
 <?php include ("footer_admin.php")?>
