@@ -138,7 +138,7 @@ body
 }
 
 
-#tableau_clients {
+#tableau_clients, #tableau_maisons, #tableau_factures, #tableau_tickets{
     width:98%;
     margin-top: 15px;
     margin-bottom: 15px;
@@ -189,22 +189,34 @@ tr:hover
     list-style: none;
 }
 
-#Pieces h2, #Capteurs h2, #Actionneurs h2
+/*#Pieces h2, #Capteurs h2, #Actionneurs h2
+{
+    text-align: center;
+}*/
+
+#details_maison h2
 {
     text-align: center;
 }
 
-#liste_piece_user, #liste_capteurs_user, #liste_actionneurs_user
+#liste_details_maison
 {
-    display: flex;
-    justify-content: space-around;
+    text-align: center;
 }
 
-#Pieces p, #Capteurs p, #Actionneurs p
+#details_maison p
 {
+    margin: 10px;
+    display: inline-block;
     border : 1px solid black;
     padding: 10px;
     border-radius: 3px;
+    width: 15%;
+}
+
+#details_maison p:hover
+{
+    cursor: pointer;
 }
 
 #tableaux_client_admin table
