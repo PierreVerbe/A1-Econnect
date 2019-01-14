@@ -1,4 +1,4 @@
-<?php include ("header_client.php")?>
+<?php include ("header_domisep.php")?>
 <head>
 <meta charset="UTF-8">
 <style type="text/css">
@@ -30,4 +30,4 @@
 
 </div>
 
-<?php include ("footer_client.php")?>
+<?php include ("footer_domisep.php")?>
