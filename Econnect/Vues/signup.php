@@ -38,42 +38,41 @@
 		
 			<div class="vitrine_image2">
 				<p id="texte_vitrine_image2"></p>
-					<form method="POST" action="" onsubmit="return Validate()" name="form" >
+					<form method="POST" action="../Controleurs/do_signup.php" onsubmit="return Validate()" name="form" >
 						<div id="email_div">
 							<label>Email</label> <br>
 							<input type="email" name="email" class="textInput"><br><br>
 							<div id="email_error"></div>
 						</div>
 					    <div id="password_div">
-					      <label>Mots de passe</label> <br>
-					      <input type="password" name="password" class="textInput"><br><br>
-					    </div>
-					    <div id="pass_confirm_div">
-					       <label>Confirmer le mots de passe</label> <br>
-					       <input type="password" name="password_confirm" class="textInput"><br><br>
-					       <div id="password_error"></div>
+						      <label>Mots de passe</label> <br>
+						      <input type="password" name="password" class="textInput"><br><br>
+						    <div id="pass_confirm_div">
+						       <label>Confirmer le mots de passe</label> <br>
+						       <input type="password" name="password_confirm" class="textInput"><br><br>
+						       <div id="password_error"></div>
 					    <div id="cemac_div">
 					       <label>CEMAC</label> <br>
-					       <input type="number" name="cemac" class="textInput"><br><br>
-					      <div id="cemac_error"></div>
+					       <input type="number" name="cemac" class="textInput">
+					      <div id="cemac_error"></div><br><br>
 					    </div>   
 					     <div id="checkbox_div">
 					    <div class='checkbox'>
 					    	<input type=checkbox name=checkbox value='yes'>
-							J'accepte les conditions générales d'utilisation <a href="">ici</a><br><br/>
+							J'accepte les conditions générales d'utilisation <a href="cgu.html">lire</a><br><br/>
 					    </div>
 
 						</div>
 					    <div>
 					    <input type="submit" name="register" value="S'inscrire" class="btn">
-					    </div>
+					    </div><br><br/>
 									
 				</div>
 
 			</div>
 
 			<div class="vitrine_text1">
-				<p id="texte_vitrine_text1"><a href="../index.php">Retour à la page d'accueil</a></p>
+				<p id="texte_vitrine_text1"><a href="../index.php">Retour à la page d'accueil</a></p><br/>
 			</div>
 
 
@@ -134,7 +133,7 @@ function Validate() {
     password.focus();
     return false;
   }
-  // check if the two passwords match
+  // vérification des mots de passe
   if (password.value != password_confirm.value) {
     password.style.border = "1px solid red";
     document.getElementById('pass_confirm_div').style.color = "red";
@@ -143,8 +142,9 @@ function Validate() {
     return false;
   }
 
+//vérification des CGU
   if (!document.checkbox.checked) { 
-  	document.getElementById('my_msg').innerHTML="Acceptez les CGU d'abord ";
+  	 alert("Il faut accepter les conditions générales d'utilisation !");
   	return false; 
   } 
 }
