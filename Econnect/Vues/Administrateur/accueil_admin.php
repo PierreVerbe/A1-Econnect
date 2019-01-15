@@ -45,7 +45,7 @@
 
 			<ul>
 				<li><img src="ressources/point_rouge_mini.png" alt="Alerte""> Maison n°14587 : Alerte intrusion <a href="https://livestream.com/accounts/888332/events/931293/player?width=640&height=360&autoPlay=true&mute=false"><button>Vérifier les caméras</button></a></li>
-				<li><img src="ressources/point_orange_mini.png" alt="Problème"> Maison n°14586 : Intervention nécéssaire</li>
+				<li><img src="ressources/point_orange_mini.png" alt="Problème"> Maison n°14586 : Intervention nécéssaire <button>Appel technicien</button></li>
 				<li><img src="ressources/point_vert_mini.png" alt="OK"> Tout est ok</li>
 			</ul>
 			

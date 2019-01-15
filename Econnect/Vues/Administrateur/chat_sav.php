@@ -43,6 +43,23 @@
 						}
 					}
 
+					function closeTicket(){
+						id_ticket = document.getElementById('num_ticket').value;
+
+						if (id_ticket == 0)
+						{
+							alert("Pas de ticket sélectionné");
+							return 0;
+						}
+
+						$.post("../../Controleurs/bdd_fermeture-ticket-admin.php", {numticket: id_ticket},
+								function(data){
+									alert("Le ticket a bien été fermé");
+									javascript:document.location.href='http://localhost/Econnect/A1-Econnect/Econnect/Vues/Administrateur/chat_sav.php';
+									id_ticket = 0;
+								});
+					}
+
 				</script>
 
 				<!-- message client -->
@@ -54,19 +71,26 @@
 				<h2>Répondre à un ticket :</h2>
 
 				<div class="SAV_nouveau_ticket">
-					<form method="post" action="traitement_ticket_admin.php">
-			    			<p>
-				       			<label for="message">Message :</label><br />
-				       			<textarea class="zone_message_SAV" name="message" id="message" rows="7" ></textarea>
-				   			</p>
+					<form method="post" action="../../Controleurs/bdd_traitement-ticket_admin.php">
+			    		<p>
+				       		<label for="message">Message :</label><br />
+				       		<textarea class="zone_message_SAV" name="message" id="message" rows="7" ></textarea>
+				   		</p>
 
-				   			<input type="hidden" id="num_ticket" name="id_ticket" value="" />
+				   		<input type="hidden" id="num_ticket" name="id_ticket" value="" />
 
-				   			<p>
-				   				<input class="bouton_envoyer" type="submit" value="Envoyer"/>
-							</p>
+				   		<p>
+				   			<input class="bouton_envoyer" type="submit" value="Envoyer"/>
+						</p>
 					</form>
+
+					<input type="button" name="close_ticket" value="Fermer le ticket" onclick="closeTicket()">
 				</div>
+
+				<script type="text/javascript">
+					
+
+				</script>
 
 			</section>
 

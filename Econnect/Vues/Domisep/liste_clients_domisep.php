@@ -14,9 +14,11 @@
 					Liste des clients :<br /><br />
 
 					<div id="recherche_client">
-						<label>Nom Client : </label><input type="text" name="recherche_nom" id="search_name" />
+						<label>Nom Client : </label><input type="text" name="recherche_nom" id="search_name" onKeyPress="if (event.keyCode == 13) search()"/>
 
 						<input type="button" name="validate" value="Rechercher" onclick="search()" />
+
+						<input type="button" id="boutonAnnuler" value="Annuler" onClick="javascript:document.location.href='http://localhost/Econnect/A1-Econnect/Econnect/Vues/Domisep/liste_clients_domisep.php'" />
 					</div>
 
 					<?php include("../../Controleurs/bdd_liste-clients_admin.php");?>
