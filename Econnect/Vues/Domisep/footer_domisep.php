@@ -33,8 +33,6 @@
     <img src="../Icons/Aide.png" alt="Icon aide" width="35" height="35"><a classe="qsdjsd" href="aides_client.php">
     Besoin d'aide ?</a> <br />
 
-    <img src="../Icons/SAV.png" alt="Icon SAV" width="35" height="35"><a classe="qsdjsd" href="SAV_client.php">
-    SAV</a> <br />
   </p>
 
   </footer>

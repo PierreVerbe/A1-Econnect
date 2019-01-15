@@ -14,7 +14,8 @@
 			<p>Schéma de la maison, vue d'ensemble... </p>
 		</div>
 
-		<div class="element">
+<a style="text-decoration: none;" href="Info_Profit_Client.php">
+        <div class="element" >
 			<p> C'est du texte essentiellement. Informations essentielles du client : 
 				<ul>
 					<li>Adresse mail</li>
@@ -25,6 +26,7 @@
 				</ul>
 			</p>
 		</div>
+        </a>
 		
 	</div>	
 </section>

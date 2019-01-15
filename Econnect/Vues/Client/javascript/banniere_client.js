@@ -2,6 +2,8 @@ var slideIndex = 1;
 
 showDivs(slideIndex);
 
+window.setInterval("plusDivs(1)",7000);
+
 function plusDivs(n) 
 {
 	showDivs(slideIndex += n);

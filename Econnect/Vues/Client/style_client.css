@@ -190,7 +190,7 @@ src: url('../Fonts/Montserrat/Montserrat-Regular.otf');
     box-shadow: 5px 5px 13px;
 }
 
-#bloc_info
+.tableau_bord
 {
     display: flex;
     flex-wrap: wrap;
@@ -397,6 +397,15 @@ src: url('../Fonts/Montserrat/Montserrat-Regular.otf');
     border-collapse: collapse;
 }
 
+#SAV_table_client {
+    width:98%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left : auto;
+    margin-right : auto;
+    border-collapse: collapse;
+}
+
 th, td {
     text-align: left;
     padding: 8px;
@@ -444,6 +453,13 @@ tr:hover
     margin-left : 50%;
     margin-right : 50%;
     margin-bottom: 10px;
+}
+
+#contenu_ticket
+{
+    font-family: Montserrat, Verdana;
+    font-size: 1em;
+    margin-left: 30px;
 }
 
 /*################################### FIN SAV ###################################*/
@@ -950,7 +966,19 @@ footer img
     justify-content: space-around;
     align-content: flex-start;
     align-content: baseline;    
-} 
+}
+
+#tableau_factures
+{
+    width:98%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left : auto;
+    margin-right : auto;
+    overflow: auto;
+    background-color: #dcdcdc;
+    font-family: Montserrat, Verdana;
+}
 
 .consommationHAUT h1, .consommationBAS h1
 {
@@ -968,13 +996,6 @@ footer img
 }
 
 /* Pour les cadres spécifiques de la page conso. */
-#listeFactures
-{
-    border-radius: 10px;
-    background-color: #CBCBCB;
-    padding: 5px;
-    height: 25px;
-
 
 } 
 
@@ -1007,6 +1028,162 @@ footer img
 
 #quit p {
 
+}
+
+/**************************************************************/
+/********************* PAGE GESTION CLIENT ********************/
+/**************************************************************/
+
+/* Pour le fond des cadres */
+#gestionCAll
+{
+    width:98%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left : auto;
+    margin-right : auto;
+    border-radius: 20px;
+    background-color: #A5CAFF;
+    border : 3px solid #8FA8DE;
+    box-shadow: 5px 5px 13px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+}
+
+/* Pour l'organisation des cadres */
+#gestionClient
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.gestionCPiece{
+    padding: 10px;
+    margin: 15px;
+    background-color: #dcdcdc;
+    border : 3px solid #b6b6b6;
+    box-shadow: 3px 3px 9px;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: flex-start;
+    align-content: baseline;  
+    display: flex;
+    align-items: center;
+    justify-content: center;      
+}
+/* Pour les cadres généraux HAUT et BAS */
+.gestionCCapteurs
+{
+    padding: 10px;
+    margin: 15px;
+    background-color: #dcdcdc;
+    border : 3px solid #b6b6b6;
+    box-shadow: 3px 3px 9px;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: flex-start;
+    align-content: baseline;  
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+} 
+
+.gestionCActionneurs
+{
+    padding: 10px;
+    margin: 15px;
+    background-color: #dcdcdc;
+    border : 3px solid #b6b6b6;
+    box-shadow: 3px 3px 9px;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: flex-start;
+    align-content: baseline;  
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+
+ /* Les deux cotes de la carte */
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  perspective: 1000px; /* Supprime l'effet de profondeur */
+}
+
+/* Permet d'avoir la differentiation entre le devant et le derrire de la carte */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #b9caf6;
+  color: black;
+}
+.flip-card-front h1
+{
+    margin-left: 0px;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: darkgrey;
+  color: white;
+  transform: rotateY(180deg);
+}
+.flip-card-back h1
+{
+    margin-left: 0px;
+}
+
+.buttonAddEntity {
+  display: inline-block;
+  border: none;
+  color: black;
+  text-align: center;
+  font-size: 15px;
+  padding: 10px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  background-color: #b9caf6;
+  border : 3px solid #8FA8DE;
+  border-radius: 10px;
+  vertical-align: middle;
+}
+
+.buttonAddEntity:hover {
+  font-size: 18px;
 }
 
 /*################################### DEBUT COMMUN ###################################*/
@@ -1047,4 +1224,4 @@ h2
   margin-left:15px;
   font-size: 45px;
 }
-/*################################### FIN COMMUN ###################################*/
+/*################################### FIN CGV ###################################*/

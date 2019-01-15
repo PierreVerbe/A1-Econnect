@@ -32,10 +32,9 @@
 					
 					function validateForm(){
 						if (document.forms["access_home"]["numero_client"].value != "" && document.forms["access_home"]["confirm"].checked == true){
-							document.location.href="http://localhost/Econnect/A1-Econnect/Econnect/Vues/Client/accueil_client.php"
 						}
 						else{
-							alert("!");
+							alert("Veuillez rensignez tous les champs correctement.");
 							return false;
 						}
 					}

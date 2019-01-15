@@ -32,7 +32,7 @@ $graph->SetTheme($theme_class);
 
 $graph->SetBox(false);
 
-$graph->title->Set("Nombre de conexions");
+$graph->title->Set("Nombre de connexions");
 $graph->ygrid->Show(true);
 $graph->xgrid->Show(false);
 $graph->yaxis->HideZeroLabel();

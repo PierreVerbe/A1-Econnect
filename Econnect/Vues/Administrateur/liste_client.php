@@ -16,9 +16,11 @@
 				Liste des clients :<br /><br />
 
 				<div id="recherche_client">
-					<label>Nom Client : </label><input type="text" name="recherche_nom" id="search_name" />
+					<label>Nom Client : </label><input type="text" name="recherche_nom" id="search_name" onKeyPress="if (event.keyCode == 13) search()"/>
 
 					<input type="button" name="validate" value="Rechercher" onclick="search()" />
+
+					<input type="button" id="boutonAnnuler" value="Annuler" onClick="javascript:document.location.href='http://localhost/Econnect/A1-Econnect/Econnect/Vues/Administrateur/liste_client.php'" />
 				</div>
 
 				<?php include("../../Controleurs/bdd_liste-clients_admin.php");?>
@@ -90,6 +92,17 @@
 								});
 						}
 					}
+				}
+
+				function getSensorsDetails(){
+					var numCapteur = document.getElementById('idCapteur').innerHTML;
+					numCapteur = Number(numCapteur.replace(/[^\d]/g, ""));
+
+					$.post("../../Controleurs/bdd_details_sensors_admin.php", {id_capteur: numCapteur},
+								function(data){
+									alert(data);
+								});
+
 				}
 			</script>
 

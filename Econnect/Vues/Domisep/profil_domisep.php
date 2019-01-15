@@ -10,23 +10,18 @@
 			<article id="details">
 				<h2>Informations détaillées :</h2></br>
 
-				<p>Nom :</p>
-				<p>Prénom :</p>
-				<p>Pays :</p>
-				<p>Ville :</p>
-				<p>Adresse email :</p>
-				<p>Téléphone :</p>
+				<?php include("../../Controleurs/bdd_profil-info_domisep.php");?> 
 			</article>
 
 			<article id="poste">
-				<h2>Votre poste :</h2></br>
-				<p>Détails du poste :</p>
+				<h2>Votre poste : CTO</h2></br>
+				<p>Détails du poste : En charge du site Econnect proposé par Domisep. Gère la plateforme ainsi que les administrateurs et les techniciens.</p>
 			</article>
 
 			<article id="connexion">
 				<h2>Informations de connexion :</h2></br>
-				<p>Premier accès au site :</p>
-				<p>Dernière connexion :</p>
+				<p>Premier accès au site : 2019-01-10</p>
+				<p>Dernière connexion : 2019-01-22</p>
 			</article>
 		</div>
 	</section>
