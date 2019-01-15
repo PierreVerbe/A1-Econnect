@@ -56,7 +56,7 @@
 
 				<h2>Vous êtes nouveau ?</h2>
 
-				<input type="button" id="boutonInscription" value="Inscrivez-vous !" onClick="javascript:document.location.href='Vues/register.php'" />
+				<input type="button" id="boutonInscription" value="Inscrivez-vous !" onClick="javascript:document.location.href='Vues/signup.php'" />
 				
 			</section>
 
