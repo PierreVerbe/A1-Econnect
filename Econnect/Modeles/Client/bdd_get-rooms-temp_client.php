@@ -9,7 +9,7 @@
 		die('Erreur : ' . $e->getMessage());
 	}
 
-	$req = $bdd->query('SELECT type_piece.Type_piece FROM type_piece, piece WHERE type_piece.ID_Piece = piece.ID_Piece AND piece.ID_Maison = 1');	
+	$req = $bdd->query('SELECT type_piece.Type_piece, type_piece.ID_Piece FROM type_piece, piece WHERE type_piece.ID_Piece = piece.ID_Piece AND piece.ID_Maison = 1');	
 
 	while ($donnees = $req->fetch())
 	{
@@ -30,3 +30,4 @@
 
 	$req->closeCursor();
 ?>
+

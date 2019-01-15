@@ -16,9 +16,9 @@
 			<div class="login">
 				<form method="post" action="Controleurs/do_login.php" >
 					<label>Email:</label>
-					<input type="email" name="txtemail" required />
+					<input type="email" name="txtemail" class="mail" required />
 					<label>Mot de passe:</label>
-					<input type="password" name="txtpass" required />
+					<input type="password" name="txtpass" class="passmdp" required />
 					<input type="submit" name="submit_login" value="Connexion" />	
 				</form>
 			</div>
@@ -66,9 +66,9 @@
 
 				<form method="post" action="Controleurs/do_login.php" >
 					<label>Email:</label>
-					<input type="email" name="txtemail" required />
+					<input type="email" name="txtemail" class="mail" required />
 					<label>Mot de passe:</label>
-					<input type="password" name="txtpass" required />
+					<input type="password" name="txtpass" class="passmdp" required />
 					<input type="submit" id="boutonConnexion" name="submit_login" value="Connexion" />	
 				</form>
 				

@@ -1,6 +1,6 @@
 <?php // content="text/plain; charset=utf-8"
-require_once ('../jpgraph-4.2.5/src/jpgraph.php');
-require_once ('../jpgraph-4.2.5/src/jpgraph_bar.php');
+require_once ('../../jpgraph-4.2.5/src/jpgraph.php');
+require_once ('../../jpgraph-4.2.5/src/jpgraph_bar.php');
 
 try
 {
@@ -15,11 +15,11 @@ $arrayMois = array('1','2','3','4','5','6','7','8','9','10','11','12');
 
 $datay = array();
 
-$req = $bdd->query('SELECT facture.Prix FROM facture GROUP BY MONTH(facture.Date_facture) ASC');
+$req = $bdd->query('SELECT facture.Consommation FROM facture GROUP BY MONTH(facture.Date_facture) ASC');
 
 while ($donnees = $req->fetch())
 {
-	$datay[] = $donnees['Prix'];
+	$datay[] = $donnees['Consommation'];
 }
 
 $req->closeCursor();
@@ -34,7 +34,7 @@ $theme_class=new UniversalTheme;
 $graph->SetTheme($theme_class);
 
 $graph->yaxis->SetTickPositions(array(0,25,50,75,100,125,150));
-$graph->yaxis->title->Set("Prix en €");
+$graph->yaxis->title->Set("Consommation en KWh");
 $graph->SetBox(false);
 
 $graph->ygrid->SetFill(false);
@@ -52,7 +52,7 @@ $graph->Add($b1plot);
 $b1plot->SetColor("white");
 $b1plot->SetFillColor("#cc1111");
 
-$graph->title->Set("Prix des factures des 12 derniers mois");
+$graph->title->Set("Consommation électrique des 12 derniers mois");
 
 // Display the graph
 $graph->Stroke();

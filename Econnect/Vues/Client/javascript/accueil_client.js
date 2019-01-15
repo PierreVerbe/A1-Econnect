@@ -45,7 +45,9 @@ function showDivs_Bas_Droit(n)
 
 function getTempWanted(){
     var piece = document.getElementById('pieceTemp').innerHTML;
-    $.post("../../Controleurs/bdd_change_temp_client", {postpiece: piece},
+    /*alert(piece);*/
+    /*var idPiece = document.getElementsByClass('pieceTemp').getAttribute('data-pieceID');*/
+    $.post("../../Modeles/Client/bdd_change_temp_client", {postpiece: piece},
         function(data){
         $('#getTemp').html(data);
         });
@@ -64,7 +66,7 @@ function changePosTemp(){
         temp = parseInt(temp,10);
         temp = temp+1;
 
-        $.post("../../Controleurs/bdd_change_temp_client", {postemp: temp},
+        $.post("../../Modeles/Client/bdd_change_temp_client", {postemp: temp},
             function(data){
             getTempWanted();
             });
@@ -86,7 +88,7 @@ function changeNegTemp(){
         temp = parseInt(temp,10);
         temp = temp-1;
 
-        $.post("../../Controleurs/bdd_change_temp_client", {postemp: temp},
+        $.post("../../Modeles/Client/bdd_change_temp_client", {postemp: temp},
             function(data){
             getTempWanted();
             });
@@ -97,7 +99,7 @@ function changeNegTemp(){
 
 function getLumWanted(){
     var piece = document.getElementById('pieceLum1').innerHTML;
-    $.post("../../Controleurs/bdd_change_lum_client", {postpiece: piece},
+    $.post("../../Modeles/Client/bdd_change_lum_client", {postpiece: piece},
         function(data){
         $('#getLum').html(data);
         });
@@ -117,7 +119,7 @@ function changePosLum(){
         lum = lum + 10;
 
 
-        $.post("../../Controleurs/bdd_change_lum_client.php", {postlum: lum},
+        $.post("../../Modeles/Client/bdd_change_lum_client.php", {postlum: lum},
             function(data){
             getLumWanted();
             });
@@ -140,7 +142,7 @@ function changeNegLum(){
         lum = lum - 10;
 
 
-        $.post("../../Controleurs/bdd_change_lum_client.php", {postlum: lum},
+        $.post("../../Modeles/Client/bdd_change_lum_client.php", {postlum: lum},
             function(data){
             getLumWanted();
             });

@@ -8,6 +8,8 @@ var table = document.getElementById('SAV_table_client');
 						$.post("../../Modeles/Client/Requete_SAV_Contenu_Ticket.php", {postid: id_ticket},
 							function(data){
 								$('#contenu_ticket').html(data);
+								document.getElementById('num_ticket').value = id_ticket;
 							});
 					}
 				}
+

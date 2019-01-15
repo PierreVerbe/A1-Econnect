@@ -18,52 +18,14 @@
 				<article class="Liste_tickets">
 					<h2>Liste de vos tickets :</h2>
 			
-					<?php include ("../../Controleurs/bdd_liste-tickets-sav_admin.php");?>	
+					<?php include ("../../Modeles/Administrateur/bdd_liste-tickets-sav_admin.php");?>	
 				</article>
 				<br />
 
 				<script src="http://code.jquery.com/jquery.min.js"></script>
-
-				<script>
-
-					var table = document.getElementById('SAV_table');
-
-					for(var i = 1; i < table.rows.length; i++)
-					{
-						table.rows[i].onclick = function()
-						{
-							var id_ticket = this.cells[2].innerHTML;
-
-							document.getElementById('num_ticket').value = id_ticket;
-
-							$.post("../../Controleurs/bdd_message-tickets-sav_admin.php", {postid: id_ticket},
-								function(data){
-									$('#contenu_ticket').html(data);
-								});
-						}
-					}
-
-					function closeTicket(){
-						id_ticket = document.getElementById('num_ticket').value;
-
-						if (id_ticket == 0)
-						{
-							alert("Pas de ticket sélectionné");
-							return 0;
-						}
-
-						$.post("../../Controleurs/bdd_fermeture-ticket-admin.php", {numticket: id_ticket},
-								function(data){
-									alert("Le ticket a bien été fermé");
-									javascript:document.location.href='http://localhost/Econnect/A1-Econnect/Econnect/Vues/Administrateur/chat_sav.php';
-									id_ticket = 0;
-								});
-					}
-
-				</script>
+				<script src="javascript/chat_sav.js"></script>
 
 				<!-- message client -->
-				<h2>Contenu du ticket :</h2>
 
 				<!-- Pour la barre de délimitation -->
 				<div id="contenu_ticket"></div>
@@ -71,7 +33,7 @@
 				<h2>Répondre à un ticket :</h2>
 
 				<div class="SAV_nouveau_ticket">
-					<form method="post" action="../../Controleurs/bdd_traitement-ticket_admin.php">
+					<form method="post" action="../../Modeles/Administrateur/bdd_traitement-ticket_admin.php">
 			    		<p>
 				       		<label for="message">Message :</label><br />
 				       		<textarea class="zone_message_SAV" name="message" id="message" rows="7" ></textarea>

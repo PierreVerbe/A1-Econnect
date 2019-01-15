@@ -2,7 +2,7 @@
 
 	try
 	{
-		$bdd = new PDO('mysql:host=localhost;dbname=econnect_v2;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+		include ("../../Modeles/Requete_parametre.php");
 	}
 	catch (Exception $e)
 	{
@@ -16,6 +16,12 @@
 		##### Pièces ######
 
 		$req = $bdd->query('SELECT message.ID_Message, message.Date_message, message.Piece_jointe, message.Contenu FROM message, ticket WHERE message.ID_Ticket = ticket.ID_Ticket AND ticket.ID_Ticket =  "'.$id_ticket.'"');
+
+		?>
+
+		<h2>Contenu du ticket</h2>
+
+		<?php
 
 
 		while ($donnees = $req->fetch())

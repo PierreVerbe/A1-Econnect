@@ -24,11 +24,11 @@
 			<div id = "Nombres">
 
 				<p>
-					<?php echo "<img src='../../Controleurs/graph_users_admin.php'/>";?>
+					<?php echo "<img src='../../Modeles/Administrateur/graph_users_admin.php'/>";?>
 				</p>
 
 				<p>
-					<?php echo "<img src='../../Controleurs/graph_ventes_admin.php'/>";?>
+					<?php echo "<img src='../../Modeles/Administrateur/graph_ventes_admin.php'/>";?>
 				</p>
 			
 			</div>
@@ -61,12 +61,7 @@
 				<li>Maison n°14582 : HAG défaillant <button class="button">Détails</button><button class="button">Désactiver</button><button class="button">Appel Technicien</button></li>
 			</ul>
 
-			<script>
-				function desactivated()
-				{
-					alert("Désactivé !");
-				}
-			</script>
+			<script src="javascript/accueil_admin.js"></script>
 			
 		</article>
 			

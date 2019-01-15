@@ -28,21 +28,9 @@
 
 				</form>
 
-				<script type="text/javascript">
-					
-					function validateForm(){
-						if (document.forms["access_home"]["numero_client"].value != "" && document.forms["access_home"]["confirm"].checked == true){
-						}
-						else{
-							alert("Veuillez rensignez tous les champs correctement.");
-							return false;
-						}
-					}
-				</script>
+				<script src="javascript/acces_maison.js"></script>
 
-				
 			</div>
-
 
 		</section>
 
