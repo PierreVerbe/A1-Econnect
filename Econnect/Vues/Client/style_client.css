@@ -486,6 +486,11 @@ tr:hover
     display:flex;
     justify-content: space-around;
 }
+
+#infoClient
+{
+  text-align: left;
+}
         
 #imageClient{
     margin-top: 10px; 
