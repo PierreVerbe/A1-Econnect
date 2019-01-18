@@ -126,8 +126,14 @@
 		flex-direction: column;
 	}
 
-	form{
+	form
+	{
 		padding: 50;
+	}
+
+	input
+	{
+		margin: 3px;
 	}
 
 	.form_col {
