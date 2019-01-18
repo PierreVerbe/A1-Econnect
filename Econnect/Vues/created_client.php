@@ -12,16 +12,6 @@
 			<div class="logo">
 				<img src="../Vues/Image/Logo_Econnect_texte.png" alt="logo" width="300" />
 			</div>
-			<div class="login">
-				<form method="post" action="do_login.php" >
-					<label>Email:</label>
-					<input type="email" name="txtemail" required />
-					<label>Mot de passe:</label>
-					<input type="password" name="txtpass" required />
-					<input type="submit" name="submit" value="Connexion" />	
-				</form>
-			</div>
-
 	</header>
 
 	

@@ -9,7 +9,7 @@ class Model {
 		$password = "root";
 
 		try {
-		    $conn = new PDO("mysql:host=$servername;dbname=bdd__v2", $username, $password);
+		    $conn = new PDO("mysql:host=$servername;dbname=bdd_econnect_v2", $username, $password);
 		    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		    $this->connexion=$conn;
 	    }
@@ -30,7 +30,7 @@ class Model {
 		$user = null;
 	    foreach  ($this->connexion->query($sql) as $row) {
 	    	try {
-	    	$user = new User($row['email'],$row['password'],$row['type']);
+	    	$user = new User($row['nom'],$row['prenom']$row['email'],$row['password'],$row['type']);
 	    	} 
 	    	catch(Exception $e) {
 	    		echo $e;
@@ -75,14 +75,14 @@ class Model {
 	  	return $domisep;
 	}*/
 
-	function createClient($client){		
+/*	function createClient($client){		
 		$this->connexion->exec("INSERT INTO `client`( `nom`,`prenom`,`email`, `cemac` ) VALUES ('.$client->getNom().','.$client->getPrenom().','.$client->getMail().','.$client->getCemac().')");
-	}
+	}*/
 
 	function checkLoggedIn(){
 	session_start();
 	if (!$_SESSION["user"]){
-		header("Location: ../Vues/login.html");
+		header("Location: ../index.php");
 	}
 }
 }

@@ -71,12 +71,11 @@
     </div> 
     </div>  
       <div>
-        <input type="checkbox" name="checkbox">
-        <a href="cgu.html">Lire les conditions d'utilisation</a>
+        <h3><a href="cgu.html">En vous inscrivant, vous acceptez les conditions d'utilisation</a></h3>
 
       </div>
     <div>
-    <input type="submit" name="register" value="Register" class="btn">
+    <input type="submit" name="register" value="S'inscrire" class="btn">
     </div>
 </body>
 									
