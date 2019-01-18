@@ -14,11 +14,11 @@
 			</div>
 			<p id="soustitre_logo"> Un produit Domisep©</p>
 			<div class="login">
-				<form method="post" action="Controleurs/do_login.php" >
+				<form method="post" action="Controleurs/login.php" >
 					<label>Email:</label>
-					<input type="email" name="txtemail" class="mail" required />
+					<input type="email" name="login" class="mail" required />
 					<label>Mot de passe:</label>
-					<input type="password" name="txtpass" class="passmdp" required />
+					<input type="password" name="password" class="passmdp" required />
 					<input type="submit" name="submit_login" value="Connexion" />	
 				</form>
 			</div>

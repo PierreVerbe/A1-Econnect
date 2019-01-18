@@ -38,34 +38,47 @@
 		
 			<div class="vitrine_image2">
 				<p id="texte_vitrine_image2"></p>
-					<form method="POST" action="../Controleurs/do_signup.php" onsubmit="return Validate()" name="form" >
-						<div id="email_div">
-							<label>Email</label> <br>
-							<input type="email" name="email" class="textInput"><br><br>
-							<div id="email_error"></div>
-						</div>
-					    <div id="password_div">
-						      <label>Mots de passe</label> <br>
-						      <input type="password" name="password" class="textInput"><br><br>
-						    <div id="pass_confirm_div">
-						       <label>Confirmer le mots de passe</label> <br>
-						       <input type="password" name="password_confirm" class="textInput"><br><br>
-						       <div id="password_error"></div>
-					    <div id="cemac_div">
-					       <label>CEMAC</label> <br>
-					       <input type="number" name="cemac" class="textInput">
-					      <div id="cemac_error"></div><br><br>
-					    </div>   
-					     <div id="checkbox_div">
-					    <div class='checkbox'>
-					    	<input type=checkbox name=checkbox value='yes'>
-							J'accepte les conditions générales d'utilisation <a href="cgu.html">lire</a><br><br/>
-					    </div>
+					<div>
+   <form method="POST" action="../Controleurs/inscription_client.php" onsubmit="return Validate()" name="vform" >
+    <div id="name_div">
+      <label>Nom</label> <br>
+      <input type="text" name="name" class="textInput">
+      <div id="name_error"></div>
+    </div>
+        <div id="firstname_div">
+      <label>Prénom</label> <br>
+      <input type="text" name="firstname" class="textInput">
+      <div id="firstname_error"></div>
+    </div>
+    <div id="email_div">
+      <label>Email</label> <br>
+      <input type="email" name="email" class="textInput">
+      <div id="email_error"></div>
+    </div>
+    <div id="password_div">
+      <label>Mot de passe</label> <br>
+      <input type="password" name="password" class="textInput">
+    </div>
+    <div id="pass_confirm_div">
+       <label>Confirmer le mot de passe</label> <br>
+       <input type="password" name="password_confirm" class="textInput">
+       <div id="password_error"></div>
+     </div>
+    <div id="cemac_div">
+      <label>CEMAC</label> <br>
+      <input type="number" name="cemac" class="textInput">
+      <div id="cemac_error"></div><br>
+    </div> 
+    </div>  
+      <div>
+        <input type="checkbox" name="checkbox">
+        <a href="cgu.html">Lire les conditions d'utilisation</a>
 
-						</div>
-					    <div>
-					    <input type="submit" name="register" value="S'inscrire" class="btn">
-					    </div><br><br/>
+      </div>
+    <div>
+    <input type="submit" name="register" value="Register" class="btn">
+    </div>
+</body>
 									
 				</div>
 
@@ -77,23 +90,27 @@
 
 
 	</body>
-
 <script>
 
 //Initialisation des variables
-var cemac = document.forms['form']['cemac'];
-var email = document.forms['form']['email'];
-var password = document.forms['form']['password'];
-var password_confirm = document.forms['form']['password_confirm'];
+var cemac = document.forms['vform']['cemac'];
+var name = document.forms['vform']['name'];
+var firstname = document.forms['vform']['firstname'];
+var email = document.forms['vform']['email'];
+var password = document.forms['vform']['password'];
+var password_confirm = document.forms['vform']['password_confirm'];
 
 // Affichage des erreurs
 var email_error = document.getElementById('email_error');
+var name_error = document.getElementById('name_error');
+var firstname_error = document.getElementById('firstname_error');
 var password_error = document.getElementById('password_error');
 var cemac_error = document.getElementById("cemac_error");
 
 
-// Action de vérification
 cemac.addEventListener('blur', cemacVerify, true);
+name.addEventListener('blur', nameVerify, true);
+firstname.addEventListener('blur', firstnameVerify, true);
 email.addEventListener('blur', emailVerify, true);
 password.addEventListener('blur', passwordVerify, true);
 
@@ -107,7 +124,7 @@ function Validate() {
     cemac.focus();
     return false;
   }
-  if (cemac.value <10000 ||cemac.value >99999) {
+  if (cemac.value <10000 || cemac.value >99999) {
     cemac.style.border = "1px solid red";
     document.getElementById('cemac_div').style.color = "red";
     cemac_error.textContent = "Le CEMAC possède 5 charactères ";
@@ -115,7 +132,22 @@ function Validate() {
     return false;
   }
 
-
+  // validate name
+  if (name.value == "") {
+    name.style.border = "1px solid red";
+    document.getElementById('name_div').style.color = "red";
+    name_error.textContent = "Nom requis";
+    name.focus();
+    return false;
+  }
+    // validate firstname
+  if (firstname.value == "") {
+    firstname.style.border = "1px solid red";
+    document.getElementById('firstname_div').style.color = "red";
+    firstname_error.textContent = "Prénom requis";
+    firstname.focus();
+    return false;
+  }
   // validate email
   if (email.value == "") {
     email.style.border = "1px solid red";
@@ -133,7 +165,7 @@ function Validate() {
     password.focus();
     return false;
   }
-  // vérification des mots de passe
+  // check if the two passwords match
   if (password.value != password_confirm.value) {
     password.style.border = "1px solid red";
     document.getElementById('pass_confirm_div').style.color = "red";
@@ -141,15 +173,24 @@ function Validate() {
     password_error.innerHTML = "Les mots de passe sont différents";
     return false;
   }
-
-//vérification des CGU
-  if (!document.checkbox.checked) { 
-  	 alert("Il faut accepter les conditions générales d'utilisation !");
-  	return false; 
-  } 
 }
 
-
+function nameVerify() {
+  if (name.value != "") {
+    name.style.border = "1px solid #5e6e66";
+    document.getElementById('name_div').style.color = "#5e6e66";
+    name_error.innerHTML = "";
+    return true;
+  }
+}
+function firstnameVerify() {
+  if (firstname.value != "") {
+    firstname.style.border = "1px solid #5e6e66";
+    document.getElementById('firstname_div').style.color = "#5e6e66";
+    firstname_error.innerHTML = "";
+    return true;
+  }
+}
 
 function emailVerify() {
   if (email.value != "") {
@@ -167,7 +208,7 @@ function passwordVerify() {
     password_error.innerHTML = "";
     return true;
   }
-  if (password.value === password_confirm.value) {
+  if (password.value == password_confirm.value) {
     password.style.border = "1px solid #5e6e66";
     document.getElementById('pass_confirm_div').style.color = "#5e6e66";
     password_error.innerHTML = "";
@@ -177,12 +218,11 @@ function passwordVerify() {
 
 function cemacVerify() {
   if (cemac.value != "") {
-   cemac.style.border = "1px solid #5e6e6";
+   cemac.style.border = "1px solid #5e6e66";
    document.getElementById('cemac_div').style.color = "#5e6e66";
    cemac_error.innerHTML = "";
    return true;
   }
 }
-
 </script>
 </html>
