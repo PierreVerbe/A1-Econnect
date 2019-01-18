@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  ven. 11 jan. 2019 à 10:45
+-- Généré le :  ven. 18 jan. 2019 à 10:34
 -- Version du serveur :  5.7.23
 -- Version de PHP :  7.2.10
 
@@ -33,18 +33,19 @@ CREATE TABLE IF NOT EXISTS `actionneur` (
   `ID_Actionneur` int(11) NOT NULL AUTO_INCREMENT,
   `Numero_serie` varchar(128) COLLATE utf8_bin NOT NULL,
   `ID_Piece` int(11) NOT NULL,
-  `Date_actuelle` datetime NOT NULL,
+  `Date_actuelle` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `ETAT_Actionneur` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`ID_Actionneur`),
   KEY `ID_Piece` (`ID_Piece`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Déchargement des données de la table `actionneur`
 --
 
-INSERT INTO `actionneur` (`ID_Actionneur`, `Numero_serie`, `ID_Piece`, `Date_actuelle`) VALUES
-(1, '3021478', 1, '2018-12-21 11:56:00'),
-(2, '3021479', 2, '2018-12-21 11:56:00');
+INSERT INTO `actionneur` (`ID_Actionneur`, `Numero_serie`, `ID_Piece`, `Date_actuelle`, `ETAT_Actionneur`) VALUES
+(1, '3021478', 1, '2018-12-21 11:56:00', 0),
+(4, '123789', 1, '2019-01-18 10:41:59', 0);
 
 -- --------------------------------------------------------
 
@@ -57,17 +58,20 @@ CREATE TABLE IF NOT EXISTS `capteur` (
   `ID_Capteur` int(11) NOT NULL AUTO_INCREMENT,
   `Numero_serie` varchar(128) COLLATE utf8_bin NOT NULL,
   `ID_Piece` int(11) NOT NULL,
+  `TEMP_Capteur` int(11) NOT NULL DEFAULT '0',
+  `LUM_Capteur` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`ID_Capteur`),
   KEY `ID_Piece` (`ID_Piece`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Déchargement des données de la table `capteur`
 --
 
-INSERT INTO `capteur` (`ID_Capteur`, `Numero_serie`, `ID_Piece`) VALUES
-(1, '302145', 1),
-(2, '302145', 1);
+INSERT INTO `capteur` (`ID_Capteur`, `Numero_serie`, `ID_Piece`, `TEMP_Capteur`, `LUM_Capteur`) VALUES
+(1, '302145', 1, 0, 0),
+(2, '302146', 1, 0, 0),
+(10, '15', 1, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -138,6 +142,8 @@ CREATE TABLE IF NOT EXISTS `facture` (
 --
 
 INSERT INTO `facture` (`ID_Facture`, `Date_facture`, `Consommation`, `Prix`, `ID_Maison`) VALUES
+(1, '2018-12-18', '95.00', '120.00', 1),
+(2, '2019-01-18', '88.00', '90.00', 1),
 (3, '2019-01-01', '100.00', '50.00', 1),
 (4, '2019-02-01', '90.00', '40.00', 1),
 (5, '2019-03-01', '80.00', '30.00', 1),
@@ -181,7 +187,7 @@ INSERT INTO `maison` (`ID_Maison`, `Mode_maison`, `Numero`, `Rue`, `Ville`, `Cod
 (5, 'Confort', 3, 'Rue du Général Leclerc', 'Issy-les-Moulineaux', '92130', 'France'),
 (6, 'Eco', 10, 'rue de la République', 'Marseille', '13005', 'France'),
 (7, 'Hibernation', 5, 'rue Emile Zola', 'Lyon', '69001', 'France'),
-(8, 'Eco', 5, 'Rue de la Paix', 'Monopoly', '75001', 'France');
+(8, 'Eco', 9, 'Avenue de la division leclerc', 'Cachan', '94234', 'France');
 
 -- --------------------------------------------------------
 
@@ -223,20 +229,20 @@ CREATE TABLE IF NOT EXISTS `piece` (
   `ID_Maison` int(11) NOT NULL,
   `Temperature` int(11) NOT NULL DEFAULT '20',
   `Luminosite` int(11) NOT NULL DEFAULT '50',
+  `Nom_piece` varchar(255) COLLATE utf8_bin NOT NULL DEFAULT 'Piece',
   PRIMARY KEY (`ID_Piece`),
   KEY `ID_Maison` (`ID_Maison`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Déchargement des données de la table `piece`
 --
 
-INSERT INTO `piece` (`ID_Piece`, `ID_Maison`, `Temperature`, `Luminosite`) VALUES
-(1, 1, 20, 70),
-(2, 1, 20, 70),
-(3, 1, 20, 50),
-(4, 1, 20, 50),
-(5, 1, 20, 50);
+INSERT INTO `piece` (`ID_Piece`, `ID_Maison`, `Temperature`, `Luminosite`, `Nom_piece`) VALUES
+(1, 1, 27, 100, 'Cuisine'),
+(2, 1, 20, 100, 'Salon'),
+(10, 1, 25, 50, 'Chambre de Yanis'),
+(11, 1, 15, 50, 'Salon');
 
 -- --------------------------------------------------------
 
@@ -297,9 +303,9 @@ CREATE TABLE IF NOT EXISTS `type_piece` (
 INSERT INTO `type_piece` (`ID_Piece`, `Type_piece`) VALUES
 (1, 'Cuisine'),
 (2, 'Salon'),
-(3, 'Chambre'),
-(4, 'Salle de bain'),
-(5, 'Salle d\'eau');
+(5, 'WC'),
+(6, 'Bureau'),
+(7, 'Chambre 1');
 
 -- --------------------------------------------------------
 
@@ -386,7 +392,7 @@ INSERT INTO `utilisateur` (`ID_User`, `User_type`, `Nom`, `Prenom`, `Adresse_ema
 (2, 'Client', 'Verbe', 'Pierre', 'pierre.verbe@isep.fr', 'mdp4597', '0678458785', '1998-02-16', '2018-12-26', '2019-01-23'),
 (3, 'Client', 'Kaveh', 'Nina', 'nina.kaveh@isep.fr', '123456789', '0687895412', '1998-02-17', '2018-12-27', '2019-12-27'),
 (4, 'Client', 'Kettou', 'Yanis', 'yanis.kettou@isep.fr', '7894587sfeg*', '0797479878', '1998-05-04', '2018-12-06', '2019-12-06'),
-(5, 'Client', 'Léa', 'Verhanege', 'lea.verhanaege@isep.fr', 'eegreggù$*884df', '0798478750', '1998-02-12', '2018-12-05', '2019-12-05');
+(5, 'Client', 'Léa', 'Verhaeghe', 'lea.tki@isep.fr', 'eegreggù$*884df', '0798478750', '1998-02-12', '2018-12-05', '2019-12-05');
 
 --
 -- Contraintes pour les tables déchargées
@@ -405,23 +411,10 @@ ALTER TABLE `capteur`
   ADD CONSTRAINT `capteur_ibfk_1` FOREIGN KEY (`ID_Piece`) REFERENCES `piece` (`ID_Piece`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Contraintes pour la table `message`
---
-ALTER TABLE `message`
-  ADD CONSTRAINT `message_ibfk_1` FOREIGN KEY (`ID_Ticket`) REFERENCES `ticket` (`ID_Ticket`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
 -- Contraintes pour la table `piece`
 --
 ALTER TABLE `piece`
   ADD CONSTRAINT `piece_ibfk_1` FOREIGN KEY (`ID_Maison`) REFERENCES `maison` (`ID_Maison`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Contraintes pour la table `ticket`
---
-ALTER TABLE `ticket`
-  ADD CONSTRAINT `ticket_ibfk_1` FOREIGN KEY (`ID_Maison`) REFERENCES `maison` (`ID_Maison`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `ticket_ibfk_2` FOREIGN KEY (`ID_User`) REFERENCES `utilisateur` (`ID_User`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Contraintes pour la table `user_maison`
