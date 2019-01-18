@@ -4,8 +4,8 @@ var i=0;
 var currentPage = url[url.length - 1];
 
 for(i;i<navLinks.length;i++){
- 	var isLink = navLinks[i].href.split("/");
- 	if(isLink[isLink.length-1] == currentPage) {
+ 	var thisLink = navLinks[i].href.split("/");
+ 	if(thisLink[thisLink.length-1] == currentPage) {
  	navLinks[i].className = "current";
 	}
 
