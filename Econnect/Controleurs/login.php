@@ -17,8 +17,12 @@ $user = $model->getUserByEmail($login);
 $password2 = $user->getPassword();
 echo "$password";
 echo "     ";
+echo "$user";
 echo "$user->getPassword()";
-if ($password==$password2){
+if ($user == null){
+	header("Location: ../index.php");
+}
+else if ($password==$password2){
 	session_start();	
 	$_SESSION["user"]=serialize($user);
 		
@@ -33,7 +37,7 @@ if ($password==$password2){
 	
 		header("Location: ../Vues/Domisep/accueil_domisep.php");
 	}
-}/*else {
-		header("Location: ../index.php");
-}*/
+}else {
+		header("Location: ../Vues/erreur_login.php");
+}
 ?>
