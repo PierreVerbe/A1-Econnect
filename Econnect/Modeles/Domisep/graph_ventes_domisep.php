@@ -4,7 +4,7 @@ require_once ('../../jpgraph-4.2.5/src/jpgraph_line.php');
 
 try
 {
-	$bdd = new PDO('mysql:host=localhost;dbname=econnect_v2;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+	include ("../../Modeles/Requete_parametre.php");
 }
 catch (Exception $e)
 {
