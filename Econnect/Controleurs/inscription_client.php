@@ -1,10 +1,15 @@
 <?php
-$nom = $_POST['name'];
-$prenom $_POST['firstname'];
-$mail = $_POST['email'];
+$nom = $_POST["name"];
+$prenom $_POST["firstname"];
+$mail = $_POST["email"];
 $password = $_POST["password"];
 $type = "Client";
 
+echo "$nom";
+echo "$prenom";
+echo "$mail";
+echo "$password";
+echo "$type";
 
 
 include "../Modeles/user.php";
@@ -14,6 +19,9 @@ try {
 $model = new Model();   
 } catch(Exception $e) {
     echo $e->getMessage();
+}
+finally {
+	echo "connexion au modele";
 }
 
 $pass = hash("md5", $password);

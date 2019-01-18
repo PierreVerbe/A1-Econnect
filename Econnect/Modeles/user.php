@@ -10,7 +10,7 @@ class User
 	public $type;
 
 	
-	function __construct($email,$pass,$type){
+	function __construct($nom,$prenom,$email,$pass,$type){
 	
 		$this->email=$email;
 		$this->password=$pass;
