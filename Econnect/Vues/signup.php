@@ -114,7 +114,7 @@ function Validate() {
   if (cemac.value <10000 || cemac.value >99999) {
     cemac.style.border = "1px solid red";
     document.getElementById('cemac_div').style.color = "red";
-    cemac_error.textContent = "Le CEMAC possède 5 charactères ";
+    cemac_error.textContent = "Le CEMAC possède 5 charactères et commence par un 1 ";
     cemac.focus();
     return false;
   }

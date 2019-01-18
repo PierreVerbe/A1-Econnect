@@ -6,10 +6,10 @@ class Model {
 	function __construct() {
 		$servername = "localhost";
 		$username = "root";
-		$password = "root";
+		$password = "";
 
 		try {
-		    $conn = new PDO("mysql:host=$servername;dbname=bdd_econnect_v2", $username, $password);
+		    $conn = new PDO("mysql:host=$servername;dbname=econnect_v2", $username, $password);
 		    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		    $this->connexion=$conn;
 	    }
