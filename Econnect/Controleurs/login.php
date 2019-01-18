@@ -4,8 +4,6 @@ $password = $_POST['password'];
 
 include "../Modeles/user.php";
 include "../Modeles/model.php";
-echo "$login";
-echo "$password";
 try {
 $model = new Model();
     
@@ -18,7 +16,8 @@ $password = hash("md5", $password);
 $user = $model->getUserByEmail($login);
 $password2 = $user->getPassword();
 echo "$password";
-echo "$password2";
+echo "     ";
+echo "$user->getPassword()";
 if ($password==$password2){
 	session_start();	
 	$_SESSION["user"]=serialize($user);
@@ -28,12 +27,13 @@ if ($password==$password2){
 		
 	}else if ($user->getType() == "Admin"){
 		
-		header("Location: ../Vues/home_admin.php");
+		header("Location: ../Vues/Administrateur/accueil_admin.php");
 		
 	} else if ($user->getType() == "Domisep") {
-		header("Location: ../Vues/Administrateur/accueil_admin.php");
+	
+		header("Location: ../Vues/Domisep/accueil_domisep.php");
 	}
-}else {
-	header("Location: ../Vues/Domisep/accueil_domisep.php");
-}
+}/*else {
+		header("Location: ../index.php");
+}*/
 ?>

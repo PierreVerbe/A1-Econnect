@@ -1,15 +1,9 @@
 <?php
 $nom = $_POST["name"];
-$prenom $_POST["firstname"];
+$prenom = $_POST["firstname"];
 $mail = $_POST["email"];
 $password = $_POST["password"];
 $type = "Client";
-
-echo "$nom";
-echo "$prenom";
-echo "$mail";
-echo "$password";
-echo "$type";
 
 
 include "../Modeles/user.php";

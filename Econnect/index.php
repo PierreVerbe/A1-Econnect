@@ -64,7 +64,7 @@
 
 				<h2>Vous êtes déjà client ?</h2>
 
-				<form method="post" action="Controleurs/do_login.php" >
+				<form method="post" action="Controleurs/login.php" >
 					<label>Email:</label>
 					<input type="email" name="txtemail" class="mail" required />
 					<label>Mot de passe:</label>

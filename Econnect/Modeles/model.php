@@ -30,7 +30,7 @@ class Model {
 		$user = null;
 	    foreach  ($this->connexion->query($sql) as $row) {
 	    	try {
-	    	$user = new User($row['nom'],$row['prenom']$row['email'],$row['password'],$row['type']);
+	    	$user = new User($row['nom'],$row['prenom'],$row['email'],$row['password'],$row['type']);
 	    	} 
 	    	catch(Exception $e) {
 	    		echo $e;

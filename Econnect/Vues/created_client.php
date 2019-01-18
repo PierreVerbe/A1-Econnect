@@ -16,14 +16,6 @@
 
 	
 	<body>	
-		<div class="menu">
-			<ul>
-				<li>Qui sommes nous ?</li>		
-				<li>Ce que nous proposons</li>	
-				<li>Nos partenaires</li>
-				<li>Identification</li>
-			</ul>			
-		</div>
 
 		
 			<div class="vitrine_image2">
@@ -31,7 +23,7 @@
       <div>
 		<h1>Vous êtes inscrit !</h1>
 		<br><br><br><br>
-		<form action="login.php" method="post">
+		<form action="../index.php" method="post">
 		    <input type="submit" value="Retour au login">
       </div>
 </body>
