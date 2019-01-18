@@ -19,7 +19,7 @@
 					<input type="email" name="txtemail" class="mail" required />
 					<label>Mot de passe:</label>
 					<input type="password" name="txtpass" class="passmdp" required />
-					<input type="submit" name="submit_login" value="Connexion" />	
+					<input type="submit" name="submit_login" value="Connexion" id="boutonSubmit" />	
 				</form>
 			</div>
 

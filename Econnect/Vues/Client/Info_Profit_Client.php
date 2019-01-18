@@ -30,8 +30,10 @@ input[type=text], select, textarea {
 }
 
 label {
-    padding: 12px 12px 12px 0;
     display: inline-block;
+	width: 140px;
+	text-align: right;
+	margin-right: 5px;
 }
 
 .boutton {
@@ -58,7 +60,7 @@ label {
 
 .col-25 {
     float: left;
-    width: 25%;
+    width: 15%;
     margin-top: 20px;
 
 }
@@ -122,7 +124,7 @@ while ($donnees = $req->fetch())
     
     <div class="row" >
       <div class="col-25">
-        <label for="fname">Nom</label>
+        <label for="fname">Nom :</label>
       </div>
       <div class="col-75">
         <input type="text" id="fname" name="firstname" value="<?php echo $donnees['Nom']; ?>">
@@ -131,7 +133,7 @@ while ($donnees = $req->fetch())
 
     <div class="row">
       <div class="col-25">
-        <label for="lname">Prénom</label>
+        <label for="lname">Prénom :</label>
       </div>
       <div class="col-75">
         <input type="text" id="lname" name="lastname" value="<?php echo $donnees['Prenom']; ?>">
@@ -140,7 +142,7 @@ while ($donnees = $req->fetch())
 
     <div class="row">
       <div class="col-25" >
-        <label for="subject">Email</label>
+        <label for="subject">Email :</label>
       </div>
       <div class="col-75" id="email_div">
         <input type="email"  name="email" value="<?php echo $donnees['Adresse_email']; ?>" class="textInput" id="mail">
@@ -150,7 +152,7 @@ while ($donnees = $req->fetch())
 
     <div class="row">
       <div class="col-25">
-        <label for="subject">Téléphone</label>
+        <label for="subject">Téléphone :</label>
       </div>
       <div class="col-75">
         <input type="tel" id="Téléphone" name="Téléphone" value="<?php echo $donnees['Telephone']; ?>" min="1" max="10" pattern="[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}">
@@ -159,7 +161,7 @@ while ($donnees = $req->fetch())
 
     <div class="row">
       <div class="col-25">
-        <label for="subject">Date de naissance</label>
+        <label for="subject">Date de naissance :</label>
       </div>
       <div class="col-75">
         <input type="date" id="Date_naissance" name="Date_naissance" value="<?php echo $donnees['Date_naissance']; ?>">

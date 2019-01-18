@@ -19,6 +19,18 @@ header
     box-shadow: 5px 5px 13px;
 }
 
+#boutonSubmit
+{
+	border:none;
+	margin: 10px;
+	padding: 9px;
+	border-radius:2px;
+	box-shadow:3px 3px 12px #999;
+	background:#fff;
+	font:bold 13px Arial;
+	color:#555;
+}
+
 .mail, .passmdp
 {
 	width: 20%;
@@ -211,14 +223,13 @@ header
 
 #boutonConnexion {
 	border:none;
-	padding:6px 0 6px 0;
+	margin: 10px;
+	padding: 9px;
 	border-radius:2px;
 	box-shadow:3px 3px 12px #999;
 	background:#fff;
 	font:bold 13px Arial;
 	color:#555;
-	margin-right: 40%;
-	padding: 3px;
 }
 
 section
