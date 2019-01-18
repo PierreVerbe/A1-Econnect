@@ -14,16 +14,11 @@
 			<p>Schéma de la maison, vue d'ensemble... </p>
 		</div>
 
-<a style="text-decoration: none;" href="Info_Profit_Client.php">
+	<a style="text-decoration: none;" href="Info_Profit_Client.php">
         <div class="element" >
-			<p> C'est du texte essentiellement. Informations essentielles du client : 
-				<ul>
-					<li>Adresse mail</li>
-					<li>Téléphone</li>
-					<li>Nombre d'utilisateur secondaire</li>
-					<li>Nombre de maisons gérées</li>
-					<li>Nombre de pièces dans chaque maison ... </li>
-				</ul>
+        	<h2>Vos informations :</h2>
+			<p> 
+				<?php include ("../../Modeles/Client/bdd_get-info-profil_client.php"); ?>
 			</p>
 		</div>
         </a>

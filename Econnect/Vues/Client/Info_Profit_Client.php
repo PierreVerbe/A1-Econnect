@@ -18,31 +18,10 @@ input[type=text], select, textarea {
     border: 1px solid #ccc;
     border-radius: 4px;
     resize: vertical;
-    padding: 12px 12px 12px 0;
+    padding: 12px 12px 12px 12px;
     display: inline-block;
 }
-#mail{
-	width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    resize: vertical;
-}
-#Téléphone{
-	width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    resize: vertical;
-}
-#Date_naissance{
-	width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    resize: vertical;
-}
-#MDP{
+#mail, #Téléphone, #Date_naissance, #MDP{
 	width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
@@ -51,8 +30,10 @@ input[type=text], select, textarea {
 }
 
 label {
-    padding: 12px 12px 12px 0;
     display: inline-block;
+	width: 140px;
+	text-align: right;
+	margin-right: 5px;
 }
 
 .boutton {
@@ -79,7 +60,7 @@ label {
 
 .col-25 {
     float: left;
-    width: 25%;
+    width: 15%;
     margin-top: 20px;
 
 }
@@ -120,81 +101,106 @@ label {
 }
 </style>
 </head>
-<section id="sectionClient2">
-	<form method="POST" action=" " onsubmit="return Validate()" name="form" >
-	<div class="container">
-  	
+
+<?php
+
+try
+{
+  include ("../../Modeles/Requete_parametre.php");
+}
+catch (Exception $e)
+{
+  die('Erreur : ' . $e->getMessage());
+}
+
+$req = $bdd->query('SELECT utilisateur.Nom, utilisateur.Prenom, utilisateur.Adresse_email, utilisateur.Mot_de_passe, utilisateur.Telephone, utilisateur.Date_naissance FROM utilisateur WHERE utilisateur.Adresse_email = \'pablo.grana@isep.fr\'');
+
+while ($donnees = $req->fetch())
+  {
+    ?>
+    <section id="sectionClient2">
+  <form method="POST" action=" " onsubmit="return Validate()" name="form" >
+  <div class="container">
+    
     <div class="row" >
       <div class="col-25">
-        <label for="fname">Nom</label>
+        <label for="fname">Nom :</label>
       </div>
       <div class="col-75">
-        <input type="text" id="fname" name="firstname" placeholder="Votre nom ...">
+        <input type="text" id="fname" name="firstname" value="<?php echo $donnees['Nom']; ?>">
       </div>
     </div>
 
     <div class="row">
       <div class="col-25">
-        <label for="lname">Prénom</label>
+        <label for="lname">Prénom :</label>
       </div>
       <div class="col-75">
-        <input type="text" id="lname" name="lastname" placeholder="Votre prénom...">
+        <input type="text" id="lname" name="lastname" value="<?php echo $donnees['Prenom']; ?>">
       </div>
     </div>
 
     <div class="row">
       <div class="col-25" >
-        <label for="subject">Email</label>
+        <label for="subject">Email :</label>
       </div>
       <div class="col-75" id="email_div">
-        <input type="email"  name="email" placeholder="Votre mail..." class="textInput" id="mail">
+        <input type="email"  name="email" value="<?php echo $donnees['Adresse_email']; ?>" class="textInput" id="mail">
         <div id="email_error"></div>
       </div>
     </div>
 
     <div class="row">
       <div class="col-25">
-        <label for="subject">Téléphone</label>
+        <label for="subject">Téléphone :</label>
       </div>
       <div class="col-75">
-        <input type="tel" id="Téléphone" name="Téléphone" placeholder="Votre numéro de téléphone... " min="1" max="10" pattern="[0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2}">
+        <input type="tel" id="Téléphone" name="Téléphone" value="<?php echo $donnees['Telephone']; ?>" min="1" max="10" pattern="[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}">
       </div>
     </div>
 
     <div class="row">
       <div class="col-25">
-        <label for="subject">Date de naissance</label>
+        <label for="subject">Date de naissance :</label>
       </div>
       <div class="col-75">
-        <input type="date" id="Date_naissance" name="Date_naissance" placeholder="Votre date de naissance ...">
+        <input type="date" id="Date_naissance" name="Date_naissance" value="<?php echo $donnees['Date_naissance']; ?>">
       </div>
     </div>
     <div class="row">
-    	<div class="col-25" >	
-    		<label for="subject">Mot de passe :</label><br/>
-    	</div>		
-    	<div class="col-75" id="password_div">
-			<input name="passeword_confirm"  type="passeword" name="password" placeholder="Votre mot de passe ..." class="textInput" id="MDP" /><br /><br />
-		</div>
-	</div>		
-	<div class="row">		   
-		<div class="col-25">
-			<label for="subject">Confirmer le mot de passe :</label><br/>
-		</div>   
-		<div class="col-75" id="pass_confirm_div">
-			<input name="passeword_confirm" type="passeword"  placeholder="Confirmez votre mot de passe ..." class="textInput" id="MDP" /><br /><br />
-			<div id="password_error"></div>
-		</div>				 				
-	</div>		
+      <div class="col-25" > 
+        <label for="subject">Mot de passe :</label><br/>
+      </div>    
+      <div class="col-75" id="password_div">
+      <input name="passeword_confirm"  type="passeword" name="password" value="<?php echo $donnees['Mot_de_passe']; ?>" class="textInput" id="MDP" /><br /><br />
+    </div>
+  </div>    
+  <div class="row">      
+    <div class="col-25">
+      <label for="subject">Confirmer le mot de passe :</label><br/>
+    </div>   
+    <div class="col-75" id="pass_confirm_div">
+      <input name="passeword_confirm" type="passeword"  placeholder="Confirmez votre nouveau mot de passe ..." class="textInput" id="MDP" /><br /><br />
+      <div id="password_error"></div>
+    </div>                
+  </div>    
 
     <div class="row" >
-      	<button class="boutton" type="submit" name="register"><span>Soumettre</span></button>
-  		</button> 
+        <button class="boutton" type="submit" name="register"><span>Soumettre</span></button>
+      </button> 
     </div>
 
   </form>
 </div>
 </section>
+  <?php
+  }
+
+  $req->closeCursor();
+
+?>
+
+
 </html>
 
 <script>

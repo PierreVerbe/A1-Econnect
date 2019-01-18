@@ -362,7 +362,7 @@ src: url('../Fonts/Montserrat/Montserrat-Regular.otf');
 /*################################### DEBUT SAV ###################################*/
 
 /*Pour le SAV du site*/
-.bloc_SAV
+.bloc_SAV1, .bloc_SAV2
 {
     width:98%;
     margin-top: 15px;
@@ -485,6 +485,11 @@ tr:hover
 #conteneur{
     display:flex;
     justify-content: space-around;
+}
+
+#infoClient
+{
+  text-align: left;
 }
         
 #imageClient{
@@ -1242,6 +1247,7 @@ h2
   font-size: 45px;
 }
 /*################################### FIN CGV ###################################*/
+<<<<<<< HEAD
 /*################################### DEBUT MODAL ###################################*/
 
 
@@ -1280,3 +1286,5 @@ h2
   text-decoration: none;
   cursor: pointer;
 }
+=======
+>>>>>>> 2faf0911463b43816f161b2d2faba6f2f9224239

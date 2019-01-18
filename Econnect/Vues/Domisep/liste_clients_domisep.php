@@ -1,155 +1,50 @@
-<?php include ("header_domisep.php")?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Econnect - Domisep</title>
+</head>
 
-<body>
-	<section id="clients">
 
-			<article id="liste_clients">
-				Liste des clients :<br /><br />
+	<?php include ("header_domisep.php")?>
 
-				<div id="recherche_client">
-					<label>Nom Client : </label><input type="text" name="recherche_nom" />
+	<body>
+		<section id="clients">
 
-					<label>N° Client : </label><input type="text" name="recherche_numero" />
+				<article id="liste_clients">
 
-					<label>Adresse : </label><input type="text" name="recherche_adresse" />
+					
+					Liste des clients :<br /><br />
 
-					<label>Statut : </label><input type="text" name="recherche_statut" />
+					<div id="recherche_client">
+						<label>Nom Client : </label><input type="text" name="recherche_nom" id="search_name" onKeyPress="if (event.keyCode == 13) search()"/>
 
-				</div>
+						<input type="button" name="validate" value="Rechercher" onclick="search()" />
 
-				<input type="button" name="validate" value="Rechercher">
+						<input type="button" id="boutonAnnuler" value="Annuler" onClick="javascript:document.location.href='http://localhost/Econnect/A1-Econnect/Econnect/Vues/Domisep/liste_clients_domisep.php'" />
+					</div>
 
-				<table id="tableau_clients">
-					<tr>
-						<th>N° Client</th>
-						<th>Nom du client</th>
-						<th>Adresse du client</th>
-						<th>Statut</th>
-					</tr>
-					<tr>
-						<td>300014</td>
-						<td>Jean François</td>
-						<td>1 rue des Lilas, 75006 Paris</td>
-						<td>En attente d'installation</td>
-					</tr>
-					<tr>
-						<td>300015</td>
-						<td>Bertrand Martin</td>
-						<td>5 rue du Vieux-Port, 13001 Marseille</td>
-						<td>Défaut de paiement</td>
-					</tr>
-					<tr>
-						<td>300016</td>
-						<td>Patrick Nerat</td>
-						<td>7 rue du Parc, 64200</td>
-						<td>Déménagement en cours</td>
-					</tr>
-				</table>
-			
-			</article>
+					<?php include("../../Modeles/Domisep/bdd_liste-clients_domisep.php");?>
 
-		</section>
+					<script src="http://code.jquery.com/jquery.min.js"></script>
 
-		<section id="details_client">
+					<script src="javascript/liste_client_domisep.js"></script>
+				
+				</article>
 
-			<ul id="proprietes">
-				<li>N° Client :</li>
-				<li>Nom du client :</li>
-				<li>Fin du contrat :</li>
-			</ul>
+			</section>
 
-			<p id="mode">Mode actuel : Hibernation</p>
+			<section id="details_client">
 
-			<div id="Pieces">
-				<h2>Pièces</h2>
-				<div id="liste_piece_user">
-					<p>Salon</p>
-					<p>Chambre</p>
-					<p>Cuisine</p>
-				</div>
-			</div>
+				
 
-			<div id="Capteurs">
-				<h2>Capteurs</h2>
-				<div id="liste_capteurs_user">
-					<p>Capteur 1</p>
-					<p>Capteur 2</p>
-					<p>Capteur 3</p>
-				</div>
-			</div>
 
-			<div id="Actionneurs">
-				<h2>Actionneurs</h2>
-				<div id="liste_actionneurs_user">
-					<p>Action 1</p>
-					<p>Action 2</p>
-					<p>Action 3</p>
-				</div>
-			</div>
+				<div id="tableau_maisons_ajax"></div>
 
-			<div id="tableaux_client_admin">
-				<div id="Listes_factures">
-					<table id="tableau_factures">
-						<caption>Liste des factures du client</caption>
-						<tr>
-							<th>N° Facture</th>
-							<th>Date</th>
-							<th>Consommation</th>
-							<th>Prix</th>
-						</tr>
-						<tr>
-							<td>300014</td>
-							<td>08-09-2018</td>
-							<td>40kWh</td>
-							<td>35€</td>
-						</tr>
-						<tr>
-							<td>300015</td>
-							<td>08-10-2018</td>
-							<td>50kWh</td>
-							<td>30€</td>
-						</tr>
-						<tr>
-							<td>300016</td>
-							<td>08-11-2018</td>
-							<td>45kWh</td>
-							<td>45€</td>
-						</tr>
-					</table>
-				</div>
+				<div id="details_maison"></div>
+				
+			</section>
+	</body>
 
-				<div id="Listes_tickets_user_admin">
-					<table id="tableau_tickets_user">
-						<caption>Liste des tickets du client</caption>
-						<tr>
-							<th>N° Ticket</th>
-							<th>Objet</th>
-							<th>Date</th>
-							<th>Statut</th>
-						</tr>
-						<tr>
-							<td>300014</td>
-							<td>Problème capteur</td>
-							<td>07-04-2018</td>
-							<td>Ouvert</td>
-						</tr>
-						<tr>
-							<td>300015</td>
-							<td>Problème facture</td>
-							<td>04-05-2018</td>
-							<td>Fermé</td>
-						</tr>
-						<tr>
-							<td>300016</td>
-							<td>Problème connexion</td>
-							<td>03-06-2018</td>
-							<td>Fermé</td>
-						</tr>
-					</table>
-				</div>
-			</div>
-			
-		</section>
-</body>
+	<?php include ("footer_domisep.php")?>
 
-<?php include ("footer_domisep.php")?>
+</html>

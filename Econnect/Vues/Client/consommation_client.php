@@ -10,7 +10,7 @@
 				<article class="consommationHAUT">
 					<h1>Estimation de la consommation :</h1>
 					<div id="grapheConso">
-						<?php echo "<img src='../../Controleurs/graph_consommation_client.php'/>";?>
+						<?php echo "<img src='../../Modeles/Client/graph_consommation_client.php'/>";?>
 					</div>
 				</article>
 
@@ -18,10 +18,10 @@
 				<article class="consommationBAS">
 					<h1>Vos factures :</h1>
 					<div id="listeFactures">
-						<?php include("../../Controleurs/bdd_liste-factures_client.php"); ?>
+						<?php include("../../Modeles/Client/bdd_liste-factures_client.php"); ?>
 					</div>
 					<div id="grapheFactures">
-						<?php echo "<img src='../../Controleurs/graph_factures_client.php'/>";?>
+						<?php echo "<img src='../../Modeles/Client/graph_factures_client.php'/>";?>
 					</div>
 				</article>
 

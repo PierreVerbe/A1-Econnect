@@ -24,11 +24,11 @@
 			<div id = "Nombres">
 
 				<p>
-					<?php echo "<img src='../../Controleurs/graph_users_admin.php'/>";?>
+					<?php echo "<img src='../../Modeles/Administrateur/graph_users_admin.php'/>";?>
 				</p>
 
 				<p>
-					<?php echo "<img src='../../Controleurs/graph_ventes_admin.php'/>";?>
+					<?php echo "<img src='../../Modeles/Administrateur/graph_ventes_admin.php'/>";?>
 				</p>
 			
 			</div>
@@ -45,7 +45,7 @@
 
 			<ul>
 				<li><img src="ressources/point_rouge_mini.png" alt="Alerte""> Maison n°14587 : Alerte intrusion <a href="https://livestream.com/accounts/888332/events/931293/player?width=640&height=360&autoPlay=true&mute=false"><button>Vérifier les caméras</button></a></li>
-				<li><img src="ressources/point_orange_mini.png" alt="Problème"> Maison n°14586 : Intervention nécéssaire</li>
+				<li><img src="ressources/point_orange_mini.png" alt="Problème"> Maison n°14586 : Intervention nécéssaire <button>Appel technicien</button></li>
 				<li><img src="ressources/point_vert_mini.png" alt="OK"> Tout est ok</li>
 			</ul>
 			
@@ -61,12 +61,7 @@
 				<li>Maison n°14582 : HAG défaillant <button class="button">Détails</button><button class="button">Désactiver</button><button class="button">Appel Technicien</button></li>
 			</ul>
 
-			<script>
-				function desactivated()
-				{
-					alert("Désactivé !");
-				}
-			</script>
+			<script src="javascript/accueil_admin.js"></script>
 			
 		</article>
 			

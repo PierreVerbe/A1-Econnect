@@ -9,19 +9,19 @@
 
 		<div id="graphes_domisep">
 			<p>
-				<?php echo "<img src='../../Controleurs/graph_users_domisep.php'/>";?>
+				<?php echo "<img src='../../Modeles/Domisep/graph_users_domisep.php'/>";?>
 			</p>
 			
 			<p>
-				<?php echo "<img src='../../Controleurs/graph_ventes_domisep.php'/>";?>
+				<?php echo "<img src='../../Modeles/Domisep/graph_ventes_domisep.php'/>";?>
 			</p>
 			
 			<p>
-				<?php echo "<img src='../../Controleurs/graph_visites_domisep.php'/>";?>
+				<?php echo "<img src='../../Modeles/Domisep/graph_visites_domisep.php'/>";?>
 			</p>
 			
 			<p>
-				<?php echo "<img src='../../Controleurs/graph_temps_domisep.php'/>";?>
+				<?php echo "<img src='../../Modeles/Domisep/graph_temps_domisep.php'/>";?>
 			</p>
 			
 		</div>

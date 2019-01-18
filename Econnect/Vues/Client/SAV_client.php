@@ -1,7 +1,7 @@
 <?php include ("header_client.php")?>
 <?php include ("banniere_client.php")?>
 
-	<section class="bloc_SAV">
+	<section class="bloc_SAV1">
 
 		<h1> Chat/SAV</h1>
 		
@@ -16,9 +16,12 @@
 		<script src="javascript/SAV_client.js"></script>
 
 		<!-- message client -->
-		<h2>Contenu du ticket :</h2>
+		<!--<h2>Contenu du ticket :</h2>-->
 
 		<div id="contenu_ticket"></div>
+	</section>
+
+	<section class="bloc_SAV2">
 
 		<h2>Ouvrir un nouveau ticket :</h2>
 

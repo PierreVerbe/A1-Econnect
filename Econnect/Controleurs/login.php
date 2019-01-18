@@ -1,20 +1,39 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Untitled Document</title>
-</head>
+<?php
+$login = $_POST['login'];
+$password = $_POST['password'];
 
-<body>
-<form method="post" action="do_login.php" >
-<label>ENTER EMAIL:</label>
- <input type="email" name="txtemail" required /><br><br>
-<label>ENTER PASSWORD:</label>
- <input type="password" name="txtpass" required /> <br><br>
-		<input type="submit" name="submit" value="LOGIN" />
-			
-									
-</form>
+include "../Modeles/user.php";
+include "../Modeles/model.php";
+echo "$login";
+echo "$password";
+try {
+$model = new Model();
+    
+}
+catch(Exception $e) {
+    echo $e->getMessage();
+}
 
-</body>
-</html>
+$password = hash("md5", $password);
+$user = $model->getUserByEmail($login);
+$password2 = $user->getPassword();
+echo "$password";
+echo "$password2";
+if ($password==$password2){
+	session_start();	
+	$_SESSION["user"]=serialize($user);
+		
+	if ($user->getType() == "Client") {
+		header("Location: ../Vues/Client/accueil_client.php");
+		
+	}else if ($user->getType() == "Admin"){
+		
+		header("Location: ../Vues/home_admin.php");
+		
+	} else if ($user->getType() == "Domisep") {
+		header("Location: ../Vues/Administrateur/accueil_admin.php");
+	}
+}else {
+	header("Location: ../Vues/Domisep/accueil_domisep.php");
+}
+?>

@@ -425,3 +425,38 @@ footer img
 {
     border-bottom: 1px solid #ddd;
 }
+
+/*################################### DEBUT modelFooter ###################################*/
+.modelFooter
+{
+    width:96%;
+    padding: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left : 1%;
+    margin-right : 1%;
+    border-radius: 20px;
+    background-color: #A5CAFF;
+    border : 3px solid #8FA8DE;
+    box-shadow: 5px 5px 13px;
+}
+.modelFooter p {
+  padding-left:45px;
+}
+.modelFooter h3 {
+  padding-left:27px;
+}
+.modelFooter h1 {
+  margin-left:15px;
+  font-size: 45px;
+}
+/*################################### FIN modelFooter ###################################*/
+
+/*################################### PAGES FOOTER ###################################*/
+.pages_footer
+{
+    font-family: Montserrat, Verdana;
+    /*ont-size: 1.2em;*/
+}
+
+/*################################### FIN FOOTER ###################################*/
