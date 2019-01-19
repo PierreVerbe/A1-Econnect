@@ -1,0 +1,146 @@
+	body
+	{
+		background-color:#82c3b8;
+		color: white;
+		font-family: Arial;
+	}
+
+	.menu ul
+	{	
+		display: flex;
+		list-style-type: none;
+		justify-content: space-around;
+		background-color: #9ddfd0;
+		padding: 20px;
+		flex-wrap: wrap;
+	}
+	
+	.menu ul :hover 
+	{
+		font-weight: bold;
+	}
+
+	.login{
+		text-align: right;
+		font-size: 110%;
+	}
+
+
+	.vitrine_image1
+	{
+		background-image:url(Image/paysage_vitrine.png);
+	    height:500px;
+	    background-position: center;
+	    background-position: no-repeat;
+	    background-size: cover;
+	    position: relative;
+	}
+
+
+	.vitrine_image2
+	{
+		background-image:url(Image/tech_vitrine.png);
+	    height:450px;
+	    background-position: center;
+	    background-position: no-repeat;
+	    background-size: cover;
+	    position: relative;
+	    text-align: center;
+	}
+
+	#texte_vitrine_image2
+	{
+		text-align: center;
+		font-size: 1.5em;
+		padding-top: 30px;
+    	font-family: Verdana;
+	}
+
+	#button_multiple_vitrine_image2
+	{
+		text-align: center;
+		padding-top: 50px;
+	}
+
+	.button_vitrine_image2
+	{
+		background: #073763;
+		background: -webkit-linear-gradient(#073763, #073763);
+		background: linear-gradient(#073763, #073763);
+		border-radius: 5px;
+		padding: 8px 22px;
+		color: #073763;
+		display: inline-block;
+		font: normal 700 24px/1 "Calibri", sans-serif;
+		text-align: center;
+		text-shadow: none;
+		-webkit-transition: color 0.5s;
+  		transition: color 0.5s;
+	}
+
+	.button_vitrine_image2:hover
+	{
+		color: #ffffff;
+	}
+
+	#texte2_vitrine_image2
+	{
+		text-align: center;
+		color: white;
+		font-family: Verdana;
+	}
+
+	.meteo
+ 	{
+		background-color: white;
+		border: 1px;
+		border-radius: 10px;
+		padding: 20px;
+		text-align: center;
+		margin-top: 10px; 
+		margin-bottom: 10px;
+		color: black;
+	}
+
+	.Graphs
+	{	
+		border: 4px ;
+		border-color: white;
+		margin-top: 10px; 
+		margin-bottom: 10px;
+		padding: 250;
+	}
+
+	.Partenaires
+	{
+		border: 1px;
+		border-color: white;
+		margin-top: 10px; 
+		margin-bottom: 10px;
+		padding: 200;
+	}
+
+	section
+	{
+		display: flex;
+		flex-direction: column;
+	}
+
+	form
+	{
+		padding: 50;
+	}
+
+	input
+	{
+		margin: 3px;
+	}
+
+	.form_col {
+    display: inline-block;
+    margin-right: 15px;
+    padding: 3px 0px;
+    width: 200px;
+    min-height: 1px;
+    text-align: right;
+}

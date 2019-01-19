@@ -1,41 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style_admin.css">
+		<title></title>
+	</head>
 
-<body>
-	<header>
-		<div id = "Menu">
-			<ul>
-				<li>Liste des clients</li>
-				<li>Accès maison</li>
-				<li>Chat/SAV</li>
-				<li>Déconnexion</li>
-			</ul>
-		</div>
-	</header>
+	<body>
 
-</body>
+		<header>
+			<img src="../Image/Econnect_feuille_mini.png" alt="Logo_Econnect"/>
+			<div id = "Menu">
+				<ul class="navbar">
+					<li><a href="accueil_admin.php">Accueil</a></li>
+					<li><a href="liste_client.php">Liste des clients</a></li>
+					<li><a href="acces_maison.php">Accès maison</a></li>
+					<li><a href="chat_sav.php">Chat/SAV</a></li>
+					<li><a href="quit_admin.php">Déconnexion</a></li>
+				</ul>
+			</div>
+				<script>
+					var url = location.href.split("/");
+					var navLinks = document.getElementsByClassName("navbar")[0].getElementsByTagName("a");
+					var i=0;
+					var currentPage = url[url.length - 1];
 
-<style type="text/css">
-	#Menu ul
-	{
-		display: flex;
-		list-style-type: none;
-		justify-content: space-around;
-		border: 0px solid black;
-		border-radius: 10px;
-		background-color: #6FFFBF;	
-	}
+					for(i;i<navLinks.length;i++){
+					 	var isLink = navLinks[i].href.split("/");
+					 	if(isLink[isLink.length-1] == currentPage) {
+					 	navLinks[i].className = "current";
+						}
 
-	#Menu li
-	{
-		padding-top: 10px;
-		padding-bottom: 10px;
-		padding-left: 10px;
-		padding-right: 10px;
-	}
+					}
+				</script>
+		</header>
 
-	#Menu li:hover
-	{
-		background: #00E67F;
-		cursor: pointer;
-		transition: background 1s;
-	}
-</style>
+	</body>
+
+</html>

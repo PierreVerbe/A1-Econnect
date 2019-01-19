@@ -1,16 +1,109 @@
+@font-face /* Définition d'une nouvelle police nommée quicksand */
+{ 
+font-family: 'Quicksand';
+src: url('../Fonts/Quicksand/Quicksand-Light.otf');
+}
+
+@font-face /* Définition d'une nouvelle police nommée quicksand */
+{ 
+font-family: 'Montserrat';
+src: url('../Fonts/Montserrat/Montserrat-Regular.otf');
+}
+
+/*Couleur de fond du site*/
+
 body
 {
-	background-color: #aceace;
+    background-color: #e1e4e7;
 }
+
+/*a
+{
+    text-decoration: none;
+    color: black;
+}*/
+
+/*############### BANNIERE ###################*/
+
+header
+{
+    background-image:url(../Image/Header/Fond_montagne.jpg);
+    height:100%;
+    background-position: center;
+    background-position: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+/*Menu*/
+
+#Menu ul
+{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;  
+}
+
+#Menu li
+{
+    float: left;
+    font-size: 1.5em;
+    font-family: Quicksand, Verdana;
+}
+
+#Menu li a 
+{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    text-decoration: none;
+}
+
+#Menu li:hover:not(.current)
+{
+    display: block;
+    text-align: center;
+    background-color: black;
+    text-decoration: none;
+}
+
+/* Pour le bouton du menu ma maison */
+.current 
+{
+    background-color:#118ccf;
+}
+
+
+header
+{
+    margin-bottom: 10px;
+}
+
+
+/* ############## ACCUEIL ############# */
+
 #Chiffres h1
 {
 	text-align: center;
+    font-family: Montserrat, Verdana;
 }
 
 #Chiffres
 {
-	border: 1px solid black;
-	border-radius: 10px;
+	width:98%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left : auto;
+    margin-right : auto;
+    border-radius: 20px;
+    background-color: #A5CAFF;
+    border : 3px solid #8FA8DE;
+    box-shadow: 5px 5px 13px;
 }
 
 #Nombres 
@@ -21,28 +114,299 @@ body
 
 #Nombres p
 {
-	border: 1px solid black;
-	padding-top: 200px;
-	padding-left: 60px;
-	padding-right: 60px;
+	padding-top: 30px;
+	padding-left: 30px;
+	padding-right: 30px;
+    padding-bottom: 30px;
 }
 
-#Alertes #liste_alertes
+/*#Alertes h1
+{
+   font-family: Montserrat, Verdana; 
+}
+#liste_alertes
 {
 	display: flex;
 	justify-content: space-around;
+    font-family: Montserrat, Verdana;
+}*/
+
+#gestion_admin
+{
+    width:98%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left : auto;
+    margin-right : auto;
+    border-radius: 20px;
+    background-color: #A5CAFF;
+    border : 3px solid #8FA8DE;
+    box-shadow: 5px 5px 13px;
+    font-family: Montserrat, Verdana;
 }
 
-/* Pour le footer de la page */
+#Alertes, #gestion_pannes
+{
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 45%;
+    margin: 10px;
+    padding: 10px;
+}
+
+#Alertes li, #gestion_pannes li
+{
+    height: 30px;
+}
+
+#gestion_admin
+{
+    display: flex;
+    justify-content: space-around;
+}
+
+#gestion_admin ul
+{
+    list-style-type: none;
+}
+
+
+/* ############## LISTE CLIENTS ############### */
+
+#clients
+{
+    width:98%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left : auto;
+    margin-right : auto;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #A5CAFF;
+    border : 3px solid #8FA8DE;
+    box-shadow: 5px 5px 13px;
+    font-family: Montserrat, Verdana;
+}
+
+#recherche_client
+{
+    display: flex;
+    justify-content: flex-start;
+}
+
+#recherche_client input
+{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#SAV_table
+{
+    margin: auto;
+}
+
+
+#tableau_clients, #tableau_maisons, #tableau_factures, #tableau_tickets {
+    width:98%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left : auto;
+    margin-right : auto;
+    /*border-collapse: collapse;*/
+    overflow: auto;
+    background-color: #dcdcdc;
+    font-family: Montserrat, Verdana;
+}
+
+th, td {
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+tr:hover
+{
+    background-color: #b9ecb0 ;
+    cursor:pointer;
+}
+
+#details_client
+{
+    width:98%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left : auto;
+    margin-right : auto;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #A5CAFF;
+    border : 3px solid #8FA8DE;
+    box-shadow: 5px 5px 13px;
+    font-family: Montserrat, Verdana;
+}
+
+#proprietes
+{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+/*#Pieces h2, #Capteurs h2, #Actionneurs h2
+{
+    text-align: center;
+}*/
+
+#details_maison h2
+{
+    text-align: center;
+}
+
+#liste_details_maison
+{
+    text-align: center;
+}
+
+#details_maison p
+{
+    margin: 10px;
+    display: inline-block;
+    border : 1px solid black;
+    padding: 10px;
+    border-radius: 3px;
+    width: 15%;
+}
+
+#details_maison p:hover
+{
+    cursor: pointer;
+}
+
+#tableaux_client_admin table
+{
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    background-color: #dcdcdc;
+    overflow: auto;
+    width: 80%;
+}
+
+#tableaux_client_admin caption
+{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+/* ################ ACCES MAISON #############*/
+
+
+#confirmation
+{
+    text-align: center;
+    width:98%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left : auto;
+    margin-right : auto;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #A5CAFF;
+    border : 3px solid #8FA8DE;
+    box-shadow: 5px 5px 13px;
+    font-family: Montserrat, Verdana; 
+}
+
+
+/* ################# CHAT/SAV ############*/
+.bloc_SAV
+{
+    width:98%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left : auto;
+    margin-right : auto;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #A5CAFF;
+    border : 3px solid #8FA8DE;
+    box-shadow: 5px 5px 13px;
+    font-family: Montserrat, Verdana;
+}
+
+#SAV_table
+{
+    background-color: #dcdcdc;
+    width: 100%;
+}
+
+.SAV_nouveau_ticket
+{
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.zone_message_SAV
+{
+    width : 100%;
+}
+
+.bouton_envoyer
+{
+    margin-left : 50%;
+    margin-right : 50%;
+    margin-bottom: 10px;
+}
+
+#contenu_message
+{
+    border: 1px solid black;
+    background-color: white;
+    padding: 5px;
+}
+
+
+
+/*##################### PAGE QUIT CLIENT ###################*/
+
+
+#quit {
+    width:98%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left : auto;
+    margin-right : auto;
+    border-radius: 20px;
+    background-color: #A5CAFF;
+    border : 3px solid #8FA8DE;
+    box-shadow: 5px 5px 13px;
+    text-align: center;
+}
+
+
+/* ################ FOOTER ###############*/
+
 footer
 {
+    
     display : flex;
     justify-content: space-between;
-    /*text-align: center;*/
-    width:100%;
+    height: 150px;
     line-height: 20px;
-    height:10px;
-    background-color: #a1e5ff  ;
+
+    /* Pour un footer responsif */
+    background-image:url(../Image/Footer/fond_cristaux.png);
+    height:100%;
+    background-position: center;
+    background-position: no-repeat;
+    background-size: cover;
+    position: relative;
+    border-radius: 10px;
 }
 
 footer img
@@ -50,27 +414,49 @@ footer img
     vertical-align: middle;
 }
 
-#a_propos, #le_groupe, #nous_contcater, #aide
+#a_propos, #le_groupe, #nous_contacter, #aide
 {
     margin : 20px;
-    /*border-bottom: 1px solid #ddd; pour la barre sous le texte*/
-}
-
-#couleur
-{
-    width:100%;
-    height:90px;
-    background-color: #00b9ff ;
-}
-
-#couleur2
-{
-    width:100%;
-    height:100px;
-    background-color:  #2f4852  ;
+    font-family: Quicksand, Verdana;
+    font-size: 1em;
 }
 
 .texte_f
 {
     border-bottom: 1px solid #ddd;
 }
+
+/*################################### DEBUT modelFooter ###################################*/
+.modelFooter
+{
+    width:96%;
+    padding: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left : 1%;
+    margin-right : 1%;
+    border-radius: 20px;
+    background-color: #A5CAFF;
+    border : 3px solid #8FA8DE;
+    box-shadow: 5px 5px 13px;
+}
+.modelFooter p {
+  padding-left:45px;
+}
+.modelFooter h3 {
+  padding-left:27px;
+}
+.modelFooter h1 {
+  margin-left:15px;
+  font-size: 45px;
+}
+/*################################### FIN modelFooter ###################################*/
+
+/*################################### PAGES FOOTER ###################################*/
+.pages_footer
+{
+    font-family: Montserrat, Verdana;
+    /*ont-size: 1.2em;*/
+}
+
+/*################################### FIN FOOTER ###################################*/

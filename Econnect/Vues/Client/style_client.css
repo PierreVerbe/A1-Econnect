@@ -1,13 +1,29 @@
-/* Header de la page */
+/*################################### DEBUT HEADER ###################################*/
+@font-face /* Définition d'une nouvelle police nommée quicksand */
+{ 
+font-family: 'Quicksand';
+src: url('../Fonts/Quicksand/Quicksand-Light.otf');
+}
+
 header
+{ 
+    height:300px;
+}
+
+/*Image de fond du header responsif : si on chnage la taille de l'image sera tjs centrée*/
+#image_fond_header
 {
-    height:207px;
-    background-color:#898f93  ;
+    background-image:url(../Image/Header/Fond_montagne.jpg);
+    height:100%;
+    background-position: center;
+    background-position: no-repeat;
+    background-size: cover;
+    position: relative;
 }
 
 
-/* liste pour l emenu de la page */
-ul 
+/* liste pour le menu de la page */
+ul.navbar
 {
     display: flex;
     justify-content: space-around;
@@ -18,13 +34,14 @@ ul
     background-color: #333;
 }
 
-li 
+ul.navbar li
 {
     float: left;
-    font-family: arial;
+    font-size: 1.5em;
+    font-family: Quicksand, Verdana;
 }
 
-li a 
+ul.navbar li a 
 {
     display: block;
     color: white;
@@ -33,9 +50,15 @@ li a
     text-decoration: none;
 }
 
-li a:hover:not(.active) 
+ul.navbar li a:hover:not(.current) 
 {
     background-color: #111;
+}
+
+/* Pour le bouton actif */
+.current 
+{
+    background-color:#118ccf;
 }
 
 
@@ -44,16 +67,14 @@ body
     background-color:#e1e4e7;
 }
 
-/* Pour le bouton du menu ma maison */
-.active 
-{
-    background-color:#118ccf;
-}
+/*################################### FIN HEADER ###################################*/
 
-/* Pour le bouton du menu quitter */
-.quit
-{
-    color: red;
+/*################################### DEBUT BANNER ###################################*/
+
+@font-face /* Définition d'une nouvelle police nommée quicksand */
+{ 
+font-family: 'Montserrat';
+src: url('../Fonts/Montserrat/Montserrat-Regular.otf');
 }
 
 .slider_boutons
@@ -68,18 +89,38 @@ body
 .Slide_h 
 {
     height:150px;
-    display:none;
-    
+    display:none; 
+}
+
+.Text_Slide_h
+{
+    font-family: Montserrat, Verdana;
+    font-size: 1.2em;
+    text-align: center;
+    vertical-align: middle;
 }
 
 .Slider_h
 {
     width:50%;
     height:150px;
-    border: 5px blue outset;
+    border: 5px #2149A0 outset;
     border-radius: 5px;
     display: flex;
     justify-content: space-between;
+}
+
+.Slide_image_texte
+{
+    float:right;
+    font-family: Montserrat, Verdana;
+    font-size: 1.2em;
+}
+
+.Slide_image
+{
+    margin-bottom: 5px;
+    margin-top:5px;
 }
 
 .Slider_h_gauche, .Slider_h_droite
@@ -102,17 +143,20 @@ body
 
 .bouton_eco, .bouton_sortie, .bouton_confort, .bouton_hibernation 
 {
-    max-width:85px;
-    max-height:85px;
-    min-width:85px;
-    min-height:85px;
+    max-width:120px;
+    max-height:120px;
+    min-width:120px;
+    min-height:120px;
     background: #118ccf;
     box-shadow:2px 2px 8px #aaa;
-    font:bold 13px Arial;
+    font:bold 1.3em Montserrat, Verdana;
     border-radius:50%;
-    color:#555;
+    color:#ffffff;
     padding: 5px;
-    margin: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .bouton_eco:hover, .bouton_sortie:hover, .bouton_confort:hover, .bouton_hibernation:hover
@@ -125,11 +169,14 @@ body
     display: flex;
     justify-content: flex-end;
     /*padding: 0px;*/
-    margin: 10px;
     padding-left:0;
 }
 
-/* pour le tableau de bord */
+
+/*################################### FIN BANNER ###################################*/
+
+/*################################### DEBUT ACCEUIL_CLIENT ###################################*/
+
 .tableau_bord
 {
     width:98%;
@@ -138,12 +185,12 @@ body
     margin-left : auto;
     margin-right : auto;
     border-radius: 20px;
-    background-color: #67bbde;
-    border : 3px solid #219af4;
+    background-color: #A5CAFF;
+    border : 3px solid #8FA8DE;
     box-shadow: 5px 5px 13px;
 }
 
-#bloc_info
+.tableau_bord
 {
     display: flex;
     flex-wrap: wrap;
@@ -164,28 +211,130 @@ body
     justify-content: space-between;
 }
 
-/*########################################################*/
-
-/* Pour le slider en haut de la page */
-/*.Slide_Haut_Gauche 
+.titre_contenu_info_H_G
 {
-    height:200px;
-    display:none;
-}*/
-
-.Slider_h
-{
-    width:50%;
-    height:150px;
-    border: 5px blue outset;
-    border-radius: 5px;
-    display: flex;
-    justify-content: space-between;
+    font-family: Montserrat, Verdana;
+    font-size: 1.5em;
+    text-align: center;
+    border-left: 250px solid #737373;
+    border-right: 250px solid #737373;
+    background-color: #737373;
 }
+
+.contenu_info_H_G
+{
+    font-family: Montserrat, Verdana;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.bouton_info_H_G
+{
+    text-align: center;
+}
+
+.moins_température
+{
+    height: 100px;
+    width: 100px;
+    margin-right: 40px;
+    font-family: Montserrat, Verdana;
+    font-size: 2em;
+    display: inline-block;
+    cursor: pointer;
+    background: rgba(64, 0, 255, 1);
+    border: 2px solid #1800a2;
+    border-radius: 5px;
+    box-shadow:0px 0px 4px 2px rgba(0, 0, 0, 0.25), inset 1px 1px 0px 0px rgba(255, 255, 255, 0.25);
+}
+
+.moins_température:hover
+{
+    background: rgba(64, 0, 255, 0.65);
+}
+
+.plus_température
+{
+    height: 100px;
+    width: 100px;
+    margin-left: 40px;
+    font-family: Montserrat, Verdana;
+    font-size: 2em;
+    display: inline-block;
+    cursor: pointer;
+    background: rgba(255, 0, 0, 1);
+    border: 2px solid #BD0000;
+    border-radius: 5px;
+    box-shadow:0px 0px 4px 2px rgba(0, 0, 0, 0.25), inset 1px 1px 0px 0px rgba(255, 255, 255, 0.25);
+}
+
+.plus_température:hover
+{
+    background: rgba(255, 0, 0, 0.65);
+}
+
+.contenu_info_B_D
+{
+    font-family: Montserrat, Verdana;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.bouton_info_B_D
+{
+    text-align: center;
+}
+
+.moins_lumière
+{
+    height: 100px;
+    width: 100px;
+    margin-right: 40px;
+    font-family: Montserrat, Verdana;
+    font-size: 2em;
+    display: inline-block;
+    cursor: pointer;
+    background: rgba(173, 173, 0, 1);
+    border: 2px solid #adad00;
+    border-radius: 5px;
+    box-shadow:0px 0px 4px 2px rgba(0, 0, 0, 0.25), inset 1px 1px 0px 0px rgba(255, 255, 255, 0.25);
+}
+
+.moins_lumière:hover
+{
+    background: rgba(173, 173, 0, 0.65);
+}
+
+.plus_lumière
+{
+    height: 100px;
+    width: 100px;
+    margin-left: 40px;
+    font-family: Montserrat, Verdana;
+    font-size: 2em;
+    display: inline-block;
+    cursor: pointer;
+    background: rgba(245, 245, 0, 1);
+    border: 2px solid #f9f500;
+    border-radius: 5px;
+    box-shadow:0px 0px 4px 2px rgba(0, 0, 0, 0.25), inset 1px 1px 0px 0px rgba(255, 255, 255, 0.25);
+}
+
+.plus_lumière:hover
+{
+    background: rgba(245, 245, 0, 0.65);
+}
+
+.Image_Slide_Haut_Gauche
+{
+    width: auto;
+    height: auto;
+}
+
 
 .info_bloc_gauche, .info_bloc_droite
 {
-    background-color: rgba(106,106,106,0.4);
+    background-color: rgba(150,200,150,0.8);
     border: none;
     height:22px;
     width:22px;
@@ -195,35 +344,25 @@ body
     margin-bottom: 189px;
 
     /*Transition de la taille des curseurs*/
-    -webkit-transition: width 0.5s, height 0.5s; /* For Safari 3.1 to 6.0 */
+    -webkit-transition: width 0.5s, height 0.5s, margin-top 0.5s, margin-bottom 0.5s; /* Pour Safari */
     transition: width 0.5s, height 0.5s, margin-top 0.5s, margin-bottom 0.5s;
 }
 
 .info_bloc_gauche:hover, .info_bloc_droite:hover
 {
-    background-color: rgba(106,106,106,0.8);
+    background-color: rgba(150,200,150,0.6);
     height:34px;
     width:34px;
     margin-top: 183px;
     margin-bottom: 183px;
 }
 
-/*################################################################################*/
-/*#info_loupe
-{
-    background: blue;
-    -webkit-transition: background 1s;
-    transition: background 1s;
-}*/
+/*################################### FIN ACCEUIL_CLIENT ###################################*/
 
-#info_loupe:hover
-{
-   background: green;
-    
-}
+/*################################### DEBUT SAV ###################################*/
 
 /*Pour le SAV du site*/
-.bloc_SAV
+.bloc_SAV1, .bloc_SAV2
 {
     width:98%;
     margin-top: 15px;
@@ -231,8 +370,8 @@ body
     margin-left : auto;
     margin-right : auto;
     border-radius: 20px;
-    background-color: #67bbde;
-    border : 3px solid #219af4;
+    background-color: #A5CAFF;
+    border : 3px solid #8FA8DE;
     box-shadow: 5px 5px 13px;
 }
 
@@ -249,9 +388,16 @@ body
     box-shadow: 3px 3px 9px;
 }
 
-
-
 .SAV_table {
+    width:98%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left : auto;
+    margin-right : auto;
+    border-collapse: collapse;
+}
+
+#SAV_table_client {
     width:98%;
     margin-top: 15px;
     margin-bottom: 15px;
@@ -270,19 +416,487 @@ tr:nth-child(even){background-color: #f2f2f2}
 th {
     background-color: #4CAF50;
     color: white;
+    font-family: Montserrat, Verdana;
 }
 
+tr
+{
+    font-family: Montserrat, Verdana;
+}
+
+tr:hover
+{
+    background-color: #b9ecb0 ;
+    cursor:pointer;
+}
+
+.SAV_nouveau_ticket
+{
+    font-family: Montserrat, Verdana;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.zone_objet_SAV
+{
+    font-family: Montserrat, Verdana;
+}
+
+.zone_message_SAV
+{
+    width : 100%;
+}
+
+.bouton_envoyer
+{
+    font-family: Montserrat, Verdana;
+    margin-left : 50%;
+    margin-right : 50%;
+    margin-bottom: 10px;
+}
+
+#contenu_ticket
+{
+    font-family: Montserrat, Verdana;
+    font-size: 1em;
+    margin-left: 30px;
+}
+
+/*################################### FIN SAV ###################################*/
+
+/*################################### DEBUT PROFIL ###################################*/
+
+/*Pour la page profit client*/
+#sectionClient
+{ 
+    width:98%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left : auto;
+    margin-right : auto;
+    background-color: #A5CAFF;
+    border : 3px solid #8FA8DE;
+    box-shadow: 5px 5px 13px;
+    height: 450px;
+    text-align: center;
+    border-radius: 20px;  
+}
+
+#conteneur{
+    display:flex;
+    justify-content: space-around;
+}
+
+#infoClient
+{
+  text-align: left;
+}
+        
+#imageClient{
+    margin-top: 10px; 
+    height: 200px;
+    width: 200px;
+}
+
+.element:nth-child(1){
+    margin-top: 50px; 
+    background-color: #dcdcdc;
+    width: 600px; 
+    border-radius: 10px;
+    background-color: #dcdcdc;
+    border : 3px solid #b6b6b6;
+    box-shadow: 3px 3px 9px;
+    font-family: Montserrat, Verdana;
+    font-size: 1.2em;
+}
+
+.element:nth-child(2){
+    margin-top: 50px; 
+    background-color: #dcdcdc; 
+    width: 600px;
+    border-radius: 10px;
+    background-color: #dcdcdc;
+    border : 3px solid #b6b6b6;
+    box-shadow: 3px 3px 9px; 
+    text-align: left; 
+    text-indent: 25px; 
+    font-family: Montserrat, Verdana;
+    font-size: 1.2em;
+}
+
+    
+
+/*Pour la page paramètres client*/
+#body_Client
+{
+    background-color: #dcdcdc; 
+}
+
+#GestionClient
+{
+  width:98%;
+  height: 450px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left : auto;
+  margin-right : auto;
+  border-radius: 20px;
+  background-color: #A5CAFF;
+  border : 3px solid #8FA8DE;
+  box-shadow: 5px 5px 13px;
+}
+
+#conteneur_1{
+    display:flex;
+    justify-content: space-around;
+}
+#Acces{
+    text-decoration: underline;
+}
+.button_1 {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #118ccf;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 15px;
+  padding: 10px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 15px;
+  float: right; 
+}
+
+.button_1 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button_1 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button_1:hover span {
+  padding-right: 25px;
+}
+
+.button_1:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.ComptePrincipal{
+    margin-top: 50px; 
+    background-color: #dcdcdc;
+    width: 500px; 
+    border-style: groove;
+    border-width: 2px; 
+    border-color: #008080; 
+    border-radius: 10px;
+    margin-right: 10px; 
+}
+.CompteSecondaire{
+    margin-top: 50px; 
+    background-color: #dcdcdc; 
+    width: 500px;
+    border-style: groove;
+    border-width: 2px; 
+    border-color: #008080; 
+    border-radius: 10px; 
+    margin-right: 10px; 
+}
+.button_2 {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #118ccf;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 15px;
+  padding: 10px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button_2 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button_2 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button_2:hover span {
+  padding-right: 25px;
+}
+
+.button_2:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.button_3 {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #118ccf;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 15px;
+  padding: 10px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button_3 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button_3 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button_3:hover span {
+  padding-right: 25px;
+}
+
+.button_3:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.Ajout{
+    margin-top: 50px; 
+    background-color: #dcdcdc; 
+    width: 500px;
+    border-style: groove;
+    border-width: 2px; 
+    border-color: #008080; 
+    border-radius: 10px; 
+    margin-right: 10px; 
+}
+.button_4 {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #118ccf;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 15px;
+  padding: 10px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button_4 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button_4 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button_4:hover span {
+  padding-right: 25px;
+}
+
+.button_4:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.button_5 {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #118ccf;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 15px;
+  padding: 10px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button_5 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button_5 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button_5:hover span {
+  padding-right: 25px;
+}
+
+.button_5:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.buttonS {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #118ccf;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 15px;
+  padding: 10px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.buttonS span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.buttonS span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.buttonS:hover span {
+  padding-right: 25px;
+}
+
+.buttonS:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+#GestioN
+{
+  width:98%;
+  height: 450px;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left : auto;
+  margin-right : auto;
+  border-radius: 20px;
+  background-color: #A5CAFF;
+  border : 3px solid #8FA8DE;
+  box-shadow: 5px 5px 13px;
+}
+
+#conteneur_2{
+    display:inline-block;
+    justify-content: space-around;
+}
+.Piece{
+    margin-top: 50px; 
+    background-color: #dcdcdc;
+    width: 500px; 
+    border-style: groove;
+    border-width: 2px; 
+    border-color: #008080; 
+    border-radius: 10px;
+    margin-right: 10px; 
+    float: left;
+    height: 250px;
+}
+.Capteurs{
+    margin-top: 50px; 
+    background-color: #dcdcdc;
+    width: 500px; 
+    border-style: groove;
+    border-width: 2px; 
+    border-color: #008080; 
+    border-radius: 10px;
+    margin-right: 10px; 
+    float: left;
+    height: 250px;
+}
+
+.Actionneurs{
+    margin-top: 50px; 
+    background-color: #dcdcdc;
+    width: 500px; 
+    border-style: groove;
+    border-width: 2px; 
+    border-color: #008080; 
+    border-radius: 10px;
+    margin-right: 10px; 
+    float: left;
+    height: 250px;
+}
+
+/*################################### FIN PROFIL ###################################*/
+
+/*################################### DEBUT FOOTER ###################################*/
 
 /* Pour le footer de la page */
 footer
 {
+    
     display : flex;
     justify-content: space-between;
-    /*text-align: center;*/
-    width:100%;
+    height: 150px;
     line-height: 20px;
-    height:10px;
-    background-color: #a1e5ff  ;
+
+    /* Pour un footer responsif */
+    background-image:url(../Image/Footer/fond_cristaux.png);
+    height:100%;
+    background-position: center;
+    background-position: no-repeat;
+    background-size: cover;
+    position: relative;
 }
 
 footer img
@@ -290,24 +904,11 @@ footer img
     vertical-align: middle;
 }
 
-#a_propos, #le_groupe, #nous_contcater, #aide
+#a_propos, #le_groupe, #nous_contacter, #aide
 {
     margin : 20px;
-    /*border-bottom: 1px solid #ddd; pour la barre sous le texte*/
-}
-
-#couleur
-{
-    width:100%;
-    height:90px;
-    background-color: #00b9ff ;
-}
-
-#couleur2
-{
-    width:100%;
-    height:100px;
-    background-color:  #2f4852  ;
+    font-family: Quicksand, Verdana;
+    font-size: 1em;
 }
 
 .texte_f
@@ -315,6 +916,14 @@ footer img
     border-bottom: 1px solid #ddd;
 }
 
+/*################################### PAGES FOOTER ###################################*/
+.pages_footer
+{
+    font-family: Montserrat, Verdana;
+    /*ont-size: 1.2em;*/
+}
+
+/*################################### FIN FOOTER ###################################*/
 
 /**************************************************************/
 /********************** PAGE CONSOMMATION *********************/
@@ -323,9 +932,15 @@ footer img
 /* Pour le fond des cadres */
 .consommation
 {
-    margin: 1% 3% 1% 3%;
+    width:98%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left : auto;
+    margin-right : auto;
     border-radius: 20px;
-    background-color: #404040;
+    background-color: #A5CAFF;
+    border : 3px solid #8FA8DE;
+    box-shadow: 5px 5px 13px;
 }
 
 /* Pour l'organisation des cadres */
@@ -337,18 +952,39 @@ footer img
     justify-content: space-around;
 }
 
+#consommation h1{
+	flex-basis: 100%;
+	max-height: 50px;
+}
 /* Pour les cadres généraux HAUT et BAS */
 .consommationHAUT, .consommationBAS
 {
     padding: 10px;
     margin: 15px;
-    height:400px;
+    background-color: #dcdcdc;
+    border : 3px solid #b6b6b6;
+    box-shadow: 3px 3px 9px;
     border-radius: 10px;
-    background-color: #a6a6a6;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-} 
+    justify-content: space-around;
+    align-content: flex-start;
+    align-content: baseline;    
+}
+
+#tableau_factures
+{
+    width:98%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left : auto;
+    margin-right : auto;
+    overflow: auto;
+    background-color: #dcdcdc;
+    font-family: Montserrat, Verdana;
+}
+
 .consommationHAUT h1, .consommationBAS h1
 {
     padding: 10px;
@@ -359,19 +995,294 @@ footer img
 #grapheConso
 {
     border-radius: 10px;
-    background-color: #0066ff;
+    background-color: #CBCBCB;
+    padding: 5px;
+
 }
 
 /* Pour les cadres spécifiques de la page conso. */
-#listeFactures
-{
-    border-radius: 10px;
-    background-color: #0066ff;
+
 } 
 
 /* Pour les cadres spécifiques de la page conso. */
 #grapheFactures
 {
     border-radius: 10px;
-    background-color: #0066ff;
+    background-color: #CBCBCB;
+    padding: 5px;
+
 } 
+
+
+/**************************************************************/
+/*********************** PAGE QUIT CLIENT *********************/
+/**************************************************************/
+
+#quit {
+    width:98%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left : auto;
+    margin-right : auto;
+    border-radius: 20px;
+    background-color: #A5CAFF;
+    border : 3px solid #8FA8DE;
+    box-shadow: 5px 5px 13px;
+    text-align: center;
+}
+
+#quit p {
+
+}
+
+/**************************************************************/
+/********************* PAGE GESTION CLIENT ********************/
+/**************************************************************/
+
+/* Pour le fond des cadres */
+#gestionCAll
+{
+    width:98%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left : auto;
+    margin-right : auto;
+    border-radius: 20px;
+    background-color: #A5CAFF;
+    border : 3px solid #8FA8DE;
+    box-shadow: 5px 5px 13px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+}
+
+/* Pour l'organisation des cadres */
+#gestionClient
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.gestionCPiece{
+    padding: 10px;
+    margin: 15px;
+    background-color: #dcdcdc;
+    border : 3px solid #b6b6b6;
+    box-shadow: 3px 3px 9px;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: flex-start;
+    align-content: baseline;  
+    display: flex;
+    align-items: center;
+    justify-content: center;      
+}
+/* Pour les cadres généraux HAUT et BAS */
+.gestionCCapteurs
+{
+    padding: 10px;
+    margin: 15px;
+    background-color: #dcdcdc;
+    border : 3px solid #b6b6b6;
+    box-shadow: 3px 3px 9px;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: flex-start;
+    align-content: baseline;  
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+} 
+
+.gestionCActionneurs
+{
+    padding: 10px;
+    margin: 15px;
+    background-color: #dcdcdc;
+    border : 3px solid #b6b6b6;
+    box-shadow: 3px 3px 9px;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: flex-start;
+    align-content: baseline;  
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+
+ /* Les deux cotes de la carte */
+.tuile {
+  margin: 5px;
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  perspective: 1000px; /* Supprime l'effet de profondeur */
+}
+
+/* Permet d'avoir la differentiation entre le devant et le derrire de la carte */
+.tuile-ensemble {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.tuile:hover .tuile-ensemble {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.tuile-avant, .tuile-arriere {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.tuile-avant {
+  background-color: #b9caf6;
+  color: black;
+}
+.tuile-avant h1
+{
+    margin-left: 0px;
+}
+
+/* Style the back side */
+.tuile-arriere {
+  background-color: darkgrey;
+  color: white;
+  transform: rotateY(180deg);
+}
+.tuile-arriere h1
+{
+    margin-left: 0px;
+}
+
+.buttonAddEntity {
+  display: inline-block;
+  border: none;
+  color: black;
+  text-align: center;
+  font-size: 15px;
+  padding: 10px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  background-color: #b9caf6;
+  border : 3px solid #8FA8DE;
+  border-radius: 10px;
+  vertical-align: middle;
+}
+
+.buttonAddEntity:hover {
+  font-size: 18px;
+}
+
+.deleteEntity {
+  color: #000;
+  float: right;
+  margin-right: 10px;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.deleteEntity:hover,
+.deleteEntity:focus {
+  color: #FF0000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/*################################### DEBUT COMMUN ###################################*/
+h1
+{
+    font-family: Montserrat, Verdana;
+    margin-left: 30px;
+}
+
+h2
+{
+    font-family: Montserrat, Verdana;
+    font-size: 1.3em;
+    margin-left: 30px;
+}
+/*################################### FIN COMMUN ###################################*/
+/*################################### DEBUT CGV ###################################*/
+.cgv
+{
+    width:96%;
+    padding: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left : 1%;
+    margin-right : 1%;
+    border-radius: 20px;
+    background-color: #A5CAFF;
+    border : 3px solid #8FA8DE;
+    box-shadow: 5px 5px 13px;
+}
+.cgv p {
+  padding-left:45px;
+}
+.cgv h3 {
+  padding-left:27px;
+}
+.cgv h1 {
+  margin-left:15px;
+  font-size: 45px;
+}
+/*################################### FIN CGV ###################################*/
+
+/*################################### DEBUT MODAL ###################################*/
+
+
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1; 
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
