@@ -3,23 +3,7 @@
 
 <script src="http://code.jquery.com/jquery.min.js"></script>
 
-<script>
-function deletePiece(ID_Piece)
-{
-	window.location.href = "deletePiece.php?ID_Piece=" + ID_Piece;
-}
-
-function deleteCapteur(ID_Capteur)
-{
-	window.location.href = "deleteCapteur.php?ID_Capteur=" + ID_Capteur;
-}
-
-function deleteActionneur(ID_Actionneur)
-{
-	window.location.href = "deleteActionneur.php?ID_Actionneur=" + ID_Actionneur;
-}
-
-</script>
+<script src="javascript/gestion_client.js"></script>
 
 <body id="body_Client">
 	<section id="gestionCAll">
@@ -28,11 +12,16 @@ function deleteActionneur(ID_Actionneur)
 
 			<div class="gestionCPiece">
 
-				<?php 
-				$bdd = new PDO('mysql:host=localhost;dbname=econnect_v2;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+				<?php
 
-				//$data = $bdd->query("SELECT * FROM `piece` INNER JOIN `type_piece` ON piece.ID_Piece = type_piece.ID_Piece WHERE ID_Maison = 1");
-				$piece = $bdd->query("SELECT * FROM `piece` WHERE ID_Maison = 1");
+				try{
+					include ("../../Modeles/Requete_parametre.php");
+				}
+				catch (Exception $e){
+					die('Erreur : ' . $e->getMessage());
+				}
+
+				$piece = $bdd->query("SELECT * FROM piece INNER JOIN user_maison ON piece.ID_Maison = user_maison.ID_Maison INNER JOIN utilisateur ON user_maison.ID_User = utilisateur.ID_User WHERE Adresse_email = \"pablo.grana@isep.fr\";");
 
 				while ($row = $piece->fetch()) {
 				    echo "	<div class=\"tuile\">
@@ -79,7 +68,7 @@ function deleteActionneur(ID_Actionneur)
 				 	<div class="modal-content">
 						<span class="close" onclick='javascript: $(this).parent().parent("#pieceModal").css("display", "none");'>&times;</span>
 						<h1>Ajout d'une pièce</h1>
-						<form action="addPiece.php" method="get">
+						<form action="../../Modeles/Client/addPiece.php" method="get">
 							Nom de la pièce : <input type="text" maxlength="28" name="nom" required><br>
 							Température voulu : <input type="number" min="10" step="0.5" max="30" name="temp" required><br>
 							<input type="submit">
@@ -98,11 +87,12 @@ function deleteActionneur(ID_Actionneur)
 
 			<div class="gestionCCapteurs">
 				<?php
-				$i = 1;
-				$piece = $bdd->query("SELECT * FROM `piece` WHERE ID_Maison = 1");
+				
+				$piece = $bdd->query("SELECT * FROM piece INNER JOIN user_maison ON piece.ID_Maison = user_maison.ID_Maison INNER JOIN utilisateur ON user_maison.ID_User = utilisateur.ID_User WHERE Adresse_email = \"pablo.grana@isep.fr\";");
 
 				$capteur = $bdd->query("SELECT * FROM `capteur` INNER JOIN piece ON capteur.ID_Piece = piece.ID_Piece INNER JOIN user_maison ON piece.ID_Maison = user_maison.ID_Maison INNER JOIN utilisateur ON user_maison.ID_User = utilisateur.ID_User WHERE Adresse_email = \"pablo.grana@isep.fr\";");
 
+				$i = 1;
 				while ($row = $capteur->fetch()) {
 				    echo "	<div class=\"tuile\">
 
@@ -141,7 +131,7 @@ function deleteActionneur(ID_Actionneur)
 				 	<div class="modal-content">
 						<span class="close" onclick='javascript: $(this).parent().parent("#capteurModal").css("display", "none");'>&times;</span>
 						<h1>Ajout d'un capteur</h1>
-						<form action="addCapteur.php" method="get">
+						<form action="../../Modeles/Client/addCapteur.php" method="get">
 							Pièce : <select name="ID_Piece">
 									<?php
 										while ($row = $piece->fetch()) {
@@ -168,12 +158,13 @@ function deleteActionneur(ID_Actionneur)
 
 
 			<div class="gestionCActionneurs">
-				<?php 
-				$i = 1;
-				$piece = $bdd->query("SELECT * FROM `piece` WHERE ID_Maison = 1");
+				<?php
+
+				$piece = $bdd->query("SELECT * FROM piece INNER JOIN user_maison ON piece.ID_Maison = user_maison.ID_Maison INNER JOIN utilisateur ON user_maison.ID_User = utilisateur.ID_User WHERE Adresse_email = \"pablo.grana@isep.fr\";");
 
 				$data = $bdd->query("SELECT * FROM `actionneur` INNER JOIN piece ON actionneur.ID_Piece = piece.ID_Piece INNER JOIN user_maison ON piece.ID_Maison = user_maison.ID_Maison INNER JOIN utilisateur ON user_maison.ID_User = utilisateur.ID_User WHERE Adresse_email = \"pablo.grana@isep.fr\";");
-
+				
+				$i = 1;
 				while ($row = $data->fetch()) {
 					if($row['ETAT_Actionneur']==0) $row['ETAT_Actionneur']= "OFF";
 					else $row['ETAT_Actionneur']= "ON";
@@ -219,7 +210,7 @@ function deleteActionneur(ID_Actionneur)
 				 	<div class="modal-content">
 						<span class="close" onclick='javascript: $(this).parent().parent("#actionneurModal").css("display", "none");'>&times;</span>
 						<h1>Ajout d'un actionneur</h1>
-						<form action="addActionneur.php" method="get">
+						<form action="../../Modeles/Client/addActionneur.php" method="get">
 							Pièce : <select name="ID_Piece">
 									<?php
 										while ($row = $piece->fetch()) {
