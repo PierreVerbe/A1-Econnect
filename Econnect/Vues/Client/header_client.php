@@ -27,4 +27,4 @@
   		</li>
 	</ul>
 
-<script src="suiviNav.js" ></script>
+<script src="javascript/suiviNav.js" ></script>
