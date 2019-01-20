@@ -14,14 +14,8 @@
 
 				<?php
 
-				try{
-					include ("../../Modeles/Requete_parametre.php");
-				}
-				catch (Exception $e){
-					die('Erreur : ' . $e->getMessage());
-				}
+				include("../../Modeles/Client/bdd_get-piece.php");
 
-				$piece = $bdd->query("SELECT * FROM piece INNER JOIN user_maison ON piece.ID_Maison = user_maison.ID_Maison INNER JOIN utilisateur ON user_maison.ID_User = utilisateur.ID_User WHERE Adresse_email = \"pablo.grana@isep.fr\";");
 
 				while ($row = $piece->fetch()) {
 				    echo "	<div class=\"tuile\">
@@ -88,9 +82,9 @@
 			<div class="gestionCCapteurs">
 				<?php
 				
-				$piece = $bdd->query("SELECT * FROM piece INNER JOIN user_maison ON piece.ID_Maison = user_maison.ID_Maison INNER JOIN utilisateur ON user_maison.ID_User = utilisateur.ID_User WHERE Adresse_email = \"pablo.grana@isep.fr\";");
+				include("../../Modeles/Client/bdd_get-piece.php");
 
-				$capteur = $bdd->query("SELECT * FROM `capteur` INNER JOIN piece ON capteur.ID_Piece = piece.ID_Piece INNER JOIN user_maison ON piece.ID_Maison = user_maison.ID_Maison INNER JOIN utilisateur ON user_maison.ID_User = utilisateur.ID_User WHERE Adresse_email = \"pablo.grana@isep.fr\";");
+				include("../../Modeles/Client/bdd_get-capteur.php");
 
 				$i = 1;
 				while ($row = $capteur->fetch()) {
@@ -160,9 +154,9 @@
 			<div class="gestionCActionneurs">
 				<?php
 
-				$piece = $bdd->query("SELECT * FROM piece INNER JOIN user_maison ON piece.ID_Maison = user_maison.ID_Maison INNER JOIN utilisateur ON user_maison.ID_User = utilisateur.ID_User WHERE Adresse_email = \"pablo.grana@isep.fr\";");
+				include("../../Modeles/Client/bdd_get-piece.php");
 
-				$data = $bdd->query("SELECT * FROM `actionneur` INNER JOIN piece ON actionneur.ID_Piece = piece.ID_Piece INNER JOIN user_maison ON piece.ID_Maison = user_maison.ID_Maison INNER JOIN utilisateur ON user_maison.ID_User = utilisateur.ID_User WHERE Adresse_email = \"pablo.grana@isep.fr\";");
+				include("../../Modeles/Client/bdd_get-actionneur.php");
 				
 				$i = 1;
 				while ($row = $data->fetch()) {
