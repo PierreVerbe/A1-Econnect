@@ -18,6 +18,7 @@
 					<li><a href="quit_admin.php">Déconnexion</a></li>
 				</ul>
 			</div>
+		<script src="javascript/suiviNav.js" ></script>
 		</header>
 
 	</body>
