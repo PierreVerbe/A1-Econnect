@@ -13,7 +13,7 @@
 		$Luminosite_Moyenne = $donnees['ROUND(AVG(piece.Luminosite), 1)'];
 		}
 ?>
-		<p class="Slide_image_texte"><img class="Slide_image" src="../Image/Banniere/moyenne_lumiere.png" width="100" height="100">Luminosité moyenne est : <?php echo $Luminosite_Moyenne ?>%</p>
+		<p class="Slide_image_texte"><img class="Slide_image" src="../Image/Banniere/moyenne_lumiere.png" width="100" height="100">Luminosité moyenne : <?php echo $Luminosite_Moyenne ?>%</p>
 <?php
 		$req->closeCursor();
 ?>
