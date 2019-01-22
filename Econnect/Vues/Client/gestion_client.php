@@ -37,13 +37,13 @@
 					    				<p>Température voulu : ".$row['Temperature']."°C<br>Luminosite : ".$row['Luminosite']."</p>
 
 					    				<div>
-					    					<button class=\"moins_température\" onclick=\"changement_temperature(0.5)\">- °C</button>
-					    					<button class=\"plus_température\" onclick=\"changement_temperature(-0.5)\">+ °C</button>
+					    					<button class=\"tempDown\" onclick=\"changement_temperature(0.5)\">-</button>
+					    					<button class=\"tempUp\" onclick=\"changement_temperature(-0.5)\">+</button>
 					    				</div>
-
+					    					<br>
 					    				<div>
-					    					<button class=\"moins_lumière\">-</button>
-					    					<button class=\"plus_lumière\">+</button>
+					    					<button class=\"lumDown\">-</button>
+					    					<button class=\"lumUp\">+</button>
 					    				</div>
 
 					    			</div>
@@ -182,8 +182,8 @@
 				    					<p>Numéro de série : n°".$row['Numero_serie']."</p>
 				    					<p>État : ".$row['ETAT_Actionneur']."</p>
 					    				<div>
-					    					<button class=\"moins_température\" onclick=\"changement_temperature(0.5)\">OFF</button>
-					    					<button class=\"plus_température\" onclick=\"changement_temperature(-0.5)\">ON</button>
+					    					<button class=\"actionOFF\" onclick=\"changement_temperature(0.5)\">OFF</button>
+					    					<button class=\"actionON\" onclick=\"changement_temperature(-0.5)\">ON</button>
 					    				</div>
 
 				    				</div>

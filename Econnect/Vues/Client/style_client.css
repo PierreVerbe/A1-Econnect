@@ -1242,6 +1242,127 @@ footer img
   text-decoration: none;
   cursor: pointer;
 }
+/* ACTION DES BOUTONS */
+.lumDown
+{
+    height: 50px;
+    width: 50px;
+    margin-right: 40px;
+    font-family: Montserrat, Verdana;
+    font-size: 2em;
+    display: inline-block;
+    cursor: pointer;
+    background:  rgb(225, 225, 0);
+    border: 2px solid rgb(205, 205, 0);
+    border-radius: 5px;
+    box-shadow:0px 0px 4px 2px rgba(0, 0, 0, 0.25), inset 1px 1px 0px 0px rgb(205, 205, 0);
+}
+
+.lumDown:hover
+{
+    background:  rgb(205, 205, 0);
+}
+
+.lumUp
+{
+    height: 50px;
+    width: 50px;
+    margin-left: 40px;
+    font-family: Montserrat, Verdana;
+    font-size: 2em;
+    display: inline-block;
+    cursor: pointer;
+    background: rgb(225, 225, 0);
+    border: 2px solid #f9f500;
+    border-radius: 5px;
+    box-shadow:0px 0px 4px 2px rgba(0, 0, 0, 0.25), inset 1px 1px 0px 0px rgba(255, 255, 255, 0.25);
+}
+
+.lumUp:hover
+{
+    background: yellow;
+}
+
+.tempDown
+{
+    height: 50px;
+    width: 50px;
+    margin-right: 40px;
+    font-family: Montserrat, Verdana;
+    font-size: 2em;
+    display: inline-block;
+    cursor: pointer;
+    background:  rgb(64, 0, 225);
+    border: 2px solid rgb(44, 0, 205);
+    border-radius: 5px;
+    box-shadow:0px 0px 4px 2px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 0px rgba(255, 255, 255, 0.25);
+}
+
+.tempDown:hover
+{
+    background:  rgb(44, 0, 205);
+}
+
+.tempUp
+{
+    height: 50px;
+    width: 50px;
+    margin-left: 40px;
+    font-family: Montserrat, Verdana;
+    font-size: 2em;
+    display: inline-block;
+    cursor: pointer;
+    background: rgb(225, 0, 0);
+    border: 2px red;
+    border-radius: 5px;
+    box-shadow:0px 0px 4px 2px rgba(0, 0, 0, 0.25), inset 1px 1px 0px 0px rgba(255, 255, 255, 0.25);
+}
+
+.tempUp:hover
+{
+    background: red;
+}
+
+.actionON
+{
+    height: 100px;
+    width: 100px;
+    margin-left: 20px;
+    font-family: Montserrat, Verdana;
+    font-size: 2em;
+    display: inline-block;
+    cursor: pointer;
+    background:  rgb(44, 205, 44);
+    border: 2px solid rgb(64, 225, 64);
+    border-radius: 5px;
+    box-shadow:0px 0px 4px 2px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 0px rgba(255, 255, 255, 0.25);
+}
+
+.actionON:hover
+{
+    background:  rgb(64, 225, 64);
+}
+
+.actionOFF
+{
+    height: 100px;
+    width: 100px;
+    margin-right: 20px;
+    font-family: Montserrat, Verdana;
+    font-size: 2em;
+    display: inline-block;
+    cursor: pointer;
+    background: rgb(225, 0, 0);
+    border: 2px solid rgb(205, 0, 0);
+    border-radius: 5px;
+    box-shadow:0px 0px 4px 2px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 0px rgba(255, 255, 255, 0.25);
+}
+
+.actionOFF:hover
+{
+    background: rgb(205, 0, 0);
+}
+
 
 
 /*################################### DEBUT COMMUN ###################################*/
