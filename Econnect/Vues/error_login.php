@@ -15,17 +15,7 @@
 	</header>
 
 	
-	<body>	
-		<div class="menu">
-			<ul>
-				<li>Qui sommes nous ?</li>		
-				<li>Ce que nous proposons</li>	
-				<li>Nos partenaires</li>
-				<li>Identification</li>
-			</ul>			
-		</div>
-
-		
+	<body>
 			<div class="vitrine_image2">
 				<p id="texte_vitrine_image2"></p>
       <div>

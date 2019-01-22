@@ -11,6 +11,8 @@ class User
 	
 	function __construct($nom,$prenom,$email,$pass,$type){
 	
+		$this->nom=$nom;
+		$this->prenom=$prenom;
 		$this->email=$email;
 		$this->password=$pass;
 		$this->type=$type;
