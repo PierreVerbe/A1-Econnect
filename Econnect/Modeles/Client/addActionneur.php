@@ -1,5 +1,12 @@
 <?php
-$bdd = new PDO('mysql:host=localhost;dbname=econnect_v2;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+try
+{
+	include ("../../Modeles/Requete_parametre.php");
+}
+catch (Exception $e)
+{
+	die('Erreur : ' . $e->getMessage());
+}
 
 $ID_Piece = htmlspecialchars($_GET["ID_Piece"]);
 $num_serie = htmlspecialchars($_GET["num_serie"]);
@@ -10,6 +17,5 @@ $addActionneur->bindParam(2, $num_serie);
 
 $addActionneur->execute();
 
-header('Location: gestion_client.php');
+header('Location: ../../Vues/Client/parametre_client.php');
 ?>
-S

@@ -2,31 +2,23 @@
 
 <html>
 
-	<head>
-		<meta charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="../Vues/style_signup.css">
-		<title>E-Connect</title>
-	</head>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../Vues/style_signup.css">
+    <title>E-Connect</title>
+  </head>
 
-	<header>
-			<div class="logo">
-				<img src="../Vues/Image/Logo_Econnect_texte.png" alt="logo" width="300" />
-			</div>
-			<div class="login">
-				<form method="post" action="do_login.php" >
-					<label>Email:</label>
-					<input type="email" name="txtemail" required />
-					<label>Mot de passe:</label>
-					<input type="password" name="txtpass" required />
-					<input type="submit" name="submit" value="Connexion" />	
-				</form>
-			</div>
+  <header>
+      <div class="logo">
+        <img src="../Vues/Image/Logo_Econnect_texte.png" alt="logo" width="300" />
+      </div>
 
-	</header>
+  </header>
 
-			<div class="vitrine_image2">
-				<p id="texte_vitrine_image2"></p>
-					<div>
+      <div class="vitrine_image2">
+        <p id="texte_vitrine_image2"></p>
+          <div>
+
    <form method="POST" action="../Controleurs/inscription_client.php" onsubmit="return Validate()" name="vform" >
     <div id="name_div">
       <label>Nom</label> <br>
@@ -66,19 +58,18 @@
     <input type="submit" name="register" value="S'inscrire" class="btn">
     </div>
 </body>
-									
-				</div>
+                  
+        </div>
 
-			</div>
+      </div>
 
-			<div class="vitrine_text1">
-				<p id="texte_vitrine_text1"><a href="../index.php">Retour à la page d'accueil</a></p><br/>
-			</div>
+      <div class="vitrine_text1">
+        <p id="texte_vitrine_text1"><a href="../index.php">Retour à la page d'accueil</a></p><br/>
+      </div>
 
 
-	</body>
+  </body>
 <script>
-
 //Initialisation des variables
 var cemac = document.forms['vform']['cemac'];
 var name = document.forms['vform']['name'];
@@ -86,24 +77,18 @@ var firstname = document.forms['vform']['firstname'];
 var email = document.forms['vform']['email'];
 var password = document.forms['vform']['password'];
 var password_confirm = document.forms['vform']['password_confirm'];
-
 // Affichage des erreurs
 var email_error = document.getElementById('email_error');
 var name_error = document.getElementById('name_error');
 var firstname_error = document.getElementById('firstname_error');
 var password_error = document.getElementById('password_error');
 var cemac_error = document.getElementById("cemac_error");
-
-
 cemac.addEventListener('blur', cemacVerify, true);
 name.addEventListener('blur', nameVerify, true);
 firstname.addEventListener('blur', firstnameVerify, true);
 email.addEventListener('blur', emailVerify, true);
 password.addEventListener('blur', passwordVerify, true);
-
-
 function Validate() {
-
   if (cemac.value == "") {
     cemac.style.border = "1px solid red";
     document.getElementById('cemac_div').style.color = "red";
@@ -118,7 +103,6 @@ function Validate() {
     cemac.focus();
     return false;
   }
-
   // validate name
   if (name.value == "") {
     name.style.border = "1px solid red";
@@ -161,7 +145,6 @@ function Validate() {
     return false;
   }
 }
-
 function nameVerify() {
   if (name.value != "") {
     name.style.border = "1px solid #5e6e66";
@@ -178,7 +161,6 @@ function firstnameVerify() {
     return true;
   }
 }
-
 function emailVerify() {
   if (email.value != "") {
     email.style.border = "1px solid #5e6e66";
@@ -202,7 +184,6 @@ function passwordVerify() {
     return true;
   }
 }
-
 function cemacVerify() {
   if (cemac.value != "") {
    cemac.style.border = "1px solid #5e6e66";

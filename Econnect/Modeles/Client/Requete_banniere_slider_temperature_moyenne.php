@@ -13,7 +13,7 @@
 		$Temperature_Moyenne = $donnees['ROUND(AVG(piece.Temperature), 1)'];
 		}
 ?>
-		<p class="Slide_image_texte"><img class="Slide_image" src="../Image/Banniere/moyenne_temperature.png" width="100" height="100">Température moyenne est de : <?php echo $Temperature_Moyenne ?>°C</p>
+		<p class="Slide_image_texte"><img class="Slide_image" src="../Image/Banniere/moyenne_temperature.png" width="100" height="100">Température moyenne : <?php echo $Temperature_Moyenne ?>°C</p>
 <?php
 		$req->closeCursor();
 ?>

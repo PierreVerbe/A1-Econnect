@@ -1,5 +1,4 @@
 <?php
-
 class Model {
 	private $connexion;
 	
@@ -7,23 +6,20 @@ class Model {
 		$servername = "localhost";
 		$username = "root";
 		$password = "";
-
 		try {
-		    $conn = new PDO("mysql:host=$servername;dbname=econnect_v2", $username, $password);
-		    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-		    $this->connexion=$conn;
+			require "Requete_parametre.php";
+			$this->connexion=$bdd;
+		    // $conn = new PDO("mysql:host=$servername;dbname=econnect_v2", $username, $password);
+		    // $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		    // $this->connexion=$conn;
 	    }
 		catch(PDOException $e) {
 	    	echo "Echec lors de la connexion: " . $e->getMessage();
 	    }
-
 	}
-
 	function createUser($user){
 		$this->connexion->exec("INSERT INTO `utilisateur`(`User_type`,`Nom`,`Prenom`,`Adresse_email`,`Mot_de_passe`) VALUES ('".$user->getType()."','".$user->getNom()."','".$user->getPrenom()."','".$user->getMail()."','".$user->getPassword()."')");
 	}
-
-
 	function getUserByEmail($email){
 		include_once "user.php";
 		$sql =  "SELECT * FROM `utilisateur` WHERE Adresse_email='".$email."'";
@@ -52,9 +48,7 @@ class Model {
 	  	}
 	  	return $client;
 	}
-
 	function getAdminByEmail($email){
-
 		$sql =  "SELECT * FROM `utilisateur` WHERE Adresse_email='".$email."' AND User_type='"admin"'";
 		$admin = null;
 		include_once "admin.php";
@@ -63,9 +57,7 @@ class Model {
 	  	}
 	  	return $admin;
 	}
-
 	function getDomisepByEmail($email){
-
 		$sql =  "SELECT * FROM `utilisateur` WHERE Adresse_email='".$email."' AND User_type='"domisep"'";
 		$domisep = null;
 		include_once "admin.php";
@@ -74,11 +66,9 @@ class Model {
 	  	}
 	  	return $domisep;
 	}*/
-
 /*	function createClient($client){		
 		$this->connexion->exec("INSERT INTO `client`( `nom`,`prenom`,`email`, `cemac` ) VALUES ('.$client->getNom().','.$client->getPrenom().','.$client->getMail().','.$client->getCemac().')");
 	}*/
-
 	function checkLoggedIn(){
 	session_start();
 	if (!$_SESSION["user"]){
@@ -86,5 +76,4 @@ class Model {
 	}
 }
 }
-
 ?>

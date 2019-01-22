@@ -11,7 +11,7 @@
 			<div class="Slide_h"><?php include("../../Modeles/Client/Requete_banniere_slider_luminosite_moyenne.php");?></div>
 			<div class="Slide_h">	<p class="Text_Slide_h">Le saviez-vous ?<br />
 															En 2014, le niveau des océans a augmenté d'environ 3,3 mm<br />
-															Les prévisions etaient plus optimistes<br /></p></div>	  	
+															Les prévisions étaient plus optimistes.<br /></p></div>	  	
 
 	  		<!-- Boutons slider du haut -->
 		  	<button class="Slider_h_droite" onclick="plusDivs(1)">&#10095;</button>

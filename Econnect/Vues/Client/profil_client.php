@@ -11,7 +11,7 @@
 		<div class="element">
 			<img id="imageClient" src="ressources/userHome.png">
 
-			<p>Schéma de la maison, vue d'ensemble... </p>
+			<p>Plan de votre logement</p>
 		</div>
 
 	<a style="text-decoration: none;" href="Info_Profit_Client.php">
