@@ -12,22 +12,13 @@
       <div class="logo">
         <img src="../Vues/Image/Logo_Econnect_texte.png" alt="logo" width="300" />
       </div>
-      <div class="login">
-        <form method="post" action="do_login.php" >
-          <label>Email:</label>
-          <input type="email" name="txtemail" required />
-          <label>Mot de passe:</label>
-          <input type="password" name="txtpass" required />
-          <input type="submit" name="submit" value="Connexion" /> 
-        </form>
-      </div>
 
-<<<<<<< HEAD
   </header>
 
       <div class="vitrine_image2">
         <p id="texte_vitrine_image2"></p>
           <div>
+
    <form method="POST" action="../Controleurs/inscription_client.php" onsubmit="return Validate()" name="vform" >
     <div id="name_div">
       <label>Nom</label> <br>
