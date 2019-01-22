@@ -14,10 +14,11 @@
 
 				<?php
 
-				include("../../Modeles/Client/bdd_get-piece.php");
-
+				include("../../Modeles/Client/bdd_get-piece.php");	
 
 				while ($row = $piece->fetch()) {
+					$temp = $row['Temperature'];
+					$lum = $row['Luminosite'];
 				    echo "	<div class=\"tuile\">
 
 					    		<div class=\"tuile-ensemble\">
@@ -34,16 +35,16 @@
 					    			<div class=\"tuile-arriere\">
 
 					    				<button class=\"deleteEntity\" onclick=\"javascript: deletePiece($(this).parent().parent().find('#idSAV').html());\">&times;</button>
-					    				<p>Température voulu : ".$row['Temperature']."°C<br>Luminosite : ".$row['Luminosite']."</p>
+					    				<p>Température voulu : ".$temp."°C<br>Luminosite : ".$lum."</p>
 
 					    				<div>
-					    					<button class=\"tempDown\" onclick=\"changement_temperature(0.5)\">-</button>
-					    					<button class=\"tempUp\" onclick=\"changement_temperature(-0.5)\">+</button>
+					    					<button class=\"tempDown\" onclick=\"javascript: setTemp($temp - 1, $(this).parent().parent().parent().find('#idSAV').html());\">-</button>
+					    					<button class=\"tempUp\"   onclick=\"javascript: setTemp($temp + 1, $(this).parent().parent().parent().find('#idSAV').html());\">+</button>
 					    				</div>
 					    					<br>
 					    				<div>
-					    					<button class=\"lumDown\">-</button>
-					    					<button class=\"lumUp\">+</button>
+					    					<button class=\"lumDown\" onclick=\"javascript: setLum($lum - 5, $(this).parent().parent().parent().find('#idSAV').html());\">-</button>
+					    					<button class=\"lumUp\" onclick=\"javascript: setLum($lum + 5, $(this).parent().parent().parent().find('#idSAV').html());\">+</button>
 					    				</div>
 
 					    			</div>
@@ -182,8 +183,8 @@
 				    					<p>Numéro de série : n°".$row['Numero_serie']."</p>
 				    					<p>État : ".$row['ETAT_Actionneur']."</p>
 					    				<div>
-					    					<button class=\"actionOFF\" onclick=\"changement_temperature(0.5)\">OFF</button>
-					    					<button class=\"actionON\" onclick=\"changement_temperature(-0.5)\">ON</button>
+					    					<button class=\"actionOFF\" onclick=\"javascript: setEtat(0, $(this).parent().parent().parent().find('#idSAV').html());\">OFF</button>
+					    					<button class=\"actionON\" onclick=\"javascript: setEtat(1, $(this).parent().parent().parent().find('#idSAV').html());\">ON</button>
 					    				</div>
 
 				    				</div>
