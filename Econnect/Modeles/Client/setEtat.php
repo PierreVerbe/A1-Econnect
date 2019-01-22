@@ -13,6 +13,6 @@ $actionneur = htmlspecialchars($_GET["actionneur"]);
 $setEtat = $bdd->query('UPDATE actionneur SET ETAT_Actionneur = '.$etat.' WHERE ID_Actionneur = '.$actionneur.'');
 
 
-header('Location: ../../Vues/Client/gestion_client.php');
+header('Location: ../../Vues/Client/parametre_client.php');
 
 ?>

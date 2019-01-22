@@ -13,5 +13,5 @@ $data = $bdd->prepare("DELETE FROM `capteur` WHERE `capteur`.`ID_Capteur` = ?");
 $data->bindParam(1, $ID_Capteur);
 $data->execute();
 
-header('Location: ../../Vues/Client/gestion_client.php'); 
+header('Location: ../../Vues/Client/parametre_client.php');
 ?>

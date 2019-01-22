@@ -17,5 +17,5 @@ $addActionneur->bindParam(2, $num_serie);
 
 $addActionneur->execute();
 
-header('Location: ../../Vues/Client/gestion_client.php');
+header('Location: ../../Vues/Client/parametre_client.php');
 ?>

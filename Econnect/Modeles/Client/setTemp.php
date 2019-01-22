@@ -13,6 +13,6 @@ $piece = htmlspecialchars($_GET["piece"]);
 $setTemp = $bdd->query('UPDATE piece SET Temperature = '.$temp.' WHERE ID_piece = '.$piece.'');
 
 
-header('Location: ../../Vues/Client/gestion_client.php');
+header('Location: ../../Vues/Client/parametre_client.php');
 
 ?>

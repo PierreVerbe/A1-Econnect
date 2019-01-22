@@ -13,5 +13,5 @@ $data = $bdd->prepare("DELETE FROM `actionneur` WHERE `actionneur`.`ID_Actionneu
 $data->bindParam(1, $ID_Actionneur);
 $data->execute();
 
-header('Location: ../../Vues/Client/gestion_client.php'); 
+header('Location: ../../Vues/Client/parametre_client.php');
 ?>

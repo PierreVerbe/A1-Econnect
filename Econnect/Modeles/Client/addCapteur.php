@@ -16,5 +16,5 @@ $addCapteur->bindParam(2, $num_serie);
 
 $addCapteur->execute();
 
-header('Location: ../../Vues/Client/gestion_client.php');
+header('Location: ../../Vues/Client/parametre_client.php');
 ?>

@@ -15,5 +15,5 @@ $data->bindParam(2, $ID_Piece);
 $data->bindParam(3, $ID_Piece);
 $data->execute();
 
-header('Location: ../../Vues/Client/gestion_client.php'); 
+header('Location: ../../Vues/Client/parametre_client.php');
 ?>

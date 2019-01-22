@@ -18,5 +18,5 @@ $addPiece->bindParam(3, $nom);
 
 $addPiece->execute();
 
-header('Location: ../../Vues/Client/gestion_client.php');
+header('Location: ../../Vues/Client/parametre_client.php');
 ?>
