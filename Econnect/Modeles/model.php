@@ -4,8 +4,8 @@ class Model {
 	
 	function __construct() {
 		$servername = "localhost";
-		$username = "KAVEH";
-		$password = "password";
+		$username = "root";
+		$password = "";
 		try {
 			require "Requete_parametre.php";
 			$this->connexion=$bdd;
