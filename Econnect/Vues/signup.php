@@ -22,6 +22,7 @@
         </form>
       </div>
 
+<<<<<<< HEAD
   </header>
 
       <div class="vitrine_image2">

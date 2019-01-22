@@ -3,23 +3,7 @@
 
 <script src="http://code.jquery.com/jquery.min.js"></script>
 
-<script>
-function deletePiece(ID_Piece)
-{
-	window.location.href = "deletePiece.php?ID_Piece=" + ID_Piece;
-}
-
-function deleteCapteur(ID_Capteur)
-{
-	window.location.href = "deleteCapteur.php?ID_Capteur=" + ID_Capteur;
-}
-
-function deleteActionneur(ID_Actionneur)
-{
-	window.location.href = "deleteActionneur.php?ID_Actionneur=" + ID_Actionneur;
-}
-
-</script>
+<script src="javascript/gestion_client.js"></script>
 
 <body id="body_Client">
 	<section id="gestionCAll">
@@ -28,11 +12,10 @@ function deleteActionneur(ID_Actionneur)
 
 			<div class="gestionCPiece">
 
-				<?php 
-				$bdd = new PDO('mysql:host=localhost;dbname=econnect_v2;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+				<?php
 
-				//$data = $bdd->query("SELECT * FROM `piece` INNER JOIN `type_piece` ON piece.ID_Piece = type_piece.ID_Piece WHERE ID_Maison = 1");
-				$piece = $bdd->query("SELECT * FROM `piece` WHERE ID_Maison = 1");
+				include("../../Modeles/Client/bdd_get-piece.php");
+
 
 				while ($row = $piece->fetch()) {
 				    echo "	<div class=\"tuile\">
@@ -54,13 +37,13 @@ function deleteActionneur(ID_Actionneur)
 					    				<p>Température voulu : ".$row['Temperature']."°C<br>Luminosite : ".$row['Luminosite']."</p>
 
 					    				<div>
-					    					<button class=\"moins_température\" onclick=\"changement_temperature(0.5)\">- °C</button>
-					    					<button class=\"plus_température\" onclick=\"changement_temperature(-0.5)\">+ °C</button>
+					    					<button class=\"tempDown\" onclick=\"changement_temperature(0.5)\">-</button>
+					    					<button class=\"tempUp\" onclick=\"changement_temperature(-0.5)\">+</button>
 					    				</div>
-
+					    					<br>
 					    				<div>
-					    					<button class=\"moins_lumière\">-</button>
-					    					<button class=\"plus_lumière\">+</button>
+					    					<button class=\"lumDown\">-</button>
+					    					<button class=\"lumUp\">+</button>
 					    				</div>
 
 					    			</div>
@@ -79,7 +62,7 @@ function deleteActionneur(ID_Actionneur)
 				 	<div class="modal-content">
 						<span class="close" onclick='javascript: $(this).parent().parent("#pieceModal").css("display", "none");'>&times;</span>
 						<h1>Ajout d'une pièce</h1>
-						<form action="addPiece.php" method="get">
+						<form action="../../Modeles/Client/addPiece.php" method="get">
 							Nom de la pièce : <input type="text" maxlength="28" name="nom" required><br>
 							Température voulu : <input type="number" min="10" step="0.5" max="30" name="temp" required><br>
 							<input type="submit">
@@ -98,11 +81,12 @@ function deleteActionneur(ID_Actionneur)
 
 			<div class="gestionCCapteurs">
 				<?php
+				
+				include("../../Modeles/Client/bdd_get-piece.php");
+
+				include("../../Modeles/Client/bdd_get-capteur.php");
+
 				$i = 1;
-				$piece = $bdd->query("SELECT * FROM `piece` WHERE ID_Maison = 1");
-
-				$capteur = $bdd->query("SELECT * FROM `capteur` INNER JOIN piece ON capteur.ID_Piece = piece.ID_Piece INNER JOIN user_maison ON piece.ID_Maison = user_maison.ID_Maison INNER JOIN utilisateur ON user_maison.ID_User = utilisateur.ID_User WHERE Adresse_email = \"pablo.grana@isep.fr\";");
-
 				while ($row = $capteur->fetch()) {
 				    echo "	<div class=\"tuile\">
 
@@ -141,7 +125,7 @@ function deleteActionneur(ID_Actionneur)
 				 	<div class="modal-content">
 						<span class="close" onclick='javascript: $(this).parent().parent("#capteurModal").css("display", "none");'>&times;</span>
 						<h1>Ajout d'un capteur</h1>
-						<form action="addCapteur.php" method="get">
+						<form action="../../Modeles/Client/addCapteur.php" method="get">
 							Pièce : <select name="ID_Piece">
 									<?php
 										while ($row = $piece->fetch()) {
@@ -168,12 +152,13 @@ function deleteActionneur(ID_Actionneur)
 
 
 			<div class="gestionCActionneurs">
-				<?php 
+				<?php
+
+				include("../../Modeles/Client/bdd_get-piece.php");
+
+				include("../../Modeles/Client/bdd_get-actionneur.php");
+				
 				$i = 1;
-				$piece = $bdd->query("SELECT * FROM `piece` WHERE ID_Maison = 1");
-
-				$data = $bdd->query("SELECT * FROM `actionneur` INNER JOIN piece ON actionneur.ID_Piece = piece.ID_Piece INNER JOIN user_maison ON piece.ID_Maison = user_maison.ID_Maison INNER JOIN utilisateur ON user_maison.ID_User = utilisateur.ID_User WHERE Adresse_email = \"pablo.grana@isep.fr\";");
-
 				while ($row = $data->fetch()) {
 					if($row['ETAT_Actionneur']==0) $row['ETAT_Actionneur']= "OFF";
 					else $row['ETAT_Actionneur']= "ON";
@@ -197,8 +182,8 @@ function deleteActionneur(ID_Actionneur)
 				    					<p>Numéro de série : n°".$row['Numero_serie']."</p>
 				    					<p>État : ".$row['ETAT_Actionneur']."</p>
 					    				<div>
-					    					<button class=\"moins_température\" onclick=\"changement_temperature(0.5)\">OFF</button>
-					    					<button class=\"plus_température\" onclick=\"changement_temperature(-0.5)\">ON</button>
+					    					<button class=\"actionOFF\" onclick=\"changement_temperature(0.5)\">OFF</button>
+					    					<button class=\"actionON\" onclick=\"changement_temperature(-0.5)\">ON</button>
 					    				</div>
 
 				    				</div>
@@ -219,7 +204,7 @@ function deleteActionneur(ID_Actionneur)
 				 	<div class="modal-content">
 						<span class="close" onclick='javascript: $(this).parent().parent("#actionneurModal").css("display", "none");'>&times;</span>
 						<h1>Ajout d'un actionneur</h1>
-						<form action="addActionneur.php" method="get">
+						<form action="../../Modeles/Client/addActionneur.php" method="get">
 							Pièce : <select name="ID_Piece">
 									<?php
 										while ($row = $piece->fetch()) {
