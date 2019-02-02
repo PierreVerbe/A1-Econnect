@@ -10,7 +10,7 @@
 			<article id="details">
 				<h2>Informations détaillées :</h2></br>
 
-				<?php include("../../Controleurs/bdd_profil-info_domisep.php");?> 
+				<?php include("../../Modeles/Domisep/bdd_profil-info_domisep.php");?> 
 			</article>
 
 			<article id="poste">

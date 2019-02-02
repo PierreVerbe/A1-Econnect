@@ -20,7 +20,7 @@
 
 					<input type="button" name="validate" value="Rechercher" onclick="search()" />
 
-					<input type="button" id="boutonAnnuler" value="Annuler" onClick="javascript:document.location.href='http://localhost/Econnect/A1-Econnect/Econnect/Vues/Administrateur/liste_client.php'" />
+					<input type="button" id="boutonAnnuler" value="Annuler" onClick="javascript:document.location.href='../../Vues/Administrateur/liste_client.php'" />
 				</div>
 
 				<?php include("../../Modeles/Administrateur/bdd_liste-clients_admin.php");?>

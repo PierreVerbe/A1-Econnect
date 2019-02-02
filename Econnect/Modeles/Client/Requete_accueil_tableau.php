@@ -8,7 +8,7 @@
 	}
 
 	// utilisateur.ID_User = mettre le numéro du compte en fonctionnement
-	$req = $bdd->query('SELECT ticket.ID_Ticket, ticket.Objet, ticket.Status FROM ticket, utilisateur WHERE utilisateur.ID_User = ticket.ID_User AND utilisateur.ID_User = 2 ORDER BY ticket.ID_Ticket DESC LIMIT 10');
+	$req = $bdd->query('SELECT ticket.ID_Ticket, ticket.Objet, ticket.Status FROM ticket, utilisateur WHERE utilisateur.ID_User = ticket.ID_User AND utilisateur.ID_User = 1 ORDER BY ticket.ID_Ticket DESC LIMIT 10');
 	?>
 
 	<table class="SAV_table">
