@@ -16,7 +16,7 @@
 
 				<h1>Accès maison du client</h1>
 
-				<form name="access_home" action="http://localhost/Econnect/A1-Econnect/Econnect/Vues/Client/accueil_client.php" onsubmit="return validateForm()" method="post">
+				<form name="access_home" action="../../Vues/Client/accueil_client.php" onsubmit="return validateForm()" method="post">
 					
 					<label>N° Client : </label><input type="text" name="numero_client" />
 

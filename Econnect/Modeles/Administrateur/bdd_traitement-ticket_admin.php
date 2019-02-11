@@ -21,7 +21,7 @@
 
 		$bdd->exec('INSERT INTO message(ID_Ticket, Date_message, Piece_jointe, Contenu) VALUES("'.$id_ticket.'", "'.$date.'", NULL, "'.$message.'")');
 
-		header('Location: http://localhost/Econnect/A1-Econnect/Econnect/Vues/Administrateur/chat_sav.php');
+		header('Location: ../../Vues/Administrateur/chat_sav.php');
 		exit();
 	}
 

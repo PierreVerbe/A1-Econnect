@@ -11,8 +11,8 @@
 		
 		$objet_message = $_POST['objet_message'];
 		$statut= "En cours de traitement";
-		$ID_User = 2; //en attendant qu'il y ait le login
-		$ID_Maison = 8; // en attendant qu'il y ait le login
+		$ID_User = 1; //en attendant qu'il y ait le login
+		$ID_Maison = 2; // en attendant qu'il y ait le login
 		$message = $_POST['message'];
 		$date = date("Y-m-d H:i:s");	
 
@@ -27,7 +27,7 @@
 
 		$bdd->exec('INSERT INTO message(ID_Ticket, Date_message, Piece_jointe, Contenu) VALUES("'.$id_ticket.'", "'.$date.'", NULL, "'.$message.'")');
 
-		header('Location: http://localhost/Econnect/A1-Econnect/Econnect/Vues/Client/SAV_client.php');
+		header('Location: ../../Vues/Client/SAV_client.php');
 		exit();
 		
 	}

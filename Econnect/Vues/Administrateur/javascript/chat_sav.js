@@ -27,7 +27,7 @@ function closeTicket(){
 	$.post("../../Modeles/Administrateur/bdd_fermeture-ticket-admin.php", {numticket: id_ticket},
 	function(data){
 		alert("Le ticket a bien été fermé");
-		javascript:document.location.href='http://localhost/Econnect/A1-Econnect/Econnect/Vues/Administrateur/chat_sav.php';
+		javascript:document.location.href='../../Vues/Administrateur/chat_sav.php';
 		id_ticket = 0;
 	});
 }
