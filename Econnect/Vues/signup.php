@@ -15,48 +15,102 @@
 
   </header>
 
-      <div class="vitrine_image2">
-        <p id="texte_vitrine_image2"></p>
-          <div>
+	<section class="signup">
+		    
+		<?php require("signup_check.php"); ?>
 
-   <form method="POST" action="../Controleurs/inscription_client.php" onsubmit="return Validate()" name="vform" >
-    <div id="name_div">
-      <label>Nom</label> <br>
-      <input type="text" name="name" class="textInput">
-      <div id="name_error"></div>
-    </div>
-        <div id="firstname_div">
-      <label>Prénom</label> <br>
-      <input type="text" name="firstname" class="textInput">
-      <div id="firstname_error"></div>
-    </div>
-    <div id="email_div">
-      <label>Email</label> <br>
-      <input type="email" name="email" class="textInput">
-      <div id="email_error"></div>
-    </div>
-    <div id="password_div">
-      <label>Mot de passe</label> <br>
-      <input type="password" name="password" class="textInput">
-    </div>
-    <div id="pass_confirm_div">
-       <label>Confirmer le mot de passe</label> <br>
-       <input type="password" name="password_confirm" class="textInput">
-       <div id="password_error"></div>
-     </div>
-    <div id="cemac_div">
-      <label>CEMAC</label> <br>
-      <input type="number" name="cemac" class="textInput">
-      <div id="cemac_error"></div><br>
-    </div> 
-    </div>  
+		<h2>Inscription</h2>
+		<?php
+		if(isset($erreur) && isset($_SESSION['id'])) {
+			header('Location: connexion.php');
+		}
+		else if (isset($erreur)) {
+			echo '<font color='.$erreurColor.'>'.$erreur."</font>";
+		}
+		?>
+		<form method="POST" action="">
+		<table class="signup">
+
+		   <tr>
+		      <td align="right">
+		         <label for="cemac">Cemac :</label>
+		      </td>
+		      <td>
+		         <input type="text" placeholder="N° du cemac" id="cemac" name="cemac" value="<?php if(isset($cemac)) { echo $cemac; } ?>" />
+		      </td>
+		   </tr>
+
+		   <tr>
+		      <td align="right">
+		         <label for="prenom">Prenom :</label>
+		      </td>
+		      <td>
+		         <input type="text" placeholder="Prenom" id="prenom" name="prenom" value="<?php if(isset($prenom)) { echo $prenom; } ?>" />
+		      </td>
+		   </tr>
+
+		   <tr>
+		      <td align="right">
+		         <label for="nom">Nom :</label>
+		      </td>
+		      <td>
+		         <input type="text" placeholder="Nom" id="nom" name="nom" value="<?php if(isset($nom)) { echo $nom; } ?>" />
+		      </td>
+		   </tr>
+
+		   <tr>
+		      <td align="right">
+		         <label for="mail">Mail :</label>
+		      </td>
+		      <td>
+		         <input type="email" placeholder="Votre mail" id="mail" name="mail" value="<?php if(isset($mail)) { echo $mail; } ?>" />
+		      </td>
+		   </tr>
+
+		   <tr>
+		      <td align="right">
+		         <label for="email">Confirmation du mail :</label>
+		      </td>
+		      <td>
+		         <input type="email" placeholder="Confirmez votre mail" id="email" name="email" value="<?php if(isset($email)) { echo $email; } ?>" />
+		      </td>
+		   </tr>
+
+		   <tr>
+		      <td align="right">
+		         <label for="pass">Mot de passe :</label>
+		      </td>
+		      <td>
+		         <input type="password" placeholder="Votre mot de passe" id="pass" name="pass" value="<?php if(isset($pass)) { echo $pass; } ?>" />
+		      </td>
+		   </tr>
+
+		   <tr>
+		      <td align="right">
+		         <label for="password">Confirmation du mot de passe :</label>
+		      </td>
+		      <td>
+		         <input type="password" placeholder="Confirmez votre mdp" id="password" name="password" value="<?php if(isset($password)) { echo $password; } ?>" />
+		      </td>
+		   </tr>
+
+		   <tr>
+		      <td></td>
+		      <td align="center">
+		         <br />
+		         <input type="submit" name="forminscription" value="S'inscrire" />
+		      </td>
+		   </tr>
+
+		</table>
+		</form>
+
+	</section>
+    
       <div>
         <h3><a href="cgu.html">En vous inscrivant, vous acceptez les conditions d'utilisation</a></h3>
-
       </div>
-    <div>
-    <input type="submit" name="register" value="S'inscrire" class="btn">
-    </div>
+
 </body>
                   
         </div>
