@@ -68,6 +68,7 @@ if(isset($_POST['forminscription'])) {
 							        $_SESSION['id'] = $userinfo['ID_User'];
 							        $_SESSION['cemac'] = $userinfo['Cemac'];
 							        $_SESSION['mail'] = $userinfo['Adresse_email'];
+							        $_SESSION['type'] = $userinfo['User_type'];
     		                    	$erreurColor = "blue";
 
 								}

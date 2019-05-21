@@ -14,12 +14,23 @@
 			</div>
 			<p id="soustitre_logo"> Un produit Domisep©</p>
 			<div class="login">
-				<form method="post" action="Controleurs/login.php" >
+				<?php require("Controleurs/login.php"); ?>
+
+				<?php
+				if(isset($_SESSION['type'])) {
+					if($_SESSION['type'] == "Client")	header('Location: Vues/Client/accueil_client.php');
+				}
+				else if (isset($erreur)) {
+					echo '<font color='.$erreurColor.'>'.$erreur."</font>";
+				}
+				?>
+
+				<form method="POST" action="" >
 					<label>Email:</label>
-					<input type="email" name="login" class="mail" required />
+					<input type="email" name="mail" class="mail" value="<?php if(isset($mail)) { echo $mail; } ?>" required />
 					<label>Mot de passe:</label>
-					<input type="password" name="txtpass" class="passmdp" required />
-					<input type="submit" name="submit_login" value="Connexion" id="boutonSubmit" />	
+					<input type="password" name="password" class="passmdp" required />
+					<input type="submit" name="formlogin" value="Connexion" id="boutonSubmit" />	
 				</form>
 			</div>
 
@@ -64,12 +75,12 @@
 
 				<h2>Vous êtes déjà client ?</h2>
 
-				<form method="post" action="Controleurs/login.php" >
+				<form method="POST" action="" >
 					<label>Email:</label>
-					<input type="email" name="txtemail" class="mail" required />
+					<input type="email" name="mail" class="mail" required />
 					<label>Mot de passe:</label>
-					<input type="password" name="txtpass" class="passmdp" required />
-					<input type="submit" id="boutonConnexion" name="submit_login" value="Connexion" />	
+					<input type="password" name="password" class="passmdp" required />
+					<input type="submit" name="formlogin" value="Connexion" id="boutonSubmit" />	
 				</form>
 				
 			</section>
