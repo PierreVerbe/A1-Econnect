@@ -7,6 +7,7 @@
 
 	<div id="quit">	
 		<p>
+		<?php session_destroy(); ?>
 		Votre profil utilisateur est en cours de déconnexion...</br>
 		<img src="ressources/load.gif"/></br>
 		<a href="../../index.php">> Cliquez ici <</a>

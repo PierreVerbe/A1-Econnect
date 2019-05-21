@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<?php session_start();
+ ?>
+ <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8" />
@@ -22,7 +24,7 @@
   		<li><a href="consommation_client.php">Consommation</a></li>
   		<li><a href="SAV_client.php">Chat/SAV</a></li>
   		<li><a href="parametre_client.php">Paramètres</a></li>
-  		<li><a href="profil_client.php">Mon profil</a></li>
+  		<li><a href="profil_client.php">Mon profil <?php if(isset($_SESSION['id'])) echo "(".$_SESSION['id'].")";?></a></li>
   		<li><a href="quit_client.php">Déconnexion</a>
   		</li>
 	</ul>
