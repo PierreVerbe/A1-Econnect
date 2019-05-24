@@ -25,10 +25,10 @@
 		<div id="bouton_mode">
 			<script src="http://code.jquery.com/jquery.min.js"></script>
 			<script src="javascript/button_client.js"> </script>
-			<button class="bouton_eco" id="bouton_eco" name="bouton_mode" value="Eco" type="submit" onclick="ecoMode()">Eco</button>
-			<button class="bouton_sortie" id="bouton_sortie" name="bouton_mode" value="Sortie" type="submit" onclick="sortieMode()">Sortie</button>
-			<button class="bouton_confort" id="bouton_confort" name="bouton_mode" value="Confort" type="submit" onclick="confortMode()">Confort</button>
-			<button class="bouton_hibernation" id="bouton_hibernation" name="bouton_mode" value="Hibernation" type="submit" onclick="hibernationMode()">Hiber-<br />nation</button>
+			<button class="bouton_eco" id="bouton_eco" name="bouton_mode" value="Eco" type="submit" onclick="ecoMode(<?php echo $_SESSION['id']; ?>)">Eco</button>
+			<button class="bouton_sortie" id="bouton_sortie" name="bouton_mode" value="Sortie" type="submit" onclick="sortieMode(<?php echo $_SESSION['id']; ?>)">Sortie</button>
+			<button class="bouton_confort" id="bouton_confort" name="bouton_mode" value="Confort" type="submit" onclick="confortMode(<?php echo $_SESSION['id']; ?>)">Confort</button>
+			<button class="bouton_hibernation" id="bouton_hibernation" name="bouton_mode" value="Hibernation" type="submit" onclick="hibernationMode(<?php echo $_SESSION['id']; ?>)">Hiber-<br />nation</button>
 		</div>
 	</div>
 
