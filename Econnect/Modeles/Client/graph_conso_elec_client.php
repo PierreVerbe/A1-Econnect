@@ -15,7 +15,9 @@ $arrayMois = array('1','2','3','4','5','6','7','8','9','10','11','12');
 
 $datay = array();
 
-$req = $bdd->query('SELECT facture.Prix FROM facture GROUP BY MONTH(facture.Date_facture) ASC');
+$req = $bdd->prepare("SELECT facture.Prix FROM facture,user_maison,utilisateur WHERE user_maison.ID_Maison = facture.ID_Maison AND utilisateur.ID_User = user_maison.ID_Maison AND utilisateur.ID_User = ? GROUP BY MONTH(facture.Date_facture) ASC");
+	$req->bindParam(1, $_SESSION['id']);
+	$req->execute();
 
 while ($donnees = $req->fetch())
 {

@@ -12,7 +12,6 @@
 	$req = $bdd->prepare("SELECT * FROM piece INNER JOIN user_maison ON piece.ID_Maison = user_maison.ID_Maison INNER JOIN utilisateur ON user_maison.ID_User = utilisateur.ID_User WHERE utilisateur.ID_User = ?");
 	$req->bindParam(1, $_SESSION['id']);
 	$req->execute();
-	//$req = $bdd->query("SELECT * FROM piece INNER JOIN user_maison ON piece.ID_Maison = user_maison.ID_Maison INNER JOIN utilisateur ON user_maison.ID_User = utilisateur.ID_User WHERE ID_User = ".$_session['id'].";");	
 
 	while ($donnees = $req->fetch())
 	{
