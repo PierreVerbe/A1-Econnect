@@ -11,16 +11,14 @@
 
 	<div class="info_H_G">
 				<button class="info_bloc_gauche" onclick="plusDivs_Haut_Gauche(-1)">&#10094;</button>
-				
+
 				<img class="Slide_Haut_Gauche" src="../Image/Accueil/temperature.png">
 
 			<?php include("../../Modeles/Client/bdd_get-rooms-temp_client.php");?>
 
 			<button class="info_bloc_droite" onclick="plusDivs_Haut_Gauche(1)">&#10095;</button>
 			</div>
-		
-				
-			
+
 
 			<!-- Script pour le bloc Haut Gauche -->
 			<script src="javascript/accueil_client.js"> </script>
@@ -33,20 +31,20 @@
 			<!-- troisième block du tableau de bord = bas gauche -->
 			<div class="info_B_G">
 
-			<!-- appel du graphique -->	
+			<!-- appel du graphique -->
 			<?php echo "<img src='../../Modeles/Client/graph_conso_elec_client.php'/>";?>
-			
+
 			</div>
 
 			<!-- quatrième block du tableau de bord = bas droit -->
 			<div class="info_B_D">
 				<button class="info_bloc_gauche" onclick="plusDivs_Bas_Droit(-1)">&#10094;</button>
-				
+
 				<img class="Slide_Bas_Droit" src="../Image/Accueil/lumiere.png">
 
 				<?php include("../../Modeles/Client/bdd_get-rooms-lum_client.php"); ?>
-												
-			  	
+
+
 
 				<button class="info_bloc_droite" onclick="plusDivs_Bas_Droit(1)">&#10095;</button>
 			</div>
