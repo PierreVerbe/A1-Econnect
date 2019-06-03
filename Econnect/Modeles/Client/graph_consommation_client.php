@@ -25,7 +25,22 @@ while ($donnees = $req->fetch())
 	$datay[] = $donnees['Consommation'];
 }
 
+//$req2 = $bdd->prepare("SELECT facture.Consommation FROM facture WHERE facture.ID_Maison = $id_maison GROUP BY facture.ID_Facture ASC LIMIT 12 ");
+//$req2->bindParam(1, $_SESSION['id']);
+//$req2->execute();
+
+//$req = $bdd->query('SELECT facture.Consommation FROM facture GROUP BY MONTH(facture.Date_facture) ASC');
+
+//while ($donnees2 = $req2->fetch())
+//{
+//	$datay[] = $donnees2['Consommation'];
+//}
+
 $req->closeCursor();
+
+
+echo ("mes data :" . $datay[]);
+
 
 //$data1y=array(900,1100,1950,2100,2200);
 
