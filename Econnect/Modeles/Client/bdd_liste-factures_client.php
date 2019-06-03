@@ -42,5 +42,5 @@
 	<?php
 
 		$req->closeCursor();
-		
+
 ?>

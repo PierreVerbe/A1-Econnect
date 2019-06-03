@@ -26,15 +26,15 @@
 	$data_tab = str_split($data,33);
 
 	// séparation des trames de température et de luminosité
-	$trames_temp = array();
+	$trames_lum = array();
 
 	for ($nb_trames = 1; $nb_trames < sizeof($data_tab); $nb_trames++)
 	{
 		try
 		{
-			if (substr($data_tab[$nb_trames], 6, 1) == "3")
+			if (substr($data_tab[$nb_trames], 6, 1) == "5")
 			{
-				array_push($trames_temp, $data_tab[$nb_trames]);
+				array_push($trames_lum, $data_tab[$nb_trames]);
 			}
 		}
 		catch (Exception $e)
@@ -43,15 +43,15 @@
 		}
 	}
 
-	// récupération champ température
-	$temp = substr($trames_temp[sizeof($trames_temp) - 1], 9, 4);
+	// récupération champ luminosité
+	$lum = substr($trames_lum[sizeof($trames_lum) - 1], 9, 4);
 
 	// passage string hexa vers integer
-	$temp = hexdec($temp);
+	$lum = hexdec($lum);
 
 	// mise à jour sur la base de données
-	$req = $bdd->prepare('UPDATE capteur SET TEMP_Capteur = :temperature WHERE ID_Piece = 1');
-	$req->bindParam(':temperature', $temp, PDO::PARAM_INT);
+	$req = $bdd->prepare('UPDATE capteur SET LUM_Capteur = :luminosite WHERE ID_Piece = 1');
+	$req->bindParam(':luminosite', $lum, PDO::PARAM_INT);
 	$req->execute();
 
 

@@ -9,13 +9,15 @@
 		die('Erreur : ' . $e->getMessage());
 	}
 
-	$req = $bdd->query("SELECT * FROM piece INNER JOIN user_maison ON piece.ID_Maison = user_maison.ID_Maison INNER JOIN utilisateur ON user_maison.ID_User = utilisateur.ID_User WHERE Adresse_email = \"pablo.grana@isep.fr\";");	
+	include ("bdd_trame_temp_client.php");
+	$req = $bdd->query("SELECT * FROM capteur INNER JOIN piece ON capteur.ID_Piece = piece.ID_Piece INNER JOIN user_maison ON piece.ID_Maison = user_maison.ID_Maison INNER JOIN utilisateur ON user_maison.ID_User = utilisateur.ID_User WHERE Adresse_email = \"pablo.grana@isep.fr\";");
+	//$req = $bdd->query("SELECT * FROM piece INNER JOIN user_maison ON piece.ID_Maison = user_maison.ID_Maison INNER JOIN utilisateur ON user_maison.ID_User = utilisateur.ID_User WHERE Adresse_email = \"pablo.grana@isep.fr\";");
 
 	while ($donnees = $req->fetch())
 	{
 		?>
 		<div class="Slide_Haut_Gauche">	<p class="titre_contenu_info_H_G" id="pieceTemp"><?php echo $donnees['Nom_piece']; ?></p>
-												<p class="contenu_info_H_G"><br /><br />Température actuelle : 18°C<br /><br />
+												<p class="contenu_info_H_G"><br /><br />Température actuelle : <?php echo $donnees['TEMP_Capteur']; ?>°C<br /><br />
 																			Ajuster la température : <a id="getTemp"></a>°C<br /><br /> </p>
 																			<div class="bouton_info_H_G">
 																			<button class="moins_température" onclick="changeNegTemp()">- °C</button>
@@ -25,9 +27,8 @@
 
 	?>
 
-	
+
 	<?php
 
 	$req->closeCursor();
 ?>
-
