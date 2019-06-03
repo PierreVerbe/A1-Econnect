@@ -1,4 +1,4 @@
-<?php // content="text/plain; charset=utf-8"
+<?php session_start();// content="text/plain; charset=utf-8"
 require_once ('../../jpgraph-4.2.5/src/jpgraph.php');
 require_once ('../../jpgraph-4.2.5/src/jpgraph_bar.php');
 
