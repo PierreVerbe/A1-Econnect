@@ -9,15 +9,9 @@
 		die('Erreur : ' . $e->getMessage());
 	}
 
-<<<<<<< HEAD
-	//$req = $bdd->query('SELECT utilisateur.Adresse_email, utilisateur.Telephone, utilisateur.Fin_abo FROM utilisateur WHERE utilisateur.Adresse_email = \'pablo.grana@isep.fr\'');
-
 	$req = $bdd->prepare('SELECT * FROM utilisateur WHERE utilisateur.ID_User = ?');
 	$req->bindParam(1, $_SESSION['id']);
 	$req->execute();
-=======
-	$req = $bdd->query('SELECT utilisateur.Adresse_email, utilisateur.Telephone, utilisateur.Fin_abo FROM utilisateur WHERE utilisateur.ID_User = '.$_SESSION['id']);
->>>>>>> a2e5af0aeef65de0c3f480a8950a544f7f4b50ac
 
 	?>
 
