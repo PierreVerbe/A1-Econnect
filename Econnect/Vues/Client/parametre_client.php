@@ -235,6 +235,4 @@
 
 </body>
 
-	
-
 <?php include ("footer_client.php")?>
