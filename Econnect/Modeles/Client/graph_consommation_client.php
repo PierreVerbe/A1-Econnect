@@ -1,4 +1,5 @@
-<?php // content="text/plain; charset=utf-8"
+<?php session_start(); // content="text/plain; charset=utf-8"
+
 require_once ('../../jpgraph-4.2.5/src/jpgraph.php');
 require_once ('../../jpgraph-4.2.5/src/jpgraph_bar.php');
 
@@ -15,7 +16,9 @@ $arrayMois = array('1','2','3','4','5','6','7','8','9','10','11','12');
 
 $datay = array();
 
-$req = $bdd->query('SELECT facture.Consommation FROM facture GROUP BY MONTH(facture.Date_facture) ASC');
+$req = $bdd->prepare('SELECT facture.Consommation FROM facture INNER JOIN user_maison ON facture.ID_Maison = user_maison.ID_Maison WHERE user_maison.ID_User = ? GROUP BY MONTH(facture.Date_facture) ASC');
+$req->bindParam(1,$_SESSION['id']);
+$req->execute();
 
 while ($donnees = $req->fetch())
 {
@@ -56,4 +59,5 @@ $graph->title->Set("Consommation électrique des 12 derniers mois");
 
 // Display the graph
 $graph->Stroke();
+
 ?>

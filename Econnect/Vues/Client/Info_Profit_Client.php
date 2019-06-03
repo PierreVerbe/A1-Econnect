@@ -115,6 +115,18 @@
     ?>
 
     <section id="sectionClient2">
+
+    	<?php require("mdpReset_check.php"); ?>
+
+		<?php
+		if(isset($_SESSION['id'])) {
+			header('Location: connexion.php');
+		}
+		else if (isset($erreur)) {
+			echo '<font color='.$erreurColor.'>'.$erreur."</font>";
+		}
+		?>
+		<form method="POST" action="">
 	  	<form method="POST" action=" " onsubmit="return Validate()" name="form" >
 		  	<div class="container">
 
