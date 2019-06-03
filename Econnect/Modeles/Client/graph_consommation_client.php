@@ -15,14 +15,30 @@ $arrayMois = array('1','2','3','4','5','6','7','8','9','10','11','12');
 
 $datay = array();
 
-$req = $bdd->query('SELECT facture.Consommation FROM facture GROUP BY MONTH(facture.Date_facture) ASC');
+$req = $bdd->query('SELECT facture.Consommation FROM facture WHERE facture.ID_Maison = (SELECT user_maison.ID_Maison FROM utilisateur,user_maison WHERE user_maison.ID_User = user_maison.ID_User AND utilisateur.ID_User = user_maison.ID_User AND utilisateur.ID_User = 1 GROUP BY user_maison.ID_Maison ASC LIMIT 1) GROUP BY MONTH(facture.Date_facture) ASC LIMIT 12');
+
 
 while ($donnees = $req->fetch())
 {
 	$datay[] = $donnees['Consommation'];
 }
 
+//$req2 = $bdd->prepare("SELECT facture.Consommation FROM facture WHERE facture.ID_Maison = $id_maison GROUP BY facture.ID_Facture ASC LIMIT 12 ");
+//$req2->bindParam(1, $_SESSION['id']);
+//$req2->execute();
+
+//$req = $bdd->query('SELECT facture.Consommation FROM facture GROUP BY MONTH(facture.Date_facture) ASC');
+
+//while ($donnees2 = $req2->fetch())
+//{
+//	$datay[] = $donnees2['Consommation'];
+//}
+
 $req->closeCursor();
+
+
+echo ("mes data :" . $datay[]);
+
 
 //$data1y=array(900,1100,1950,2100,2200);
 
