@@ -1,5 +1,7 @@
 <?php
   // Allumage de l'actionneur
+
+  // Champ capteur "a", "ON" valeur champ "VAL" à "0000"
   $trame = "1G02D2a01000121";
   $adresse = "http://projets-tomcat.isep.fr:8080/appService/?ACTION=COMMAND&TEAM=G02D&TRAME=".$trame;
   echo $adresse;
