@@ -102,12 +102,12 @@
 	</head>
 
 	<?php
+		require("mdpReset_check.php");
 
-		try {
-			include ("../../Modeles/Requete_parametre.php");
-		} catch (Exception $e) {
-			die('Erreur : ' . $e->getMessage());
+		if (isset($erreur)) {
+			echo '<font color='.$erreurColor.'>'.$erreur."</font>";
 		}
+
 
 		$req = $bdd->query('SELECT utilisateur.Nom, utilisateur.Prenom, utilisateur.Adresse_email, utilisateur.Mot_de_passe, utilisateur.Telephone, utilisateur.Date_naissance FROM utilisateur WHERE utilisateur.ID_User = '.$_SESSION['id']);
 
@@ -115,73 +115,61 @@
     ?>
 
     <section id="sectionClient2">
+		
+	  	<div class="container">
 
-    	<?php require("mdpReset_check.php"); ?>
+		    <div class="row" >
+		      	<div class="col-25">
+		        	<label for="fname">Nom :</label>
+		  		</div>
+		      	<div class="col-75">
+		        	<div style="text-align: left; font-size: 25px;"><?php echo $donnees['Nom']; ?></div>
+		      	</div>
+		    </div>
 
-		<?php
-		if(isset($_SESSION['id'])) {
-			header('Location: connexion.php');
-		}
-		else if (isset($erreur)) {
-			echo '<font color='.$erreurColor.'>'.$erreur."</font>";
-		}
-		?>
-		<form method="POST" action="">
-	  	<form method="POST" action=" " onsubmit="return Validate()" name="form" >
-		  	<div class="container">
+		    <div class="row">
+		      	<div class="col-25">
+		        	<label for="lname">Prénom :</label>
+		      	</div>
+		      	<div class="col-75">
+		        	<div style="text-align: left; font-size: 25px;"><?php echo $donnees['Prenom']; ?></div>
+		      	</div>
+		    </div>
 
-			    <div class="row" >
-			      	<div class="col-25">
-			        	<label for="fname">Nom :</label>
-			  		</div>
-			      	<div class="col-75">
-			        	<input type="text" id="fname" name="firstname" value="<?php echo $donnees['Nom']; ?>">
-			      	</div>
-			    </div>
+		    <div class="row">
+		      	<div class="col-25" >
+		        	<label for="subject">Email :</label>
+		      	</div>
+		      	<div class="col-75">
+		        	<div style="text-align: left; font-size: 25px;"><?php echo $donnees['Adresse_email']; ?></div>
+		      	</div>
+		    </div>
 
-			    <div class="row">
-			      	<div class="col-25">
-			        	<label for="lname">Prénom :</label>
-			      	</div>
-			      	<div class="col-75">
-			        	<input type="text" id="lname" name="lastname" value="<?php echo $donnees['Prenom']; ?>">
-			      	</div>
-			    </div>
+		    <div class="row">
+		      	<div class="col-25">
+			        <label for="subject">Téléphone :</label>
+		      	</div>
+		      	<div class="col-75">
+		        	<div style="text-align: left; font-size: 25px;"><?php echo $donnees['Telephone']; ?></div>
+		      	</div>
+		    </div>
 
-			    <div class="row">
-			      	<div class="col-25" >
-			        	<label for="subject">Email :</label>
-			      	</div>
-			      	<div class="col-75" id="email_div">
-				        <input type="email"  name="email" value="<?php echo $donnees['Adresse_email']; ?>" class="textInput" id="mail">
-			        	<div id="email_error"></div>
-			      	</div>
-			    </div>
+		    <div class="row">
+		      	<div class="col-25">
+			        <label for="subject">Date de naissance :</label>
+		      	</div>
+		      	<div class="col-75">
+		        	<div style="text-align: left; font-size: 25px;"><?php echo $donnees['Date_naissance']; ?></div>
+		      	</div>
+		    </div>
 
-			    <div class="row">
-			      	<div class="col-25">
-				        <label for="subject">Téléphone :</label>
-			      	</div>
-			      	<div class="col-75">
-				        <input type="tel" id="Téléphone" name="Téléphone" value="<?php echo $donnees['Telephone']; ?>" min="1" max="10" pattern="[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}">
-			      	</div>
-			    </div>
-
-			    <div class="row">
-			      	<div class="col-25">
-				        <label for="subject">Date de naissance :</label>
-			      	</div>
-			      	<div class="col-75">
-				        <input type="date" id="Date_naissance" name="Date_naissance" value="<?php echo $donnees['Date_naissance']; ?>">
-			      	</div>
-			    </div>
-
+			<form method="POST" action="">
 			    <div class="row">
 			      	<div class="col-25" > 
 				        <label for="subject">Ancien mot de passe :</label><br/>
 			      	</div>    
 			      	<div class="col-75" id="password_div">
-			      		<input name="passeword_confirm"  type="passeword" name="password" value="<?php echo $donnees['Mot_de_passe']; ?>" class="textInput" id="MDP" /><br /><br />
+			      		<input name="old_password"  type="password" placeholder="Votre ancien mot de passe"  class="textInput" id="MDP" /><br /><br />
 			    	</div>
 			  	</div>
 
@@ -190,7 +178,7 @@
 			        	<label for="subject">Nouveau mot de passe :</label><br/>
 			      	</div>    
 			      		<div class="col-75" id="password_div">
-			      		<input name="passeword_confirm"  type="passeword" name="password" value="<?php echo $donnees['Mot_de_passe']; ?>" class="textInput" id="MDP" /><br /><br />
+			      		<input name="new_pass"  type="password" placeholder="Votre nouveau mot de passe" value="" class="textInput" id="MDP" /><br /><br />
 			    	</div>
 			  	</div> 
 
@@ -199,17 +187,17 @@
 			      		<label for="subject">Confirmer le nouveau mot de passe :</label><br/>
 			    	</div>   
 			    	<div class="col-75" id="pass_confirm_div">
-			      		<input name="passeword_confirm" type="passeword"  placeholder="Confirmez votre nouveau mot de passe ..." class="textInput" id="MDP" /><br /><br />
-			      		<div id="password_error"></div>
+			      		<input name="new_password" type="password" placeholder="Confirmation de votre nouveau mot de passe" class="textInput" id="MDP" /><br /><br />
 			    	</div>                
 			  	</div>    
 
 			    <div class="row" >
-			        <button class="boutton" type="submit" name="register"><span>Soumettre</span></button> 
+			        <button class="boutton" type="submit" name="formresetmdp"><span>Soumettre</span></button> 
 			    </div>
+			</form>
 
-			</div>
-		</form>
+		</div>
+		
 	</section>
 
   	<?php
