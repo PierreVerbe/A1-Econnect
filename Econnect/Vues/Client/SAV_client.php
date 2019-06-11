@@ -39,7 +39,6 @@
 			   	<input class="bouton_envoyer" type="submit" value="Envoyer"/>
 			</form>
 
-			
 		</div>
 
 	</section>

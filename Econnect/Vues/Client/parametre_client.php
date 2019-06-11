@@ -211,30 +211,6 @@
 		</div>
 	</section>
 
-
-	<section id="GestionClient">
-		<h1>Gestion des comptes</h1>
-
-		<div id="conteneur_1">
-			<div class="ComptePrincipal">
-				<h2 id="Acces">Accès total</h2>
-				<p>Photo de la maison</p>
-				<button class="button_1" style="vertical-align:middle"><span>Accès </span></button>
-			</div>
-			<div class="CompteSecondaire">
-				<h2>Compte secondaire </h2>
-				<button class="button_2" style="vertical-align:middle"><span>Compte de Jean-Pascal </span></button>
-				<button class="button_3" style="vertical-align:middle"><span>Compte de Jacques-Olivier </span></button>
-			</div>
-			<div class="Ajout">
-				<h2>Ajout de comptes secondaires</h2>
-				<button class="button_4" style="vertical-align:middle"><span>Ajouter </span></button>
-			</div>
-		</div>
-	</section>
-
 </body>
-
-	
 
 <?php include ("footer_client.php")?>
