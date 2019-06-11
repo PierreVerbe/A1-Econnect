@@ -19,6 +19,7 @@
 				<?php
 				if(isset($_SESSION['type'])) {
 					if($_SESSION['type'] == "Client")	header('Location: Vues/Client/accueil_client.php');
+					else if($_SESSION['type'] == "Domisep")	header('Location: Vues/Domisep/accueil_domisep.php');
 				}
 				else if (isset($erreur)) {
 					echo '<font color='.$erreurColor.'>'.$erreur."</font>";
