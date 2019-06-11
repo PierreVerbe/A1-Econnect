@@ -50,7 +50,7 @@
 	$temp = hexdec($temp);
 
 	// mise à jour sur la base de données
-	$req = $bdd->prepare('UPDATE capteur SET TEMP_Capteur = :temperature WHERE ID_Piece = 1');
+	$req = $bdd->prepare('UPDATE capteur, piece, maison, user_maison, utilisateur SET TEMP_Capteur = :temperature WHERE capteur.ID_Piece = piece.ID_Piece AND piece.ID_Maison = maison.ID_Maison AND maison.ID_Maison = user_maison.ID_Maison AND user_maison.ID_User = utilisateur.ID_User AND Adresse_email = \'pablo.grana@isep.fr\';');
 	$req->bindParam(':temperature', $temp, PDO::PARAM_INT);
 	$req->execute();
 

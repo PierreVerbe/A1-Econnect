@@ -1,5 +1,7 @@
 <?php include ("header_client.php")?>
 <?php include ("banniere_client.php")?>
+<?php include ("../../Modeles/Client/bdd_trame_temp_client.php");?>
+<?php include ("../../Modeles/Client/bdd_trame_lum_client.php");?>
 
 <body>
 

@@ -20,7 +20,7 @@
 	{
 		$piece = $_POST['postpiece'];
 
-		$req = $bdd->query('SELECT piece.Temperature FROM piece, type_piece WHERE piece.ID_Piece = type_piece.ID_Piece AND type_piece.Type_piece = "'.$piece.'"');
+		$req = $bdd->query('SELECT piece.Temperature FROM piece WHERE Nom_piece = "'.$piece.'"');
 
 		while ($donnees = $req->fetch())
 		{
