@@ -59,6 +59,8 @@
 
 			</div>
 
+			<img class="maison_domo_gif" src="Vues/Image/Gif/maison_domo.gif"/>
+
 		</article>
 
 		<article id="utilisateur">

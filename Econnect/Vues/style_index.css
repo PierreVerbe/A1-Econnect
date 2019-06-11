@@ -277,3 +277,11 @@ footer img
 {
     border-bottom: 1px solid #ddd;
 }
+
+.maison_domo_gif
+{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px
+}
