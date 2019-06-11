@@ -2,14 +2,13 @@
 
 <body>
 	<section id="profil">
-		<h1>Votre profil</h1>
+		<h1>Votre profil : Domi'<?php echo $_SESSION['nom'] ?> </h1>
 
 		<img src="ressources/profil_domisep_mini.png" alt="Image de profil">
 
 		<div id="articles">
 			<article id="details">
 				<h2>Informations détaillées :</h2></br>
-
 				<?php include("../../Modeles/Domisep/bdd_profil-info_domisep.php");?> 
 			</article>
 
@@ -20,8 +19,9 @@
 
 			<article id="connexion">
 				<h2>Informations de connexion :</h2></br>
-				<p>Premier accès au site : 2019-01-10</p>
-				<p>Dernière connexion : 2019-01-22</p>
+				<p>Connexion sécurisé par protocol BCRYPT </p>
+				<p>Historique de connexion implémenté dans les prochains mois :) </p>
+				
 			</article>
 		</div>
 	</section>
