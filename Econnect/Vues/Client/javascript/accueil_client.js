@@ -14,9 +14,9 @@ function plusDivs_Haut_Gauche(n)
 	{
 		j = -1;
 	}
-	if (j == -2)
+	if (j == -1 || j == -2)
 	{
-		j = 4;
+		j = 3;
 	}
 	console.log(j);
   getTempWanted();
@@ -45,9 +45,9 @@ function plusDivs_Bas_Droit(n)
 	{
 		k = -1;
 	}
-	if (k == -2)
+	if (k == -1 || k == -2)
 	{
-		k = 4;
+		k = 3;
 	}
 	console.log(k);
   getLumWanted();
@@ -67,6 +67,7 @@ function showDivs_Bas_Droit(n)
 
 function getTempWanted(){
     var piece = document.getElementsByClassName("titre_contenu_info_H_G")[j];
+		console.log(piece.innerHTML);
     $.post("../../Modeles/Client/bdd_change_temp_client", {postpiece: piece.innerHTML},
         function(data){
 				var piece2 = document.getElementsByClassName("contenu_info_H_G")[j];
@@ -75,18 +76,18 @@ function getTempWanted(){
 }
 
 function changePosTemp(){
-    var temp = document.getElementById('getTemp').innerHTML;
-    var piece = document.getElementById('pieceTemp').innerHTML;
+    var temp = document.getElementsByClassName('contenu_info_H_G')[j];
+    var piece = document.getElementsByClassName("titre_contenu_info_H_G")[j];
     if (temp >= 30)
     {
         alert("Vous ne pouvez pas augmenter plus la température");
     }
     else
     {
-        temp = parseInt(temp,10);
+        temp = parseInt($(temp).find("#getTemp").text(),10);
         temp = temp+1;
 
-        $.post("../../Modeles/Client/bdd_change_temp_client", {postemp: temp},
+        $.post("../../Modeles/Client/bdd_change_temp_client", {postemp: temp, postpiece: piece.innerHTML},
             function(data){
             getTempWanted();
             });
@@ -94,18 +95,18 @@ function changePosTemp(){
 }
 
 function changeNegTemp(){
-    var temp = document.getElementById('getTemp').innerHTML;
-    var piece = document.getElementById('pieceTemp').innerHTML;
+  	var temp = document.getElementsByClassName('contenu_info_H_G')[j];
+    var piece = document.getElementsByClassName("titre_contenu_info_H_G")[j];
     if (temp <= 10)
     {
         alert("Vous ne pouvez pas diminuer la température");
     }
     else
     {
-        temp = parseInt(temp,10);
+        temp = parseInt($(temp).find("#getTemp").text(),10);
         temp = temp-1;
 
-        $.post("../../Modeles/Client/bdd_change_temp_client", {postemp: temp},
+        $.post("../../Modeles/Client/bdd_change_temp_client", {postemp: temp, postpiece: piece.innerHTML},
             function(data){
             getTempWanted();
             });
@@ -124,54 +125,40 @@ function getLumWanted(){
 }
 
 function changePosLum(){
-    var lum = document.getElementById('getLum').innerHTML;
-    var piece = document.getElementById('pieceLum1').innerHTML;
+    var lum = document.getElementsByClassName('contenu_info_B_D')[k];
+    var piece = document.getElementsByClassName("titre_contenu_info_B_D")[k];
     if (lum >= 100)
     {
         alert("Vous ne pouvez pas augmenter la luminosité");
     }
-
     else
     {
-        lum = parseInt(lum,10);
-        lum = lum + 10;
+        lum = parseInt($(lum).find("#getLum").text(),10);
+        lum = lum + 1;
 
-
-        $.post("../../Modeles/Client/bdd_change_lum_client.php", {postlum: lum},
+        $.post("../../Modeles/Client/bdd_change_lum_client.php", {postlum: lum, postpiece: piece.innerHTML},
             function(data){
+						console.log("Resultat" + data);
             getLumWanted();
             });
     }
-
-
 }
 
 function changeNegLum(){
-    var lum = document.getElementById('getLum').innerHTML;
-    var piece = document.getElementById('pieceLum1').innerHTML;
+	var lum = document.getElementsByClassName('contenu_info_B_D')[k];
+	var piece = document.getElementsByClassName("titre_contenu_info_B_D")[k];
     if (lum <= 0)
     {
         alert("Vous ne pouvez pas diminuer la luminosité");
     }
-
     else
     {
-        lum = parseInt(lum,10);
-        lum = lum - 10;
+        lum = parseInt($(lum).find("#getLum").text(),10);
+        lum = lum - 1;
 
-
-        $.post("../../Modeles/Client/bdd_change_lum_client.php", {postlum: lum},
+        $.post("../../Modeles/Client/bdd_change_lum_client.php", {postlum: lum, postpiece: piece.innerHTML},
             function(data){
             getLumWanted();
             });
     }
 }
-
-//pour les boutons de température
-/*function changement_temperature(n)
-{
-  $.post("../../Controleurs/bdd_liste-maisons-clients_admin.php", {postid: id_client},
-        function(data){
-        $('#tableau_maisons_ajax').html(data);
-        });
-}*/

@@ -9,13 +9,6 @@
 		die('Erreur : ' . $e->getMessage());
 	}
 
-	/*$req = $bdd->query('SELECT piece.Temperature FROM piece');
-
-		while ($donnees = $req->fetch())
-		{
-			echo $donnees['Temperature'];
-		}*/
-
 	if(isset($_POST['postpiece']))
 	{
 		$piece = $_POST['postpiece'];
@@ -33,8 +26,13 @@
 	if(isset($_POST['postlum']))
 	{
 		$lum = $_POST['postlum'];
+		$piece = $_POST['postpiece'];
 
-		if($req2 = $bdd->query('UPDATE piece SET piece.Luminosite = "'.$lum.'"') === TRUE)
+		$req2 = $bdd->prepare('UPDATE piece SET Luminosite = ? WHERE Nom_piece = ?');
+		$req2->bindParam(1, $lum);
+		$req2->bindParam(2, $piece);
+
+		if($req2->execute())
 		{
 			echo "complete";
 		}
