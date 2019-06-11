@@ -12,7 +12,7 @@
 	$req->execute();
 			  	
 	while ($donnees = $req->fetch()){
-		$Temperature_Moyenne = $donnees['ROUND(AVG(piece.Temperature), 1)'];
+		$Temperature_Moyenne = $donnees['ROUND(AVG(capteur.TEMP_Capteur), 1)'];
 		}
 ?>
 		<p class="Slide_image_texte"><img class="Slide_image" src="../Image/Banniere/moyenne_temperature.png" width="100" height="100">Température moyenne : <?php echo $Temperature_Moyenne ?>°C</p>
