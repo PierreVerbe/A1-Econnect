@@ -1,3 +1,11 @@
+<?php session_start();
+  if(isset($_SESSION['type']) or !isset($_SESSION['id'])){
+    if($_SESSION['type'] != "Administrateur" or !isset($_SESSION['id'])) {
+      session_destroy();
+      header("Location: ../../index.php");
+    }
+  }
+?>
 <!DOCTYPE html>
 <html>
 	<head>

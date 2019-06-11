@@ -35,6 +35,8 @@ if(isset($_POST['formlogin'])) {
 			        $_SESSION['cemac'] = $userinfo['Cemac'];
 			        $_SESSION['mail'] = $userinfo['Adresse_email'];
 					$_SESSION['type'] = $userinfo['User_type'];
+			        $_SESSION['nom'] = $userinfo['Nom'];
+			        $_SESSION['prenom'] = $userinfo['Prenom'];
 	            }
 	            else {
 					$erreurColor = "red";

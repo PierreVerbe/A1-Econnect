@@ -1,3 +1,11 @@
+<?php session_start();
+  if(isset($_SESSION['type']) or !isset($_SESSION['id'])){
+    if($_SESSION['type'] != "Domisep" or !isset($_SESSION['id'])) {
+      session_destroy();
+      header("Location: ../../index.php");
+    }
+  }
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,7 +29,7 @@
 	<ul class="navbar">
   		<li><a href="accueil_domisep.php">Accueil</a></li>
   		<li><a href="liste_clients_domisep.php">Liste Clients</a></li>
-  		<li><a href="profil_domisep.php">Mon profil</a></li>
+  		<li><a href="profil_domisep.php">Mon profil <?php if(isset($_SESSION['id'])) echo "(".$_SESSION['id'].")";?></a></li>
   		<li><a href="quit_domisep.php">Déconnexion</a>
   		</li>
 	</ul>

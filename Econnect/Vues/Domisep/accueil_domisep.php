@@ -1,7 +1,7 @@
 <?php include ("header_domisep.php")?>
 
 <body>
-	<h1>Bienvenue M. Feller</h1>
+	<h1>Bienvenue Domi'<?php echo $_SESSION['nom'] ?></h1>
 
 	<section id="tableau_bord">
 
