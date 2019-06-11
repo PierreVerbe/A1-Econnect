@@ -8,7 +8,9 @@
 	}
 
 	// Récupération du nom et prenom de l'utilisateur
-	$req = $bdd->query('SELECT utilisateur.Nom, utilisateur.Prenom FROM utilisateur WHERE utilisateur.ID_User = 1 ');
+	$req = $bdd->prepare("SELECT utilisateur.Nom, utilisateur.Prenom FROM utilisateur WHERE utilisateur.ID_User = ?");
+	$req->bindParam(1, $_SESSION['id']);
+	$req->execute();
 			  	
 	while ($donnees = $req->fetch()){
 		$Nom = $donnees['Nom'];
@@ -16,7 +18,9 @@
 		}
 
 	//Récupération du mode de la maison
-	$req = $bdd->query('SELECT maison.Mode_maison FROM utilisateur, maison, user_maison WHERE user_maison.ID_User = utilisateur.ID_User AND user_maison.ID_Maison = maison.ID_Maison AND utilisateur.ID_User = 1');
+	$req = $bdd->prepare("SELECT maison.Mode_maison FROM utilisateur, maison, user_maison WHERE user_maison.ID_User = utilisateur.ID_User AND user_maison.ID_Maison = maison.ID_Maison AND utilisateur.ID_User = ? ORDER BY maison.ID_Maison ASC LIMIT 1");
+	$req->bindParam(1, $_SESSION['id']);
+	$req->execute();
 			  	
 	while ($donnees = $req->fetch()){
 		$Mode = $donnees['Mode_maison'];

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  ven. 18 jan. 2019 à 10:34
--- Version du serveur :  5.7.23
--- Version de PHP :  7.2.10
+-- Généré le :  mar. 21 mai 2019 à 16:03
+-- Version du serveur :  5.7.26
+-- Version de PHP :  7.2.18
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -371,28 +371,30 @@ INSERT INTO `user_piece` (`ID_User_piece`, `ID_Piece`, `ID_User`) VALUES
 DROP TABLE IF EXISTS `utilisateur`;
 CREATE TABLE IF NOT EXISTS `utilisateur` (
   `ID_User` int(11) NOT NULL AUTO_INCREMENT,
-  `User_type` varchar(128) COLLATE utf8_bin NOT NULL,
+  `User_type` varchar(128) COLLATE utf8_bin NOT NULL DEFAULT 'Client',
   `Nom` varchar(128) COLLATE utf8_bin NOT NULL,
   `Prenom` varchar(128) COLLATE utf8_bin NOT NULL,
   `Adresse_email` varchar(128) COLLATE utf8_bin NOT NULL,
   `Mot_de_passe` varchar(128) COLLATE utf8_bin NOT NULL,
-  `Telephone` varchar(128) COLLATE utf8_bin NOT NULL,
-  `Date_naissance` date NOT NULL,
-  `Debut_abo` date NOT NULL,
-  `Fin_abo` date NOT NULL,
-  PRIMARY KEY (`ID_User`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+  `Telephone` varchar(128) COLLATE utf8_bin DEFAULT NULL,
+  `Date_naissance` date DEFAULT NULL,
+  `Debut_abo` date DEFAULT NULL,
+  `Fin_abo` date DEFAULT NULL,
+  `Cemac` int(11) NOT NULL,
+  PRIMARY KEY (`ID_User`),
+  UNIQUE KEY `Cemac` (`Cemac`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Déchargement des données de la table `utilisateur`
 --
 
-INSERT INTO `utilisateur` (`ID_User`, `User_type`, `Nom`, `Prenom`, `Adresse_email`, `Mot_de_passe`, `Telephone`, `Date_naissance`, `Debut_abo`, `Fin_abo`) VALUES
-(1, 'Client', 'Grana', 'Pablo', 'pablo.grana@isep.fr', 'mdp12345', '0676877850', '1998-05-24', '2018-12-04', '2019-01-04'),
-(2, 'Client', 'Verbe', 'Pierre', 'pierre.verbe@isep.fr', 'mdp4597', '0678458785', '1998-02-16', '2018-12-26', '2019-01-23'),
-(3, 'Client', 'Kaveh', 'Nina', 'nina.kaveh@isep.fr', '123456789', '0687895412', '1998-02-17', '2018-12-27', '2019-12-27'),
-(4, 'Client', 'Kettou', 'Yanis', 'yanis.kettou@isep.fr', '7894587sfeg*', '0797479878', '1998-05-04', '2018-12-06', '2019-12-06'),
-(5, 'Client', 'Léa', 'Verhaeghe', 'lea.tki@isep.fr', 'eegreggù$*884df', '0798478750', '1998-02-12', '2018-12-05', '2019-12-05');
+INSERT INTO `utilisateur` (`ID_User`, `User_type`, `Nom`, `Prenom`, `Adresse_email`, `Mot_de_passe`, `Telephone`, `Date_naissance`, `Debut_abo`, `Fin_abo`, `Cemac`) VALUES
+(1, 'Client', 'Grana', 'Pablo', 'pablo.grana@isep.fr', '$2y$10$La7N7IOI7sRYESa73m3Yo.PGhd.gR4e/5NW6rF8RoN9/YTjw/Rlty', '0676877850', '1998-05-24', '2018-12-04', '2019-01-04', 12),
+(2, 'Client', 'Verbe', 'Pierre', 'pierre.verbe@isep.fr', '$2y$10$s5IlsexW6ZhVPGeC8hWSJ.8FttCDQTBftz.8xZnhUhyjFW46rqDt2', '0678458785', '1998-02-16', '2018-12-26', '2019-01-23', 7),
+(3, 'Client', 'Kaveh', 'Nina', 'nina.kaveh@isep.fr', '$2y$10$uUM2WeUxSVN/oapw4o66yOHnuALVz8D3DyFEeH8b1eat0nilxnLCq', '0687895412', '1998-02-17', '2018-12-27', '2019-12-27', 0),
+(4, 'Client', 'Kettou', 'Yanis', 'yanis.kettou@isep.fr', '$2y$10$Y1RANGKvpsCGWKUHg8AJAOM/R3Bj0xrR5/IZLSnG8toSYVCzdT.46', '0797479878', '1998-05-04', '2018-12-06', '2019-12-06', 6),
+(5, 'Client', 'Léa', 'Verhaeghe', 'lea.verhaeghe@isep.fr', '$2y$10$YM101SLXil39uFLQpyQ/LOUUG1rGUznX9/CfNPEQXYoFI8WA3eMji', '0798478750', '1998-02-12', '2018-12-05', '2019-12-05', 9);
 
 --
 -- Contraintes pour les tables déchargées
