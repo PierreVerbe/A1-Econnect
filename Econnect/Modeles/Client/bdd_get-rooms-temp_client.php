@@ -11,8 +11,6 @@
 
 
 	include ("bdd_trame_temp_client.php");
-	//$req = $bdd->query("SELECT * FROM capteur INNER JOIN piece ON capteur.ID_Piece = piece.ID_Piece INNER JOIN user_maison ON piece.ID_Maison = user_maison.ID_Maison INNER JOIN utilisateur ON user_maison.ID_User = utilisateur.ID_User WHERE Adresse_email = \"pablo.grana@isep.fr\";");
-	//$req = $bdd->query("SELECT * FROM piece INNER JOIN user_maison ON piece.ID_Maison = user_maison.ID_Maison INNER JOIN utilisateur ON user_maison.ID_User = utilisateur.ID_User WHERE Adresse_email = \"pablo.grana@isep.fr\";");
 
 	$req = $bdd->prepare("SELECT * FROM capteur INNER JOIN piece ON capteur.ID_Piece = piece.ID_Piece INNER JOIN user_maison ON piece.ID_Maison = user_maison.ID_Maison INNER JOIN utilisateur ON user_maison.ID_User = utilisateur.ID_User WHERE utilisateur.ID_User = ?");
 	$req->bindParam(1, $_SESSION['id']);

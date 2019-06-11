@@ -1,6 +1,7 @@
 var var_Haut_Gauche = 1;
 var var_Bas_Droit = 1;
 var j = -1;
+var k = -1
 
 //Pour la box de l'accueil haut gauche
 showDivs_Haut_Gauche(var_Haut_Gauche);
@@ -12,6 +13,10 @@ function plusDivs_Haut_Gauche(n)
 	if (j == 4)
 	{
 		j = -1;
+	}
+	if (j == -2)
+	{
+		j = 4;
 	}
 	console.log(j);
   getTempWanted();
@@ -35,7 +40,17 @@ showDivs_Bas_Droit(var_Bas_Droit);
 function plusDivs_Bas_Droit(n)
 {
 	showDivs_Bas_Droit(var_Bas_Droit += n);
-    getLumWanted();
+	k = k+n;
+	if (k == 4)
+	{
+		k = -1;
+	}
+	if (k == -2)
+	{
+		k = 4;
+	}
+	console.log(k);
+  getLumWanted();
 }
 
 function showDivs_Bas_Droit(n)
@@ -52,7 +67,6 @@ function showDivs_Bas_Droit(n)
 
 function getTempWanted(){
     var piece = document.getElementsByClassName("titre_contenu_info_H_G")[j];
-    /*var idPiece = document.getElementsByClass('pieceTemp').getAttribute('data-pieceID');*/
     $.post("../../Modeles/Client/bdd_change_temp_client", {postpiece: piece.innerHTML},
         function(data){
 				var piece2 = document.getElementsByClassName("contenu_info_H_G")[j];
@@ -99,10 +113,12 @@ function changeNegTemp(){
 }
 
 function getLumWanted(){
-		var piece = document.getElementsByClassName("titre_contenu_info_H_G")[j];
+		var piece = document.getElementsByClassName("titre_contenu_info_B_D")[k];
+		console.log(piece.innerHTML);
     $.post("../../Modeles/Client/bdd_change_lum_client", {postpiece: piece.innerHTML},
         function(data){
-				var piece2 = document.getElementsByClassName("contenu_info_H_G")[j];
+				console.log(data);
+				var piece2 = document.getElementsByClassName("contenu_info_B_D")[k];
         $(piece2).find("#getLum").text(data);
         });
 }

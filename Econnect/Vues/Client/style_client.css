@@ -1,12 +1,12 @@
 /*################################### DEBUT HEADER ###################################*/
 @font-face /* Définition d'une nouvelle police nommée quicksand */
-{ 
+{
 font-family: 'Quicksand';
 src: url('../Fonts/Quicksand/Quicksand-Light.otf');
 }
 
 header
-{ 
+{
     height:300px;
 }
 
@@ -41,7 +41,7 @@ ul.navbar li
     font-family: Quicksand, Verdana;
 }
 
-ul.navbar li a 
+ul.navbar li a
 {
     display: block;
     color: white;
@@ -50,13 +50,13 @@ ul.navbar li a
     text-decoration: none;
 }
 
-ul.navbar li a:hover:not(.current) 
+ul.navbar li a:hover:not(.current)
 {
     background-color: #111;
 }
 
 /* Pour le bouton actif */
-.current 
+.current
 {
     background-color:#118ccf;
 }
@@ -72,7 +72,7 @@ body
 /*################################### DEBUT BANNER ###################################*/
 
 @font-face /* Définition d'une nouvelle police nommée quicksand */
-{ 
+{
 font-family: 'Montserrat';
 src: url('../Fonts/Montserrat/Montserrat-Regular.otf');
 }
@@ -86,10 +86,10 @@ src: url('../Fonts/Montserrat/Montserrat-Regular.otf');
 }
 
 /* Pour le slider en haut de la page */
-.Slide_h 
+.Slide_h
 {
     height:150px;
-    display:none; 
+    display:none;
 }
 
 .Text_Slide_h
@@ -141,7 +141,7 @@ src: url('../Fonts/Montserrat/Montserrat-Regular.otf');
 
 /* Pour les boutons de l'activation des modes */
 
-.bouton_eco, .bouton_sortie, .bouton_confort, .bouton_hibernation 
+.bouton_eco, .bouton_sortie, .bouton_confort, .bouton_hibernation
 {
     max-width:120px;
     max-height:120px;
@@ -211,7 +211,7 @@ src: url('../Fonts/Montserrat/Montserrat-Regular.otf');
     justify-content: space-between;
 }
 
-.titre_contenu_info_H_G
+.titre_contenu_info_H_G, .titre_contenu_info_B_D
 {
     font-family: Montserrat, Verdana;
     font-size: 1.5em;
@@ -221,7 +221,7 @@ src: url('../Fonts/Montserrat/Montserrat-Regular.otf');
     background-color: #737373;
 }
 
-.contenu_info_H_G
+.contenu_info_H_G, .contenu_info_B_D
 {
     font-family: Montserrat, Verdana;
     font-size: 1.2em;
@@ -468,7 +468,7 @@ tr:hover
 
 /*Pour la page profit client*/
 #sectionClient
-{ 
+{
     width:98%;
     margin-top: 15px;
     margin-bottom: 15px;
@@ -479,7 +479,7 @@ tr:hover
     box-shadow: 5px 5px 13px;
     height: 450px;
     text-align: center;
-    border-radius: 20px;  
+    border-radius: 20px;
 }
 
 #conteneur{
@@ -491,17 +491,17 @@ tr:hover
 {
   text-align: left;
 }
-        
+
 #imageClient{
-    margin-top: 10px; 
+    margin-top: 10px;
     height: 200px;
     width: 200px;
 }
 
 .element:nth-child(1){
-    margin-top: 50px; 
+    margin-top: 50px;
     background-color: #dcdcdc;
-    width: 600px; 
+    width: 600px;
     border-radius: 10px;
     background-color: #dcdcdc;
     border : 3px solid #b6b6b6;
@@ -511,25 +511,25 @@ tr:hover
 }
 
 .element:nth-child(2){
-    margin-top: 50px; 
-    background-color: #dcdcdc; 
+    margin-top: 50px;
+    background-color: #dcdcdc;
     width: 600px;
     border-radius: 10px;
     background-color: #dcdcdc;
     border : 3px solid #b6b6b6;
-    box-shadow: 3px 3px 9px; 
-    text-align: left; 
-    text-indent: 25px; 
+    box-shadow: 3px 3px 9px;
+    text-align: left;
+    text-indent: 25px;
     font-family: Montserrat, Verdana;
     font-size: 1.2em;
 }
 
-    
+
 
 /*Pour la page paramètres client*/
 #body_Client
 {
-    background-color: #dcdcdc; 
+    background-color: #dcdcdc;
 }
 
 #GestionClient
@@ -566,7 +566,7 @@ tr:hover
   transition: all 0.5s;
   cursor: pointer;
   margin: 15px;
-  float: right; 
+  float: right;
 }
 
 .button_1 span {
@@ -595,24 +595,24 @@ tr:hover
 }
 
 .ComptePrincipal{
-    margin-top: 50px; 
+    margin-top: 50px;
     background-color: #dcdcdc;
-    width: 500px; 
-    border-style: groove;
-    border-width: 2px; 
-    border-color: #008080; 
-    border-radius: 10px;
-    margin-right: 10px; 
-}
-.CompteSecondaire{
-    margin-top: 50px; 
-    background-color: #dcdcdc; 
     width: 500px;
     border-style: groove;
-    border-width: 2px; 
-    border-color: #008080; 
-    border-radius: 10px; 
-    margin-right: 10px; 
+    border-width: 2px;
+    border-color: #008080;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+.CompteSecondaire{
+    margin-top: 50px;
+    background-color: #dcdcdc;
+    width: 500px;
+    border-style: groove;
+    border-width: 2px;
+    border-color: #008080;
+    border-radius: 10px;
+    margin-right: 10px;
 }
 .button_2 {
   display: inline-block;
@@ -693,14 +693,14 @@ tr:hover
   right: 0;
 }
 .Ajout{
-    margin-top: 50px; 
-    background-color: #dcdcdc; 
+    margin-top: 50px;
+    background-color: #dcdcdc;
     width: 500px;
     border-style: groove;
-    border-width: 2px; 
-    border-color: #008080; 
-    border-radius: 10px; 
-    margin-right: 10px; 
+    border-width: 2px;
+    border-color: #008080;
+    border-radius: 10px;
+    margin-right: 10px;
 }
 .button_4 {
   display: inline-block;
@@ -840,39 +840,39 @@ tr:hover
     justify-content: space-around;
 }
 .Piece{
-    margin-top: 50px; 
+    margin-top: 50px;
     background-color: #dcdcdc;
-    width: 500px; 
+    width: 500px;
     border-style: groove;
-    border-width: 2px; 
-    border-color: #008080; 
+    border-width: 2px;
+    border-color: #008080;
     border-radius: 10px;
-    margin-right: 10px; 
+    margin-right: 10px;
     float: left;
     height: 250px;
 }
 .Capteurs{
-    margin-top: 50px; 
+    margin-top: 50px;
     background-color: #dcdcdc;
-    width: 500px; 
+    width: 500px;
     border-style: groove;
-    border-width: 2px; 
-    border-color: #008080; 
+    border-width: 2px;
+    border-color: #008080;
     border-radius: 10px;
-    margin-right: 10px; 
+    margin-right: 10px;
     float: left;
     height: 250px;
 }
 
 .Actionneurs{
-    margin-top: 50px; 
+    margin-top: 50px;
     background-color: #dcdcdc;
-    width: 500px; 
+    width: 500px;
     border-style: groove;
-    border-width: 2px; 
-    border-color: #008080; 
+    border-width: 2px;
+    border-color: #008080;
     border-radius: 10px;
-    margin-right: 10px; 
+    margin-right: 10px;
     float: left;
     height: 250px;
 }
@@ -884,7 +884,7 @@ tr:hover
 /* Pour le footer de la page */
 footer
 {
-    
+
     display : flex;
     justify-content: space-between;
     height: 150px;
@@ -970,7 +970,7 @@ footer img
     flex-direction: row;
     justify-content: space-around;
     align-content: flex-start;
-    align-content: baseline;    
+    align-content: baseline;
 }
 
 #tableau_factures
@@ -989,7 +989,7 @@ footer img
 {
     padding: 10px;
     margin: 10px;
-} 
+}
 
 /* Pour les cadres spécifiques de la page conso. */
 #grapheConso
@@ -1005,7 +1005,7 @@ footer img
     border-radius: 10px;
     background-color: #CBCBCB;
     padding: 5px;
-} 
+}
 
 
 /**************************************************************/
@@ -1072,10 +1072,10 @@ footer img
     flex-wrap: wrap;
     flex-direction: row;
     align-content: flex-start;
-    align-content: baseline;  
+    align-content: baseline;
     display: flex;
     align-items: center;
-    justify-content: center;      
+    justify-content: center;
 }
 /* Pour les cadres généraux HAUT et BAS */
 .gestionCCapteurs
@@ -1089,11 +1089,11 @@ footer img
     flex-wrap: wrap;
     flex-direction: row;
     align-content: flex-start;
-    align-content: baseline;  
+    align-content: baseline;
     display: flex;
     align-items: center;
-    justify-content: center;   
-} 
+    justify-content: center;
+}
 
 .gestionCActionneurs
 {
@@ -1106,10 +1106,10 @@ footer img
     flex-wrap: wrap;
     flex-direction: row;
     align-content: flex-start;
-    align-content: baseline;  
+    align-content: baseline;
     display: flex;
     align-items: center;
-    justify-content: center;   
+    justify-content: center;
 }
 
  /* Les deux cotes de la carte */
@@ -1202,9 +1202,9 @@ footer img
 }
 
 .modal {
-  display: none; 
+  display: none;
   position: fixed;
-  z-index: 1; 
+  z-index: 1;
   padding-top: 100px;
   left: 0;
   top: 0;
@@ -1398,4 +1398,3 @@ h2
   font-size: 45px;
 }
 /*################################### FIN CGV ###################################*/
-
