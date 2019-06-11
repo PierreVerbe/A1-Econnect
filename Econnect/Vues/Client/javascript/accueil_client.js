@@ -1,55 +1,62 @@
 var var_Haut_Gauche = 1;
 var var_Bas_Droit = 1;
+var j = -1;
 
 //Pour la box de l'accueil haut gauche
 showDivs_Haut_Gauche(var_Haut_Gauche);
 
-function plusDivs_Haut_Gauche(n) 
+function plusDivs_Haut_Gauche(n)
 {
 	showDivs_Haut_Gauche(var_Haut_Gauche += n);
-    getTempWanted();
+	j = j+n;
+	if (j == 4)
+	{
+		j = -1;
+	}
+	console.log(j);
+  getTempWanted();
 }
 
-function showDivs_Haut_Gauche(n) 
+function showDivs_Haut_Gauche(n)
 {
   var i;
   var x = document.getElementsByClassName("Slide_Haut_Gauche");
-  if (n > x.length) {var_Haut_Gauche = 1}    
+  if (n > x.length) {var_Haut_Gauche = 1}
   if (n < 1) {var_Haut_Gauche = x.length}
   for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";  
+     x[i].style.display = "none";
   }
-		x[var_Haut_Gauche-1].style.display = "block";  
+		x[var_Haut_Gauche-1].style.display = "block";
 }
 
 //Pour la box de l'accueil bas droite
 showDivs_Bas_Droit(var_Bas_Droit);
 
-function plusDivs_Bas_Droit(n) 
+function plusDivs_Bas_Droit(n)
 {
 	showDivs_Bas_Droit(var_Bas_Droit += n);
     getLumWanted();
 }
 
-function showDivs_Bas_Droit(n) 
+function showDivs_Bas_Droit(n)
 {
   var i;
   var x = document.getElementsByClassName("Slide_Bas_Droit");
-  if (n > x.length) {var_Bas_Droit = 1}    
+  if (n > x.length) {var_Bas_Droit = 1}
   if (n < 1) {var_Bas_Droit = x.length}
   for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";  
+     x[i].style.display = "none";
   }
-		x[var_Bas_Droit-1].style.display = "block";  
+		x[var_Bas_Droit-1].style.display = "block";
 }
 
 function getTempWanted(){
-    var piece = document.getElementById('pieceTemp').innerHTML;
-    /*alert(piece);*/
+    var piece = document.getElementsByClassName("titre_contenu_info_H_G")[j];
     /*var idPiece = document.getElementsByClass('pieceTemp').getAttribute('data-pieceID');*/
-    $.post("../../Modeles/Client/bdd_change_temp_client", {postpiece: piece},
+    $.post("../../Modeles/Client/bdd_change_temp_client", {postpiece: piece.innerHTML},
         function(data){
-        $('#getTemp').html(data);
+				var piece2 = document.getElementsByClassName("contenu_info_H_G")[j];
+        $(piece2).find("#getTemp").text(data);
         });
 }
 
@@ -60,7 +67,6 @@ function changePosTemp(){
     {
         alert("Vous ne pouvez pas augmenter plus la température");
     }
-
     else
     {
         temp = parseInt(temp,10);
@@ -71,8 +77,6 @@ function changePosTemp(){
             getTempWanted();
             });
     }
-    
-
 }
 
 function changeNegTemp(){
@@ -82,7 +86,6 @@ function changeNegTemp(){
     {
         alert("Vous ne pouvez pas diminuer la température");
     }
-
     else
     {
         temp = parseInt(temp,10);
@@ -93,15 +96,14 @@ function changeNegTemp(){
             getTempWanted();
             });
     }
-    
-
 }
 
 function getLumWanted(){
-    var piece = document.getElementById('pieceLum1').innerHTML;
-    $.post("../../Modeles/Client/bdd_change_lum_client", {postpiece: piece},
+		var piece = document.getElementsByClassName("titre_contenu_info_H_G")[j];
+    $.post("../../Modeles/Client/bdd_change_lum_client", {postpiece: piece.innerHTML},
         function(data){
-        $('#getLum').html(data);
+				var piece2 = document.getElementsByClassName("contenu_info_H_G")[j];
+        $(piece2).find("#getLum").text(data);
         });
 }
 
@@ -124,7 +126,7 @@ function changePosLum(){
             getLumWanted();
             });
     }
-    
+
 
 }
 
@@ -150,7 +152,7 @@ function changeNegLum(){
 }
 
 //pour les boutons de température
-/*function changement_temperature(n) 
+/*function changement_temperature(n)
 {
   $.post("../../Controleurs/bdd_liste-maisons-clients_admin.php", {postid: id_client},
         function(data){
