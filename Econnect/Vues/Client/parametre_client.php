@@ -14,7 +14,7 @@
 
 				<?php
 
-				include("../../Modeles/Client/bdd_get-piece.php");	
+				include("../../Modeles/Client/bdd_get-piece.php");
 
 				while ($row = $piece->fetch()) {
 					$temp = $row['Temperature'];
@@ -35,7 +35,7 @@
 					    			<div class=\"tuile-arriere\">
 
 					    				<button class=\"deleteEntity\" onclick=\"javascript: deletePiece($(this).parent().parent().find('#idSAV').html());\">&times;</button>
-					    				<p>Température voulu : ".$temp."°C<br>Luminosite : ".$lum."</p>
+					    				<p>Température voulue : ".$temp."°C<br>Luminosité : ".$lum." %</p>
 
 					    				<div>
 					    					<button class=\"tempDown\" onclick=\"javascript: setTemp($temp - 1, $(this).parent().parent().parent().find('#idSAV').html());\">-</button>
@@ -65,7 +65,7 @@
 						<h1>Ajout d'une pièce</h1>
 						<form action="../../Modeles/Client/addPiece.php" method="get">
 							Nom de la pièce : <input type="text" maxlength="28" name="nom" required><br>
-							Température voulu : <input type="number" min="10" step="0.5" max="30" name="temp" required><br>
+							Température voulue : <input type="number" min="10" step="0.5" max="30" name="temp" required><br>
 							<input type="submit">
 						</form>
 					</div>
@@ -77,7 +77,7 @@
 
 			<div class="gestionCCapteurs">
 				<?php
-				
+
 				include("../../Modeles/Client/bdd_get-piece.php");
 
 				include("../../Modeles/Client/bdd_get-capteur.php");
@@ -114,7 +114,7 @@
 				    		$i++;
 				    }
 				?>
-				
+
 				<button class="buttonAddEntity" id="btnModalCapteur" onclick='javascript: $("#capteurModal").css("display", "block");'>Ajouter un capteur</button>
 
 				<div id="capteurModal" class="modal">
@@ -145,7 +145,7 @@
 				include("../../Modeles/Client/bdd_get-piece.php");
 
 				include("../../Modeles/Client/bdd_get-actionneur.php");
-				
+
 				$i = 1;
 				while ($row = $data->fetch()) {
 					if($row['ETAT_Actionneur']==0) $row['ETAT_Actionneur']= "OFF";
@@ -166,7 +166,7 @@
 
 				    				<div class=\"tuile-arriere\">
 										<button class=\"deleteEntity\" onclick=\"javascript: deleteActionneur($(this).parent().parent().find('#idSAV').html());\">&times;</button>
-				    					
+
 				    					<p>Numéro de série : n°".$row['Numero_serie']."</p>
 				    					<p>État : ".$row['ETAT_Actionneur']."</p>
 					    				<div>
@@ -205,7 +205,7 @@
 						</form>
 					</div>
 				</div>
-				
+
 			</div>
 
 		</div>
