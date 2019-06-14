@@ -1,0 +1,87 @@
+header
+{
+    height:300px;
+}
+
+/*Image de fond du header responsif : si on chnage la taille de l'image sera tjs centrée*/
+#image_fond_header
+{
+    background-image:url(../Image/Header/Fond_montagne.jpg);
+    height:100%;
+    background-position: center;
+    background-position: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+/*################################### DEBUT FOOTER ###################################*/
+
+/* Pour le footer de la page */
+footer
+{
+
+    display : flex;
+    justify-content: space-between;
+    height: 150px;
+    line-height: 20px;
+
+    /* Pour un footer responsif */
+    background-image:url(../Image/Footer/fond_cristaux.png);
+    height:100%;
+    background-position: center;
+    background-position: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+footer img
+{
+    vertical-align: middle;
+}
+
+#a_propos, #le_groupe, #nous_contacter, #aide
+{
+    margin : 20px;
+    font-family: Quicksand, Verdana;
+    font-size: 1em;
+}
+
+.texte_f
+{
+    border-bottom: 1px solid #ddd;
+}
+
+/*################################### PAGES FOOTER ###################################*/
+.pages_footer
+{
+    font-family: Montserrat, Verdana;
+    /*ont-size: 1.2em;*/
+}
+
+/*################################### FIN FOOTER ###################################*/
+
+/*################################### DEBUT CGV ###################################*/
+.cgv
+{
+    width:96%;
+    padding: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left : 1%;
+    margin-right : 1%;
+    border-radius: 20px;
+    background-color: #A5CAFF;
+    border : 3px solid #8FA8DE;
+    box-shadow: 5px 5px 13px;
+}
+.cgv p {
+  padding-left:45px;
+}
+.cgv h3 {
+  padding-left:27px;
+}
+.cgv h1 {
+  margin-left:15px;
+  font-size: 45px;
+}
+/*################################### FIN CGV ###################################*/

@@ -26,8 +26,8 @@
 					    			<div class=\"tuile-avant\">
 
 					    				<h1>".$row['Nom_piece']."</h1>
-					    				<p>Température : ".$row['Temperature']."°c</p>
-					    				<p>Luminosité :".$row['Luminosite']."</p>
+					    				<p>Température : ".$row['Temperature']."°C</p>
+					    				<p>Luminosité : ".$row['Luminosite']." %</p>
 					    				<p style=\"display: none\">Identifiant SAV : ".$row['ID_Piece']."</p>
 
 					    			</div>
@@ -35,7 +35,7 @@
 					    			<div class=\"tuile-arriere\">
 
 					    				<button class=\"deleteEntity\" onclick=\"javascript: deletePiece($(this).parent().parent().find('#idSAV').html());\">&times;</button>
-					    				<p>Température voulue : ".$temp."°C<br>Luminosité : ".$lum." %</p>
+					    				<p>Température voulue : ".$temp."°C<br>Luminosité voulue : ".$lum." %</p>
 
 					    				<div>
 					    					<button class=\"tempDown\" onclick=\"javascript: setTemp($temp - 1, $(this).parent().parent().parent().find('#idSAV').html());\">-</button>

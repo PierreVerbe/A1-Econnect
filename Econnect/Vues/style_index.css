@@ -8,15 +8,15 @@ body
 header
 {
 	width:98%;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    margin-left : 5px;
-    margin-right : 5px;
-    padding: 10px;
-    border-radius: 20px;
-    background-color: #82c5bc;
-    border : 3px solid ;
-    box-shadow: 5px 5px 13px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left : 5px;
+  margin-right : 5px;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: #82c5bc;
+  border : 3px solid ;
+  box-shadow: 5px 5px 13px;
 }
 
 #boutonSubmit
@@ -87,7 +87,7 @@ header
 	padding-top: 100px;
 	display: block;
 	margin-left: auto;
-   	margin-right: auto;
+  margin-right: auto;
 
 }
 
@@ -95,14 +95,14 @@ header
 {
 	text-align: center;
 	font-size: 1.5em;
-    font-family: Verdana;
+  font-family: Verdana;
 }
 
 .vitrine_text1
 {
 	text-align: center;
 	font-size: 1.5em;
-    font-family: Verdana;
+  font-family: Verdana;
 }
 
 .vitrine_image2
@@ -144,7 +144,7 @@ header
 	text-align: center;
 	text-shadow: none;
 	-webkit-transition: color 0.5s;
-  	transition: color 0.5s;
+  transition: color 0.5s;
 }
 
 .button_vitrine_image2:hover
@@ -245,37 +245,43 @@ form
 
 footer
 {
+	border : 3px solid ;
+	box-shadow: 5px 5px 13px;
+	border-radius: 20px;
+  display : flex;
+  justify-content: space-between;
+  height: 150px;
+  line-height: 20px;
 
-    display : flex;
-    justify-content: space-between;
-    height: 150px;
-    line-height: 20px;
-    background-color: blue;
-
-    /* Pour un footer responsif */
-    /*background-image:url(../Image/Footer/fond_cristaux.png);*/
-    height:100%;
-    background-position: center;
-    background-position: no-repeat;
-    background-size: cover;
-    position: relative;
+  /* Pour un footer responsif */
+  /*background-image:url(../Image/Footer/fond_cristaux.png);*/
+  height:100%;
+  background-position: center;
+  background-position: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
 footer img
 {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
 #a_propos, #le_groupe, #nous_contacter, #aide
 {
-    margin : 20px;
-    font-family: Quicksand, Verdana;
-    font-size: 1em;
+  margin : 20px;
+  font-family: Quicksand, Verdana;
+  font-size: 1em;
+}
+
+footer b
+{
+	margin-bottom: 30px;
 }
 
 .texte_f
 {
-    border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
 }
 
 .maison_domo_gif
@@ -288,5 +294,6 @@ footer img
 
 #soustitre_logo
 {
+	color: white;
 	font-family: Verdana;
 }
