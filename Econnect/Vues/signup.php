@@ -98,7 +98,7 @@
 		      <td></td>
 		      <td align="center">
 		         <br />
-		         <input type="submit" name="forminscription" value="S'inscrire" />
+		         <input class="tested" type="submit" name="forminscription" value="S'inscrire" />
 		      </td>
 		   </tr>
 
@@ -107,20 +107,17 @@
 
 	</section>
     
-      <div>
-        <h3><a href="cgu.html">En vous inscrivant, vous acceptez les conditions d'utilisation</a></h3>
-      </div>
+	<div>
+		<h3><a href="cgu.html">En vous inscrivant, vous acceptez les conditions d'utilisation</a></h3>
+	</div>
 
 </body>
-                  
-        </div>
+                 
+    <div class="vitrine_text1">
+    	<p id="texte_vitrine_text1"><a href="../index.php">Retour à la page d'accueil</a></p><br/>
+    </div>
 
-      </div>
-
-      <div class="vitrine_text1">
-        <p id="texte_vitrine_text1"><a href="../index.php">Retour à la page d'accueil</a></p><br/>
-      </div>
-
+    <img class="planete_gif" src="../Vues/Image/Gif/planete_feuille.gif"/>
 
   </body>
 </html>

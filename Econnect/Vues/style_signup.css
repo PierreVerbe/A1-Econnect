@@ -1,160 +1,226 @@
-	body
-	{
-		background-color:#82c3b8;
-		color: white;
-		font-family: Arial;
-	}
-
-	.menu ul
-	{	
-		display: flex;
-		list-style-type: none;
-		justify-content: space-around;
-		background-color: #9ddfd0;
-		padding: 20px;
-		flex-wrap: wrap;
-	}
-	
-	.menu ul :hover 
-	{
-		font-weight: bold;
-	}
-
-	.login{
-		text-align: right;
-		font-size: 110%;
-	}
-
-
-	.vitrine_image1
-	{
-		background-image:url(Image/paysage_vitrine.png);
-	    height:500px;
-	    background-position: center;
-	    background-position: no-repeat;
-	    background-size: cover;
-	    position: relative;
-	}
-
-
-	.vitrine_image2
-	{
-		background-image:url(Image/tech_vitrine.png);
-	    height:450px;
-	    background-position: center;
-	    background-position: no-repeat;
-	    background-size: cover;
-	    position: relative;
-	    text-align: center;
-	}
-
-	#texte_vitrine_image2
-	{
-		text-align: center;
-		font-size: 1.5em;
-		padding-top: 30px;
-    	font-family: Verdana;
-	}
-
-	#button_multiple_vitrine_image2
-	{
-		text-align: center;
-		padding-top: 50px;
-	}
-
-	.button_vitrine_image2
-	{
-		background: #073763;
-		background: -webkit-linear-gradient(#073763, #073763);
-		background: linear-gradient(#073763, #073763);
-		border-radius: 5px;
-		padding: 8px 22px;
-		color: #073763;
-		display: inline-block;
-		font: normal 700 24px/1 "Calibri", sans-serif;
-		text-align: center;
-		text-shadow: none;
-		-webkit-transition: color 0.5s;
-  		transition: color 0.5s;
-	}
-
-	.button_vitrine_image2:hover
-	{
-		color: #ffffff;
-	}
-
-	#texte2_vitrine_image2
-	{
-		text-align: center;
-		color: white;
-		font-family: Verdana;
-	}
-
-	.meteo
- 	{
-		background-color: white;
-		border: 1px;
-		border-radius: 10px;
-		padding: 20px;
-		text-align: center;
-		margin-top: 10px; 
-		margin-bottom: 10px;
-		color: black;
-	}
-
-	.Graphs
-	{	
-		border: 4px ;
-		border-color: white;
-		margin-top: 10px; 
-		margin-bottom: 10px;
-		padding: 250;
-	}
-
-	.Partenaires
-	{
-		border: 1px;
-		border-color: white;
-		margin-top: 10px; 
-		margin-bottom: 10px;
-		padding: 200;
-	}
-
-	section
-	{
-		display: flex;
-		flex-direction: column;
-	}
-
-	form
-	{
-		padding: 50;
-	}
-
-	input
-	{
-		margin: 3px;
-	}
-
-	.form_col {
-    display: inline-block;
-    margin-right: 15px;
-    padding: 3px 0px;
-    width: 200px;
-    min-height: 1px;
-    text-align: right;
+body
+{
+	background-color:#82c3b8;
+	color: white;
+	font-family: Arial;
 }
-section.signup {
+
+.menu ul
+{	
+	display: flex;
+	list-style-type: none;
+	justify-content: space-around;
+	background-color: #9ddfd0;
+	padding: 20px;
+	flex-wrap: wrap;
+}
+
+.menu ul :hover 
+{
+	font-weight: bold;
+}
+
+.login
+{
+	text-align: right;
+	font-size: 110%;
+}
+
+.vitrine_image1
+{
+	background-image:url(Image/paysage_vitrine.png);
+    height:500px;
+    background-position: center;
+    background-position: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.vitrine_image2
+{
+	background-image:url(Image/tech_vitrine.png);
+    height:450px;
+    background-position: center;
+    background-position: no-repeat;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+}
+
+#texte_vitrine_image2
+{
+	text-align: center;
+	font-size: 1.5em;
+	padding-top: 30px;
+	font-family: Verdana;
+}
+
+#button_multiple_vitrine_image2
+{
+	text-align: center;
+	padding-top: 50px;
+}
+
+.button_vitrine_image2
+{
+	background: #073763;
+	background: -webkit-linear-gradient(#073763, #073763);
+	background: linear-gradient(#073763, #073763);
+	border-radius: 5px;
+	padding: 8px 22px;
+	color: #073763;
+	display: inline-block;
+	font: normal 700 24px/1 "Calibri", sans-serif;
+	text-align: center;
+	text-shadow: none;
+	-webkit-transition: color 0.5s;
+		transition: color 0.5s;
+}
+
+.button_vitrine_image2:hover
+{
+	color: #ffffff;
+}
+
+#texte2_vitrine_image2
+{
+	text-align: center;
+	color: white;
+	font-family: Verdana;
+}
+
+.meteo
+	{
+	background-color: white;
+	border: 1px;
+	border-radius: 10px;
+	padding: 20px;
+	text-align: center;
+	margin-top: 10px; 
+	margin-bottom: 10px;
+	color: black;
+}
+
+.Graphs
+{	
+	border: 4px ;
+	border-color: white;
+	margin-top: 10px; 
+	margin-bottom: 10px;
+	padding: 250;
+}
+
+.Partenaires
+{
+	border: 1px;
+	border-color: white;
+	margin-top: 10px; 
+	margin-bottom: 10px;
+	padding: 200;
+}
+
+section
+{
+	display: flex;
+	flex-direction: column;
+}
+
+form
+{
+	padding: 50;
+}
+
+input
+{
+	margin: 3px;
+}
+
+.form_col 
+{
+display: inline-block;
+margin-right: 15px;
+padding: 3px 0px;
+width: 200px;
+min-height: 1px;
+text-align: right;
+}
+
+section.signup 
+{
     width:78%;
     margin: auto;
     border-radius: 20px;
-    background-color: rgba(200,200,255,0.99);
-    border : 3px solid #5599FF;
+    background-color: #93d5ca;
+    border : 3px solid #0d8b66;
     box-shadow: 0px 0px 20px black;
     text-align: center;
 }
 
-table.signup {
+table.signup 
+{
     text-align: center;
+}
 
+/*.submit_button
+{
+	background-color: #4CAF50;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+}*/
+
+.tested
+{
+	-moz-box-shadow:inset 0px 1px 0px 0px #9acc85;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #9acc85;
+	box-shadow:inset 0px 1px 0px 0px #9acc85;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #74ad5a), color-stop(1, #68a54b));
+	background:-moz-linear-gradient(top, #74ad5a 5%, #68a54b 100%);
+	background:-webkit-linear-gradient(top, #74ad5a 5%, #68a54b 100%);
+	background:-o-linear-gradient(top, #74ad5a 5%, #68a54b 100%);
+	background:-ms-linear-gradient(top, #74ad5a 5%, #68a54b 100%);
+	background:linear-gradient(to bottom, #74ad5a 5%, #68a54b 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#74ad5a', endColorstr='#68a54b',GradientType=0);
+	background-color:#74ad5a;
+	border:1px solid #3b6e22;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	font-weight:bold;
+	padding:6px 12px;
+	text-decoration:none;
+}
+
+.tested:hover 
+{
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #68a54b), color-stop(1, #74ad5a));
+	background:-moz-linear-gradient(top, #68a54b 5%, #74ad5a 100%);
+	background:-webkit-linear-gradient(top, #68a54b 5%, #74ad5a 100%);
+	background:-o-linear-gradient(top, #68a54b 5%, #74ad5a 100%);
+	background:-ms-linear-gradient(top, #68a54b 5%, #74ad5a 100%);
+	background:linear-gradient(to bottom, #68a54b 5%, #74ad5a 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#68a54b', endColorstr='#74ad5a',GradientType=0);
+	background-color:#68a54b;
+}
+
+.tested:active 
+{
+	position:relative;
+	top:1px;
+}
+
+
+.planete_gif
+{
+	display: block;
+    margin-left: auto;
+    margin-right: auto
 }
