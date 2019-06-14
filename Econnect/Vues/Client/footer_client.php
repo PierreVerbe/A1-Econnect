@@ -1,8 +1,8 @@
 <footer>
-  	
+
   <p Id="a_propos">
     <b>A PROPOS:</b> <br />
-    
+
     <img src="../Icons/Confidentialite.png" alt="Icon confidentialité" width="35" height="35"><a classe="qsdjsd" href="confidentialite_client.php">
     Mentions légales</a> <br />
 
@@ -29,7 +29,7 @@
     <img src="../Icons/Epingle.png" alt="Icon epingle" width="35" height="35"><a classe="qsdjsd" href="informations_client.php">
     Informations</a> <br />
   </p>
-  
+
   <p id="aide">
     <b>AIDE:</b> <br />
 
