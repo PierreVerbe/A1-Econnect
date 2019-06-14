@@ -108,7 +108,6 @@
 			echo '<font color='.$erreurColor.'>'.$erreur."</font>";
 		}
 
-
 		$req = $bdd->query('SELECT utilisateur.Nom, utilisateur.Prenom, utilisateur.Adresse_email, utilisateur.Mot_de_passe, utilisateur.Telephone, utilisateur.Date_naissance FROM utilisateur WHERE utilisateur.ID_User = '.$_SESSION['id']);
 
 		while ($donnees = $req->fetch()) {

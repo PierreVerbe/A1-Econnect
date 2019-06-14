@@ -1,13 +1,18 @@
 <?php session_start();
-  if(!isset($_SESSION['id'])) header("Location: ../../index.php"); 
- ?>
+  if(isset($_SESSION['type']) or !isset($_SESSION['id'])){
+    if($_SESSION['type'] != "Client" or !isset($_SESSION['id'])) {
+      session_destroy();
+      header("Location: ../../index.php");
+    }
+  }
+?>
  <!DOCTYPE html>
 <html>
-<head>
+  <head>
   <meta charset="utf-8" />
         <link rel="stylesheet" href="style_client.css" />
         <title>Econnect</title>
-</head>
+  </head>
 
 <header>
 		
