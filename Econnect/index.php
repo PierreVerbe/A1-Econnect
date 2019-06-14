@@ -98,7 +98,7 @@
 		    <img src="Vues/Icons/Confidentialite.png" alt="Icon confidentialité" width="35" height="35"><a classe="qsdjsd" href="Vues/Visiteur/confidentialite_visiteur.php">
 		    Mentions légales</a> <br />
 
-		    <img src="Vues/Icons/Copyright.png" alt="Icon Copyright" width="35" height="35"><a classe="qsdjsd" href="Vues/Visiteur/copyright_visiteurt.php">
+		    <img src="Vues/Icons/Copyright.png" alt="Icon Copyright" width="35" height="35"><a classe="qsdjsd" href="Vues/Visiteur/copyright_visiteur.php">
 		    Copyright Econnect©</a>	<br />
 
 		    <img src="Vues/Icons/Cgv.png" alt="Icon CGV" width="35" height="35"><a classe="qsdjsd" href="Vues/Visiteur/cgv_client.php">
@@ -127,9 +127,6 @@
 
 		    <img src="Vues/Icons/Aide.png" alt="Icon aide" width="35" height="35"><a classe="qsdjsd" href="Vues/Visiteur/aides_visiteur.php">
 		    Besoin d'aide ?</a> <br />
-
-		    <img src="Vues/Icons/SAV.png" alt="Icon SAV" width="35" height="35"><a classe="qsdjsd" href="Vues/Visiteur/SAV_visiteur.php">
-		    SAV</a> <br />
 		  </p>
 
 		  </footer>
