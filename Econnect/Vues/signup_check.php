@@ -17,7 +17,12 @@ if(isset($_POST['forminscription'])) {
    	$pass = htmlspecialchars($_POST['pass']);
    	$password = htmlspecialchars($_POST['password']);
 
-   	if(!empty($_POST['cemac']) AND !empty($_POST['nom']) AND !empty($_POST['prenom']) AND !empty($_POST['mail']) AND !empty($_POST['email']) AND !empty($_POST['pass']) AND !empty($_POST['password'])) {
+   	$numeroRue = htmlspecialchars($_POST['numeroRue']);
+   	$adresse = htmlspecialchars($_POST['adresse']);
+   	$ville = htmlspecialchars($_POST['ville']);
+   	$codePostal = htmlspecialchars($_POST['codePostal']);
+
+   	if(!empty($_POST['cemac']) AND !empty($_POST['nom']) AND !empty($_POST['prenom']) AND !empty($_POST['mail']) AND !empty($_POST['email']) AND !empty($_POST['pass']) AND !empty($_POST['password']) AND !empty($_POST['numeroRue']) AND !empty($_POST['adresse']) AND !empty($_POST['ville']) AND !empty($_POST['codePostal'])) {
 
       	$cemaclength = strlen($cemac);
 
@@ -56,14 +61,14 @@ if(isset($_POST['forminscription'])) {
 	               				$insertmbr->bindParam(":nom",$nom);
 		                   	 	$insertmbr->execute();
 
-								$reqIdUser = $bdd->prepare("SELECT * FROM utilisateur WHERE Adresse_email LIKE :mail AND Mot_de_passe LIKE :pass)");
+								$reqIdUser = $bdd->prepare("SELECT * FROM utilisateur WHERE Adresse_email LIKE :mail");
 	               				$reqIdUser->bindParam(":mail",$mail);
-	               				$reqIdUser->bindParam(":pass",$pass);
-							    $userexist = $reqIdUser->rowCount();
+							    $userexist = $reqIdUser->execute();
 
 							    $erreurColor = "green";
-							    if($userexist == 1) {
+							    
 							        $userinfo = $reqIdUser->fetch();
+
 							        session_start();
 							        $_SESSION['id'] = $userinfo['ID_User'];
 							        $_SESSION['cemac'] = $userinfo['Cemac'];
@@ -73,7 +78,26 @@ if(isset($_POST['forminscription'])) {
 							        $_SESSION['prenom'] = $userinfo['Prenom'];
     		                    	$erreurColor = "blue";
 
-								}
+			                	    $insertMaison = $bdd->prepare("INSERT INTO maison(Numero, Rue, Ville, Code_postal) VALUES(:numeroRue, :adresse, :ville, :codePostal)");
+		               				$insertMaison->bindParam(":numeroRue",$numeroRue);
+		               				$insertMaison->bindParam(":adresse",$adresse);
+		               				$insertMaison->bindParam(":ville",$ville);		
+		               				$insertMaison->bindParam(":codePostal",$codePostal);
+			                   	 	$insertMaison->execute();
+
+									$reqMaison = $bdd->prepare("SELECT * FROM maison WHERE Numero LIKE :numeroRue AND Rue LIKE :adresse AND Code_postal LIKE :codePostal GROUP BY ID_Maison DESC LIMIT 1 ");
+		               				$reqMaison->bindParam(":numeroRue",$numeroRue);
+		               				$reqMaison->bindParam(":adresse",$adresse);
+		               				$reqMaison->bindParam(":codePostal",$codePostal);
+								    $testmaison = $reqMaison->execute();
+							        $maisonInfo = $reqMaison->fetch();
+
+			                	    $insertMaisonUser = $bdd->prepare("INSERT INTO user_maison(ID_User, ID_Maison) VALUES(:idu, :idm)");
+		               				$insertMaisonUser->bindParam(":idu",$_SESSION['id']);
+		               				$insertMaisonUser->bindParam(":idm",$maisonInfo['ID_Maison']);
+			                   	 	$insertMaisonUser->execute();
+
+								
 		                    	$erreur = "Votre compte a bien été créé ! <a href=\"../index.php\">Me connecter</a>";
 
 		                    	$cemac = "";
