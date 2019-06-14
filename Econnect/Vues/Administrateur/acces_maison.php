@@ -16,7 +16,9 @@
 
 				<h1>Accès maison du client</h1>
 
-				<form name="access_home" action="../../Vues/Client/accueil_client.php" onsubmit="return validateForm()" method="post">
+				<?php require("redirection_client.php"); ?>
+
+				<form name="access_home" action="" onsubmit="return validateForm()" method="post">
 					
 					<label>N° Client : </label><input type="text" name="numero_client" />
 
@@ -28,7 +30,16 @@
 
 				</form>
 
-				<script src="javascript/acces_maison.js"></script>
+				<script src="javascript/acces_maison.js">
+					function validateForm(){
+						if (document.forms["access_home"]["numero_client"].value != "" && document.forms["access_home"]["confirm"].checked == true){
+						}
+						else{
+							alert("Vous n'avez pas rempli les champs demandés !");
+							return false;
+						}
+					}
+				</script>
 
 			</div>
 
