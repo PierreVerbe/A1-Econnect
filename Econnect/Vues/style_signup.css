@@ -135,14 +135,17 @@ input
 	margin: 3px;
 }
 
-.form_col 
-{
-display: inline-block;
-margin-right: 15px;
-padding: 3px 0px;
-width: 200px;
-min-height: 1px;
-text-align: right;
+td {
+    width:24%;
+
+}
+
+.signupColG {
+	text-align: right;
+}
+
+.signupColD {
+    text-align: left;
 }
 
 section.signup 
@@ -197,6 +200,7 @@ table.signup
 	font-weight:bold;
 	padding:6px 12px;
 	text-decoration:none;
+	margin-bottom: 10px;
 }
 
 .tested:hover 

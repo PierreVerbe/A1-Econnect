@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mar. 21 mai 2019 à 16:03
+-- Généré le :  ven. 14 juin 2019 à 15:57
 -- Version du serveur :  5.7.26
 -- Version de PHP :  7.2.18
 
@@ -37,15 +37,7 @@ CREATE TABLE IF NOT EXISTS `actionneur` (
   `ETAT_Actionneur` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`ID_Actionneur`),
   KEY `ID_Piece` (`ID_Piece`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
-
---
--- Déchargement des données de la table `actionneur`
---
-
-INSERT INTO `actionneur` (`ID_Actionneur`, `Numero_serie`, `ID_Piece`, `Date_actuelle`, `ETAT_Actionneur`) VALUES
-(1, '3021478', 1, '2018-12-21 11:56:00', 0),
-(4, '123789', 1, '2019-01-18 10:41:59', 0);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
 
@@ -62,16 +54,7 @@ CREATE TABLE IF NOT EXISTS `capteur` (
   `LUM_Capteur` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`ID_Capteur`),
   KEY `ID_Piece` (`ID_Piece`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
-
---
--- Déchargement des données de la table `capteur`
---
-
-INSERT INTO `capteur` (`ID_Capteur`, `Numero_serie`, `ID_Piece`, `TEMP_Capteur`, `LUM_Capteur`) VALUES
-(1, '302145', 1, 0, 0),
-(2, '302146', 1, 0, 0),
-(10, '15', 1, 0, 0);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
 
@@ -166,14 +149,14 @@ INSERT INTO `facture` (`ID_Facture`, `Date_facture`, `Consommation`, `Prix`, `ID
 DROP TABLE IF EXISTS `maison`;
 CREATE TABLE IF NOT EXISTS `maison` (
   `ID_Maison` int(11) NOT NULL AUTO_INCREMENT,
-  `Mode_maison` varchar(128) COLLATE utf8_bin NOT NULL,
+  `Mode_maison` varchar(128) COLLATE utf8_bin NOT NULL DEFAULT 'Eco',
   `Numero` int(11) NOT NULL,
   `Rue` varchar(128) COLLATE utf8_bin NOT NULL,
   `Ville` varchar(128) COLLATE utf8_bin NOT NULL,
   `Code_postal` varchar(128) COLLATE utf8_bin NOT NULL,
-  `Pays` varchar(128) COLLATE utf8_bin NOT NULL,
+  `Pays` varchar(128) COLLATE utf8_bin NOT NULL DEFAULT 'France',
   PRIMARY KEY (`ID_Maison`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Déchargement des données de la table `maison`
@@ -232,17 +215,15 @@ CREATE TABLE IF NOT EXISTS `piece` (
   `Nom_piece` varchar(255) COLLATE utf8_bin NOT NULL DEFAULT 'Piece',
   PRIMARY KEY (`ID_Piece`),
   KEY `ID_Maison` (`ID_Maison`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Déchargement des données de la table `piece`
 --
 
 INSERT INTO `piece` (`ID_Piece`, `ID_Maison`, `Temperature`, `Luminosite`, `Nom_piece`) VALUES
-(1, 1, 27, 100, 'Cuisine'),
 (2, 1, 20, 100, 'Salon'),
-(10, 1, 25, 50, 'Chambre de Yanis'),
-(11, 1, 15, 50, 'Salon');
+(3, 6, 25, 50, 'TEST YAN');
 
 -- --------------------------------------------------------
 
@@ -321,7 +302,7 @@ CREATE TABLE IF NOT EXISTS `user_maison` (
   PRIMARY KEY (`ID_Possession`),
   KEY `ID_Maison` (`ID_Maison`),
   KEY `ID_User` (`ID_User`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Déchargement des données de la table `user_maison`
@@ -383,7 +364,7 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
   `Cemac` int(11) NOT NULL,
   PRIMARY KEY (`ID_User`),
   UNIQUE KEY `Cemac` (`Cemac`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Déchargement des données de la table `utilisateur`
@@ -393,7 +374,7 @@ INSERT INTO `utilisateur` (`ID_User`, `User_type`, `Nom`, `Prenom`, `Adresse_ema
 (1, 'Client', 'Grana', 'Pablo', 'pablo.grana@isep.fr', '$2y$10$La7N7IOI7sRYESa73m3Yo.PGhd.gR4e/5NW6rF8RoN9/YTjw/Rlty', '0676877850', '1998-05-24', '2018-12-04', '2019-01-04', 12),
 (2, 'Client', 'Verbe', 'Pierre', 'pierre.verbe@isep.fr', '$2y$10$s5IlsexW6ZhVPGeC8hWSJ.8FttCDQTBftz.8xZnhUhyjFW46rqDt2', '0678458785', '1998-02-16', '2018-12-26', '2019-01-23', 7),
 (3, 'Client', 'Kaveh', 'Nina', 'nina.kaveh@isep.fr', '$2y$10$uUM2WeUxSVN/oapw4o66yOHnuALVz8D3DyFEeH8b1eat0nilxnLCq', '0687895412', '1998-02-17', '2018-12-27', '2019-12-27', 0),
-(4, 'Client', 'Kettou', 'Yanis', 'yanis.kettou@isep.fr', '$2y$10$Y1RANGKvpsCGWKUHg8AJAOM/R3Bj0xrR5/IZLSnG8toSYVCzdT.46', '0797479878', '1998-05-04', '2018-12-06', '2019-12-06', 6),
+(4, 'Administrateur', 'Kettou', 'Yanis', 'yanis.kettou@isep.fr', '$2y$10$momeYVYw5uSvBlxRwNO8WuOtd9PGlhUSZu4m9Plo/QDC6q2ZUQBW6', '0797479878', '1998-05-04', '2018-12-06', '2019-12-06', 6),
 (5, 'Client', 'Léa', 'Verhaeghe', 'lea.verhaeghe@isep.fr', '$2y$10$YM101SLXil39uFLQpyQ/LOUUG1rGUznX9/CfNPEQXYoFI8WA3eMji', '0798478750', '1998-02-12', '2018-12-05', '2019-12-05', 9);
 
 --
